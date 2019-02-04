@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import static org.assertj.core.api.Assertions.assertThat;
 import static study.qa.automation.utils.TestContext.getDriver;
 
-public class MyStepdefs {
+public class def_3_13 {
     @When("^Navigate to login page$")
     public void navigateToLoginPage() {
         getDriver().get("http://local.school.portnov.com:4520/#/login");
