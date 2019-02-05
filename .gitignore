@@ -8,3 +8,5 @@ javaWebdriverCucumber.iml
 pom.xml
 ASK.iml
 workspace.xml
+dependency-reduced-pom.xml
+
