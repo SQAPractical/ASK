@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4200121-7d80-4649-804f-650be57d34d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b4200121-7d80-4649-804f-650be57d34d9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,8 +103,9 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="75">
-                <caret line="5" column="35" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="35" />
+
+              <first_editor relative-caret-position="64">
+                <caret line="34" column="30" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="30" />
               </first_editor>
               <second_editor />
             </state>
@@ -287,7 +286,9 @@
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1409" height="805" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25237748" />
+
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24485451" />
+>>>>>>> master
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -301,7 +302,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.47685835" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.46321526" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" />
@@ -331,6 +332,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -352,6 +354,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+=======
+>>>>>>> master
         </state>
       </provider>
     </entry>
@@ -361,8 +365,13 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
+<<<<<<< HEAD
           <first_editor relative-caret-position="75">
             <caret line="5" column="35" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="35" />
+=======
+          <first_editor relative-caret-position="64">
+            <caret line="34" column="30" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="30" />
+>>>>>>> master
           </first_editor>
           <second_editor />
         </state>
