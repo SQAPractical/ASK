@@ -7,7 +7,7 @@
     The name of your local branch must match the name of your remote branch.
         Example (You can see in terminal):
         `* [new branch]      nik -> nik`
-        
+
 2. Type `git branch` to verify that you created the branch
     (your currently branch will appear in green)
     
