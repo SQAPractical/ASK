@@ -101,8 +101,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="29" column="78" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="78" />
+            <state relative-caret-position="95">
+              <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -130,11 +130,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="41" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="47" />
     <option name="y" value="23" />
-    <option name="width" value="1230" />
-    <option name="height" value="731" />
+    <option name="width" value="1233" />
+    <option name="height" value="705" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -205,7 +205,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549337409989" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549338976531" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -289,9 +289,9 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="46" y="23" width="1234" height="777" extended-state="6" />
+    <frame x="47" y="23" width="1233" height="705" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24496645" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24517213" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -306,7 +306,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30072993" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.5823817" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -358,8 +358,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="29" column="78" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="78" />
+        <state relative-caret-position="95">
+          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="26" />
         </state>
       </provider>
     </entry>
