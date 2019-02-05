@@ -6,3 +6,7 @@
    IntelliJ IDEA
    Selenium
    Java
+
+   Ruby
+   Scala
+
