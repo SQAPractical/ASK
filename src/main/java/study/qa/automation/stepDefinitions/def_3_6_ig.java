@@ -1,6 +1,8 @@
 package study.qa.automation.stepDefinitions;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import static study.qa.automation.utils.TestContext.getDriver;
 
@@ -196,6 +198,35 @@ public class def_3_6_ig {
     }
 
 
+    @Then("^Verify that quiz \"([^\"]*)\" was created$")
+    public void verifyThatQuizWasCreated(String arg0) throws Throwable {
+        getDriver().findElement(By.xpath("//div[@class='quizzes']//*[contains(text(),'Testing Ig')]")).click();
+        Thread.sleep(5000);
+        System.out.println("Verify that quiz was created");
+    }
+
+    @And("^Delete quiz \"([^\"]*)\"$")
+    public void deleteQuiz(String quiz) throws InterruptedException {
+        getDriver().findElement(By.xpath("//*[contains(text(), 'Testing Ig')]/../../..//*[contains(text(), 'Delete')]")).click();
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//*[contains(text(), 'Confirmation')]/../../..//*[contains(text(), 'Delete')]")).click();
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
+        Thread.sleep(2000);
+
+//        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
+//        Thread.sleep(2000);
+//        int quizzes = getDriver().findElements(By.xpath("//*[contains(text(), 'Testing Ig')]")).size();
+//        for (int i = 0; i < quizzes; i++) {
+//            getDriver().findElement(By.xpath("//*[contains(text(), 'Testing Ig')]")).click();
+//            Thread.sleep(1000);
+//            getDriver().findElement(By.xpath("//*[contains(text(), 'Testing Ig')]/../../..//*[contains(text(), 'Delete')]")).click();
+//            Thread.sleep(1000);
+//            getDriver().findElement(By.xpath("//*[contains(text(), 'Confirmation')]/../../..//*[contains(text(), 'Delete')]")).click();
+//            Thread.sleep(5000);
+//        }
+//
+   }
 }
 
 
