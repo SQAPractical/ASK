@@ -10,16 +10,16 @@ Feature: Feature 1
 #      // Create Quiz
     And Push Create new Quiz button
     And Type Title of the Quiz "Testing Ig"
-    And Click Add Question
-    And Select Textual Type of questionOne
-    And Type text of QuestionFirst "Textual 1"
-    And Click Add Question
-    And Select Textual Type of questionTwo
-    And Type text of QuestionSecond "Textual 2"
-    And Click Add Question
-    And Select Textual Type of questionThree
-    And Type text of QuestionThird "Textual 3"
-    And Click Add Question
+#    And Click Add Question
+#    And Select Textual Type of questionOne
+#    And Type text of QuestionFirst "Textual 1"
+#    And Click Add Question
+#    And Select Textual Type of questionTwo
+#    And Type text of QuestionSecond "Textual 2"
+#    And Click Add Question
+#    And Select Textual Type of questionThree
+#    And Type text of QuestionThird "Textual 3"
+#    And Click Add Question
 
 #    And Select Single-Choice Type of questionFour
 #    And Type text of QuestionFour "Single choice Question 1"
@@ -68,18 +68,5 @@ Feature: Feature 1
     And Push Create new Quiz button
     And Type Title of the Quiz "Testing Ig"
     And Click Add Question
-    And Select Textual Type of questionOne
-    And Type text of QuestionFirst "Textual 1"
-    And Click Add Question
-    And Select Textual Type of questionTwo
-    And Type text of QuestionSecond "Textual 2"
-    And Click Add Question
-    And Select Textual Type of questionThree
-    And Type text of QuestionThird "Textual 3"
-    And Click Add Question
     And Type email "tanyasptest+6@gmail.com"
-
-
-
-
 
