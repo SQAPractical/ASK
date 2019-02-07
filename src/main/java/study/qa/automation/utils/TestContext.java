@@ -1,5 +1,6 @@
 package study.qa.automation.utils;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -22,7 +23,7 @@ public class TestContext {
     private static WebDriver driver;
 
     public static void initialize() {
-        setDriver("firefox");
+        setDriver("chrome");
     }
 
     public static void close() {
@@ -60,6 +61,8 @@ public class TestContext {
                     chromeOptions.addArguments("--start-maximized");
                     chromeOptions.setExperimentalOption("prefs", chromePreferences);
                     driver = new ChromeDriver(chromeOptions);
+                    Dimension dim = new Dimension(1920, 1200);
+                    driver.manage().window().setSize(dim); //.fullscreen();
                     break;
                 case "firefox":
                     String geckoDriverName = "geckodriver.exe";
