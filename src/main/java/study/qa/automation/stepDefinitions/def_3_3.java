@@ -1,12 +1,8 @@
 package study.qa.automation.stepDefinitions;
 
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import static org.assertj.core.api.Assertions.assertThat;
 import static study.qa.automation.utils.TestContext.getDriver;
 
 public class def_3_3 {
@@ -139,17 +135,7 @@ public class def_3_3 {
     public void pushSaveButton() throws Throwable {
         getDriver().findElement(By.xpath("//span[contains(text(), 'Save')]")).click();
         Thread.sleep(1000);
-    }
 
-    @Then("^Verify that quiz \"([^\"]*)\" was assign$")
-    public void verifyThatQuizWasAssign(String myquiz) throws Throwable {
-        WebElement quiz = getDriver().findElement(By.xpath("//h4[contains(text(), 'My Assignment')]/..//*[contains(text(), 'Assignment Sofia')]"));
-        String textFromQuiz = quiz.getText();
-        assertThat(textFromQuiz.contains(myquiz)).isTrue();
-        String name = getDriver().findElement(By.xpath("//div[@class='info']//h3")).getText();
-        if (textFromQuiz.contains(myquiz)) {
-            System.out.println(name + " get assignment. ");
-        }
     }
 
     @And("^Delete quiz with name \"([^\"]*)\"$")
