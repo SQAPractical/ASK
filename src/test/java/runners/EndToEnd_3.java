@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber-html/alltestcases", "json:target/cucumber-json-report.json"},
         glue = {"study/qa/automation/stepDefinitions", "study/qa/automation/utils"},
         features = {"src/main/resources/features"},
-        tags = {"@EndToEnd_1"}
+        tags = {"@EndToEnd_3"}
 )
 
 public class EndToEnd_3 {
