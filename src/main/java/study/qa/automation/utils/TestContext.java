@@ -62,7 +62,7 @@ public class TestContext {
                     chromeOptions.setExperimentalOption("prefs", chromePreferences);
                     driver = new ChromeDriver(chromeOptions);
                     Dimension dim = new Dimension(1920, 1200);
-                    driver.manage().window().fullscreen();   //.setSize(dim);
+                    driver.manage().window().setSize(dim);    //.fullscreen();   //.setSize(dim);
                     break;
                 case "firefox":
                     String geckoDriverName = "geckodriver.exe";
