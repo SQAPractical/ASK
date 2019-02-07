@@ -108,7 +108,8 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <forkCount>${forkCount}</forkCount>
-                    <reuseForks>true</reuseForks>
+                    <reuseForks>false</reuseForks>
+                    <testFailureIgnore>true</testFailureIgnore>
                     <includes>
                         <include>**/Parallel*.class</include>
                     </includes>
