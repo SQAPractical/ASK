@@ -13,7 +13,7 @@
         <selenium-java-version>3.141.59</selenium-java-version>
         <cucumber-java-version>2.4.0</cucumber-java-version>
         <forkCount>3</forkCount>
-        <tag1>@</tag1>
+        <tag1>~@</tag1>
         <tag2>~@</tag2>
         <tag3>~@</tag3>
     </properties>
