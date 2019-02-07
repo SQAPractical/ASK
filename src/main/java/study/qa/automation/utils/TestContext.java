@@ -1,5 +1,6 @@
 package study.qa.automation.utils;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -60,6 +61,7 @@ public class TestContext {
                     chromeOptions.addArguments("--start-maximized");
                     chromeOptions.setExperimentalOption("prefs", chromePreferences);
                     driver = new ChromeDriver(chromeOptions);
+                    driver.manage().window().setSize(new Dimension(1044,784));
                     break;
                 case "firefox":
                     String geckoDriverName = "geckodriver.exe";
