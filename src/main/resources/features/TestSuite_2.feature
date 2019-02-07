@@ -1,5 +1,5 @@
 Feature: 3.13
-@EndToEnd
+@EndToEnd_3
   Scenario: Teacher creates Quiz and assign it for 5 individual students
     When  Navigate to login page
     And Type email "tanyasptest+6@gmail.com"
