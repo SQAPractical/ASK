@@ -44,6 +44,7 @@ public class TestContext {
             switch (browser) {
                 case "chrome":
                     String chromeDriverName = "chromedriver.exe";
+
                     if (osName != null && osName.contains("Mac")) {
                         chromeDriverName = "chromedriver";
                     }

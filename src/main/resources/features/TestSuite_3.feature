@@ -31,4 +31,4 @@ Feature: Feature 3
     And Type text in Options "Option A" and "Option B"
     And Select first option as correct answer
     And Push Save button
-    And Type email "tanyasptest+6@gmail.com"
+#    And Type email "tanyasptest+6@gmail.com"
