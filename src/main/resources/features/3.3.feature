@@ -25,5 +25,5 @@ Feature: 3.3
     And Select Textual Type of question
     And Type text of Question "What is textual question 5?"
     And Push Save button
-    Then Verify that quiz "Testing Assignment Aziz" was created
+    And Delete quiz with name "Testing Assignment Aziz"
     And Click Logout on left navigational panel
