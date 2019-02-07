@@ -10,20 +10,21 @@ Feature: 3.3
     And Push Create new Quiz button
     And Type Title of the Quiz "Testing Assignment Aziz"
     And Click Add Question
-    And Select Textual Type of question
+    And Select Textual Type of questionOne
     And Type text of Question "What is textual question 1?"
     And Click Add Question
-    And Select Textual Type of question
+    And Select Textual Type of questionTwo
     And Type text of Question "What is textual question 2?"
     And Click Add Question
-    And Select Textual Type of question
+    And Select Textual Type of questionThree
     And Type text of Question "What is textual question 3?"
     And Click Add Question
-    And Select Textual Type of question
+    And Select Textual Type of questionFour
     And Type text of Question "What is textual question 4?"
     And Click Add Question
-    And Select Textual Type of question
+    And Select Textual Type of questionFive
     And Type text of Question "What is textual question 5?"
     And Push Save button
+    Then Verify that quiz "Testing Assignment Aziz" was created
     And Delete quiz with name "Testing Assignment Aziz"
     And Click Logout on left navigational panel
