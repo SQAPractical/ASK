@@ -22,7 +22,7 @@ public class TestContext {
     private static WebDriver driver;
 
     public static void initialize() {
-        setDriver("chrome");
+        setDriver("firefox");
     }
 
     public static void close() {
