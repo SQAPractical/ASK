@@ -108,11 +108,11 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <forkCount>${forkCount}</forkCount>
-                    <reuseForks>false</reuseForks>
+                    <reuseForks>true</reuseForks>
                     <testFailureIgnore>true</testFailureIgnore>
-                    <includes>
-                        <include>**/Parallel*.class</include>
-                    </includes>
+                    <!--<includes>-->
+                        <!--<include>**/Parallel*.class</include>-->
+                    <!--</includes>-->
 
                     <!--<includes>-->
                         <!--<include>Sample.java</include>-->
