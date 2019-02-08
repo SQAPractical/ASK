@@ -15,17 +15,19 @@ public class def_3_13 {
     }
 
     @And("^Type email \"([^\"]*)\"$")
-    public void typeEmail(String email){
+    public void typeEmail(String email) throws Throwable {
+        Thread.sleep(3000);
         getDriver().findElement(By.xpath("//input[@placeholder='Email *']")).sendKeys(email);
     }
 
     @And("^Type Password \"([^\"]*)\"$")
-    public void typePassword(String pass){
+    public void typePassword(String pass) throws Throwable {
+        Thread.sleep(3000);
         getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).sendKeys(pass);
     }
 
     @And("^Push Sign In button$")
-    public void pushSignInButton()throws Throwable{
+    public void pushSignInButton() throws Throwable {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
         Thread.sleep(3000);
     }
