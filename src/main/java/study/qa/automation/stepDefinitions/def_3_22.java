@@ -23,12 +23,6 @@ public class def_3_22 {
         Thread.sleep(1000);
     }
 
-    @And("^Push Submit My Answers button$")
-    public void pushSubmitMyAnswersButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(), 'Submit My Answers')]")).click();
-        Thread.sleep(3000);
-    }
-
     @When("^Push Ok button$")
     public void pushOkButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Ok')]")).click();
@@ -69,12 +63,6 @@ public class def_3_22 {
         Thread.sleep(1000);
         getDriver().findElement(By.xpath("//span[@class='mat-button-wrapper'][contains(text(),'+')]")).click();
         Thread.sleep(1000);
-    }
-
-    @And("^Click Submissions on left navigational panel$")
-    public void clickSubmissionsOnLeftNavigationalPanel() throws InterruptedException {
-        getDriver().findElement(By.xpath("//h5[text()='Submissions']")).click();
-        Thread.sleep(5000);
     }
 
     @When("^Push Save button Q$")
