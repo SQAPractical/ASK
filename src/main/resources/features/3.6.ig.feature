@@ -55,10 +55,3 @@ Feature: 3.6
     And Push Save button
     Then Verify that quiz "Testing Ig" was created
     And Delete quiz "Testing Ig"
-
-
-
-
-
-
-

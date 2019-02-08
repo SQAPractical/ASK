@@ -13,7 +13,7 @@
         <selenium-java-version>3.141.59</selenium-java-version>
         <cucumber-java-version>2.4.0</cucumber-java-version>
         <forkCount>3</forkCount>
-        <tag1>@</tag1>
+        <tag1>~@</tag1>
         <tag2>~@</tag2>
         <tag3>~@</tag3>
     </properties>
@@ -107,14 +107,22 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M3</version>
                 <configuration>
-                    <!--<forkCount>${forkCount}</forkCount>-->
-                    <!--<reuseForks>false</reuseForks>-->
+                    <forkCount>${forkCount}</forkCount>
+                    <reuseForks>true</reuseForks>
+                    <testFailureIgnore>true</testFailureIgnore>
                     <!--<includes>-->
                         <!--<include>**/Parallel*.class</include>-->
                     <!--</includes>-->
-                    <parallel>all</parallel>
-                    <threadCount>10</threadCount>
-                    <redirectTestOutputToFile>false</redirectTestOutputToFile>
+
+
+
+                    <!--<includes>-->
+                        <!--<include>Sample.java</include>-->
+                    <!--</includes>-->
+
+                    <!--<parallel>false</parallel>-->
+                    <!--<threadCount>1</threadCount>-->
+                    <!--<redirectTestOutputToFile>false</redirectTestOutputToFile>-->
                 </configuration>
             </plugin>
 
