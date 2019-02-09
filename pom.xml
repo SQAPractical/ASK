@@ -111,13 +111,13 @@
                     <reuseForks>true</reuseForks>
                     <testFailureIgnore>true</testFailureIgnore>
                     <!--<includes>-->
-                        <!--<include>**/Parallel*.class</include>-->
+                    <!--<include>**/Parallel*.class</include>-->
                     <!--</includes>-->
 
 
 
                     <!--<includes>-->
-                        <!--<include>Sample.java</include>-->
+                    <!--<include>Sample.java</include>-->
                     <!--</includes>-->
 
                     <!--<parallel>false</parallel>-->
