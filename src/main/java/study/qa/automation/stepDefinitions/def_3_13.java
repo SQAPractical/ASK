@@ -1,11 +1,12 @@
 package study.qa.automation.stepDefinitions;
+
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import static org.assertj.core.api.Assertions.assertThat;
+
 import static study.qa.automation.utils.TestContext.getDriver;
 
 public class def_3_13 {
@@ -148,10 +149,10 @@ public class def_3_13 {
     public void verifyThatQuizWasAssign(String myquiz) throws Throwable {
         WebElement quiz = getDriver().findElement(By.xpath("//h4[contains(text(), 'My Assignment')]/..//*[contains(text(), 'Assignment Sofia')]"));
         String textFromQuiz = quiz.getText();
-        assertThat(textFromQuiz.contains(myquiz)).isTrue();
-        String name =getDriver().findElement(By.xpath("//div[@class='info']//h3")).getText();
-        if (textFromQuiz.contains(myquiz)){
-            System.out.println(name+ " get assignment. ");
+        Assert.assertTrue(textFromQuiz.contains(myquiz));
+        String name = getDriver().findElement(By.xpath("//div[@class='info']//h3")).getText();
+        if (textFromQuiz.contains(myquiz)) {
+            System.out.println(name + " get assignment. ");
         }
     }
 
@@ -178,10 +179,10 @@ public class def_3_13 {
         getDriver().findElement(By.xpath("//h5[text()='Assignments']")).click();
         Thread.sleep(1000);
 
-        int countAssignments=getDriver().findElements(By.xpath("//*[contains(text(),'Testing Assignment Sofia')]/..//*[contains(text(), 'more_vert')]")).size();
+        int countAssignments = getDriver().findElements(By.xpath("//*[contains(text(),'Testing Assignment Sofia')]/..//*[contains(text(), 'more_vert')]")).size();
         Thread.sleep(1000);
 
-        if (countAssignments!=0){
+        if (countAssignments != 0) {
             getDriver().findElement(By.xpath("//*[contains(text(),'Testing Assignment Sofia')]/..//*[contains(text(), 'more_vert')]")).click();
             Thread.sleep(1000);
 

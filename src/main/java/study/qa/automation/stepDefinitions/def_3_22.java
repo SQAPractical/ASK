@@ -1,13 +1,11 @@
 package study.qa.automation.stepDefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static study.qa.automation.utils.TestContext.getDriver;
 
 public class def_3_22 {
@@ -39,8 +37,8 @@ public class def_3_22 {
     public void verifyThatQuizStatusIs(String arg0, String arg1) throws Throwable {
         WebElement quiz = getDriver().findElement(By.xpath("//*[contains(text(),'Yulia')]"));
         String textFromQuiz = quiz.getText();
-        String name =getDriver().findElement(By.xpath("//*[contains(text(),'Yulia')]/../..//*[contains(text(), 'FAILED')]")).getText();
-            System.out.println (" Verified that Quiz Status is "+name);
+        String name = getDriver().findElement(By.xpath("//*[contains(text(),'Yulia')]/../..//*[contains(text(), 'FAILED')]")).getText();
+        System.out.println(" Verified that Quiz Status is " + name);
     }
 
     @And("^Click quiz \"([^\"]*)\" on List of Assignments window$")
@@ -75,7 +73,7 @@ public class def_3_22 {
     public void verifyThatQuizStatusChangedTo(String arg0, String arg1) throws Throwable {
         WebElement quiz = getDriver().findElement(By.xpath("//*[contains(text(),'Yulia')]"));
         String textFromQuiz = quiz.getText();
-        String name =getDriver().findElement(By.xpath("//*[contains(text(),'Yulia')]/../../..//*[contains(text(),'PASSED')]")).getText();
-        System.out.println (" Verified that Quiz Status is "+name);
+        String name = getDriver().findElement(By.xpath("//*[contains(text(),'Yulia')]/../../..//*[contains(text(),'PASSED')]")).getText();
+        System.out.println(" Verified that Quiz Status is " + name);
     }
 }

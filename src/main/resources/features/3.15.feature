@@ -1,5 +1,5 @@
 Feature: 3.15
-  @EndToEnd
+  @EndToEnd_3
   Scenario: Teacher creates Quiz. Student completes Quiz. Teacher gets submission.
     When  Navigate to login page
     And Type email "tanyasptest+6@gmail.com"

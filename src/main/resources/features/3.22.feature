@@ -1,5 +1,5 @@
 Feature: 3.22
-  @EndToEnd
+  @EndToEnd_3
   Scenario: 3.22 Teacher assign Quiz to single student. Student completes Quiz and it automatically graded as Failed. Teacher reviews the assignment and change the grade to Passed.
     When Navigate to login page
     And Type email "tanyasptest+8@gmail.com"

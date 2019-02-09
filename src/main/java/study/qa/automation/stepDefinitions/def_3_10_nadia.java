@@ -2,7 +2,7 @@ package study.qa.automation.stepDefinitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import org.assertj.core.api.Assertions;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -191,7 +191,7 @@ public class def_3_10_nadia {
 
     @And("^Set Passing Rate to 90%$")
     public void setPassingRate90() throws Throwable {
-        for(int i = 0; i < 15; i++) {
+        for (int i = 0; i < 15; i++) {
             getDriver().findElement(By.xpath("//span[contains(text(),'+')]")).click();
         }
     }
@@ -218,7 +218,7 @@ public class def_3_10_nadia {
         // System.out.println("Found:");
         // System.out.println(passingRate);
         // System.out.println(textFromPassingRate);
-        Assertions.assertThat(textFromPassingRate).contains(arg1);
+        Assert.assertTrue(textFromPassingRate.contains(arg1));
 //        Assertions.assertThat(textFromPassingRate.contains(arg1)).isTrue();
 
 //        if (textFromPassingRate.contains("90")) {
@@ -233,7 +233,7 @@ public class def_3_10_nadia {
     public void deleteCreatedQuiz(String quizName) throws Throwable {
         int numQuizzes = getDriver().findElements(By.xpath("//div[@class='quizzes']//*[contains(text(),'" + quizName + "')]")).size();
         System.out.println(numQuizzes);
-        for (int i=0; i<numQuizzes; i++) {
+        for (int i = 0; i < numQuizzes; i++) {
             getDriver().findElement(By.xpath("//div[@class='quizzes']//*[contains(text(),'" + quizName + "')]")).click();
             Thread.sleep(1000);
             getDriver().findElement(By.xpath("//div[@class='quizzes']//*[contains(text(),'" + quizName + "')]//../../..//*[contains(text(),'Delete')]")).click();

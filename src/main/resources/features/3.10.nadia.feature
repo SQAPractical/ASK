@@ -1,5 +1,5 @@
 Feature: 3.10
-  @EndToEnd
+  @EndToEnd_2
   Scenario: Teacher creates Quiz with 3 Textual, 3 Single- Choice, 3 Multiple-Choice question 90% passing rate.
     When  Navigate to login page
     And Type email "tanyasptest+6@gmail.com"
