@@ -6,7 +6,7 @@ import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import static study.qa.automation.utils.TestContext.getDriver;
 
-public class def_3_6_ig {
+public class def_3_6 {
 
     @And("^Select Textual Type of questionOne$")
     public void selectTextualTypeOfQuestionOne() throws InterruptedException {

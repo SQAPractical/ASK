@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import static study.qa.automation.utils.TestContext.getDriver;
 
-public class def_3_10_nadia {
+public class def_3_10 {
     @And("^Select Textual Type of Q1$")
     public void selectTextualTypeOfQ1() {
         getDriver().findElement(By.xpath("//*[contains(text(), 'Q1:')]/../../..//div[contains(text(), 'Textual')]")).click();
