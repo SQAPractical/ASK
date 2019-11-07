@@ -12,6 +12,7 @@
       And I click Register me button
       Then message "You have been Registered."
 
+  # another scenario
     Scenario: User - First name: Field is required
       Given I navigate to "registration" page
       When I type First Name ""
