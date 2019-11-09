@@ -10,7 +10,7 @@
       And I type password "12345" on "registration" page
       And I type Confirm password "12345"
       And I click Register me button
-      Then message "You have to go home today"
+      Then message "You have to go home today"fdkjdfdj
 
   # another scenario
     Scenario: User - First name: Field is required
