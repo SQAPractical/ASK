@@ -23,5 +23,7 @@
       And I type Confirm password "12345"
       And I click Register me button
       Then message "This field is required"
+      fhdfhdf
+
 
 
