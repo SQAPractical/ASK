@@ -1,3 +1,0 @@
-sggs
-  sfdsfsd
-  git
