@@ -13,4 +13,10 @@ public class Login {
 
         assertThat(getDriver().findElement(By.xpath("//h3[contains(text(),'"+name+"')]")).isDisplayed()).isTrue();
     }
-}
+
+    @Then("I verify error message {string} appears")
+    public void iVerifyErrorMessageAppears(String message) {
+        assertThat(getDriver().findElement(By.xpath("//*[text()='"+message+"']")).isDisplayed()).isTrue();
+    }
+    }
+
