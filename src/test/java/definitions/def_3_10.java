@@ -45,7 +45,7 @@ public class def_3_10 {
     @And("^I click Sign in button$")
     public void iClickSignInButton() throws Throwable {
         getDriver().findElement(By.xpath("//*[contains(text(),'Sign In')]")).click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
     }
 
     @When("^I click on \"([^\"]*)\" on left menu$")

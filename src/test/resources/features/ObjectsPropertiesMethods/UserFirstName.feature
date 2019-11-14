@@ -10,8 +10,9 @@
       And I type password "12345" on "registration" page
       And I type Confirm password "12345"
       And I click Register me button
-      Then message "You have been Registered."
+      Then message "You have to go home today"
 
+  # another scenario
     Scenario: User - First name: Field is required
       Given I navigate to "registration" page
       When I type First Name ""
@@ -22,5 +23,3 @@
       And I type Confirm password "12345"
       And I click Register me button
       Then message "This field is required"
-
-
