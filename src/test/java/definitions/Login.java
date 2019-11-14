@@ -1,13 +1,12 @@
 package definitions;
 
-
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import static support.TestContext.getDriver;
-
 
 public class Login {
 
@@ -22,5 +21,3 @@ public class Login {
         assertThat(getDriver().findElement(By.xpath("//*[text()='"+message+"']")).isDisplayed()).isTrue();
     }
 }
-
-
