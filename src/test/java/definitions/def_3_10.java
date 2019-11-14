@@ -1,14 +1,12 @@
 package definitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
-import static org.assertj.core.api.Assertions.assertThat;
-
 import static support.TestContext.getDriver;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class def_3_10 {
     @Given("^I navigate to \"([^\"]*)\" page$")
