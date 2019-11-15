@@ -16,7 +16,7 @@ Feature: Login
 
   Scenario: Login - email field required
     Given I navigate to "login" page
-    And I type email "" on "login" page
+    And I type email on "login" page
     And I type password "12345" on "login" page
     And I click Sign in button
     Then I verify error message "This field is required" appears
