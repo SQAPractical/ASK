@@ -130,10 +130,10 @@ public class def_3_10 {
     public void iOpenUrl(String url) {
         getDriver().get(url);
     }
-//added to resize window by Polina
-    @Then("^I resize window to (\\d+) and (\\d+)$")
-    public void iResizeWindowToAnd(int width, int height) {
-        Dimension dimension = new Dimension(width, height);
-        getDriver().manage().window().setSize(dimension);
-    }
+////added to resize window by Polina
+//    @Then("^I resize window to (\\d+) and (\\d+)$")
+//    public void iResizeWindowToAnd(int width, int height) {
+//        Dimension dimension = new Dimension(width, height);
+//        getDriver().manage().window().setSize(dimension);
+//    }
 }

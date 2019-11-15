@@ -3,7 +3,7 @@ Feature: GroupCode
     Given I navigate to "registration" page
     And I type First Name "test"
     And I type Last Name "test"
-    And I type email address "test@test"
+    And I type email "test@test" on "registration" page
     And I type Group Code "12$tes"
     And I type password "1234567" on "registration" page
     And I type Confirm password "1234567"
@@ -14,7 +14,7 @@ Feature: GroupCode
       Given I navigate to "registration" page
       And I type First Name "test"
       And I type Last Name "test"
-      And I type email address "test@test"
+      And I type email "test@test" on "registration" page
       And I type Group Code "12$tes"
       And I type password "1234567" on "registration" page
       And I type Confirm password "1234567"
@@ -26,7 +26,7 @@ Feature: GroupCode
         Given I navigate to "registration" page
         And I type First Name "test"
         And I type Last Name "test"
-        And I type email address "test@test"
+        And I type email "test@test" on "registration" page
         And I type Group Code "1"
         And I type password "1234567" on "registration" page
         And I type Confirm password "1234567"
@@ -38,7 +38,7 @@ Feature: GroupCode
     Given I navigate to "registration" page
     And I type First Name "test"
     And I type Last Name "test"
-    And I type email address "test@test"
+    And I type email "test@test" on "registration" page
     And I type Group Code "123test$$$"
     And I type password "1234567" on "registration" page
     And I type Confirm password "1234567"
@@ -51,7 +51,7 @@ Feature: GroupCode
     Given I navigate to "registration" page
     And I type First Name "test"
     And I type Last Name "test"
-    And I type email address "test@test"
+    And I type email "test@test" on "registration" page
     And I type Group Code "123 te"
     And I type password "123456" on "registration" page
     And I type Confirm password "123456"
@@ -59,30 +59,3 @@ Feature: GroupCode
     Then message "White spaces are not allowed"
     When I wait for 3 sec
     And I verify that "Registration" page shown
-
-  Scenario: GroupCode - White spaces are not allowed
-    Given I navigate to "registration" page
-    And I type First Name "test"
-    And I type Last Name "test"
-    And I type email address "test@test"
-    And I type Group Code " "
-    And I type password "1234567" on "registration" page
-    And I type Confirm password "1234567"
-    And I click Register me button
-    Then message "White spaces are not allowed"
-    When I wait for 3 sec
-    And I verify that "Registration" page shown
-
-
-
-
-
-
-
-
-
-      
-      
-
-
-
