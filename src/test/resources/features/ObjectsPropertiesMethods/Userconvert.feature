@@ -10,6 +10,7 @@ Feature: Userconvert
     And I click "Options" button
     Then I select option "Change User's Role"
     And I click "Change role" sign
+    Then User role "TEACHER" appears on user-details page
 
   Scenario: User - Convert - Teacher can change user's role Teacher to Student
     Given I navigate to "login" page
@@ -22,3 +23,4 @@ Feature: Userconvert
     And I click "Options" button
     Then I select option "Change User's Role"
     And I click "Change role" sign
+    Then User role "STUDENT" appears on user-details page
