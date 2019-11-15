@@ -15,7 +15,7 @@ Feature: GroupCode
       And I type First Name "test"
       And I type Last Name "test"
       And I type email "test@test" on "registration" page
-      And I type Group Code "12$tes"
+      And I type Group Code ""
       And I type password "1234567" on "registration" page
       And I type Confirm password "1234567"
       And I click Register me button
