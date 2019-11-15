@@ -1,5 +1,6 @@
-@Sanity
+
 Feature: GroupCode
+  @Sanity
   Scenario: GroupCode - Alphanumeric$Special characters
     Given I navigate to "registration" page
     And I type First Name "test"
@@ -10,7 +11,7 @@ Feature: GroupCode
     And I type Confirm password "1234567"
     And I click Register me button
     Then I verify that "You have been Registered" message appears
-
+  @Sanity
     Scenario: GroupCode - Group code field is required
       Given I navigate to "registration" page
       And I type First Name "test"
@@ -22,7 +23,7 @@ Feature: GroupCode
       And I click Register me button
       Then message "This field is required"
       And I verify that "Registration" page shown
-
+  @Sanity
       Scenario: GroupCode - Min 1 character
         Given I navigate to "registration" page
         And I type First Name "test"
@@ -34,7 +35,7 @@ Feature: GroupCode
         And I click Register me button
         When I wait for 3 sec
         Then I verify that "You have been Registered" message appears
-
+  @Sanity
   Scenario: GroupCode - Max 6 characters
     Given I navigate to "registration" page
     And I type First Name "test"
