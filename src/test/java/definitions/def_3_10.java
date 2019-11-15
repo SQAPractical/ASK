@@ -1,14 +1,13 @@
 package definitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import static support.TestContext.getDriver;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import static support.TestContext.getDriver;
 
 public class def_3_10 {
     @Given("^I navigate to \"([^\"]*)\" page$")
@@ -67,6 +66,7 @@ public class def_3_10 {
 
     @When("^I type title of the quiz \"([^\"]*)\"$")
     public void iTypeTitleOfTheQuiz(String title) throws Throwable {
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(title);
         Thread.sleep(1000);
 
@@ -85,7 +85,7 @@ public class def_3_10 {
     @Then("^I type text of question \"([^\"]*)\"$")
     public void iTypeTextOfQuestion(String text) throws Throwable {
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q1')]/../../..//textarea")).sendKeys(text);
+         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q1')]/../../..//textarea")).sendKeys(text);
         Thread.sleep(2000);
 
     }
@@ -124,5 +124,16 @@ public class def_3_10 {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
         Thread.sleep(2000);
         getDriver().navigate().refresh();
+    }
+
+    @Given("^I open url \"([^\"]*)\"$")
+    public void iOpenUrl(String url) {
+        getDriver().get(url);
+    }
+//added to resize window by Polina
+    @Then("^I resize window to (\\d+) and (\\d+)$")
+    public void iResizeWindowToAnd(int width, int height) {
+        Dimension dimension = new Dimension(width, height);
+        getDriver().manage().window().setSize(dimension);
     }
 }
