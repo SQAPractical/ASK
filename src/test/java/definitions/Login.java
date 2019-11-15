@@ -21,4 +21,3 @@ public class Login {
         assertThat(getDriver().findElement(By.xpath("//*[text()='"+message+"']")).isDisplayed()).isTrue();
     }
 }
-
