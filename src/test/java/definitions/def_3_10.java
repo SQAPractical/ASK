@@ -6,9 +6,12 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 import static support.TestContext.getDriver;
+
 
 public class def_3_10 {
     @Given("^I navigate to \"([^\"]*)\" page$")
@@ -124,5 +127,16 @@ public class def_3_10 {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
         Thread.sleep(2000);
         getDriver().navigate().refresh();
+    }
+
+    @Given("^I open url \"([^\"]*)\"$")
+    public void iOpenUrl(String url) {
+        getDriver().get(url);
+    }
+//added to resize window by Polina
+    @Then("^I resize window to (\\d+) and (\\d+)$")
+    public void iResizeWindowToAnd(int width, int height) {
+        Dimension dimension = new Dimension(width, height);
+        getDriver().manage().window().setSize(dimension);
     }
 }
