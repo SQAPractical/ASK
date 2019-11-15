@@ -1,5 +1,6 @@
 @scenario
 Feature: User - Last name
+  @Regression
   Scenario: User-Last Name - Alphanumerical $ Special characters
     Given I navigate to "registration" page
     And I type First Name "Anzxcna"
@@ -10,6 +11,7 @@ Feature: User - Last name
     And I type Confirm password "12345"
     And I click Register me button
     Then message "You have been Registered" appears
+  @Regression
   Scenario: User - Last name - Field is required
     Given I navigate to "registration" page
     And I type First Name "Anna"
@@ -19,6 +21,7 @@ Feature: User - Last name
     And I type Confirm password "12345"
     And I click Register me button
     Then message "This field is required" appears
+
   Scenario: User - Last name - Max characters
     Given I navigate to "registration" page
     And I type First Name "Anzxcna"

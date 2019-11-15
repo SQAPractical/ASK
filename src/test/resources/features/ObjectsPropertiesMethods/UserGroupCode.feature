@@ -1,3 +1,4 @@
+@Sanity
 Feature: GroupCode
   Scenario: GroupCode - Alphanumeric$Special characters
     Given I navigate to "registration" page

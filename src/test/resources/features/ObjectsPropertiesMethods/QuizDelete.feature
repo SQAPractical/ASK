@@ -1,6 +1,5 @@
-@Properties
-  Feature: Quiz - Delete
-    @Sanity
+Feature: Quiz - Delete
+  @Regression
     Scenario: Quiz - Teacher can delete quiz
       Given I navigate to "login" page
       When I type email "xjnrdnpathake@b4top.tk" on "login" page
