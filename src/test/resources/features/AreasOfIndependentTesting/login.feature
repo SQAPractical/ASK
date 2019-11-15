@@ -27,3 +27,6 @@ Feature: Login
     And I type password "12345" on "login" page
     And I click Sign in button
     Then  I verify user name "Leslie Teacher" is displayed
+
+    Scenario: Username - minimal field length
+      Given I open url "https://skryabin.com/webdriver/html/sample.html"
