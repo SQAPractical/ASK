@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import static support.TestContext.getDriver;
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 public class def_3_10 {
     @Given("^I navigate to \"([^\"]*)\" page$")
     public void iNavigateToPage(String page) throws Throwable {
@@ -123,5 +124,16 @@ public class def_3_10 {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
         Thread.sleep(2000);
         getDriver().navigate().refresh();
+    }
+
+    @Given("^I open url \"([^\"]*)\"$")
+    public void iOpenUrl(String url) {
+        getDriver().get(url);
+    }
+//added to resize window by Polina
+    @Then("^I resize window to (\\d+) and (\\d+)$")
+    public void iResizeWindowToAnd(int width, int height) {
+        Dimension dimension = new Dimension(width, height);
+        getDriver().manage().window().setSize(dimension);
     }
 }
