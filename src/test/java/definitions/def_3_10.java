@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import static support.TestContext.getDriver;
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 public class def_3_10 {
     @Given("^I navigate to \"([^\"]*)\" page$")
     public void iNavigateToPage(String page) throws Throwable {
