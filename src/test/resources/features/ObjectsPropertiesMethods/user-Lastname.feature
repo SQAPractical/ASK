@@ -1,6 +1,7 @@
 @scenario
 Feature: User - Last name
   @Regression
+  @Sanity
   Scenario: User-Last Name - Alphanumerical $ Special characters
     Given I navigate to "registration" page
     And I type First Name "Anzxcna"

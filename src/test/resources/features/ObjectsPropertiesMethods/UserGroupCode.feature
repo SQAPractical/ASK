@@ -35,7 +35,7 @@ Feature: GroupCode
         And I click Register me button
         When I wait for 3 sec
         Then I verify that "You have been Registered" message appears
-  @Sanity
+
   Scenario: GroupCode - Max 6 characters
     Given I navigate to "registration" page
     And I type First Name "test"
