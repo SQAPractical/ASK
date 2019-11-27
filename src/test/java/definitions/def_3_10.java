@@ -5,6 +5,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+
 import static support.TestContext.getDriver;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -30,6 +32,7 @@ public class def_3_10 {
         } else {
             throw new RuntimeException("Not supported " + page);
         }
+        Thread.sleep(3000);
     }
 
     @And("^I type password \"([^\"]*)\" on \"([^\"]*)\" page$")
@@ -77,16 +80,15 @@ public class def_3_10 {
 
     @When("^I select textual type of Question$")
     public void iSelectTextualTypeOfQuestion() throws Throwable {
+        Thread.sleep(5000);
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q1')]/../../..//div[contains(text(),'Textual')]")).click();
     }
 
     @Then("^I type text of question \"([^\"]*)\"$")
     public void iTypeTextOfQuestion(String text) throws Throwable {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
          getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q1')]/../../..//textarea")).sendKeys(text);
-
         Thread.sleep(2000);
-
     }
 
     @And("^I save the quiz$")
@@ -106,10 +108,10 @@ public class def_3_10 {
 
     @Then("^I select quiz \"([^\"]*)\"$")
     public void iSelectQuiz(String Quiz) throws Throwable {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         getDriver().findElement(By.xpath("//mat-select[@aria-label='Select Quiz To Assign']")).click();
         getDriver().findElement(By.xpath("//*[contains(text(), '"+Quiz+"')]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
 
     @Then("^I select student \"([^\"]*)\"$")

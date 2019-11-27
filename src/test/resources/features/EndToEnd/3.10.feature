@@ -17,7 +17,7 @@ Feature: 3.10
     When I click on "Assignments" on left menu
     And click on Create New Assignment button
     Then I select quiz "Test Quiz"
-    Then I select student "Sophia Jones"
+    Then I select student "Dmitry Dmitriev"
     Then I click Give assignment button
 #    When I click Log out
 #    And I confirm Log Out
