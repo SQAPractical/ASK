@@ -18,8 +18,4 @@ public class GroupCode {
         assertThat(getDriver().findElement(By.xpath("//h4[contains(text(),'"+message+"')]")).isDisplayed()).isTrue();
     }
 
-    @When("I wait for {int} sec")
-    public void iWaitForSec(int arg0) throws Exception {
-        Thread.sleep(((long)arg0)*1000);
-    }
 }

@@ -1,4 +1,4 @@
-@EndToEnd @Sanity
+
 Feature: 3.10
   Scenario: Teacher create Quiz and assign it to student and student get assignments
     Given I navigate to "login" page

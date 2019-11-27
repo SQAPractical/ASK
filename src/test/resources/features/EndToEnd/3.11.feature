@@ -1,4 +1,3 @@
-@EndToEnd @Sanity
 Feature: 3.11
   Scenario: Teacher create Quiz and assign it to 5 individual students
     Given I navigate to "login" page

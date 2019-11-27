@@ -1,5 +1,6 @@
 package definitions;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
@@ -49,10 +50,12 @@ public class QuizDelete {
         Thread.sleep(500);
     }
 
-    @Then("I unfold quiz {string} details")
-    public void iUnfoldQuizDetails(String quizName) throws Exception {
+
+    @And("^I unfold quiz \"([^\"]*)\" details$")
+    public void iUnfoldQuizDetails(String quizName) throws Throwable {
         iClickOnElementWithXpath("//mat-panel-title[contains(text(),'"+quizName+"')]");
     }
+
 
     @And("^I click Delete button in quiz details$")
     public void iClickDeleteButtonInQuizDetails() throws Throwable {
@@ -70,4 +73,6 @@ public class QuizDelete {
     public void iDeleteCookies() {
         getDriver().manage().deleteAllCookies();
     }
+
+
 }

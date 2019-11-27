@@ -1,4 +1,3 @@
-@EndToEnd @Sanity
 Feature: 3.10
   Scenario: Teacher create Quiz with 3T + 3S +3M
     Given I navigate to "login" page
