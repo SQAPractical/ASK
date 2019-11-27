@@ -12,14 +12,14 @@ public class def_3_17 {
     public void iClickLogOut() throws Throwable {
         getDriver().findElement(By.xpath("//*[contains(text(),'Log Out')]")).click();
     }
+    getDriver().findElement(By.xpath("//span[contains(text(),'Log Out')]")).click();
+        Thread.sleep(5000);
+}
+
+    @When("I click on My Assignments")
 
     @And("I confirm Log Out")
     public void iConfirmLogOut() throws Throwable {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Log Out')]")).click();
-        Thread.sleep(5000);
-    }
-
-    @When("I click on My Assignments")
     public void iClickOnMyAssignments() throws Throwable {
         getDriver().findElement(By.xpath("//h5[contains(text(),'My Assignments')]")).click();
         Thread.sleep(5000);
