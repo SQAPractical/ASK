@@ -52,15 +52,13 @@ public class def_3_10 {
     @When("^I click on \"([^\"]*)\" on left menu$")
     public void iClickOnOnLeftMenu(String menuItem) throws Throwable {
         getDriver().findElement(By.xpath("//*[contains(text(),'"+ menuItem +"')]")).click();
-
-        Thread.sleep(1000);
-
+        Thread.sleep(3000);
     }
 
     @When("^I click create new quiz button$")
     public void iClickCreateNewQuizButton() throws Throwable {
         getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
     }
 
@@ -86,6 +84,7 @@ public class def_3_10 {
     public void iTypeTextOfQuestion(String text) throws Throwable {
         Thread.sleep(2000);
          getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q1')]/../../..//textarea")).sendKeys(text);
+
         Thread.sleep(2000);
 
     }
