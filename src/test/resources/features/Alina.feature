@@ -1,2 +1,0 @@
-ScenarioFeature:
-  ololdf

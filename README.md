@@ -5,7 +5,7 @@
 1. Cut your own branch from `master` locally, typing:
     `git checkout -b name_of_your_branch`
     and create remote copy
-    `git push --set-upstream origin name_of_your_branch`
+    `git checkout  name_of_your_branch`
     The name of your local branch must match the name of your remote branch.
         Example (You can see in terminal):
         `* [new branch]      nik -> nik`
@@ -25,7 +25,6 @@
    To add some of the changes, instead `git add .` you can assign path to the file
     you want to commit after adding
     Example: `git add /Users/sofia/IdeaProjects/AssessmentControl/src/test/resources/features/1.ObjectsPropertiesMethods/firstTest.feature`
-
 6. Type `git status` to check that you added all the changes
     (they will be shown in green)
 
