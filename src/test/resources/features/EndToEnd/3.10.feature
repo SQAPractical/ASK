@@ -1,44 +1,44 @@
-
+@EndToEnd @Sanity
 Feature: 3.10
   Scenario: Teacher create Quiz and assign it to student and student get assignments
     Given I navigate to "login" page
-    When I type email "0mohandlove33o@cojqh5.com" on "login" page
+    When I type email "qa.sofi@gmail.com" on "login" page
     And I type password "12345" on "login" page
     And I click Sign in button
-#    Create Quiz
-    When I click on "Quizzes" on left menu
-    When I click create new quiz button
-    When I type title of the quiz "Test Quiz"
-    And I click on Add question button
-    When I select textual type of Question
-    Then I type text of question "What is Cookies?"
-    And I save the quiz
-#     Create Assignment
-    When I click on "Assignments" on left menu
-    And click on Create New Assignment button
-    Then I select quiz "Test Quiz"
-    Then I select student "Dmitry Dmitriev"
-    Then I click Give assignment button
-#    When I click Log out
+##    Create Quiz
+#    And I click on "Quizzes" on left menu
+#    And I click create new quiz button
+#    And I type title of the quiz "Selenium quiz"
+#    And I click on Add question button
+#    And I select textual type of Question
+#    And I type text of question "What is x-path?"
+#    And I save the quiz
+##     Create Assignment
+#    And I click on "Assignments" on left menu
+#    And click on Create New Assignment button
+#    And I select quiz "Selenium quiz"
+#    And I select student "Ivan Ivanov"
+#    And I click Give assignment button
+#    And I click Log out
 #    And I confirm Log Out
 ##     Login as a student and check if assignment is available
-#    When I type email "qa.sofi@gmail.com" on "login" page
+#    And I type email "qa.sofi@gmail.com" on "login" page
 #    And I type password "123456" on "login" page
 #    And I click Sign in button
-#    When I click on My Assignments
+#    And I click on My Assignments
 #    Then Student Assignment page should have quiz "3.12 End to End Quiz"
-#    When I click Log out
+#    And I click Log out
 #    And I confirm Log Out
 ##     Clean up after the test
-#    Given I navigate to "login" page
-#    When I type email "qa.sofi@gmail.com" on "login" page
+#    And I navigate to "login" page
+#    And I type email "qa.sofi@gmail.com" on "login" page
 #    And I click Sign in button
-#    When I click on "Assignments" on left menu
-#    Then select quiz "3.12 End to End Quiz" from Assignments and delete
+#    And I click on "Assignments" on left menu
+#    And select quiz "Selenium quiz" from Assignments and delete
 #    And I confirm delete
-#    Then I verify if quiz "3.12 End to End Quiz" is deleted from the Assignments page
-#    When I click on "Quizzes" on left menu
-#    Then I select Quiz "3.12 End to End Quiz"
+#    Then I verify if quiz "Selenium quiz" is deleted from the Assignments page
+#    And I click on "Quizzes" on left menu
+#    And I select Quiz "Selenium quiz"
 #    And I delete Quiz
 #    And I confirm delete
-#    Then I verify if quiz "3.12 End to End Quiz" is deleted from the Quizzes page
+#    Then I verify if quiz "Selenium quiz" is deleted from the Quizzes page
