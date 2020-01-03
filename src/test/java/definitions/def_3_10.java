@@ -53,29 +53,6 @@ public class def_3_10 {
         Thread.sleep(3000);
     }
 
-    @And("^I type last name \"([^\"]*)\"$")
-    public void iTypeLastName(String Lname) throws Throwable {
-        getDriver().findElement(By.xpath("//*[@placeholder='Last Name']")).sendKeys(Lname);
-
-    }
-
-    @And("^I type email \"([^\"]*)\"$")
-    public void iTypeEmail(String email) throws Throwable {
-        getDriver().findElement(By.xpath("//*[@placeholder='Email']")).sendKeys(email);
-    }
-
-    @And("^I type group code \"([^\"]*)\"$")
-    public void iTypeGroupCode(String group) throws Throwable {
-        getDriver().findElement(By.xpath("//*[@placeholder='Group Code']")).sendKeys(group);
-
-    }
-
-    @And("^I type password \"([^\"]*)\"$")
-    public void iTypePassword(String pass) throws Throwable {
-        getDriver().findElement(By.xpath("//*[@placeholder='Password']")).sendKeys(pass);
-
-    }
-
     @And("^I type confirm password \"([^\"]*)\"$")
     public void iTypeConfirmPassword(String ConfirmPass) throws Throwable {
         getDriver().findElement(By.xpath("//*[@placeholder='Confirm Password']")).sendKeys(ConfirmPass);
@@ -92,5 +69,4 @@ public class def_3_10 {
         Thread.sleep(2000);
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+message+"')]")).isDisplayed()).isTrue();
     }
-
 }

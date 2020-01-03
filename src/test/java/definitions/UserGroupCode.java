@@ -17,4 +17,9 @@ public class UserGroupCode {
     public void iTypeLastName(String Lname) throws Throwable {
         getDriver().findElement(By.xpath("//*[@placeholder='Last Name']")).sendKeys(Lname);
     }
+
+    @And("^I type group code \"([^\"]*)\"$")
+    public void iTypeGroupCode(String group) throws Throwable {
+        getDriver().findElement(By.xpath("//*[@placeholder='Group Code']")).sendKeys(group);
+    }
 }
