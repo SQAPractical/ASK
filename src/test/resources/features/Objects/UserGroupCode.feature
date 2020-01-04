@@ -1,3 +1,4 @@
+@Sanity
 Feature: User - group code
   Scenario: User - group code - Alphanumeric and sp char
     Given I navigate to "registration" page
