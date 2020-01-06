@@ -1,13 +1,23 @@
-@Sanity
-Feature: User - group code
-  Scenario: User - group code - Alphanumeric and sp char
+
+Feature: User - Group Code
+  Scenario: User - Group Code alphanumeric and special character
     Given I navigate to "registration" page
-    When I type first name "test"
-    And I type last name "Ivanov"
-    And I type email "test@test.gmail" on "registration" page
-    And I type group code "abc123#$"
-    And I type password "12345" on "registration" page
-    And I type confirm password "12345"
-    And I click Register me button
-    Then "You have been Registered." message appears
-  
+    When I type first name "Roma"
+    And I type last name "Test"
+    And I type email "roman.rybak98@gmail.croml"
+    And I type group code "TTT"
+    And I type password "123455"
+    And I type confirm password "123455"
+    When I click sign up button
+    Given I get confirm message contains "You have been Registered."
+
+  Scenario2: User -  Group code
+    Given I navigate to "registration" page
+    When I type first name "Roma"
+    And I type last name "Test"
+    And I type email "roman.rybak98@gmail.croml"
+    And I type group code "TTT"
+    And I type password "123455"
+    And I type confirm password "123455"
+    When I click sign up button
+    Given I get confirm message contains "You have been Registered."
