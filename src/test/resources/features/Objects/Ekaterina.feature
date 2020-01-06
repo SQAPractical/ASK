@@ -1,3 +1,3 @@
 Feature: Hello
   Scenario: New York
-    And Google
+    And Apple
