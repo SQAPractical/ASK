@@ -1,3 +1,4 @@
+
 Feature: User - Group Code
   Scenario: User - Group Code alphanumeric and special character
     Given I navigate to "registration" page
