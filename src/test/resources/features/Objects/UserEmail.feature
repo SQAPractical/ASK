@@ -7,8 +7,8 @@ Feature: User - Email
     And I type group code "696"
     And I type password "popop"
     And I type confirm password "popop"
-    When I click Register me button
-    Given I get confirm message contains "You have been Registered."
+    And I click Register me button
+    Then message "You have been Registered." appears
 
   Scenario: Email field required, can’t be empty
     Given I navigate to "Registration" page
@@ -18,19 +18,19 @@ Feature: User - Email
     And I type group code "696"
     And I type password "popop"
     And I type confirm password "popop"
-    When I click Register me button
-    Given I get confirm message contains "You have been Registered."
+    And I click Register me button
+    Then message "You have been Registered." appears
 
   Scenario: Local port with 64 characters on the left of an @ domain on the right with 63 characters followed by (.)  with 63 characters in last part of domain
     Given I navigate to "Registration" page
     When I type first name "Nazik"
     And I type last name "Baruch"
-    And I type email "1111111111111111111111111111111111111111111111111111111111111111@111111111111111111111111111111111111111111111111111111111111111.111111111111111111111111111111111111111111111111111111111111111"
+    And I type email "a111111111111111111111111111111111111111111111111111111111111111@111111111111111111111111111111111111111111111111111111111111111.111111111111111111111111111111111111111111111111111111111111111"
     And I type group code "696"
     And I type password "popop"
     And I type confirm password "popop"
-    When I click Register me button
-    Given I get confirm message contains "You have been Registered."
+    And I click Register me button
+    Then message "You have been Registered." appears
 
   Scenario: White spaces are not allowed
     Given I navigate to "Registration" page
@@ -40,8 +40,8 @@ Feature: User - Email
     And I type group code "696"
     And I type password "popop"
     And I type confirm password "popop"
-    When I click Register me button
-    Given I get confirm message contains "Should be a valid email address"
+    And I click Register me button
+    Then message "Should be a valid email address" appears
 
   Scenario: Case insensitive
     Given I navigate to "Registration" page
@@ -51,8 +51,8 @@ Feature: User - Email
     And I type group code "696"
     And I type password "popop"
     And I type confirm password "popop"
-    When I click Register me button
-    Given I get confirm message contains "You have been Registered."
+    And I click Register me button
+    Then message "You have been Registered." appears
 
 
 

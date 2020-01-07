@@ -2,6 +2,7 @@ package definitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 //import jdk.nashorn.internal.ir.LiteralNode;
 import org.openqa.selenium.By;
@@ -41,15 +42,9 @@ public class UserGroupCode {
         getDriver().findElement(By.xpath("//*[@placeholder='Confirm Password']")).sendKeys(Cpass);
     }
 
-    @When("I click sign up button")
-    public void iClickSignUpButton()  {
-        getDriver().findElement(By.xpath("//*[@type='submit']")).click();
-
-    }
-
-    @Given("I get confirm message contains {string}")
-    public void iGetConfirmMessageContains(String text) throws Throwable {
-        Thread.sleep(7000);
+    @Then("message {string} appears")
+    public void messageAppears(String text) throws Throwable {
+        Thread.sleep(2000);
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
     }
 }
