@@ -1,2 +1,0 @@
-Feature: galina
-  Scenario: Slava

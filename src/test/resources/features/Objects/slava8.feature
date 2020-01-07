@@ -1,2 +1,0 @@
-Feature: :oihoij
-  Scenario: kjnl
