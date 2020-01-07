@@ -1,4 +1,0 @@
-Feature:
-  Scenario:
-  fgvbn
-  ghjkl
