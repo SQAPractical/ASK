@@ -42,14 +42,14 @@ public class UserGroupCode {
     }
 
     @When("I click sign up button")
-    public void iClickSignUpButton() throws InterruptedException {
+    public void iClickSignUpButton()  {
         getDriver().findElement(By.xpath("//*[@type='submit']")).click();
-        Thread.sleep(3000);
+
     }
 
     @Given("I get confirm message contains {string}")
-    public void iGetConfirmMessageContains(String text) {
-        String result = getDriver().findElement(By.xpath("//h4[contains(text(),'You have been Registered.')]")).getText();
-        assertThat(result.contains(text)).isTrue();
+    public void iGetConfirmMessageContains(String text) throws Throwable {
+        Thread.sleep(7000);
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
     }
 }
