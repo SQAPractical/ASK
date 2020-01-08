@@ -41,11 +41,11 @@ public class UserGroupCode {
         getDriver().findElement(By.xpath("//*[@placeholder='Confirm Password']")).sendKeys(Cpass);
     }
 
-    @When("I click sign up button")
-    public void iClickSignUpButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[@type='submit']")).click();
-        Thread.sleep(3000);
-    }
+//    @When("I click sign up button")
+//    public void iClickSignUpButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*[@type='submit']")).click();
+//        Thread.sleep(3000);
+//    }
 
     @Given("I get confirm message contains {string}")
     public void iGetConfirmMessageContains(String text) {
