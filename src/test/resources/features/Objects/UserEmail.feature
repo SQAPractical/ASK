@@ -53,7 +53,3 @@ Feature: User - Email
     And I type confirm password "popop"
     And I click Register me button
     Then message "You have been Registered." appears
-
-
-
-
