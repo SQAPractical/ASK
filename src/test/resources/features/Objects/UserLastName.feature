@@ -9,6 +9,7 @@ Feature: User-Last Name
     And I type password "12345"
     And I type confirm password "12345"
     Then I click Register me button
+    When I get confirm message contains "You have been Registered."
 
   @EndToEnd @Sanity
     Scenario: Last Name field required, can’t be empty
@@ -20,6 +21,8 @@ Feature: User-Last Name
       And I type password "12345"
       And I type confirm password "12345"
       Then I click Register me button
+      Then I get confirm message contains "This field is required"
+    
 
   @EndToEnd @Sanity
     Scenario: White spaces are not allowed
@@ -31,7 +34,7 @@ Feature: User-Last Name
       And I type password "12345"
       And I type confirm password "12345"
       Then I click Register me button
-
+      Then I get confirm message contains "Whitespaces are not allowed"
 
   @EndToEnd @Sanity
     Scenario: Max 254 characters (When the First name 1 char)
@@ -43,6 +46,7 @@ Feature: User-Last Name
       And I type password "12345"
       And I type confirm password "12345"
       Then I click Register me button
+      Then I get confirm message contains "You have been Registered."
 
 
   @EndToEnd @Sanity
@@ -55,6 +59,7 @@ Feature: User-Last Name
       And I type password "12345"
       And I type confirm password "12345"
       Then I click Register me button
+      Then I get confirm message contains "This field are not allowed more than 254 characters"
 
 
   @EndToEnd @Sanity
@@ -67,6 +72,8 @@ Feature: User-Last Name
       And I type password "12345"
       And I type confirm password "12345"
       Then I click Register me button
+      Then I get confirm message contains "You have been Registered."
+
 
 
 
