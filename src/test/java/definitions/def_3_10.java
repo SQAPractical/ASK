@@ -53,7 +53,7 @@ public class def_3_10 {
         Thread.sleep(3000);
     }
 
-    @And("^I type confirm password \"([^\"]*)\"$")
+   // @And("^I type confirm password \"([^\"]*)\"$")
     public void iTypeConfirmPassword(String ConfirmPass) throws Throwable {
         getDriver().findElement(By.xpath("//*[@placeholder='Confirm Password']")).sendKeys(ConfirmPass);
 
