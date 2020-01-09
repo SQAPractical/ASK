@@ -2,9 +2,11 @@ package definitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static support.TestContext.getDriver;
 
 public class SingleChoiceQuestion {
@@ -81,5 +83,10 @@ public class SingleChoiceQuestion {
     @And("I click Save button")
     public void iClickSaveButton() {
         getDriver().findElement(By.xpath("//div[@class='form-controls-container ng-star-inserted']//button[2]")).click();
+    }
+
+    @Then("I get error message contains {string}")
+    public void iGetErrorMessageContains(String message) {
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(), 'This field is required')]")).isDisplayed()).isTrue();
     }
 }
