@@ -12,7 +12,7 @@ import static support.TestContext.getDriver;
 public class SingleChoiceQuestion {
     @Given("I navigate to {string}")
     public void iNavigateTo(String arg0) {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
+        getDriver().get(arg0);
     }
 
     @When("I type  email {string}")
@@ -45,7 +45,7 @@ public class SingleChoiceQuestion {
 
     @And("I type title of the quiz {string}")
     public void iTypeTitleOfTheQuiz(String Quest) throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[@formcontrolname=\"name\"]")).sendKeys(Quest);
+        getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(Quest);
         Thread.sleep(3000);
     }
 
@@ -67,26 +67,34 @@ public class SingleChoiceQuestion {
 
     @And("I type Option#{int} {string}")
     public void iTypeOption(int arg0, String Opt1) {
-        getDriver().findElement(By.xpath("//*[@id=\"mat-input-2\"]")).sendKeys(Opt1);
+        getDriver().findElement(By.xpath("//*[@placeholder='Option 1*']")).sendKeys(Opt1);
     }
 
     @And("I type Second Option {string}")
     public void iTypeSecondOption(String Opt2) {
-        getDriver().findElement(By.xpath("//*[@id=\"mat-input-3\"]")).sendKeys(Opt2);
+        getDriver().findElement(By.xpath("//*[@placeholder='Option 2*']")).sendKeys(Opt2);
     }
 
     @And("I click Option{int} radio-button")
     public void iClickOptionRadioButton(int arg0) {
-        getDriver().findElement(By.xpath("/html[1]/body[1]/ac-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/ac-quiz-builder-page[1]/form[1]/main[1]/mat-accordion[1]/mat-expansion-panel[1]/div[1]/div[1]/ac-question-body-form[1]/div[1]/div[2]/div[1]/mat-radio-group[2]/mat-radio-button[1]/label[1]/div[1]/div[1]")).click();
+        getDriver().findElement(By.xpath("//*[@placeholder='Option 1*']/../../../../..//*[@class=\"mat-radio-outer-circle\"]")).click();
     }
 
     @And("I click Save button")
     public void iClickSaveButton() {
-        getDriver().findElement(By.xpath("//div[@class='form-controls-container ng-star-inserted']//button[2]")).click();
+        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
     }
 
     @Then("I get error message contains {string}")
     public void iGetErrorMessageContains(String message) {
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(), 'This field is required')]")).isDisplayed()).isTrue();
+    }
+
+    @Then("Quiz is saved with {string} text in question")
+    public void quizIsSavedWithTextInQuestion(String text) throws Throwable {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Single Question - Allowable characters: Alphanumeric & Sp. characters')]")).click();
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Single Question - Allowable characters: Alphanumeric & Sp. characters')]/../../..//*[contains(text(), 'Preview')]")).click();
+        assertThat(getDriver().findElement(By.xpath("//h3[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
     }
 }
