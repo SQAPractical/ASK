@@ -65,7 +65,3 @@ Feature: Single Choice Question- Text
     And I type Second Option "B"
     And I click Option2 radio-button
     And I click Save button
-
-
-
-

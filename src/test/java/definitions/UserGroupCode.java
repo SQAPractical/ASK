@@ -48,7 +48,8 @@ public class UserGroupCode {
 //    }
 
     @Given("I get confirm message contains {string}")
-    public void iGetConfirmMessageContains(String text) {
+    public void iGetConfirmMessageContains(String text) throws Throwable {
+        Thread.sleep(2000);
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
     }
 }
