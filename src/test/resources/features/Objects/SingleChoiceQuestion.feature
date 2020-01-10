@@ -17,7 +17,6 @@ Feature: Single Choice Question- Text
     And I click Save button
     Then Quiz is saved with "Alphanum8eric Te$t" text in question
 
-
   Scenario: Single Choice Question - The field is required
     Given I navigate to "http://ask-stage.portnov.com/#/login"
     When I type  email "baruhnazar@gmail.com"
@@ -49,6 +48,7 @@ Feature: Single Choice Question- Text
     And I type Second Option "B"
     And I click Option2 radio-button
     And I click Save button
+    Then Quiz is saved with "Single Question - Min 1 Characters" text in question
 
   Scenario: Single Choice Question - Max 1000 characters
     Given I navigate to "http://ask-stage.portnov.com/#/login"
@@ -65,6 +65,7 @@ Feature: Single Choice Question- Text
     And I type Second Option "B"
     And I click Option2 radio-button
     And I click Save button
+    Then Quiz is saved with "Single Question - Max 1000 characters" text in question
 
 
 

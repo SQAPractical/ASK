@@ -17,17 +17,17 @@ public class SingleChoiceQuestion {
 
     @When("I type  email {string}")
     public void iTypeEmail(String Email) {
-        getDriver().findElement(By.xpath("//*[@formcontrolname=\"email\"]")).sendKeys(Email);
+        getDriver().findElement(By.xpath("//*[@placeholder='Email *']")).sendKeys(Email);
     }
 
     @And("I type  password {string}")
     public void iTypePassword(String Pass) {
-        getDriver().findElement(By.xpath("//*[@formcontrolname=\"password\"]")).sendKeys(Pass);
+        getDriver().findElement(By.xpath("//*[@placeholder='Password *']")).sendKeys(Pass);
     }
 
     @And("I click Login button")
     public void iClickLoginButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//button[@class='mat-raised-button mat-primary']")).click();
+        getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
         Thread.sleep(3000);
     }
 
@@ -39,7 +39,7 @@ public class SingleChoiceQuestion {
 
     @And("I click button Create New Quiz")
     public void iClickButtonCreateNewQuiz() throws InterruptedException {
-        getDriver().findElement(By.xpath("//div[@class='controls']//button[@class='mat-raised-button mat-primary']")).click();
+        getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
         Thread.sleep(3000);
     }
 
@@ -51,18 +51,19 @@ public class SingleChoiceQuestion {
 
     @And("I click Add Question button")
     public void iClickAddQuestionButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//mat-icon[@class='mat-icon material-icons']")).click();
+        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//span[1]")).click();
         Thread.sleep(3000);
     }
 
     @And("I click Single choice radio-button")
-    public void iClickSingleChoiceRadioButton() {
+    public void iClickSingleChoiceRadioButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//div[contains(text(),'Single-Choice')]")).click();
+        Thread.sleep(3000);
     }
 
     @And("I type Question {string}")
     public void iTypeQuestion(String QuestTex) {
-        getDriver().findElement(By.xpath("//*[@formcontrolname=\"question\"]")).sendKeys(QuestTex);
+        getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(QuestTex);
     }
 
     @And("I type Option#{int} {string}")
@@ -92,7 +93,7 @@ public class SingleChoiceQuestion {
 
     @Then("Quiz is saved with {string} text in question")
     public void quizIsSavedWithTextInQuestion(String text) throws Throwable {
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Single Question - Allowable characters: Alphanumeric & Sp. characters')]")).click();
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Single Question - Allowable characters: Alphanumeric & Sp. characters')]/../../..//*[contains(text(), 'Preview')]")).click();
         assertThat(getDriver().findElement(By.xpath("//h3[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
