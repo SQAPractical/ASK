@@ -53,11 +53,6 @@ public class def_3_10 {
         Thread.sleep(3000);
     }
 
-   // @And("^I type confirm password \"([^\"]*)\"$")
-    public void iTypeConfirmPassword(String ConfirmPass) throws Throwable {
-        getDriver().findElement(By.xpath("//*[@placeholder='Confirm Password']")).sendKeys(ConfirmPass);
-
-    }
 
     @And("^I click Register me button$")
     public void iClickRegisterMeButton() throws Throwable {
@@ -66,7 +61,7 @@ public class def_3_10 {
 
     @Then("^\"([^\"]*)\" message appears$")
     public void messageAppears(String message) throws Throwable {
-        Thread.sleep(2000);
+        Thread.sleep(12000);
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+message+"')]")).isDisplayed()).isTrue();
     }
 }

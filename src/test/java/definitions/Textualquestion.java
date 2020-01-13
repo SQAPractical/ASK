@@ -9,14 +9,18 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static support.TestContext.getDriver;
 
+public class Textualquestion {
 
-public class ChoiceQuestion {
-
+    @Given("I navigate to page{string}")
+    public void iNavigateToPage(String arg0) {
+        getDriver().get("http://ask-stage.portnov.com/#/login");
+    }
 
     @When("I type  email {string}")
     public void iTypeEmail(String Email) {
         getDriver().findElement(By.xpath("//*[@formcontrolname=\"email\"]")).sendKeys(Email);
     }
+
 
     @And("I type  password {string}")
     public void iTypePassword(String Pass) {
@@ -100,9 +104,10 @@ public class ChoiceQuestion {
     public void iClickTextualRadioButton() {
         getDriver().findElement(By.xpath("//div[contains(text(),'Textual')]")).click();
     }
-
-    @Given("I navigate to page{string}")
-    public void iNavigateToPage(String arg0) {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
-    }
 }
+
+
+
+
+
+
