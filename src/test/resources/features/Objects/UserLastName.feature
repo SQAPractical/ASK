@@ -1,5 +1,6 @@
-@EndToEnd @Sanity
+@Regression
 Feature: User-Last Name
+  @Acceptance
   Scenario: Allowable characters: Alphanumeric $ Special characters
     Given I navigate to "Registration" page
     When I type first name "Oleks"
@@ -11,7 +12,7 @@ Feature: User-Last Name
     Then I click Register me button
     When I get confirm message contains "You have been Registered."
 
-  @EndToEnd @Sanity
+  @Acceptance
     Scenario: Last Name field required, can’t be empty
       Given I navigate to "Registration" page
       When I type first name "Oleks"

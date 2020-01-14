@@ -1,5 +1,5 @@
 Feature: Single Choice Question- Text
-
+  @Sanity
   Scenario: Alphanumeric & Sp. characters
     Given I navigate to "http://ask-stage.portnov.com/#/login"
     When I type  email "baruhnazar@gmail.com"
