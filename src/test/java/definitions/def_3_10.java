@@ -53,6 +53,7 @@ public class def_3_10 {
         Thread.sleep(3000);
     }
 
+
     @And("^I click Register me button$")
     public void iClickRegisterMeButton() throws Throwable {
         getDriver().findElement(By.xpath("//span[contains(text(),'Register Me')]")).click();

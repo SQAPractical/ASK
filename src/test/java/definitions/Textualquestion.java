@@ -9,16 +9,18 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static support.TestContext.getDriver;
 
-public class SingleChoiceQuestion {
-    @Given("I navigate to {string}")
-    public void iNavigateTo(String arg0) {
-        getDriver().get(arg0);
+public class Textualquestion {
+
+    @Given("I navigate to page{string}")
+    public void iNavigateToPage(String arg0) {
+        getDriver().get("http://ask-stage.portnov.com/#/login");
     }
 
     @When("I type  email {string}")
     public void iTypeEmail(String Email) {
         getDriver().findElement(By.xpath("//*[@formcontrolname=\"email\"]")).sendKeys(Email);
     }
+
 
     @And("I type  password {string}")
     public void iTypePassword(String Pass) {
@@ -95,6 +97,17 @@ public class SingleChoiceQuestion {
         Thread.sleep(2000);
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Single Question - Allowable characters: Alphanumeric & Sp. characters')]")).click();
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Single Question - Allowable characters: Alphanumeric & Sp. characters')]/../../..//*[contains(text(), 'Preview')]")).click();
-        assertThat(getDriver().findElement(By.xpath("//h3[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
+        assertThat(getDriver().findElement(By.xpath("//h3[contains(text(),'" + text + "')]")).isDisplayed()).isTrue();
+    }
+
+    @And("I click Textual radio-button")
+    public void iClickTextualRadioButton() {
+        getDriver().findElement(By.xpath("//div[contains(text(),'Textual')]")).click();
     }
 }
+
+
+
+
+
+

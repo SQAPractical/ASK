@@ -1,21 +1,18 @@
 Feature: Single Choice Question- Text
 
   Scenario: Alphanumeric & Sp. characters
-    Given I navigate to "http://ask-stage.portnov.com/#/login"
-    When I type  email "baruhnazar@gmail.com"
-    And I type  password "159357"
+    Given I navigate to page"http://ask-stage.portnov.com/#/login"
+    When I type  email "vkalinchuk@gmail.com"
+    And I type  password "080808kv"
     And I click Login button
     And I click button Quizzes
     And I click button Create New Quiz
-    And I type title of the quiz "Single Question - Allowable characters: Alphanumeric & Sp. characters"
+    And I type title of the quiz "abc"
     And I click Add Question button
-    And I click Single choice radio-button
-    And I type Question "Alphanum8eric Te$t"
-    And I type Option#1 "A - Correct Answer"
-    And I type Second Option "B"
-    And I click Option2 radio-button
+    And I click Textual radio-button
+    And I type Question "what is 2"
     And I click Save button
-    Then Quiz is saved with "Alphanum8eric Te$t" text in question
+    Then Quiz is saved with "what is 2" text in question
 
 
   Scenario: Single Choice Question - The field is required
@@ -64,4 +61,3 @@ Feature: Single Choice Question- Text
     And I type Option#1 "A - Correct Answer"
     And I type Second Option "B"
     And I click Option2 radio-button
-    And I click Save button
