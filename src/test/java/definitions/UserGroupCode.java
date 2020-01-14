@@ -59,10 +59,6 @@ public class UserGroupCode {
         String result = getDriver().findElement(By.xpath("//*[contains(text(),'This field is required')]")).getText();
         assertThat(result.contains(text)).isTrue();}
 
-    @Then("I get error message contains {string}")
-    public void iGetErrorMessageContains(String text) {
-        String result = getDriver().findElement(By.xpath("//*[contains(text(),'Whitespaces are not allowed')]")).getText();
-        assertThat(result.contains(text)).isTrue();}
 
     @Then("I get alert message contains {string}")
     public void iGetAlertMessageContains(String text) {
