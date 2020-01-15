@@ -1,13 +1,13 @@
 package definitions;
 
-        import cucumber.api.java.en.And;
-        import cucumber.api.java.en.Given;
-        import cucumber.api.java.en.Then;
-        import cucumber.api.java.en.When;
-        import org.openqa.selenium.By;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
 
-        import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-        import static support.TestContext.getDriver;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static support.TestContext.getDriver;
 
 public class SingleChoice {
     @Given("I navigate to {string}")
@@ -55,49 +55,10 @@ public class SingleChoice {
         Thread.sleep(3000);
     }
 
-    @And("I click Single choice radio-button")
-    public void iClickSingleChoiceRadioButton() {
-        getDriver().findElement(By.xpath("//div[contains(text(),'Single-Choice')]")).click();
-    }
-
-    @And("I type Question {string}")
-    public void iTypeQuestion(String QuestTex) {
-        getDriver().findElement(By.xpath("//*[@formcontrolname=\"question\"]")).sendKeys(QuestTex);
-    }
-
-    @And("I type Option#{int} {string}")
-    public void iTypeOption(int arg0, String Opt1) {
-        getDriver().findElement(By.xpath("//*[@placeholder='Option 1*']")).sendKeys(Opt1);
-    }
-
-    @And("I type Second Option {string}")
-    public void iTypeSecondOption(String Opt2) {
-        getDriver().findElement(By.xpath("//*[@placeholder='Option 2*']")).sendKeys(Opt2);
-    }
-
-    @And("I click Option{int} radio-button")
-    public void iClickOptionRadioButton(int arg0) {
-        getDriver().findElement(By.xpath("//*[@placeholder='Option 1*']/../../../../..//*[@class=\"mat-radio-outer-circle\"]")).click();
-    }
-
-    @And("I click Save button")
-    public void iClickSaveButton() throws Throwable {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
+    @And("I click Add Option button")
+    public void iClickAddOptionButton() throws InterruptedException {
+        getDriver().findElement(By.xpath("//span[@class='mat-content']/../..//span[contains(text(),'Add Option')]")).click();
         Thread.sleep(3000);
     }
 
-    @Then("I get error message contains {string}")
-    public void iGetErrorMessageContains(String message) {
-        assertThat(getDriver().findElement(By.xpath("//*[contains(text(), 'This field is required')]")).isDisplayed()).isTrue();
-    }
-
-    @Then("Quiz is saved with {string} text in question")
-    public void quizIsSavedWithTextInQuestion(String text) throws Throwable {
-        Thread.sleep(3000);
-        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Single Question - Allowable characters: Alphanumeric & Sp. characters')]")).click();
-        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Single Question - Allowable characters: Alphanumeric & Sp. characters')]/../../..//*[contains(text(), 'Preview')]")).click();
-        Thread.sleep(3000);
-        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
-
-    }
 }
