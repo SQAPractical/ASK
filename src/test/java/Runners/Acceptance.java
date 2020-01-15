@@ -11,9 +11,9 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber/report.json"},
         features = "src/test/resources/features",
         glue = {"definitions", "support"},
-        tags = {"@Regression"} // same as VM option -Dcucumber.options="--tags @predefined"
+        tags = {"@Acceptance"} // same as VM option -Dcucumber.options="--tags @predefined"
 )
-public class Regression {
+public class Acceptance {
 
 }
 

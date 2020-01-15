@@ -2,6 +2,7 @@ package definitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 //import jdk.nashorn.internal.ir.LiteralNode;
 import org.openqa.selenium.By;
@@ -52,5 +53,17 @@ public class UserGroupCode {
         Thread.sleep(3000);
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
     }
+
+    @Then("I get message contains {string}")
+    public void iGetMessageContains(String text) {
+        String result = getDriver().findElement(By.xpath("//*[contains(text(),'This field is required')]")).getText();
+        assertThat(result.contains(text)).isTrue();}
+
+
+    @Then("I get alert message contains {string}")
+    public void iGetAlertMessageContains(String text) {
+        String result = getDriver().findElement(By.xpath("//*[contains(text(), 'Entered passwords should match')]")).getText();
+        assertThat(result.contains(text)).isTrue();}
+
 }
 

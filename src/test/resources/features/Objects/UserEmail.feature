@@ -8,18 +8,18 @@ Feature: User - Email
     And I type password "popop"
     And I type confirm password "popop"
     And I click Register me button
-    Then message "You have been Registered." appears
+    Then I get confirm message contains "You have been Registered."
 
   Scenario: Email field required, can’t be empty
     Given I navigate to "Registration" page
     When I type first name "Nazik"
     And I type last name "Baruch"
-    And I type email "778777@gmail.com"
+#    And I type email "778777@gmail.com"
     And I type group code "696"
     And I type password "popop"
     And I type confirm password "popop"
     And I click Register me button
-    Then message "You have been Registered." appears
+    Then I get confirm message contains "This field is required"
 
   Scenario: Local port with 64 characters on the left of an @ domain on the right with 63 characters followed by (.)  with 63 characters in last part of domain
     Given I navigate to "Registration" page
@@ -30,7 +30,7 @@ Feature: User - Email
     And I type password "popop"
     And I type confirm password "popop"
     And I click Register me button
-    Then message "You have been Registered." appears
+    Then I get confirm message contains "You have been Registered."
 
   Scenario: White spaces are not allowed
     Given I navigate to "Registration" page
@@ -41,7 +41,7 @@ Feature: User - Email
     And I type password "popop"
     And I type confirm password "popop"
     And I click Register me button
-    Then message "Should be a valid email address" appears
+    Then I get confirm message contains "You have been Registered."
 
   Scenario: Case insensitive
     Given I navigate to "Registration" page
@@ -52,4 +52,4 @@ Feature: User - Email
     And I type password "popop"
     And I type confirm password "popop"
     And I click Register me button
-    Then message "You have been Registered." appears
+    Then I get confirm message contains "You have been Registered."
