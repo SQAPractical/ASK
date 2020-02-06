@@ -5,7 +5,7 @@
 1. Cut your own branch from `master` locally, typing:
     `git checkout -b name_of_your_branch`
     and create remote copy
-    `git checkout  name_of_your_branch`
+    `git push --set-upstream origin name_of_your_branch`
     The name of your local branch must match the name of your remote branch.
         Example (You can see in terminal):
         `* [new branch]      nik -> nik`
@@ -45,6 +45,6 @@
     Being on your branch, type `git push`
 
 12. Once you collected all the changes on your remote branch,
-    you can go ahead and create Pull request in GitHub.
+    you can go ahead and create Pull request on GitHub.
 
 13. Repeat steps 3-12 for each complete task
