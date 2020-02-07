@@ -1,0 +1,1 @@
+alah akbar
