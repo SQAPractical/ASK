@@ -1,2 +1,4 @@
 jfjhgfhgf
-  jjvnbv
+  This line changed
+
+  // And this line is new
