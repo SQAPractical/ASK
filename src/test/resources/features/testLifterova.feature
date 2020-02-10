@@ -1,3 +1,0 @@
-bananas
-  nn
-  g
