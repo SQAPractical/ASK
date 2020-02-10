@@ -1,4 +1,4 @@
 Feature: test
-  Scenario: fixing? conflicts!!!
+  Scenario: CHENGASE
     Scenario: You too
 
