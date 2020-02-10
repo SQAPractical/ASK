@@ -1,4 +1,3 @@
 Feature: test
-  Scenario: test
-    Scenario: test 123
-
+  Scenario: CHENGASE
+    Scenario: You too
