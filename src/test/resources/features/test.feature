@@ -1,4 +1,4 @@
 Feature: test
-  Scenario: fixing? conflicts!!!
-    Scenario: You too
+  Scenario: test
+    Scenario: test 123
 
