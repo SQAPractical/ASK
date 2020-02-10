@@ -1,2 +1,2 @@
 Feature: test
-  Scenario: fixing conflicts
+  Scenario: Have a good day!
