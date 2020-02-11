@@ -1,1 +1,0 @@
-alah akbar

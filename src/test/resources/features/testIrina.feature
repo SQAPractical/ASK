@@ -1,3 +1,0 @@
-hbdcebfck
-  kjbvfjd
-  ldvnlksg
