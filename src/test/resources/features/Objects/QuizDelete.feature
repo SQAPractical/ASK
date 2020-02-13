@@ -19,7 +19,18 @@ Feature: Quiz - delete
     Then appears "Are you sure want to DELETE whole quiz? This action cannot be undone!" message
     And I click on Delete button in the right corner
 
-Feature: Quiz - delete
 
   Scenario: Quiz - Delete - Delete unsaved Quiz using "Back to Quizzes list" button.
-    Given I open login page
+    Given I navigate to login page
+    And I type email "kojixap444@allmtr.com" on login page
+    And I type password "109876" on password field
+    And I push sign in button
+    And I select the quiz menu
+    And I push Create New Quiz button
+    Then I type "Alla Tester1" in title
+    And push "Add Question" button
+    And push "Textual" radio button.
+    And I type question "Why regression testing is important?"
+    When I click on Back To Quizzes List button
+    Then "You have unsaved changes in your Quiz. Would you like to leave Quiz and discard changes?" message pops up
+    And I choose and click on Discard button.
