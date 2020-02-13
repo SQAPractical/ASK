@@ -2,7 +2,7 @@ Feature: User - First name
 
   Scenario Outline: User - First name - Alphanumeric and special char
     Given I open registration page
-    And I type first name "<FirstName>"
+    When I type first name "<FirstName>"
     And I type last name "I"
     And I type email "example@gmail.com"
     And I type group code "ABC"

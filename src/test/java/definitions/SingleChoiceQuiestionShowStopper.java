@@ -1,4 +1,4 @@
-package definifions;
+package definitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -13,10 +13,6 @@ import static support.TestContext.getDriver;
 
 public class SingleChoiceQuiestionShowStopper {
 
-    @Given("I open login page")
-    public void iOpenLoginPage() {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
-    }
 
     @And("I click Sign in button")
     public void iClickSignInButton() {
@@ -47,11 +43,6 @@ public class SingleChoiceQuiestionShowStopper {
     @Then("element with xpath {string} should be displayed")
     public void elementWithXpathShouldBeDisplayed(String xpath) {
         assertThat(getDriver().findElement(By.xpath(xpath)).isDisplayed()).isTrue();
-    }
-
-    @Then("^I wait for (\\d+) sec$")
-    public void iWaitForSec(int sec) throws Exception {
-        Thread.sleep(sec * 1000);
     }
 
     @When("I type text {string} to the element with xpath {string}")
