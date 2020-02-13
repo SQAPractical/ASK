@@ -9,6 +9,7 @@ Feature: Single-choice Question - Show-Stopper
 #    Select "Quizzes" from the menu ==> Click on "Create New Quiz" button
     And I click to the element with xpath "//*[contains(@href,'quizzes')]"
     And I click to the element with xpath "//span[contains(text(),'Create New Quiz')]/../../button"
+    And I wait for 2 sec
     Then element with xpath "//*[@placeholder='Title Of The Quiz *']" should be displayed
 
 #    Enter the quiz name in the field. ===> Title of the quiz: ..... ===> Scenario  Click on "Add Question"
