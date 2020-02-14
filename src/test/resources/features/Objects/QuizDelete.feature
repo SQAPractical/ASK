@@ -20,6 +20,7 @@ Feature: Quiz - delete
     And I click on Delete button in the right corner
 
 
+
   Scenario: Quiz - Delete - Delete unsaved Quiz using "Back to Quizzes list" button.
     Given I navigate to login page
     And I type email "kojixap444@allmtr.com" on login page
@@ -34,3 +35,32 @@ Feature: Quiz - delete
     When I click on Back To Quizzes List button
     Then "You have unsaved changes in your Quiz. Would you like to leave Quiz and discard changes?" message pops up
     And I choose and click on Discard button.
+
+
+Scenario: :  Quiz - Delete. Teacher 2 deletes Quiz created by Teacher 1.
+  Given I go to login page
+  And I type "kojixap444@allmtr.com" email
+  And I type "109876" password
+  When I click sign in button
+  And I'm waiting for 2 seconds
+  And I'm selected Quizzes menu
+  And I'm pushing Create New Quiz button
+  And I write "Alla Tester2" title
+  And I click on button Add Question
+  And I push Textual radio button.
+  And I type "Why smoke testing is important?"
+  And Check "Is "Show-Stopper" question?"
+  And I push Save Button
+  When I click on Log out button
+  Then message "Are you sure want to Log Out?"  appears
+  And I click on button  Log Out button
+  And I type "onc@hemetapartments.com" in email field
+  And I type "54321" in password field
+  And next I click Sign in Button
+  Then I am in main page of second teacher
+  And I select and click "Quizzes" option from Mane Menu
+  And select quiz "Alla Tester2"
+  And I submit Delete button
+
+
+
