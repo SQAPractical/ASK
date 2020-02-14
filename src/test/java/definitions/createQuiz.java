@@ -10,7 +10,7 @@ import static support.TestContext.getDriver;
 public class createQuiz {
     @Given("I open my login page")
     public void iOpenMyLoginPage() {
-getDriver().get("http://ask-stage.portnov.com/#/login");
+        getDriver().get("http://ask-stage.portnov.com/#/login");
     }
 
     @Then("I type my email {string}")
@@ -64,14 +64,14 @@ getDriver().get("http://ask-stage.portnov.com/#/login");
 
 
     @And("type {string} into {string}")
-    public void typeInto(String quiztitle, String field) {
-        getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(quiztitle);
+    public void typeInto(String title, String field) {
+        getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(title);
     }
 
 
     @Then("I use button which contains {string}")
     public void iUseButtonWhichContains(String click) {
-        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//span[1]")).click();
+        getDriver().findElement(By.xpath("//*[@class='controls ng-star-inserted']//span[1]")).click();
     }
 
     @And("I wait for  {int} seconds")
@@ -82,7 +82,7 @@ getDriver().get("http://ask-stage.portnov.com/#/login");
 
     @Then("I click radio-button {string}")
     public void iClickRadioButton(String click) {
-        getDriver().findElement(By.xpath("//div[contains(text(),'Single-Choice')]/..//div[@class='mat-radio-outer-circle']")).click();
+        getDriver().findElement(By.xpath("//div[contains(text(),'Single-Choice')]/..//div[@class='mat-radio-inner-circle']")).click();
 
     }
 
@@ -112,7 +112,7 @@ getDriver().get("http://ask-stage.portnov.com/#/login");
 
     @Then("I click {string} radio-button")
     public void iClickRadioButtonOption2(String clickOption2) {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Option 2*')]/../../../../../..//*[@class='mat-radio-outer-circle']")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(),'Option 2*')]/../../../../../..//*[@class='mat-radio-inner-circle']")).click();
 
     }
 

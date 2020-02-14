@@ -7,13 +7,14 @@ Feature: Create Single-Choice Question
     Then I click button "Sign in"
     And I wait here for 2 seconds
     Then I use button "Quizzes"
-    And I get page Quizzes "http://ask-stage.portnov.com/#/quizzes"
+#    And I get page Quizzes "http://ask-stage.portnov.com/#/quizzes"
     And I wait on page 2 seconds
     Then I click on button "Create New Quiz"
-    Then I wait for page "http://ask-stage.portnov.com/#/quiz-builder"
+    And I wait on page 2 seconds
+#    Then I wait for page "http://ask-stage.portnov.com/#/quiz-builder"
     And type "qwert" into "Title Of The Quiz"
     Then I use button which contains "Add Question"
-    And I wait for  2 seconds
+    And I wait on page 2 seconds
     Then I click radio-button "Single-Choice"
     And type text"qwertyuio sdfg" into "Question Required Field"
     And I stay on page 2 seconds
