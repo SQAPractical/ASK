@@ -2,11 +2,11 @@ Feature: Create Single-Choice Question
 
   Scenario: Create Quiz
     Given I open my login page
-    Then I type my email "larisa.baishenko@gmail.com"
+    When I type my email "larisa.baishenko@gmail.com"
     And I type my password "1234567"
-    Then I click button "Sign in"
+    And I click button "Sign in"
     And I wait here for 2 seconds
-    Then I use button "Quizzes"
+    And I use button "Quizzes"
 #    And I get page Quizzes "http://ask-stage.portnov.com/#/quizzes"
     And I wait on page 2 seconds
     Then I click on button "Create New Quiz"
