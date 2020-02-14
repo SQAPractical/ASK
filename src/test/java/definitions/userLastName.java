@@ -3,13 +3,15 @@ package definitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class userFirstName {
+
+public class userLastName {
     @Given("I open login page")
     public void iOpenLoginPage() {
         getDriver().get("http://ask-stage.portnov.com/#/login");
@@ -70,4 +72,5 @@ public class userFirstName {
         time = time * 1000;
         Thread.sleep(time);
     }
+
 }
