@@ -6,7 +6,6 @@ Feature: Textual Question Edit
     And I enter "test@mailinator.com" as login
     And I enter "12345" as password
     And I click SignIn button
-    And wait for 3 seconds for page to load
     And I go to Quizzes section
     And I click CreateNewQuiz button
     And I enter "TestQuiz" as a quiz title
@@ -15,7 +14,7 @@ Feature: Textual Question Edit
     And I enter "Question1" as a text of the question
     And I click Save button
     And I click on "TestQuiz"
-    And I click on Edit button
+    And I click Edit button in "TestQuiz"
     And I add "?" character at the end of existing question
     And I click Save button
     And I click on "TestQuiz"
@@ -29,7 +28,6 @@ Feature: Textual Question Edit
     And I enter "test@mailinator.com" as login
     And I enter "12345" as password
     And I click SignIn button
-    And wait for 3 seconds for page to load
     And I go to Quizzes section
     And I click CreateNewQuiz button
     And I enter "TestQuiz" as a quiz title
@@ -38,7 +36,7 @@ Feature: Textual Question Edit
     And I enter "Question1" as a text of the question
     And I click Save button
     And I click on "TestQuiz"
-    And I click on Edit button
+    And I click Edit button in "TestQuiz"
     And I change text of the question to "NewQuestion"
     And I click Save button
     And I click on "TestQuiz"
@@ -52,7 +50,6 @@ Feature: Textual Question Edit
       And I enter "test@mailinator.com" as login
       And I enter "12345" as password
       And I click SignIn button
-      And wait for 3 seconds for page to load
       And I go to Quizzes section
       And I click CreateNewQuiz button
       And I enter "TestQuiz" as a quiz title
@@ -61,7 +58,7 @@ Feature: Textual Question Edit
       And I enter "Question1" as a text of the question
       And I click Save button
       And I click on "TestQuiz"
-      And I click on Edit button
+      And I click Edit button in "TestQuiz"
       And I copy and paste question title twice
       And I click Save button
       And I click on "TestQuiz"
@@ -75,7 +72,6 @@ Feature: Textual Question Edit
         And I enter "test@mailinator.com" as login
         And I enter "12345" as password
         And I click SignIn button
-        And wait for 3 seconds for page to load
         And I go to Quizzes section
         And I click CreateNewQuiz button
         And I enter "TestQuiz" as a quiz title
@@ -84,7 +80,7 @@ Feature: Textual Question Edit
         And I enter "Question1" as a text of the question
         And I click Save button
         And I click on "TestQuiz"
-        And I click on Edit button
+        And I click Edit button in "TestQuiz"
         And I erase question title
         And I click Save button
         Then I verify that error message appears "Quiz is not completed. Check highlighted with" ...

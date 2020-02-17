@@ -34,13 +34,12 @@ public class TextualQuestionEdit {
     @And("I click SignIn button")
     public void iClickSignInButton() {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
-
+        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'Quizzes')]")));
         }
 
     @And("I go to Quizzes section")
     public void iGoToQuizzesSection() {
         getDriver().findElement(By.xpath("//*[contains(text(),'Quizzes')]")).click();
-
     }
 
     @And("I click CreateNewQuiz button")
@@ -60,9 +59,10 @@ public class TextualQuestionEdit {
     }
 
     @And("I select Question type as textual")
-    public void iSelectQuestionTypeAsTextual() {
+    public void iSelectQuestionTypeAsTextual() throws Throwable {
         new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'Textual')]")));
-        getDriver().findElement(By.xpath("//*[@class='mat-expansion-panel-body']//*[contains(text(),'Textual')]")).click();
+        Thread.sleep(1000);
+        getDriver().findElement(By.xpath("//*[contains(text(),'Textual')]/..")).click();
     }
 
     @And("I enter {string} as a text of the question")
@@ -72,14 +72,8 @@ public class TextualQuestionEdit {
     }
 
     @And("I click Save button")
-    public void iClickSaveButton() throws Throwable {
+    public void iClickSaveButton() {
         getDriver().findElement(By.xpath("//div[@class='form-controls-container ng-star-inserted']//button[2]")).click();
-        Thread.sleep(5000);
-    }
-
-    @And("I click on Edit button")
-    public void iClickOnEditButton() {
-        getDriver().findElement(By.xpath("//*//mat-panel-title[contains(text(),'TestQuiz')]/../../..//*[contains(text(),'Edit')]")).click();
     }
 
     @And("I change text of the question to {string}")
@@ -95,17 +89,10 @@ public class TextualQuestionEdit {
     }
 
 
-    @And("wait for {int} seconds for page to load")
-    public void waitForSecondsForPageToLoad(int delay) throws Throwable {
-      delay = delay * 1000;
-        Thread.sleep(delay);
-
-    }
-
     @And("I click on {string}")
     public void iClickOn(String quizName) {
         new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*//mat-panel-title[contains(text(),'"+quizName+"')]")));
-        getDriver().findElement(By.xpath("//*//mat-panel-title[contains(text(),'"+quizName+"')]")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+quizName+"')]")).click();
        }
 
 
@@ -119,19 +106,16 @@ public class TextualQuestionEdit {
 
     @And("I clean up after myself - deleting created quiz {string}")
     public void iCleanUpAfterMyselfDeletingCreatedQuiz(String qdelete) throws Throwable {
-        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*//mat-panel-title[contains(text(),'"+qdelete+"')]")));
-        getDriver().findElement(By.xpath("//*//mat-panel-title[contains(text(),'"+qdelete+"')]/../../..//*[contains(text(),'Delete')]")).click();
+        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'"+qdelete+"')]")));
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+qdelete+"')]/../../..//*[contains(text(),'Delete')]")).click();
         getDriver().findElement(By.xpath("//mat-dialog-container//*[contains(text(),'Delete')]")).click();
-        Thread.sleep(5000);
-
+        Thread.sleep(3000);
     }
 
     @And("I add {string} character at the end of existing question")
     public void iAddCharacterAtTheEndOfExistingQuestion(String qmark) {
         getDriver().findElement(By.xpath("//mat-panel-title/..")).click();
         getDriver().findElement(By.xpath("//*[@formcontrolname='question']")).sendKeys(qmark);
-
-
     }
 
     @Then("I verify that question title now contains {string}")
@@ -139,7 +123,6 @@ public class TextualQuestionEdit {
         WebElement element = getDriver().findElement(By.xpath("//*[contains(text(),'"+qtitle+"')]"));
         assertThat(element.isDisplayed()).isTrue();
         getDriver().findElement(By.xpath("//button//*[contains(text(),'Close')]")).click();
-
     }
 
 
@@ -176,7 +159,11 @@ public class TextualQuestionEdit {
         getDriver().findElement(By.xpath("//*//mat-panel-title[contains(text(),'"+qnameu+"')]")).click();
         getDriver().findElement(By.xpath("//*//mat-panel-title[contains(text(),'"+qnameu+"')]/../../..//*[contains(text(),'Delete')]")).click();
         getDriver().findElement(By.xpath("//mat-dialog-container//*[contains(text(),'Delete')]")).click();
+        Thread.sleep(3000);
+    }
 
-        Thread.sleep(5000);
+    @And("I click Edit button in {string}")
+    public void iClickEditButtonIn(String edit) {
+        getDriver().findElement(By.xpath("//*//mat-panel-title[contains(text(),'"+edit+"')]/../../..//*[contains(text(),'Edit')]")).click();
     }
 }
