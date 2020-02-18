@@ -11,20 +11,6 @@ import static support.TestContext.getDriver;
 
 public class QuizCreate {
 
-    @And("I type email {string} on login page")
-    public void iTypeEmailOnLoginPage(String email) {
-        getDriver().findElement(By.xpath("//input[@id='mat-input-0']")).sendKeys(email);
-    }
-
-    @And("I type password {string} on login page")
-    public void iTypePasswordOnLoginPage(String password) {
-        getDriver().findElement(By.xpath("//input[@id='mat-input-1']")).sendKeys(password);
-    }
-
-    @And("I click Sign in button")
-    public void iClickSignInButton() {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Sign In')]")).click();
-    }
 
     @Then("^I wait for element with xpath \"([^\"]*)\" to be present$")
     public void iWaitForElementWithXpathToBePresent(String xpath) {
@@ -81,10 +67,6 @@ public class QuizCreate {
         getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).click();
     }
 
-    @And("I click Save button")
-    public void iClickSaveButton() {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Save')]/..")).click();
-    }
 
     @And("I wait for Question* for be present")
     public void iWaitForQuestionForBePresent() {
