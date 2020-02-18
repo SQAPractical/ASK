@@ -9,10 +9,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class UserGroupCode {
-    @Given("I open login page")
-    public void iOpenLoginPage() {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
-    }
 
     @Given("I open registration page")
     public void iOpenRegistrationPage() {

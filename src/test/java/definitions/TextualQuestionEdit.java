@@ -15,10 +15,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class TextualQuestionEdit {
-    @Given("I open login page")
-    public void iOpenUrl() {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
-    }
 
 
     @And("I enter {string} as login")
@@ -49,7 +45,8 @@ public class TextualQuestionEdit {
     }
 
     @And("I enter {string} as a quiz title")
-    public void iEnterAsAQuizTitle(String quizztitle) {
+    public void iEnterAsAQuizTitle(String quizztitle) throws Throwable{
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(quizztitle);
     }
 
@@ -114,7 +111,8 @@ public class TextualQuestionEdit {
     }
 
     @And("I add {string} character at the end of existing question")
-    public void iAddCharacterAtTheEndOfExistingQuestion(String qmark) {
+    public void iAddCharacterAtTheEndOfExistingQuestion(String qmark) throws Throwable{
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//mat-panel-title/..")).click();
         getDriver().findElement(By.xpath("//*[@formcontrolname='question']")).sendKeys(qmark);
     }
@@ -164,7 +162,8 @@ public class TextualQuestionEdit {
     }
 
     @And("I click Edit button in {string}")
-    public void iClickEditButtonIn(String edit) {
+    public void iClickEditButtonIn(String edit) throws Throwable{
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//*//mat-panel-title[contains(text(),'"+edit+"')]/../../..//*[contains(text(),'Edit')]")).click();
     }
 }

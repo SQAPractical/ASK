@@ -10,7 +10,7 @@ Feature: Teacher creates Quiz
     And I click to the quizzes_menu_element
     And I wait for 2 sec
     And I click to the create_quiz_element
-    Then titile_quiz_element should be displayed
+#    Then titile_quiz_element should be displayed
     When I type text "AAATest A4" to the titile_quiz_element
     And I click to the add_quist_element
     Then single_choice_element should be presented

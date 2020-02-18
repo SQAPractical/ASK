@@ -15,7 +15,7 @@ Feature: Textual Question Edit
     And I click Save button
     And I click on "TestQuiz"
     And I click Edit button in "TestQuiz"
-    And I add "?" character at the end of existing question
+    And I add "test" character at the end of existing question
     And I click Save button
     And I click on "TestQuiz"
     And I click on Preview button
