@@ -59,7 +59,6 @@ public class quizDelete {
     }
 
     @And("I type a question {string}")
-
     public void iTypeAQuestion(String question) throws InterruptedException {
         Thread.sleep(3000);
         getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(question);
@@ -177,5 +176,142 @@ public class quizDelete {
     public void iChooseAndClickOnDiscardButton() {
         getDriver().findElement(By.xpath("//*[contains(text(),'Discard')]")).click();
     }
+
+
+    @Given("I go to login page")
+    public void iGoToLoginPage() {
+        getDriver().get("http://ask-stage.portnov.com/#/login");
+    }
+
+
+    @And("I type {string} email")
+    public void iTypeEmail(String Email) throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//*[@placeholder='Email *']")).sendKeys(Email);
+    }
+
+    @And("I type {string} password")
+    public void iTypePassword(String Pass) {
+        getDriver().findElement(By.xpath("//*[@placeholder='Password *']")).sendKeys(Pass);
+    }
+
+    @When("I click sign in button")
+    public void iClickSignInButton() {
+        getDriver().findElement(By.xpath("//*[contains(text(),'Sign In')]")).click();
+    }
+
+
+
+    @And("I'm waiting for {int} seconds")
+    public void iMWaitingForSeconds(int arg0) throws InterruptedException {
+        Thread.sleep(2000);
+    }
+
+    @And("I'm selected Quizzes menu")
+    public void iMSelectedQuizzesMenu() {
+        getDriver().findElement(By.xpath("//*[contains(text(),'Quizzes')]")).click();
+    }
+
+    @And("I'm pushing Create New Quiz button")
+    public void iMPushingCreateNewQuizButton() throws InterruptedException {
+        Thread.sleep(3000);
+        getDriver().findElement(By.xpath("//*[contains(text(),'Create New Quiz')]")).click();
+    }
+
+    @And("I write {string} title")
+    public void iWriteTitle(String title) throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//*[@placeholder=\"Title Of The Quiz *\"]")).sendKeys(title);
+    }
+
+    @And("I click on button Add Question")
+    public void iClickOnButtonAddQuestion() {
+        getDriver().findElement(By.xpath("//*[@class='controls ng-star-inserted']//span[1]")).click();
+    }
+
+    @And("I push Textual radio button.")
+    public void iPushTextualRadioButton() {
+        getDriver().findElement(By.xpath("//div[contains(text(),'Textual')]/..//div[@class='mat-radio-container']")).click();
+    }
+
+    @And("I type {string}")
+    public void iType(String Question) throws InterruptedException {
+        Thread.sleep(3000);
+        getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Question);
+    }
+
+    @And("Check {string}Show-Stopper{string}")
+    public void checkShowStopper(String arg0, String arg1) {
+        getDriver().findElement(By.xpath("//div[@class='mat-checkbox-inner-container']")).isSelected();
+    }
+
+    @And("I push Save Button")
+    public void iPushSaveButton() {
+        getDriver().findElement(By.xpath("//*[@class='form-controls-container ng-star-inserted']//button[2]")).click();
+    }
+
+
+    @When("I click on Log out button")
+    public void iClickOnLogOutButton() {
+        getDriver().findElement(By.xpath("//*[contains(text(),'Log Out')]")).click();
+    }
+
+    @Then("message {string}  appears")
+    public void messageAppears(String arg0) {
+        WebElement message = getDriver().findElement(By.xpath("//*[contains(text(),'Log Out')]"));
+        assertThat(message.isDisplayed()).isTrue();
+    }
+
+  /*  @And("I click on button  Log out button")
+    public void iClickOnButtonLogOutButton() {
+        getDriver().findElement(By.xpath("//mat-dialog-container[@id='mat-dialog-3']/../..//span[contains(text(),'Log Out')]")).click();
+    }
+*/
+    @And("I click on button  Log Out button")
+    public void iClickOnButtonLogOutButton() {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Log Out')]")).click();
+    }
+
+
+    @And("I type {string} in email field")
+    public void iTypeInEmailField(String email) throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//*[@placeholder='Email *']")).sendKeys(email);
+    }
+
+    @And("I type {string} in password field")
+    public void iTypeInPasswordField(String pass) {
+        getDriver().findElement(By.xpath("//*[@placeholder='Password *']")).sendKeys(pass);
+    }
+
+
+    @And("next I click Sign in Button")
+    public void nextIClickSignInButton() {
+        getDriver().findElement(By.xpath("//*[contains(text(),'Sign In')]")).click();
+    }
+
+    @Then("I am in main page of second teacher")
+    public void iAmInMainPageOfSecondTeacher() throws InterruptedException {
+        Thread.sleep(2000);
+        WebElement element = getDriver().findElement(By.xpath("//*[contains(text(),'Britton Alla2')]"));
+        assertThat(element.isDisplayed()).isTrue();
+    }
+
+    @And("I select and click {string} option from Mane Menu")
+    public void iSelectAndClickOptionFromManeMenu(String arg0) {
+        getDriver().findElement(By.xpath("//*[contains(text(),'Quizzes')]")).click();
+    }
+
+    @And("select quiz {string}")
+    public void selectQuiz(String arg0) throws InterruptedException {
+        Thread.sleep(3000);
+        getDriver().findElement(By.xpath("//*[contains(text(),'Alla Tester2')]")).click();
+    }
+
+    @And("I submit Delete button")
+    public void iSubmitDeleteButton() {
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Alla Tester2')]/../../..//*[contains(text(),'Delete')]")).click();
+    }
 }
+
 
