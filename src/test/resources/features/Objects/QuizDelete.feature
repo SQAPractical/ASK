@@ -1,5 +1,5 @@
 Feature: Quiz - delete
-
+  @Smoke
   Scenario: Quiz - delete - 1 question
     Given I open login page
     And I type email "kojixap444@allmtr.com" on login page
@@ -20,7 +20,7 @@ Feature: Quiz - delete
     And I click on Delete button in the right corner
 
 
-
+  @Smoke
   Scenario: Quiz - Delete - Delete unsaved Quiz using "Back to Quizzes list" button.
     Given I navigate to login page
     And I type email "kojixap444@allmtr.com" on login page

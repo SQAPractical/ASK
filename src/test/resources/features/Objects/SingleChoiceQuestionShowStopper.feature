@@ -1,5 +1,6 @@
 Feature: Single-choice Question - Show-Stopper
 
+  @Smoke
   Scenario: Single-choice Question - Show-Stopper
     Given I open login page
     And I type teacher_email "teacher@mailinator.com" to the email_element

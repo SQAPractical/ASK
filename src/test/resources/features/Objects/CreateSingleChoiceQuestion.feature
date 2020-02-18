@@ -1,5 +1,5 @@
 Feature: Create Single-Choice Question
-
+  @Objects
   Scenario: Create Quiz
     Given I open my login page
     When I type my email "larisa.baishenko@gmail.com"
