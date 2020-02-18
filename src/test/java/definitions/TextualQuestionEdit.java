@@ -106,6 +106,7 @@ public class TextualQuestionEdit {
 
     @And("I clean up after myself - deleting created quiz {string}")
     public void iCleanUpAfterMyselfDeletingCreatedQuiz(String qdelete) throws Throwable {
+        Thread.sleep(1000);
         new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'"+qdelete+"')]")));
         getDriver().findElement(By.xpath("//*[contains(text(),'"+qdelete+"')]/../../..//*[contains(text(),'Delete')]")).click();
         getDriver().findElement(By.xpath("//mat-dialog-container//*[contains(text(),'Delete')]")).click();
