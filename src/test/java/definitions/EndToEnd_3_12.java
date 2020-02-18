@@ -21,7 +21,8 @@ public class EndToEnd_3_12 {
     }
 
     @And("I click to the create_new_assign")
-    public void iClickToTheCreate_new_assign() {
+    public void iClickToTheCreate_new_assign() throws Throwable{
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//span[contains(text(),'Create New Assignment')]/../../button")).click();
     }
 
@@ -59,8 +60,9 @@ public class EndToEnd_3_12 {
     }
 
     @And("I click to the choosed_quiz {string}")
-    public void iClickToTheChoosed_quiz(String title) {
-        String xpath = "//*[contains(text(),'"+ title +"')]";
+    public void iClickToTheChoosed_quiz(String title) throws Throwable{
+        Thread.sleep(2000);
+        String xpath = "//span[contains(text(),'"+title+"')]";
         getDriver().findElement(By.xpath(xpath)).click();
     }
 

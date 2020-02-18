@@ -53,7 +53,8 @@ public class quizDelete {
     }
 
     @And("I click on Textual radio button")
-    public void iClickOnTextualRadioButton() {
+    public void iClickOnTextualRadioButton() throws Throwable{
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//*[contains(text(),'Textual')]")).click();
 
     }
@@ -77,9 +78,9 @@ public class quizDelete {
     }
 
     @And("I click on Delete button")
-    public void iClickOnDeleteButton() {
-        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Alla Tester')]/../../..//span[contains(text(),'Delete')]"
-        )).click();
+    public void iClickOnDeleteButton() throws InterruptedException{
+        Thread.sleep(1000);
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Alla Tester')]/../../..//span[contains(text(),'Delete')]")).click();
     }
 
     @And("I type email {string} on login page")

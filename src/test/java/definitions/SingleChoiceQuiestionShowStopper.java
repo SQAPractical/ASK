@@ -36,7 +36,8 @@ public class SingleChoiceQuiestionShowStopper {
         assertThat(getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).isDisplayed()).isTrue();
     }
     @When("I type text {string} to the titile_quiz_element")
-    public void iTypeTextToTheTitile_quiz_element(String title) {
+    public void iTypeTextToTheTitile_quiz_element(String title) throws Throwable{
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(title);
     }
 
