@@ -28,7 +28,7 @@
 6. Type `git status` to check that you added all the changes
     (they will be shown in green)
 
-7. To add your changes from stage to your branch, type `git commit -m "[ADDED] your_message_explaining_what_you_modified"пше `
+7. To add your changes from stage to your branch, type `git commit -m "[ADDED] your_message_explaining_what_you_modified"`
     Use different labels [ADDED] [CHANGED] [IMPROVED] [FIXED] [DELETED]
     to better understand what you did on branch
 
