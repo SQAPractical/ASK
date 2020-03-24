@@ -1,4 +1,6 @@
 Feature: test
-  Scenario: Hello world!
+  Scenario: Hello Sofia!
+    Thank you for your lesson
+
 
   to add branch
