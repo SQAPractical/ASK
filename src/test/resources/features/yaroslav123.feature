@@ -6,4 +6,4 @@ Feature: Yaroslav
     And I type "github"
     And I push my branch on github git push --set-upstream origin name_of_your_branch
     And we add more
-    And more
+    And moregit
