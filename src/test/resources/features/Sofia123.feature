@@ -1,2 +1,0 @@
-Feature: fwdgbwj
-  Scenario: utyjghr
