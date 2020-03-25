@@ -46,8 +46,8 @@ public class registrationGroupCode {
     }
 
     @And("I click {string} button")
-    public void iClickButton(String arg0) {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Register Me')]")).click();
+    public void iClickButton(String buttonName) {
+        getDriver().findElement(By.xpath("//span[contains(text(),'"+buttonName+"')]")).click();
     }
 
     @Then("message {string} appears")
