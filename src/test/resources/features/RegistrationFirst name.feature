@@ -12,7 +12,7 @@ Feature: Registration - First name
       Examples:
          | fname| lName| email| group  | password| confirm| bName| mes|
          |abc123!@$|ID|lada112@gmail.com|011| 55555 |55555|Register me|You have been Registered.|
-    #     ||ID|lada112@gmail.com|011| 55555 |55555|Register me|This field is required|
+         ||ID|lada112@gmail.com|011| 55555 |55555|Register me|This field is required|
     #     |L|ID|lada112@gmail.com|011| 55555 |55555|Register me|You have been Registered.|
     #     |qwqFirrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhtffkjhgjh|ID|lada112@gmail.com|011| 55555 |55555|Register me|Should be no more than 254 characters|
     #     |Firrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhjfghbvsrtdfgvrtuhtffkjhgjh|I|lada112@gmail.com|011| 55555 |55555|Register me|You have been Registered.|
