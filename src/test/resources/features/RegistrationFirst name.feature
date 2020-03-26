@@ -26,7 +26,7 @@ Feature: Registration - First name
     #    |Lada|ID|423(abc)d@gmail.com|011| 55555 |55555|Register me|Should be a valid email address|
     #    |Lada|ID|123'asa'@gmail.com|011| 55555 |55555|Register me|You have been Registered.|
     #    |Lada|ID|123<asa>@gmail.com|011| 55555 |55555|Register me|You have been Registered.|
-    #    |Lada|ID|123@asa@gmail.com|011| 55555 |55555|Register me|Should be a valid email address|
+        |Lada|ID|123@asa@gmail.com|011| 55555 |55555|Register me|Should be a valid email address|
 
 
 
