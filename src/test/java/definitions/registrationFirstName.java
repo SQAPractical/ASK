@@ -47,8 +47,8 @@ public class registrationFirstName {
 
 
     @Then("I click on button {string} in registration form")
-    public void iClickOnButtonInRegistrationForm(String arg0) {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Register Me')]")).click();
+    public void iClickOnButtonInRegistrationForm(String nButton) {
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+nButton+"')]")).click();
     }
 
     @Then("I should see message {string}")
