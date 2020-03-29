@@ -5,6 +5,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -74,6 +76,70 @@ public class OlesiaDefenitionFile {
     @And("I type optionTwo {string}")
     public void iTypeOptionTwo(String option) {
         getDriver().findElement(By.xpath("//textarea[@placeholder='Option 2*']")).sendKeys(option);
+    }
+
+
+    @And("I set {string} points per question {string}")
+    public void iSetPerQuestion(String points, String xpath) {
+        //getDriver().findElement(By.xpath(xpath)).clear();
+        //getDriver().findElement(By.xpath(xpath)).sendKeys(points);
+        //<mat-slider _ngcontent-c12="" class="mat-slider mat-accent mat-slider-horizontal" role="slider" style="outline: red dotted 2px !important;" tabindex="0" aria-disabled="false" aria-valuemax="10" aria-valuemin="1" aria-valuenow="8" aria-orientation="horizontal" xpath="1"><div class="mat-slider-wrapper"><div class="mat-slider-track-wrapper"><div class="mat-slider-track-background" style="transform: translateX(0px) scaleX(0.222222);"></div><div class="mat-slider-track-fill" style="transform: translateX(0px) scaleX(0.777778);"></div></div><div class="mat-slider-ticks-container" style="transform: translateX(0%);"><div class="mat-slider-ticks" style="background-size: 0% 2px; transform: translateZ(0px) translateX(0%);"></div></div><div class="mat-slider-thumb-container" style="transform: translateX(-22.2222%);"><div class="mat-slider-focus-ring"></div><div class="mat-slider-thumb"></div><div class="mat-slider-thumb-label"><span class="mat-slider-thumb-label-text">8</span></div></div></div></mat-slider>
+        //???getDriver().findElement(By.xpath("//input[@id="invoice_supplier_id"])).setAttribute("value", "your value")
+        //attributes to try: aria-valuenow, innerText  innerHTML  textContent  for style:transform: translateX(-11.1111%);
+        WebElement element = getDriver().findElement(By.xpath(xpath));
+        JavascriptExecutor executor = (JavascriptExecutor) getDriver();
+//        executor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",getDriver().findElement(By.xpath("//h2")),"innerHTML","1");
+//        executor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",getDriver().findElement(By.xpath("//h2")),"innerText","2");
+//        executor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",getDriver().findElement(By.xpath("//h2")),"outerText","3");
+//        executor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",getDriver().findElement(By.xpath("//h2")),"textContent","4");
+        executor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",
+                element,
+                "textContent",
+                "points");
+//        System.out.println(element);
+        //js.executeScript("document.getElementById('//id of element').setAttribute('attr', '10')");
+//        WebElement element = getDriver().findElement(By.xpath(xpath));
+//        JavascriptExecutor executor = (JavascriptExecutor) getDriver();
+//        executor.executeScript("arguments[0].scrollIntoView(false);", element);
+
+//        getDriver().execute_script("arguments[0].setAttribute(arguments[1], arguments[2]);",
+//                elm,
+//                "attr_name",
+//                "attr_value")
+
+//        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+//        jsExecutor.executeScript("document.getElementById('input_17').setAttribute('value', 'selected')");
+        //getElementsByName('body')[0].setAttribute('type', 'text');");
+
+//        WebDriver driver; // Assigned elsewhere
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("document.getElementById('//id of element').setAttribute('attr', '10')");
+
+        /*Actions assigner = new Actions(getDriver());
+        assigner.moveToElement(webelement);
+        assigner.click();
+        assigner.sendKeys("<your value>");
+        assigner.build().perform();*/
+    }
+
+    @Then("element with xpath {string} should have attribute {string} as {string}")
+    public void elementWithXpathShouldHaveAttributeAs(String xpath, String arg1, String arg2) {
+        getDriver().findElement(By.xpath(xpath)).getText();
+    }
+
+    @And("I add new question")
+    public void iAddNewQuestion() {
+        getDriver().findElement(By.xpath("//*[text()='add_circle']")).click();
+    }
+
+    @And("I choose First answer as right")
+    public void iChooseFirstAnswerAsRight() {
+        getDriver().findElement(By.xpath("//div[@class='right']//mat-radio-group[1]//mat-radio-button")).click();
+    }
+
+    @Then("Required field {string} id displayed")
+    public void requiredFieldIdDisplayed(String xpath) {
+        assertThat(getDriver().findElement(By.xpath(xpath)).isDisplayed()).isTrue();
     }
 }
 
