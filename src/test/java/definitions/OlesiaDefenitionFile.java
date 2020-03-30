@@ -141,5 +141,36 @@ public class OlesiaDefenitionFile {
     public void requiredFieldIdDisplayed(String xpath) {
         assertThat(getDriver().findElement(By.xpath(xpath)).isDisplayed()).isTrue();
     }
+
+    @Given("I navigate to page for registration")
+    public void iNavigateToPageForRegistration() {
+        getDriver().get("http://ask-stage.portnov.com/#/registration");
+    }
+
+    @When("I type {string} into First name")
+    public void iTypeIntoFirstName(String dataType0) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='firstName']")).sendKeys(dataType0);
+    }
+
+    @And("I type {string} into Last name")
+    public void iTypeIntoLastName(String dataType1) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='lastName']")).sendKeys(dataType1);
+    }
+
+    @And("type {string} into Group code")
+    public void typeIntoGroupCode(String dataType3) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='group']")).sendKeys(dataType3);
+    }
+
+    @And("I type {string} into Email")
+    public void iTypeIntoEmail(String dataType) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(dataType);
+    }
+
+    @Then("I wait for message {string} displayed")
+    public void iWaitForMessageDisplayed(String xpath1) {
+        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath1)));
+//        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+textMsg+"')]")).isDisplayed()).isTrue();
+    }
 }
 
