@@ -52,7 +52,7 @@ public class registrationGroupCode {
 
     @Then("message {string} appears")
     public void messageAppears(String message) throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+message+"')]")).isDisplayed()).isTrue();
     }
 }
