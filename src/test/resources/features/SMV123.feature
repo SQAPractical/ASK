@@ -1,2 +1,0 @@
-Feature: hhhhh
-  Scenario: jklk
