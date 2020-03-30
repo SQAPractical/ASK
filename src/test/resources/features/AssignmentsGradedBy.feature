@@ -298,9 +298,8 @@ And the element "//div[@class='mat-expansion-panel-body']//table" has text "Auto
     And I wait for 1 seconds
     And I type text "Quiz with textual question graded by Teacher" into xPath "//*[contains(text(),'new empty question')]/../../..//textarea[@placeholder='Question *']"
     And I wait for 2 seconds
-    And I click on the "//div[@class='controls ng-star-inserted']//span[1]" button
 
-    And I type text "What is quality?" into xPath "//*[contains(text(),'Q2')]/../../..//textarea[@placeholder='Option 1*']"
+
     And I click on the "//span[contains(text(),'Save')]" button
 
    #QUIZ WAS CREATED
