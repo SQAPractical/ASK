@@ -1,5 +1,5 @@
 Feature: Registration - Fill out Group code
-
+  @Acceptance
   Scenario Outline: Registration - Group Code
     Given I navigate to page for registration
     When I type <dataType0> into First name

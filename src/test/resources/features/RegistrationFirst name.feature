@@ -1,4 +1,6 @@
 Feature: Registration - First name
+
+   @Acceptance
    Scenario Outline: First name registration form
       Given I open url
       Then I type First Name "<fname>" in registration form

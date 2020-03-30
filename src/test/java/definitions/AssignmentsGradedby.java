@@ -27,11 +27,11 @@ public class AssignmentsGradedby {
 
     }
 
-    @Then("I should see page title as {string}")
-    public void iShouldSeePageTitleAs(String title) {
-        assertThat(getDriver().getTitle()).isEqualTo(title);
-
-    }
+//    @Then("I should see page title as {string}")
+//    public void iShouldSeePageTitleAs(String title) {
+//        assertThat(getDriver().getTitle()).isEqualTo(title);
+//
+//    }
 
     @And("I click on the {string} button")
     public void iClickOnTheButton(String button) throws InterruptedException {
