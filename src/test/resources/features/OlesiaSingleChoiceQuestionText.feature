@@ -1,5 +1,4 @@
 Feature: Single Choice Question - Text
-  @Acceptance
   Scenario: Single Choice Question - Text - fill the field with Alphanumeric & Sp. characters
     Given I navigate to login page
     When I type email "vpmawork@gmail.com"

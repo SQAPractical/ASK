@@ -14,9 +14,9 @@ Feature: Registration - Fill out Group code
       | dataType0 | dataType1 | dataType3 | dataType | password | ConfirmPassword | buttonName    | xpath1                    |
       | "a"       | "b"       | "Co12!#"  | "q@q.q"  | "12345"  | "12345"         | "Register Me" | "//*[contains(text(),'You have been Registered')]" |
       | "a"       | "b"       | "C"       | "q@q.q"  | "12345"  | "12345"         | "Register Me" | "//*[contains(text(),'You have been Registered')]" |
-      | "a"       | "b"       | "123456"  | "q@q.q"  | "12345"  | "12345"         | "Register Me" | "//*[contains(text(),'You have been Registered')]" |
-      | "a"       | "b"       | "1234567" | "q@q.q"  | "12345"  | "12345"         | "Register Me" | "//*[contains(text(),'Should be no more than 6 characters')][@role='alert']" |
-      | "a"       | "b"       | ""        | "q@q.q"  | "12345"  | "12345"         | "Register Me" | "//input[@formcontrolname='group']/../../..//*[contains(text(),'This field is required')]" |
-      | "a"       | "b"       | " "       | "q@q.q"  | "12345"  | "12345"         | "Register Me" | "//*[contains(text(),'Should be no white space')][@role='alert']" |
+#      | "a"       | "b"       | "123456"  | "q@q.q"  | "12345"  | "12345"         | "Register Me" | "//*[contains(text(),'You have been Registered')]" |
+#      | "a"       | "b"       | "1234567" | "q@q.q"  | "12345"  | "12345"         | "Register Me" | "//*[contains(text(),'Should be no more than 6 characters')][@role='alert']" |
+#      | "a"       | "b"       | ""        | "q@q.q"  | "12345"  | "12345"         | "Register Me" | "//input[@formcontrolname='group']/../../..//*[contains(text(),'This field is required')]" |
+#      | "a"       | "b"       | " "       | "q@q.q"  | "12345"  | "12345"         | "Register Me" | "//*[contains(text(),'Should be no white space')][@role='alert']" |
 
 
