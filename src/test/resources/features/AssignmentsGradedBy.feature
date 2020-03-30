@@ -324,7 +324,7 @@ And the element "//div[@class='mat-expansion-panel-body']//table" has text "Auto
       #STDENT IS SIGN IN
     And I click on the "//button[@class='mat-button mat-primary']" button
     And I click on the "//h5[contains(text(),'My Grades')]" button
-    Then the element "//tr[2]" has text "Automatic"
+    Then the element "//tr[2]" has text "-"
       #DONE
 
 
