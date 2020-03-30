@@ -5,7 +5,6 @@ chromedriver.exe
 geckodriver
 geckodriver.exe
 javaWebdriverCucumber.iml
-pom.xml
 ASK.iml
 workspace.xml
 README.md
