@@ -11,32 +11,32 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class OlgaStepDef {
-    @Given("I navigate to registration page")
+    @Given("I navigate to a registration page")
     public void iNavigateToRegistrationPage() {
         getDriver().get("http://ask-stage.portnov.com/#/registration");
     }
 
-    @And("I type first name {string}")
+    @And("I type a first name {string}")
     public void iTypeFirstName(String firstName) {
     getDriver().findElement(By.xpath("//*[@formcontrolname='firstName']")).sendKeys(firstName);
     }
 
-    @And("I type last name {string}")
+    @And("I type a last name {string}")
     public void iTypeLastName(String lastName) {
         getDriver().findElement(By.xpath("//*[@formcontrolname='lastName']")).sendKeys(lastName);
     }
 
-    @And("I type group code {string}")
+    @And("I type a group code {string}")
     public void iTypeGroupCode(String gropuCode) {
         getDriver().findElement(By.xpath("//*[@formcontrolname='group']")).sendKeys(gropuCode);
     }
 
-    @And("I type email {string}")
+    @And("I type teacher email {string}")
     public void iTypeEmail(String email) {
         getDriver().findElement(By.xpath("//*[@formcontrolname='email']")).sendKeys(email);
     }
 
-    @And("I type password {string}")
+    @And("I type teacher password {string}")
     public void iTypePassword(String password) throws InterruptedException {
         Thread.sleep(1000);
         getDriver().findElement(By.xpath("//*[@formcontrolname='password']")).sendKeys(password);
@@ -48,19 +48,19 @@ public class OlgaStepDef {
             getDriver().findElement(By.xpath("//*[@formcontrolname='confirmPassword']")).sendKeys(confirmPassword);
     }
 
-    @And ("I click {string} button")
+    @And ("I click {string} button ask")
     public void iClickButton(String buttonName) throws InterruptedException {
         Thread.sleep(3000);
             getDriver().findElement(By.xpath("//*[contains(text(),'" + buttonName + "')]")).click();
     }
 
-    @Then("message {string} appears")
+    @Then("a message {string} appears")
     public void messageAppears(String message) throws InterruptedException {
         Thread.sleep(2000);
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+message+"')]")).isDisplayed()).isTrue();
     }
 
-    @Given("I navigate to login page")
+    @Given("I navigate to login page ask")
     public void iNavigateToLoginPage() throws InterruptedException {
         Thread.sleep(2000);
         getDriver().get("http://ask-stage.portnov.com/#/login");
@@ -88,7 +88,7 @@ public class OlgaStepDef {
         getDriver().findElement(By.xpath("//*[contains(text(),'"+user+"')]"));
     }
 
-    @Then("error message {string} appears")
+    @Then("a error message {string} appears")
     public void errorMessageAppears(String errormessage)  throws InterruptedException {
         Thread.sleep(2000);
         assertThat(getDriver().findElement(By.xpath("//*[@id='mat-error-1'],'"+errormessage+"')]")).isDisplayed()).isTrue();
@@ -129,7 +129,7 @@ public class OlgaStepDef {
     @And("button Add Question should not appears")
     public void buttonAddQuestionShouldNotAppears() throws InterruptedException {
         Thread.sleep(3000);
-        assertThat(getDriver().findElement(By.xpath("//*[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).isEnabled());
+        assertThat(getDriver().findElement(By.xpath("//*[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).isDisplayed().isFals);
     }
 
     @Then("button Add Question should appears")
@@ -144,7 +144,7 @@ public class OlgaStepDef {
         getDriver().findElement(By.xpath("//*[@id='mat-radio-3']//*[@class='mat-radio-outer-circle']")).click();
     }
 
-    @And("I type question {string}")
+    @And("I type a question {string}")
     public void iTypeQuestion(String question) throws InterruptedException {
         Thread.sleep(1000);
         getDriver().findElement(By.xpath("//textarea[@id='mat-input-3']")).sendKeys(question);
@@ -268,16 +268,24 @@ public class OlgaStepDef {
         getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted shift']" +
                 "//button[@class='mat-button mat-primary']")).click();
     }
-//
-//    @And("I type in option{int} {string}")
-//    public void iTypeInOption(int nr, String opt) {
-//        getDriver().findElement(By.xpath("//*[@placeholder=\"Option "+nr+"*\"]")).sendKeys(opt);
-//
-//    assertThat(getDriver().findElement(By.xpath("//*[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).isEnabled());
+
+    @And("I type in option{int} {string}")
+    public void iTypeInOption(int nr, String opt) {
+        getDriver().findElement(By.xpath("//*[@placeholder=\"Option "+nr+"*\"]")).sendKeys(opt);
+
+    assertThat(getDriver().findElement(By.xpath("//*[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).isEnabled());
+
 //
 //    @And ("I click {string} button")
 //    public void iClickButton(String buttonName) throws InterruptedException {
 //        Thread.sleep(3000);
-//        getDriver().findElement(By.xpath("//*[contains(text(),'" + buttonName + "')]" )).click();
+//        getDriver().findElement(By.xpath("//*[contains(text(),'" + buttonName + "')]" ));
 //    }
+}
+
+    @And("I click {string} button new quiz")
+    public void iClickButtonNewQuiz(String btnName) throws InterruptedException {
+            Thread.sleep(3000);
+            getDriver().findElement(By.xpath("//span[contains(text(),'"+ btnName +"')]")).click();
+        }
 }

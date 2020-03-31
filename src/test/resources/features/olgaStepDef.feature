@@ -1,14 +1,13 @@
 Feature: olgaStepDef
 
 #  //////////////////////////////////////////////////
-#  ///// Short with Background
+#  ///// Short with Background Start
 #  //////////////////////////////////////////////////
   Background: Login - Teacher - create Quiz
-    Given I navigate to login page
-    When I type email "olgaqatester@gmail.com"
-    And I type password "123456"
-    And I click "Sign In" button
-
+    Given I navigate to login page ask
+    When I type teacher email "olgaqatester@gmail.com"
+    And I type teacher password "123456"
+    And I click "Sign In" button ask
 
 
   @olgaStepDef3
@@ -19,7 +18,7 @@ Feature: olgaStepDef
 #    And I click "Sign In" button
 #    Then I should see Title of page "Assessment Control @ Portnov"
     And I click on Quizzes
-    And I click "Create New Quiz" button
+    And I click "Create New Quiz" button new quiz
     And I should see Title Of The Quiz *
     And I type on Title Of The Quiz "Name of Quiz"
     Then I click "  Add Question  " element
@@ -27,32 +26,32 @@ Feature: olgaStepDef
   @olgaStepDef4
   Scenario: Login - Teacher - create Quiz - Add Question should not appears
     And I click on Quizzes
-    And I click "Create New Quiz" button
+    And I click "Create New Quiz" button new quiz
     Then button Add Question should not appears
 
-  @olgaStepsDef5
-  Scenario: Login -Teacher -create Quiz - Title of Quiz - Min 1 Characters
-    And I click on Quizzes
-    And I click "Create New Quiz" button
-    And I should see Title Of The Quiz *
-    And I type on Title Of The Quiz "A"
-    Then button Add Question should appears
-
-  @olgaStepsDef6
-  Scenario: Login -Teacher -create Quiz - Title of Quiz - Min 100 Characters
-    And I click on Quizzes
-    And I click "Create New Quiz" button
-    And I should see Title Of The Quiz *
-    And I type on Title Of The Quiz "0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"
-    Then button Add Question should appears
-
-  @olgaStepsDef7
-  Scenario: Login -Teacher -create Quiz - Title of Quiz - Min 101 Characters
-    And I click on Quizzes
-    And I click "Create New Quiz" button
-    And I should see Title Of The Quiz *
-    And I type on Title Of The Quiz "A0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"
-    Then button Add Question should appears
+#  @olgaStepsDef5
+#  Scenario: Login -Teacher -create Quiz - Title of Quiz - Min 1 Characters
+#    And I click on Quizzes
+#    And I click "Create New Quiz" button new quiz
+#    And I should see Title Of The Quiz *
+#    And I type on Title Of The Quiz "A"
+#    Then button Add Question should appears
+#
+#  @olgaStepsDef6
+#  Scenario: Login -Teacher -create Quiz - Title of Quiz - Min 100 Characters
+#    And I click on Quizzes
+#    And I click "Create New Quiz" button new quiz
+#    And I should see Title Of The Quiz *
+#    And I type on Title Of The Quiz "0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"
+#    Then button Add Question should appears
+#
+#  @olgaStepsDef7
+#  Scenario: Login -Teacher -create Quiz - Title of Quiz - Min 101 Characters
+#    And I click on Quizzes
+#    And I click "Create New Quiz" button new quiz
+#    And I should see Title Of The Quiz *
+#    And I type on Title Of The Quiz "A0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"
+#    Then button Add Question should appears
 
 #  ///////////////////////////////////////////////////////////
 #  /////////// Background End
@@ -60,7 +59,7 @@ Feature: olgaStepDef
 
 
 #  ///////////////////////////////////////////////////////////
-#  /////////// Long Format
+#  /////////// Long Format Start
 #  //////////////////////////////////////////////////////////
 
 #  @olgaStepDef1
@@ -130,50 +129,51 @@ Feature: olgaStepDef
 #  ///////////////////////////////////////////////////////////
 #  //////// Single Choice Question - Options - Positive
 #  ///////////////////////////////////////////////////////////
-  @olgaStepDef01
-  Scenario: Single Choice Question - Options
-#    And I click on Quizzes
-#    And I click "Create New Quiz" button
-#    And I should see Title Of The Quiz *
-    And I type on Title Of The Quiz " Serie A"
-    And I click "add Question" button
-    Then I click Single-Choice radio button
-     And I type question "Which team won most title in Italy?"
-     And I type in option1 "Juvensus"
-     And I type in option2 "Milan"
-     And I click "Save" button
-#    Then button Add Question should appears
+
+#  @olgaStepDef01
+#  Scenario: Single Choice Question - Options
+##    And I click on Quizzes
+##    And I click "Create New Quiz" button
+##    And I should see Title Of The Quiz *
+#    And I type on Title Of The Quiz " Serie A"
+#    And I click "add Question" button
+#    Then I click Single-Choice radio button
+#     And I type question "Which team won most title in Italy?"
+#     And I type in option1 "Juvensus"
+#     And I type in option2 "Milan"
+#     And I click "Save" button
+##    Then button Add Question should appears
 
 #  ///////////////////////////////////////
 #  /////////// Araltan test case
 #  ////////////////////////////////////////
 
-  #  Background:
-#  Single Choice Question - Options
-    Given I navigate to login page
-    When I type email "araltan.qae12@gmail.com"
-    And I type password "Araltan123"
-    And I click "Sign In" button
-    And I click on Quizzes
-    And I click "Create New Quiz" button
-    And I should see Title Of The Quiz *
-
-
-
-  @olgaStepDef01
-  Scenario: Single Choice Question - Options
-    Given I navigate to login page
-    When I type email "araltan.qae12@gmail.com"
-    And I type password "Araltan123"
-    And I click "Sign In" button
-    And I click on Quizzes
-    And I click "Create New Quiz" button
-    And I should see Title Of The Quiz *
-    And I type on Title Of The Quiz " Serie A"
-    And I click "add Question" button
-    Then I click Single-Choice radio button
-    And I type question "Which team won most title in Italy?"
-    And I type in option1 "Juvensus"
-    And I type in option2 "Milan"
-    And I click "Save" button
-#    Then button Add Question should appears
+#  #  Background:
+##  Single Choice Question - Options
+#    Given I navigate to login page
+#    When I type email "araltan.qae12@gmail.com"
+#    And I type password "Araltan123"
+#    And I click "Sign In" button
+#    And I click on Quizzes
+#    And I click "Create New Quiz" button
+#    And I should see Title Of The Quiz *
+#
+#
+#
+#  @olgaStepDef01
+#  Scenario: Single Choice Question - Options
+#    Given I navigate to login page
+#    When I type email "araltan.qae12@gmail.com"
+#    And I type password "Araltan123"
+#    And I click "Sign In" button
+#    And I click on Quizzes
+#    And I click "Create New Quiz" button
+#    And I should see Title Of The Quiz *
+#    And I type on Title Of The Quiz " Serie A"
+#    And I click "add Question" button
+#    Then I click Single-Choice radio button
+#    And I type question "Which team won most title in Italy?"
+#    And I type in option1 "Juvensus"
+#    And I type in option2 "Milan"
+#    And I click "Save" button
+##    Then button Add Question should appears
