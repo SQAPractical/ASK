@@ -237,12 +237,6 @@ public class OlgaStepDef {
 //        getDriver().findElement(By.xpath("//*[contains(text(),\"Q3\")]/../../..//*[contains(text(),\"Textual\")]")).sendKeys(textQuestion);
 //        getDriver().findElement(By.xpath("//*[contains(text(),'"+questionNr+"')]/../../..//*[contains(text(),\"Textual\")]")).sendKeys(textQuestion);
 //                getDriver().findElement(By.xpath(xpth)).sendKeys(textQuestion);
-
-
-
-
-
-
 //    }
 
     @And("I type {int} questions for Textual area")
