@@ -20,6 +20,8 @@ Feature:Registration - Last name
       | "test" | "  "    | "test" | "test@test.test" | "12345"  | "12345"     | "Register Me" | "Whitespaces are not allowed" |
 
 
+Scenario: Single Choice Question
+  Given I navigate to registration page
 
 
 
