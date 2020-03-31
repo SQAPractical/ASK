@@ -49,6 +49,30 @@ Feature: Multiple Choice Question - Options
     Then I click button "Save"
     Then wait for element "List of Quizzes" should be present
 
+   #############################################################
+  Scenario: Multiple Choice Question - 15 Options
+    Given I login on page
+    Then I type Email "lada.idy@gmail.com"
+    And I type Password "11111"
+    When I click button "Sign In"
+    Then I should see page title name "Assessment Control @ Portnov"
+    Then I click on an element "Quizzes"
+    And wait for element "List of Quizzes" should be present
+    Then I click on an element "Create New Quiz"
+    Then wait for element "Title Of The Quiz *" should be present
+    Then I type quiz title "Question"
+    Then I click on button add question
+    Then I click choose multiple-choice
+    And element "Multiple-Choice" should be select
+    Then wait for element "Question *" should be present
+    Then I type question title "Why QA?"
+    Then I add option 15 field
+    And I fill out all option field
+
+
+
+
+
 
 
 
