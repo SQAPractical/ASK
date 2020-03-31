@@ -1,5 +1,6 @@
 #Lada
 Feature: Multiple Choice Question - Options
+  @LadaFive
   Scenario: Multiple Choice Question - 1 Options
     Given I login on page
     Then I type Email "lada.idy@gmail.com"

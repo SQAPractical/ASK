@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Mar 31 17:37:00 EDT 2020
+@default-maven-http\://repo.maven.apache.org/maven2/.lastUpdated=1585690620351
+@default-selenium-http\://repo1.maven.org/maven2/org/seleniumhq/selenium/.lastUpdated=1585690620456
+https\://repo.maven.apache.org/maven2/.lastUpdated=1585690620504
+http\://repo1.maven.org/maven2/org/seleniumhq/selenium/.error=Could not transfer artifact com.sun.xml.bind\:jaxb-bom-ext\:pom\:2.2.10 from/to selenium (http\://repo1.maven.org/maven2/org/seleniumhq/selenium/)\: Transfer failed for http\://repo1.maven.org/maven2/org/seleniumhq/selenium/com/sun/xml/bind/jaxb-bom-ext/2.2.10/jaxb-bom-ext-2.2.10.pom 501 HTTPS Required
+http\://repo1.maven.org/maven2/.error=Could not transfer artifact com.sun.xml.bind\:jaxb-bom-ext\:pom\:2.2.10 from/to maven2 (http\://repo1.maven.org/maven2/)\: Transfer failed for http\://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.2.10/jaxb-bom-ext-2.2.10.pom 501 HTTPS Required
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact com.sun.xml.bind\:jaxb-bom-ext\:pom\:2.2.10 from/to maven (http\://repo.maven.apache.org/maven2/)\: Transfer failed for http\://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.2.10/jaxb-bom-ext-2.2.10.pom 501 HTTPS Required
+@default-maven2-http\://repo1.maven.org/maven2/.lastUpdated=1585690620403
