@@ -1,4 +1,4 @@
-Feature: Textual Questions Text
+Feature: Textual Question Text 2
 
   @AssessmentControl_1
   Scenario: Verify if teacher can create quiz with Alphanumeric & Sp. characters in text of Textual question
