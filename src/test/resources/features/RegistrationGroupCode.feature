@@ -1,7 +1,5 @@
 Feature: Registration - Group Code
-
-  @Sanity @Acceptance @Sofia1234 @Olesia
-
+  @Sanity @Acceptance @Sofia1234 @Olesia @Yaroslav
   Scenario: Registration - Group Code - alphanumeric and special char
     Given I navigate to registration page
     When I type first name "Ivan"
