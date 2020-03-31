@@ -56,3 +56,4 @@ public class registrationGroupCode {
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+message+"')]")).isDisplayed()).isTrue();
     }
 }
+
