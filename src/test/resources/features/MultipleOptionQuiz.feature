@@ -66,8 +66,11 @@ Feature: Multiple Choice Question - Options
     And element "Multiple-Choice" should be select
     Then wait for element "Question *" should be present
     Then I type question title "Why QA?"
-    Then I add option 15 field
+    Then I add option 14 field
     And I fill out all option field
+    Then I click button "Save"
+    Then wait for element "List of Quizzes" should be present
+
 
 
 

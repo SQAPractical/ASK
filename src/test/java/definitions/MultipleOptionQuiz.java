@@ -140,9 +140,9 @@ public class MultipleOptionQuiz {
 
     @Then("I add option {int} field")
     public void iAddOptionField(int arg0) throws InterruptedException {
-        int i=0;
+        int i=1;
         while (i<arg0) {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
             getDriver().findElement(By.xpath("//span[contains(text(),'Add Option')]")).click();
             i++;
         }
@@ -152,93 +152,84 @@ public class MultipleOptionQuiz {
     public void iFillOutAllOptionField() throws InterruptedException {
         WebElement fieldText = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 1')]"));
         fieldText.sendKeys("answer 1");
-        sleep(2000);
+        sleep(1000);
         getDriver().findElement(By.xpath("//*[@id='mat-checkbox-2']")).click();
-        sleep(2000);
+        sleep(1000);
 
         WebElement fieldText1 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 2')]"));
         fieldText1.sendKeys("answer 2");
-        sleep(2000);
+        sleep(1000);
         getDriver().findElement(By.xpath("//*[@id='mat-checkbox-3']")).click();
-        sleep(2000);
+        sleep(1000);
 
         WebElement fieldText2 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 3')]"));
         fieldText2.sendKeys("answer 3");
-        sleep(2000);
-        getDriver().findElement(By.xpath("//*[@id='mat-checkbox-4']")).click();
-        sleep(2000);
+        sleep(1000);
+
 
         WebElement fieldText3 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 4')]"));
         fieldText3.sendKeys("answer 4");
-        sleep(2000);
-        getDriver().findElement(By.xpath("//*[@id='mat-checkbox-5']")).click();
-        sleep(2000);
+        sleep(1000);
+
 
         WebElement fieldText4 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 5')]"));
         fieldText4.sendKeys("answer 5");
-        sleep(2000);
+        sleep(1000);
         getDriver().findElement(By.xpath("//*[@id='mat-checkbox-6']")).click();
-        sleep(2000);
+        sleep(1000);
 
         WebElement fieldText5 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 6')]"));
         fieldText5.sendKeys("answer 6");
-        sleep(2000);
-        getDriver().findElement(By.xpath("//*[@id='mat-checkbox-7']")).click();
-        sleep(2000);
+        sleep(1000);
+
 
         WebElement fieldText6 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 7')]"));
         fieldText6.sendKeys("answer 7");
-        sleep(2000);
+        sleep(1000);
         getDriver().findElement(By.xpath("//*[@id='mat-checkbox-8']")).click();
-        sleep(2000);
+        sleep(1000);
 
         WebElement fieldText7 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 8')]"));
         fieldText7.sendKeys("answer 8");
-        sleep(2000);
-        getDriver().findElement(By.xpath("//*[@id='mat-checkbox-9']")).click();
-        sleep(2000);
+        sleep(1000);
 
         WebElement fieldText8 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 9')]"));
         fieldText8.sendKeys("answer 9");
-        sleep(2000);
+        sleep(1000);
         getDriver().findElement(By.xpath("//*[@id='mat-checkbox-10']")).click();
-        sleep(2000);
+        sleep(1000);
 
         WebElement fieldText9 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 10')]"));
         fieldText9.sendKeys("answer 10");
-        sleep(2000);
+        sleep(1000);
         getDriver().findElement(By.xpath("//*[@id='mat-checkbox-11']")).click();
-        sleep(2000);
+        sleep(1000);
 
         WebElement fieldText10 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 11')]"));
         fieldText10.sendKeys("answer 11");
-        sleep(2000);
+        sleep(1000);
         getDriver().findElement(By.xpath("//*[@id='mat-checkbox-12']")).click();
-        sleep(2000);
+        sleep(1000);
 
         WebElement fieldText11 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 12')]"));
         fieldText11.sendKeys("answer 12");
-        sleep(2000);
+        sleep(1000);
         getDriver().findElement(By.xpath("//*[@id='mat-checkbox-13']")).click();
-        sleep(2000);
+        sleep(1000);
 
         WebElement fieldText12 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 13')]"));
         fieldText12.sendKeys("answer 13");
-        sleep(2000);
-        getDriver().findElement(By.xpath("//*[@id='mat-checkbox-14']")).click();
-        sleep(2000);
+        sleep(1000);
 
         WebElement fieldText13 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 14')]"));
         fieldText13.sendKeys("answer 14");
-        sleep(2000);
-        getDriver().findElement(By.xpath("//*[@id='mat-checkbox-15']")).click();
-        sleep(2000);
+        sleep(1000);
+
 
         WebElement fieldText14 = getDriver().findElement(By.xpath("//*[contains(@placeholder, 'Option 15')]"));
         fieldText14.sendKeys("answer 15");
-        sleep(2000);
-        getDriver().findElement(By.xpath("//*[@id='mat-checkbox-16']")).click();
-        sleep(2000);
+        sleep(1000);
+
 
 
     }
