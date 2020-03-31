@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Mar 31 17:36:40 EDT 2020
+@default-maven-http\://repo.maven.apache.org/maven2/.lastUpdated=1585690599858
+@default-selenium-http\://repo1.maven.org/maven2/org/seleniumhq/selenium/.lastUpdated=1585690599962
+https\://repo.maven.apache.org/maven2/.lastUpdated=1585690600237
+http\://repo1.maven.org/maven2/org/seleniumhq/selenium/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-chrome-driver\:pom\:3.141.59 from/to selenium (http\://repo1.maven.org/maven2/org/seleniumhq/selenium/)\: Transfer failed for http\://repo1.maven.org/maven2/org/seleniumhq/selenium/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.pom 501 HTTPS Required
+http\://repo1.maven.org/maven2/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-chrome-driver\:pom\:3.141.59 from/to maven2 (http\://repo1.maven.org/maven2/)\: Transfer failed for http\://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.pom 501 HTTPS Required
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-chrome-driver\:pom\:3.141.59 from/to maven (http\://repo.maven.apache.org/maven2/)\: Transfer failed for http\://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.pom 501 HTTPS Required
+@default-maven2-http\://repo1.maven.org/maven2/.lastUpdated=1585690599907
