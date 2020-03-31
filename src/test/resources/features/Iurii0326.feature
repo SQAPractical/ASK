@@ -1,4 +1,5 @@
 Feature: Registration - Group Code
+  @Olesia
   Scenario: Registration - Group Code - alphanumeric and special char
     Given I navigate to login page
     When I login as a teacher
