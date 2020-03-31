@@ -2,28 +2,11 @@ Feature: Assignments - Graded by
 
   Scenario: Assignments - Graded by Auto -create quiz with a single-choice
     Given I open ask-stage.portnov login page
-    And I type an email "casio7@meta.ua"
-    And I type the password "12345"
-    And I click on the "//button[@class='mat-raised-button mat-primary']" button
-    Then I should see page title as "Assessment Control @ Portnov"
-   #TEACHER IS SIGN IN
     And I wait for 2 seconds
-    And I click on the "//h5[contains(text(),'Quizzes')]" button
-    And I click on the "//div[@class='controls']//button[@class='mat-raised-button mat-primary']" button
-    And I wait for 2 seconds
-    And I type text "Quiz graded Auto with  a single-choice" into xPath "//*[@placeholder='Title Of The Quiz *']"
-    And I wait for 2 seconds
-    And I click on the "//div[@class='controls ng-star-inserted']//span[1]" button
-    And I click on the "//div[contains(text(),'Single-Choice')]" button
-    And I type text "What is Quality?" into xPath "//*[@class='mat-input-element mat-form-field-autofill-control mat-autosize ng-untouched ng-pristine ng-invalid']"
-    And I type text "A" into xPath "//div[@class='right']//mat-radio-group[1]//textarea[@placeholder='Option 1*']"
-    And I type text "B" into xPath "//div[@class='right']//mat-radio-group[2]//textarea[@placeholder='Option 2*']"
-    And I click on the "//button[@class='mat-raised-button mat-accent']" button
-    And I type text "C" into xPath "//div[@class='right']//mat-radio-group[3]//textarea[@placeholder='Option 3*']"
-    And I click on the "//button[@class='mat-raised-button mat-accent']" button
-    And I type text "D" into xPath "//div[@class='right']//mat-radio-group[4]//textarea[@placeholder='Option 4*']"
-    And I click on the "//div[@class='right']//mat-radio-group[1]//label[@class='mat-radio-label']" button
-    And I click on the "//div[@class='form-controls-container ng-star-inserted']//button[2]" button
+      #TEACHER IS SIGN IN
+    And a quiz with a single-choice was created
+
+
    #QUIZ WAS CREATED
     And I click on the "//h5[contains(text(),'Assignments')]" button
     And I click on the "//button[@class='mat-raised-button mat-primary']" button
