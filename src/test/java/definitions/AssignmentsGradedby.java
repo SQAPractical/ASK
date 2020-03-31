@@ -18,10 +18,6 @@ public class AssignmentsGradedby {
         getDriver().findElement(By.xpath("//button[@class='mat-raised-button mat-primary']")).click();
         }
 
-
-
-
-
     @And("I click on the {string} button")
     public void iClickOnTheButton(String button) throws InterruptedException {
         Thread.sleep(2000);
