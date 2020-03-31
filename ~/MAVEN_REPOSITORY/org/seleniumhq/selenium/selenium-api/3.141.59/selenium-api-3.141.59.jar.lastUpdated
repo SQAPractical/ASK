@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Mar 31 17:37:20 EDT 2020
+@default-maven-http\://repo.maven.apache.org/maven2/.lastUpdated=1585690624169
+@default-selenium-http\://repo1.maven.org/maven2/org/seleniumhq/selenium/.lastUpdated=1585690628063
+https\://repo.maven.apache.org/maven2/.lastUpdated=1585690640647
+http\://repo1.maven.org/maven2/org/seleniumhq/selenium/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-api\:jar\:3.141.59 from/to selenium (http\://repo1.maven.org/maven2/org/seleniumhq/selenium/)\: Transfer failed for http\://repo1.maven.org/maven2/org/seleniumhq/selenium/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar 501 HTTPS Required
+http\://repo1.maven.org/maven2/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-api\:jar\:3.141.59 from/to maven2 (http\://repo1.maven.org/maven2/)\: Transfer failed for http\://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar 501 HTTPS Required
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-api\:jar\:3.141.59 from/to maven (http\://repo.maven.apache.org/maven2/)\: Transfer failed for http\://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar 501 HTTPS Required
+@default-maven2-http\://repo1.maven.org/maven2/.lastUpdated=1585690626045
