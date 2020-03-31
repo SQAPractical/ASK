@@ -1,5 +1,5 @@
 Feature:Registration - Last name
-
+@olga
   Scenario Outline: Registration Last name
     Given I navigate to registration page
     And I type first name <Fname>

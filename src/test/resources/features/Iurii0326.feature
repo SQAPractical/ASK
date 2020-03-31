@@ -1,3 +1,14 @@
+Feature: Registration - Group Code
+  @Olesia
+  Scenario: Registration - Group Code - alphanumeric and special char
+    Given I navigate to login page
+    When I login as a teacher
+    And I wait for 1 sec
+    And I create new quiz "New1234"
+    And I wait for 2 sec
+    And I go to quizzes
+    And I wait for 2 sec
+    Then quiz with name "New1234" should be present
 #
 #Feature: Registration - Group Code
 #
