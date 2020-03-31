@@ -57,4 +57,14 @@ public class registrationFirstName {
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+message+"')]")).isDisplayed()).isTrue();
     }
 
+    @Then("^element with xpath \"([^\"]*)\" should not contain text \"([^\"]*)\"$")
+    public void elementWithXpathShouldNotContainText(String xpath, String text) {
+        String actualText = getDriver().findElement(By.xpath(xpath)).getText();
+        assertThat(actualText).doesNotContain(text);
+    }
+
+    @Then("element with xpath {string} should not displayed")
+    public void elementWithXpathShouldNotDisplayed(String xpath) {
+        assertThat(getDriver().findElement(By.xpath(xpath)).isDisplayed()).isFalse();
+    }
 }

@@ -30,6 +30,14 @@ Feature: Registration - First name
     #    |Lada|ID|123<asa>@gmail.com|011| 55555 |55555|Register me|You have been Registered.|
     #    |Lada|ID|123@asa@gmail.com|011| 55555 |55555|Register me|Should be a valid email address|
 
+      Scenario: Password
+         Given I open url
+         Then I type Password "12345" in registration form
+         Then I type Confirm password "12345" in registration form
+         Then I click on button "Register Me" in registration form
+         Then element with xpath "//*[@formcontrolname='password'][@aria-describedby]" should not displayed
+    #     Then element with xpath "//input[@formcontrolname='password']" should not contain text "This field is required"
+    #     And element with xpath "//input[@formcontrolname='confirmPassword']" should not contain text "This field is required"
 
 
 
