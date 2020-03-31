@@ -55,10 +55,10 @@ public class Iurii0326 {
         assertThat(getDriver().findElements(By.xpath("//mat-panel-title[contains(text(),'"+quizN+"')]"))).hasSize(1);
     }
 
-    @And("^I type \"([^\"]*)\" into element with xpath \"([^\"]*)\"$")
-    public void iTypeIntoElementWithXpath(String text, String xpath) {
-        getDriver().findElement(By.xpath(xpath)).sendKeys(text);
-    }
+//    @And("^I type \"([^\"]*)\" into element with xpath \"([^\"]*)\"$")
+//    public void iTypeIntoElementWithXpath(String text, String xpath) {
+//        getDriver().findElement(By.xpath(xpath)).sendKeys(text);
+//    }
 
     @And("I add question to quiz")
     public void iAddQuestionToQuiz() {
@@ -67,10 +67,10 @@ public class Iurii0326 {
         getDriver().findElement(By.xpath("//*[contains(text(),'new empty question')]/../../..//textarea[@placeholder='Question *']")).sendKeys("question");
     }
 
-    @And("I click on element with xpath {string}")
-    public void iClickOnElementWithXpath(String xpath) {
-        getDriver().findElement(By.xpath(xpath)).click();
-    }
+//    @And("I click on element with xpath {string}")
+//    public void iClickOnElementWithXpath(String xpath) {
+//        getDriver().findElement(By.xpath(xpath)).click();
+//    }
 
     @Then("element with xpath {string} should not be present")
     public void elementWithXpathShouldNotBePresent(String xpath) {

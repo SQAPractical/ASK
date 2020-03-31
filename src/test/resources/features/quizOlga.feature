@@ -1,58 +1,7 @@
-Feature: olgaStepDef
-
-  @olgaStepDef_Iurii2
-  Scenario: Quiz - Total Questions - Quiz can't be created without questions
-    Given I navigate to login page
-    When I type email "araltan.qae12@gmail.com"
-    And I type password "Araltan123"
-    And I click "Sign In" button
-    And I click on Quizzes
-    And I click "Create New Quiz" button
-    And I should see Title Of The Quiz *
-    And I type on Title Of The Quiz "Name"
-    And I can click on Save button, button is disable
-
-  @olgaStepDef_Iurii1
-  Scenario: Quiz - Total Questions - Quiz can be created with 1 question or more
-    Given I navigate to login page
-    When I type email "araltan.qae12@gmail.com"
-    And I type password "Araltan123"
-    And I click "Sign In" button
-    And I click on Quizzes
-    And I click "Create New Quiz" button
-    And I should see Title Of The Quiz *
-    And I type on Title Of The Quiz "Name"
-    And I click Add Question button
-    And I click Textual radio button
-    And I type question for Textual "Intrebare?"
-    And I click "Save" button
-
-  @olgaStepDef_Iurii_3
-  Scenario: Quiz - Total Questions - Quiz can be created with 50 question max
-    Given I navigate to login page
-    When I type email "araltan.qae12@gmail.com"
-    And I type password "Araltan123"
-    And I click "Sign In" button
-    And I click on Quizzes
-    And I click "Create New Quiz" button
-    And I should see Title Of The Quiz *
-    And I type on Title Of The Quiz "Name"
-    And I click Add Question button
-    And I type 50 questions for Textual area
-    And I click Add Question button
-    And I click "Save" button
-
-
-#    And I type on Title Of The Quiz " Serie A"
-#    And I click Add Question button
-#    Then I click Single-Choice radio button
-#    And I type question "Which team won most title in Italy?"
-#    And I type in option1 "Juvensus"
-#    And I type in option2 "Milan"
-#    And I click "Save" button
-
-#  @olgaStepDef1000
-#  Scenario: Single Choice Question - Options
+#Feature: olgaStepDef
+#
+#  @olgaStepDef_Iurii2
+#  Scenario: Quiz - Total Questions - Quiz can't be created without questions
 #    Given I navigate to login page
 #    When I type email "araltan.qae12@gmail.com"
 #    And I type password "Araltan123"
@@ -60,13 +9,64 @@ Feature: olgaStepDef
 #    And I click on Quizzes
 #    And I click "Create New Quiz" button
 #    And I should see Title Of The Quiz *
-#    And I type on Title Of The Quiz " Serie A"
+#    And I type on Title Of The Quiz "Name"
+#    And I can click on Save button, button is disable
+#
+#  @olgaStepDef_Iurii1
+#  Scenario: Quiz - Total Questions - Quiz can be created with 1 question or more
+#    Given I navigate to login page
+#    When I type email "araltan.qae12@gmail.com"
+#    And I type password "Araltan123"
+#    And I click "Sign In" button
+#    And I click on Quizzes
+#    And I click "Create New Quiz" button
+#    And I should see Title Of The Quiz *
+#    And I type on Title Of The Quiz "Name"
 #    And I click Add Question button
-#    Then I click Single-Choice radio button
-#    And I type question "Which team won most title in Italy?"
-#    And I type in option1 "Juvensus"
-#    And I type in option2 "Milan"
+#    And I click Textual radio button
+#    And I type question for Textual "Intrebare?"
 #    And I click "Save" button
+#
+#  @olgaStepDef_Iurii_3
+#  Scenario: Quiz - Total Questions - Quiz can be created with 50 question max
+#    Given I navigate to login page
+#    When I type email "araltan.qae12@gmail.com"
+#    And I type password "Araltan123"
+#    And I click "Sign In" button
+#    And I click on Quizzes
+#    And I click "Create New Quiz" button
+#    And I should see Title Of The Quiz *
+#    And I type on Title Of The Quiz "Name"
+#    And I click Add Question button
+#    And I type 50 questions for Textual area
+#    And I click Add Question button
+#    And I click "Save" button
+#
+#
+##    And I type on Title Of The Quiz " Serie A"
+##    And I click Add Question button
+##    Then I click Single-Choice radio button
+##    And I type question "Which team won most title in Italy?"
+##    And I type in option1 "Juvensus"
+##    And I type in option2 "Milan"
+##    And I click "Save" button
+#
+##  @olgaStepDef1000
+##  Scenario: Single Choice Question - Options
+##    Given I navigate to login page
+##    When I type email "araltan.qae12@gmail.com"
+##    And I type password "Araltan123"
+##    And I click "Sign In" button
+##    And I click on Quizzes
+##    And I click "Create New Quiz" button
+##    And I should see Title Of The Quiz *
+##    And I type on Title Of The Quiz " Serie A"
+##    And I click Add Question button
+##    Then I click Single-Choice radio button
+##    And I type question "Which team won most title in Italy?"
+##    And I type in option1 "Juvensus"
+##    And I type in option2 "Milan"
+##    And I click "Save" button
 
 
 #  @olgaStepDef1001
