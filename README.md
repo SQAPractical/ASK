@@ -41,10 +41,12 @@
 
 10. Type `git merge master` to make sure there won't be any conflicts in your future PR.
 
-11. If there is no conflicts, you can push to github.
+11. Run project to double check if it is not broken
+
+12. If there is no conflicts, you can push to github.
     Being on your branch, type `git push`
 
-12. Once you collected all the changes on your remote branch,
+13. Once you collected all the changes on your remote branch,
     you can go ahead and create Pull request on GitHub.
 
-13. Repeat steps 3-12 for each complete task
+14. Repeat steps 3-13 for each complete task
