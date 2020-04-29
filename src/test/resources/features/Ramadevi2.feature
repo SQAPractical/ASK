@@ -1,3 +1,3 @@
 Feature: 1
-  Scenario: 1234
+  Scenario: welcome
     Given 123
