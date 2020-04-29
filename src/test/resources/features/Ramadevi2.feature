@@ -1,3 +1,3 @@
 Feature: 1
-  Scenario: 1234
+  Scenario: Hello world
     Given 123
