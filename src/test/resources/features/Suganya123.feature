@@ -1,3 +1,3 @@
 Feature: 123
-  Scenario: Sample for testing git
+  Scenario: Sofia Sofia Sofia for testing git
     asdafg
