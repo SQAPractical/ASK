@@ -61,4 +61,61 @@ public class registrationEmail {
     public void iWaitSomeMinutes() throws InterruptedException {
         sleep(2000);
     }
+
+    @And("I click on {string} on the left menu")
+    public void iClickOnOnTheLeftMenu(String arg0) {
+        getDriver().findElement(By.xpath("//h5[contains(text(),\"User's Management\")]")).click();
+    }
+
+    @And("I click on {string} tab")
+    public void iClickOnTab(String text) {
+        getDriver().findElement(By.xpath("//div[contains(text(),'"+text+"')]")).click();
+    }
+
+    @And("I click on student that I have just created")
+    public void iClickOnStudentThatIHaveJustCreated() {
+        getDriver().findElement(By.xpath("//h4[contains(text(),'FirstN LastN')]")).click();
+    }
+
+    @And("I click on Delete User")
+    public void iClickOnDeleteUser() {
+        getDriver().findElement(By.xpath("//*[contains(text(),'delete')]")).click();
+    }
+
+    @Then("confirmation popup appears")
+    public void confirmationPopupAppears() {
+        Assert.assertTrue(getDriver().findElement(By.xpath("//*[contains(text(),'Confirmation')]")).isDisplayed());
+    }
+
+    @When("I click on Delete on popup")
+    public void iClickOnDeleteOnPopup() {
+        getDriver().switchTo().activeElement().findElement(By.xpath("//span[contains(text(),'Delete')]")).click();
+    }
+
+    @Then("User is deleted")
+    public void userIsDeleted() {
+        assert true;
+    }
+
+    @When("I click on Back to Login button")
+    public void iClickOnBackToLoginButton() {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Back to Login')]")).click();
+
+    }
+
+    @And("I click on Option button")
+    public void iClickOnOptionButton() {
+        getDriver().findElement(By.xpath("//span[@class='mat-button-wrapper']/*[contains(text(),'settings')]")).click();
+    }
+
+    @When("I click on Log Out button")
+    public void iClickOnLogOutButton() {
+        getDriver().findElement(By.xpath("//h5[contains(text(),'Log Out')]")).click();
+        getDriver().switchTo().activeElement().findElement(By.xpath("//span[contains(text(),'Log Out')]")). click();
+    }
+
+    @And("I click on Register Now button")
+    public void iClickOnRegisterNowButton() {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Register Now')]")).click();
+    }
 }
