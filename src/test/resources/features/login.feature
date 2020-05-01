@@ -29,3 +29,4 @@ Feature: Login
       Given I open login page
       And I type password "122345"
       Then password displays in bullets
+
