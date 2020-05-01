@@ -45,21 +45,16 @@ Feature: Registration with Email
     Then I wait some minutes
     When I click on "User's Management" on the left menu
     Then I wait some minutes
-#    //h5[contains(text(),"User's Management")]
     When I click on "Students" tab
-#    //h4[contains(text(),'Firstn Lastn')]
     Then I wait some minutes
     When I click on student that I have just created
     Then I wait some minutes
     And I click on Option button
-#  //*[contains(text(),'settings')]
     Then I wait some minutes
     When I click on Delete User
-#  //*[contains(text(),'delete')]
     Then I wait some minutes
     And I wait some minutes
     And confirmation popup appears
-#  //*[contains(text(),'Confirmation')]
     When I click on Delete on popup
     Then I wait some minutes
     When I click on Log Out button
