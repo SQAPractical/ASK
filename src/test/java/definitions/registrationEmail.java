@@ -18,28 +18,28 @@ public class registrationEmail {
     }
 
     @When("I type First Name {string}")
-    public void iTypeFirstName(String arg0) {
-        getDriver().findElement(By.xpath("//input[@placeholder = 'First Name']")).sendKeys(arg0);
+    public void iTypeFirstName(String firstName) {
+        getDriver().findElement(By.xpath("//input[@placeholder = 'First Name']")).sendKeys(firstName);
     }
 
     @And("I type Last Name {string}")
-    public void iTypeLastName(String arg0) {
-        getDriver().findElement(By.xpath("//input[@placeholder = 'Last Name']")).sendKeys(arg0);
+    public void iTypeLastName(String lastName) {
+        getDriver().findElement(By.xpath("//input[@placeholder = 'Last Name']")).sendKeys(lastName);
     }
 
     @And("I type Email {string}")
-    public void iTypeEmail(String arg0) {
-        getDriver().findElement(By.xpath("//input[@placeholder = 'Email']")).sendKeys(arg0);
+    public void iTypeEmail(String email) {
+        getDriver().findElement(By.xpath("//input[@placeholder = 'Email']")).sendKeys(email);
     }
 
     @And("I type group {string}")
-    public void iTypeGroup(String arg0) {
-        getDriver().findElement(By.xpath("//input[@placeholder = 'Group Code']")).sendKeys(arg0);
+    public void iTypeGroup(String group) {
+        getDriver().findElement(By.xpath("//input[@placeholder = 'Group Code']")).sendKeys(group);
     }
 
     @And("I type confirm password {string}")
-    public void iTypeConfirmPassword(String arg0) {
-        getDriver().findElement(By.xpath("//input[@placeholder = 'Confirm Password']")).sendKeys(arg0);
+    public void iTypeConfirmPassword(String confirmpass) {
+        getDriver().findElement(By.xpath("//input[@placeholder = 'Confirm Password']")).sendKeys(confirmpass);
     }
 
     @And("I click Register Me button")
@@ -48,13 +48,13 @@ public class registrationEmail {
     }
 
     @Then("message {string} will be appeared")
-    public void messageWillBeAppeared(String arg0) {
-        Assert.assertTrue(getDriver().findElement(By.xpath("//*[contains(text(),'"+arg0+"')]")).getText().equals(arg0));
+    public void messageWillBeAppeared(String message) {
+        Assert.assertTrue(getDriver().findElement(By.xpath("//*[contains(text(),'"+message+"')]")).getText().equals(message));
     }
 
     @And("I type registration password {string}")
-    public void iTypeRegistrationPassword(String arg0) {
-        getDriver().findElement(By.xpath("//input[@placeholder = 'Password']")).sendKeys(arg0);
+    public void iTypeRegistrationPassword(String pass) {
+        getDriver().findElement(By.xpath("//input[@placeholder = 'Password']")).sendKeys(pass);
     }
 
     @Then("I wait some minutes")
