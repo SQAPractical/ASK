@@ -1,5 +1,6 @@
 package definitions;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -12,10 +13,6 @@ public class QuizTotalQuestion {
         Thread.sleep(sec * 1000);
     }
 
-    @Then("I click on {string} on the left menu")
-    public void clickOnQuizzesOnTheLeftMenu(String text) {
-        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
-    }
 
     @Then("I create new Quizz")
     public void iCreateNewQuizz() {
@@ -45,6 +42,10 @@ public class QuizTotalQuestion {
 
     @Then("I Add second Question")
     public void iAddSecondQuestion() {
+        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted shift']//button[@class='mat-button mat-primary']")).click();
+    }
+    @Then("I Add third Question")
+    public void iAddThirdQuestion() {
         getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted shift']//button[@class='mat-button mat-primary']")).click();
     }
 
@@ -77,10 +78,7 @@ public class QuizTotalQuestion {
 
     }
 
-    @Then("I Add third Question")
-    public void iAddThirdQuestion() {
-        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted shift']//button[@class='mat-button mat-primary']")).click();
-    }
+
 
     @Then("I select question Multiple-Choice type")
     public void iSelectQuestionMultipleChoiceType() {
@@ -177,6 +175,7 @@ public class QuizTotalQuestion {
         getDriver().findElement(By.xpath("//div[@class='controls shift ng-star-inserted']//button[@class='mat-button mat-primary']")).click();
 
     }
+
 }
 
 
