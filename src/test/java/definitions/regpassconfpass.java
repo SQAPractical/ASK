@@ -48,20 +48,20 @@ public class regpassconfpass {
         getDriver().findElement(By.xpath("//input[@placeholder='Email']")).sendKeys(email);
     }
 
-    @And("I type groupcode {string}")
-    public void iTypeGroupcode(String groupCode) {
-        getDriver().findElement(By.xpath("//input[@placeholder='Group Code']")).sendKeys(groupCode);
-    }
+//    @And("I type groupcode {string}")
+//    public void iTypeGroupcode(String groupCode) {
+//        getDriver().findElement(By.xpath("//input[@placeholder='Group Code']")).sendKeys(groupCode);
+//    }
 
     @And("I type  registration password {string}")
     public void iTypeRegistrationPassword(String pass) {
         getDriver().findElement(By.xpath("//*[@placeholder='Password']")).sendKeys(pass);
     }
 
-    @And("I type confirm password {string}")
-    public void iTypeConfirmPassword(String confpass) {
-        getDriver().findElement(By.xpath("//*[@placeholder='Confirm Password']")).sendKeys(confpass);
-    }
+//    @And("I type confirm password {string}")
+//    public void iTypeConfirmPassword(String confpass) {
+//        getDriver().findElement(By.xpath("//*[@placeholder='Confirm Password']")).sendKeys(confpass);
+//    }
 
 
 }
