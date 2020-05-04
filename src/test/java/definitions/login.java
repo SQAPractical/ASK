@@ -6,6 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 
+import static java.lang.Thread.sleep;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
@@ -32,7 +33,7 @@ public class login {
 
     @Then("text {string} appears")
     public void textAppears(String text) throws InterruptedException {
-        Thread.sleep(2000);
+        sleep(2000);
         String actualText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).getText();
         assertThat(actualText).containsIgnoringCase(text);
 
@@ -42,7 +43,7 @@ public class login {
 
     @Then("password displays in bullets")
     public void passwordDisplaysInBullets() {
-//        assertThat(getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).getAttribute("type")).isEqualTo("password");
+//    assertThat(getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).getAttribute("type")).isEqualTo("password");
 
         String xpath = "//input[@placeholder='Password *']";
         String attribute = "type";
@@ -51,4 +52,5 @@ public class login {
         assertThat(getDriver().findElement(By.xpath(xpath)).getAttribute(attribute)).isEqualTo(value);
 
     }
+
 }
