@@ -8,11 +8,6 @@ import org.openqa.selenium.By;
 import static support.TestContext.getDriver;
 
 public class regpassconfpass {
-    @When("I click on Register Now button")
-    public void iClickOnRegisterNowButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Register Now')]")).click();
-        Thread.sleep(2000);
-    }
 
     @Then("element with {string} present")
     public void elementWithPresent(String element) {
