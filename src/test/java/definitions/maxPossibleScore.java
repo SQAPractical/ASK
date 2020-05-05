@@ -4,6 +4,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 
+import javax.print.DocFlavor;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
@@ -38,10 +40,11 @@ public class maxPossibleScore {
         getDriver().findElement(By.xpath("//*[contains(text(),'Textual')]")).click();
     }
 
-
-    @Then("I type {string} in the question field")
-    public void iTypeInTheQuestionField(String arg0) throws InterruptedException {
+    @And("I type question {string}")
+    public void iTypeQuestion(String text) throws InterruptedException {
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//textarea[@id='mat-input-6']")).getText();
+         getDriver().findElement(By.xpath("//textarea[@placeholder='Question *']")).sendKeys(text);
     }
+
+
 }
