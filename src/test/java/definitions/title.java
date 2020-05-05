@@ -11,7 +11,7 @@ public class title {
     @And("I click on the Quizzes menu item")
     public void iClickOnTheQuizzesMenuItem() throws InterruptedException {
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(),'Quizzes')]")).click();
     }
 
     @And("I click Create new Quiz button")
@@ -50,12 +50,12 @@ public class title {
     }
 
     @Then("error message {string} should appear")
-    public void errorMessageShouldAppear(String arg0) {
+    public void errorMessageShouldAppear(String text) {
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'This field is required')]")).isDisplayed()).isTrue();
     }
 
     @Then("error massage {string} should appear")
-    public void errorMassageShouldAppear(String arg0) {
+    public void errorMassageShouldAppear(String text) {
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'This field is required')]")).isDisplayed()).isTrue();
     }
 }
