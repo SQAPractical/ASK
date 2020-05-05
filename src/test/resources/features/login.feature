@@ -24,8 +24,8 @@ Feature: Login
       | "   qa.sofi@gmail.com"         | "12345Abc"     | "Whitespaces are not allowed" |
       | "qa.sofi@gmail.com"            | "     12345Abc"     | "Whitespaces are not allowed" |
 
-
   Scenario: password in bullets
       Given I open login page
       And I type password "122345"
       Then password displays in bullets
+
