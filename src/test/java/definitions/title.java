@@ -28,14 +28,41 @@ public class title {
     }
 
     @And("I click out of the Title of the Quiz field")
-    public void iClickOutOfTheTitleOfTheQuizField() {
-
-        getDriver().findElement(By.xpath("//main[@class='ng-tns-c0-0']"));
+    public void iClickOutOfTheTitleOfTheQuizField() throws InterruptedException {
+        getDriver().findElement(By.xpath("//img[@class='icon ng-star-inserted']")).click();
+        Thread.sleep(2000);
     }
 
     @Then("text {string} is displayed")
     public void textIsDisplayed(String text) throws InterruptedException {
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//*[contains(text('This field is required'),'This field is required')]"));
+        getDriver().findElement(By.xpath("//*[contains(text(),'This field is required')]")).sendKeys(text);
     }
+
+    @Then("I type character on the Title of the Quiz field {string}")
+    public void iTypeCharacterOnTheTitleOfTheQuizField(String text) throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(text);
+    }
+
+    @And("I click Add Question button")
+    public void iClickAddQuestionButton() throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//span[1]")).click();
+    }
+
+    @Then("a message {string} should appear")
+    public void aMessageShouldAppear(String text) throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//*[@class='ng-star-inserted']"));
+
+
+    }
+
+//    @Then("text {string} is displayed")
+//    public void textIsDisplayed(String text) throws InterruptedException {
+//        Thread.sleep(2000);
+//        assertThat(getDriver().findElement(By.xpath("//mat-error[contains(text(),'This field is required')]")).isDisplayed()).isTrue();
+//
+//    }
 }
