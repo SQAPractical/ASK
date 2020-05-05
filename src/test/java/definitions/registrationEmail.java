@@ -64,7 +64,8 @@ public class registrationEmail {
 
     @And("I click on {string} on the left menu")
     public void iClickOnOnTheLeftMenu(String text) {
-        getDriver().findElement(By.xpath("//*[contains(text(),'"+ text +"')]")).click();
+
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).click();
     }
 
     @And("I click on {string} tab")
