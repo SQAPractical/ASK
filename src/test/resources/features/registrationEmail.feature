@@ -55,7 +55,7 @@ Feature: Registration with Email
     Then I wait some minutes
     And I wait some minutes
     And confirmation popup appears
-    When I click on Delete on popup
+    When I click on "Delete" on "Confirmation" popup
     Then I wait some minutes
     When I click on Log Out button
     Then I wait some minutes
