@@ -63,8 +63,8 @@ public class registrationEmail {
     }
 
     @And("I click on {string} on the left menu")
-    public void iClickOnOnTheLeftMenu(String arg0) {
-        getDriver().findElement(By.xpath("//h5[contains(text(),\"User's Management\")]")).click();
+    public void iClickOnOnTheLeftMenu(String text) {
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+ text +"')]")).click();
     }
 
     @And("I click on {string} tab")
@@ -89,7 +89,7 @@ public class registrationEmail {
 
     @When("I click on Delete on popup")
     public void iClickOnDeleteOnPopup() {
-        getDriver().switchTo().activeElement().findElement(By.xpath("//span[contains(text(),'Delete')]")).click();
+        getDriver().switchTo().activeElement().findElement(By.xpath("//*[contains(text(),'Delete')]")).click();
     }
 
     @Then("User is deleted")
