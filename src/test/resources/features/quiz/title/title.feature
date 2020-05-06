@@ -24,7 +24,7 @@ Feature: Quiz title automation
     And I click on the Quizzes menu item
     And I click Create new Quiz button
     Then I type character on the Title of the Quiz field " "
-    Then error massage "This field shouldn't be empty" should appear
+    Then error message "Whitespaces not allowed" should appear
 
   Scenario: Title - minimum 1 character
     Given I open login page

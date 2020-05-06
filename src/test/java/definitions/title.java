@@ -51,13 +51,9 @@ public class title {
 
     @Then("error message {string} should appear")
     public void errorMessageShouldAppear(String text) {
-        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'This field is required')]")).isDisplayed()).isTrue();
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
     }
 
-    @Then("error massage {string} should appear")
-    public void errorMassageShouldAppear(String text) {
-        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'This field is required')]")).isDisplayed()).isTrue();
-    }
 }
 
 
