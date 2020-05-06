@@ -11,32 +11,25 @@ public class title {
     @And("I click on the Quizzes menu item")
     public void iClickOnTheQuizzesMenuItem() throws InterruptedException {
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(),'Quizzes')]")).click();
     }
 
     @And("I click Create new Quiz button")
     public void iClickCreateNewQuizButton() throws InterruptedException {
         Thread.sleep(2000);
         getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
-
     }
 
     @And("I Click on the Title of the Quiz field  and leave it empty")
     public void iClickOnTheTitleOfTheQuizFieldAndLeaveItEmpty() throws InterruptedException {
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']"));
+        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).click();
     }
 
     @And("I click out of the Title of the Quiz field")
     public void iClickOutOfTheTitleOfTheQuizField() throws InterruptedException {
         getDriver().findElement(By.xpath("//img[@class='icon ng-star-inserted']")).click();
         Thread.sleep(2000);
-    }
-
-    @Then("text {string} is displayed")
-    public void textIsDisplayed(String text) throws InterruptedException {
-        Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//*[contains(text(),'This field is required')]")).sendKeys(text);
     }
 
     @Then("I type character on the Title of the Quiz field {string}")
@@ -51,18 +44,20 @@ public class title {
         getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//span[1]")).click();
     }
 
-    @Then("a message {string} should appear")
-    public void aMessageShouldAppear(String text) throws InterruptedException {
-        Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//*[@class='ng-star-inserted']"));
-
-
+    @Then("I should see error massage")
+    public void iShouldSeeErrorMassage() {
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'This field is required')]")).isDisplayed()).isTrue();
     }
 
-//    @Then("text {string} is displayed")
-//    public void textIsDisplayed(String text) throws InterruptedException {
-//        Thread.sleep(2000);
-//        assertThat(getDriver().findElement(By.xpath("//mat-error[contains(text(),'This field is required')]")).isDisplayed()).isTrue();
-//
-//    }
+    @Then("error message {string} should appear")
+    public void errorMessageShouldAppear(String text) {
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'This field is required')]")).isDisplayed()).isTrue();
+    }
+
+    @Then("error massage {string} should appear")
+    public void errorMassageShouldAppear(String text) {
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'This field is required')]")).isDisplayed()).isTrue();
+    }
 }
+
+
