@@ -33,11 +33,10 @@ public class login {
 
     @Then("text {string} appears")
     public void textAppears(String text) throws InterruptedException {
-        Thread.sleep(2500);
-        String actualText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).getText();
-        assertThat(actualText).containsIgnoringCase(text);
-
-//      assertThat(getDriver().findElement(By.xpath("//p[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
+        Thread.sleep(2000);
+//        String actualText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).getText();
+//        assertThat(actualText).containsIgnoringCase(text);
+      assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
 
     }
 

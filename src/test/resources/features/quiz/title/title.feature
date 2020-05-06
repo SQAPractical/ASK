@@ -13,10 +13,9 @@ Feature: Quiz title automation
     And I click Create new Quiz button
     And I Click on the Title of the Quiz field  and leave it empty
     And I click out of the Title of the Quiz field
-    Then text "This field is required" is displayed
+    Then I should see error massage
 
-
-
+@test1
   Scenario: Title - not empty
     Given I open login page
     When I type email "qa.sofi@gmail.com"
@@ -25,8 +24,7 @@ Feature: Quiz title automation
     And I click on the Quizzes menu item
     And I click Create new Quiz button
     Then I type character on the Title of the Quiz field " "
-    And I click Add Question button
-
+    Then error message "Whitespaces not allowed" should appear
 
   Scenario: Title - minimum 1 character
     Given I open login page
@@ -58,6 +56,5 @@ Feature: Quiz title automation
     And I click on the Quizzes menu item
     And I click Create new Quiz button
     Then I type character on the Title of the Quiz field "aabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnççwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwopqrstuvwxyzopqrstuvw"
-    And I click Add Question button
-    Then a message "The title of the quiz shouldn`t be more than 1000 characters" should appear
+    Then error message "The title of the quiz shouldn`t be more than 1000 characters" should appear
 
