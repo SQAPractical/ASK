@@ -68,12 +68,7 @@ public class multipleChoice_option {
 
     @Then("{string} is deleted succesfully")
     public void isDeletedSuccesfully(String question) {
-//        String text = getDriver().findElement(By.xpath("//*[contains(text(),'"+ question+"')]")).getText();
-//        if(text == null){
-//            assert true;
-//        }else{
-//            assert false;
-//        }
+
         try{
             String text = getDriver().findElement(By.xpath("//*[contains(text(),'"+ question+"')]")).getText();
         }catch (Exception e){
@@ -82,9 +77,6 @@ public class multipleChoice_option {
                 assert true;
             }
         }
-
-
-//        Assert.assertFalse(getDriver().findElement(By.xpath("//*[contains(text(),'"+ question+"')]")) != null);
 
     }
 

@@ -9,7 +9,7 @@ Feature: Multiple Choice Question_Option
     Then I wait some minutes
     And I click on "Create New Quiz" button
     Then I wait some minutes
-    When I type "Nhung Question" in the "Title Of The Quiz *" field
+    When I type "Nhung EndtoEnd Question" in the "Title Of The Quiz *" field
     And I click on Add Question button
     Then I wait some minutes
     When In "Q1", I select "Multiple-Choice" type
@@ -193,6 +193,7 @@ Feature: Multiple Choice Question_Option
     And I click on "Sign In" button
     Then I wait some minutes
     When I click on "Submissions" on the left menu
+    Then I wait some minutes
     And I click on "Automatically Graded" tab
     Then I wait some minutes
     Then  "student vctv1012" student with "Nhung Q" question is displayed at Automatically Graded
