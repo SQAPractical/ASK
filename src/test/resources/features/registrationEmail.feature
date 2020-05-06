@@ -54,7 +54,7 @@ Feature: Registration with Email
     When I click on Delete User
     Then I wait some minutes
     And I wait some minutes
-    And confirmation popup appears
+    And "Confirmation" popup appears
     When I click on "Delete" on "Confirmation" popup
     Then I wait some minutes
     When I click on Log Out button
