@@ -16,42 +16,16 @@ import static support.TestContext.getDriver;
 
 
 public class AssessmentGroup {
-    @Given("I open login page")
-    public void iOpenLoginPage() {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
-    }
 
-    @And("I type password {string}")
-    public void iTypePassword(String password) {
-        getDriver().findElement(By.xpath("//*[@placeholder='Password *']")).sendKeys(password);
-    }
-
-    @When("I type email {string}")
-    public void iTypeEmail(String email) {
-        getDriver().findElement(By.xpath("//*[@placeholder='Email *']")).sendKeys(email);
-    }
-
-    @And("I click sign in")
-    public void iClickSignIn() {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
-    }
-
-
-    @Then("password displays in bullets")
-    public void passwordDisplaysInBullets() {
-        assertThat(getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).getAttribute("type")).isEqualTo("password");
-
-    }
-
-    @Then("text {string} appears")
-    public void textAppears(String text) {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException ie) {
-            String actualText = getDriver().findElement(By.xpath("//*[contains(text(),'" + text + "')]")).getText();
-            assertThat(actualText).containsIgnoringCase(text);
-        }
-    }
+//    @Then("text {string} appears")
+//    public void textAppears(String text) {
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException ie) {
+//            String actualText = getDriver().findElement(By.xpath("//*[contains(text(),'" + text + "')]")).getText();
+//            assertThat(actualText).containsIgnoringCase(text);
+//        }
+//    }
 
     @When("I click on {string}")
     public void iClickOn(String button) {
@@ -77,7 +51,7 @@ public class AssessmentGroup {
     @Then("element with xpath {string} is present")
     public void elementWithXpathIsPresent(String xpath) {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         } catch (InterruptedException ie) {
             assertThat(getDriver().findElements(By.xpath(xpath))).hasSize(1);
         }
@@ -96,7 +70,7 @@ public class AssessmentGroup {
     @And("I click on Group Filter")
     public void iClickOnGroupFilter() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         } catch (InterruptedException ie) {
         getDriver().findElement(By.xpath("//mat-select[@placeholder='Group Filter']//div//div//div")).click();}
     }
@@ -104,7 +78,7 @@ public class AssessmentGroup {
     @And("I click on Group Number")
     public void iClickOnGroupNumber() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         } catch (InterruptedException ie){
         getDriver().findElement(By.xpath("//mat-option[20]//span[1]")).click();}
     }
@@ -112,7 +86,7 @@ public class AssessmentGroup {
     @Then("element dashboard contains text {string}")
     public void elementDashboardContainsText(String text) {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         } catch (InterruptedException ie) {
             String actualText = getDriver().findElement(By.xpath("//a[3]//div[1]//div[2]//h5[1]")).getText();
             assertThat(actualText).containsIgnoringCase(text);
@@ -122,7 +96,7 @@ public class AssessmentGroup {
     @And("I click on Quiz to assign")
     public void iClickOnQuizToAssign() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         } catch (InterruptedException ie){
         getDriver().findElement(By.xpath("//mat-select[@placeholder='Select Quiz To Assign']//div//div//span")).click();}
     }
@@ -153,11 +127,13 @@ public class AssessmentGroup {
     }
 
     @When("I click on Go to my assignments button")
-    public void iClickOnGoToMyAssignmentsButton() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException ie){
-            getDriver().findElement(By.xpath("//mat-card[1]//div[1]//a[1]//button[1]//span[1]")).click();}
+    public void iClickOnGoToMyAssignmentsButton() throws InterruptedException {
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException ie){
+            Thread.sleep(2000);
+            getDriver().findElement(By.xpath("//h5[contains(text(),'My Assignments')]")).click();
+//    }
     }
 }
 
