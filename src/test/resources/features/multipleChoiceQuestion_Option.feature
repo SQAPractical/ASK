@@ -9,7 +9,7 @@ Feature: Multiple Choice Question_Option
     Then I wait some minutes
     And I click on "Create New Quiz" button
     Then I wait some minutes
-    When I type "Nhung Question" in the "Title Of The Quiz *" field
+    When I type "Nhung Question" in the "Title Of The Quiz *"
     And I click on Add Question button
     Then I wait some minutes
     When In "Q1", I select "Multiple-Choice" type
@@ -48,7 +48,7 @@ Feature: Multiple Choice Question_Option
     When I click on "Quizzes" on the left menu
     And I click on "Create New Quiz" button
     Then I wait some minutes
-    When I type "Nhung Question 2" in the "Title Of The Quiz *" field
+    When I type "Nhung Question 2" in the "Title Of The Quiz *"
     And I click on Add Question button
     And In "Q1", I select "Multiple-Choice" type
     And In "Q1", I type "Question 1" in "Question *" field
@@ -70,7 +70,7 @@ Feature: Multiple Choice Question_Option
     When I click on "Quizzes" on the left menu
     And I click on "Create New Quiz" button
     Then I wait some minutes
-    When I type "Nhung Question 3" in the "Title Of The Quiz *" field
+    When I type "Nhung Question 3" in the "Title Of The Quiz *"
     And I click on Add Question button
     And In "Q1", I select "Multiple-Choice" type
     Then I wait some minutes
@@ -106,7 +106,7 @@ Feature: Multiple Choice Question_Option
     When I click on "Quizzes" on the left menu
     And I click on "Create New Quiz" button
     Then I wait some minutes
-    When I type "Nhung Question 4" in the "Title Of The Quiz *" field
+    When I type "Nhung Question 4" in the "Title Of The Quiz *"
     And I click on Add Question button
     And In "Q1", I select "Multiple-Choice" type
     And In "Q1", I type "Question 1" in "Question *" field
@@ -131,7 +131,7 @@ Feature: Multiple Choice Question_Option
     And I click on "Create New Quiz" button
     Then I wait some minutes
 #    Create quiz
-    When I type "Nhung Q" in the "Title Of The Quiz *" field
+    When I type "Nhung Q" in the "Title Of The Quiz *"
     And I click on Add Question button
     Then I wait some minutes
     And In "Q1", I select "Multiple-Choice" type

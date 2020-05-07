@@ -9,7 +9,7 @@ Feature: Teacher Creates Quiz with 5 Multiple-Choice questions
     Then I wait some minutes
     And I click on "Create New Quiz" button
     Then I wait some minutes
-    When I type "Nhung Question" in the "Title Of The Quiz *" field
+    When I type "Nhung Question" in the "Title Of The Quiz *"
     And I click on Add Question button
     Then I wait some minutes
     When I add 5 questions "Multiple-Choice"

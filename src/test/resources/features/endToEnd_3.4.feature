@@ -9,7 +9,7 @@ Feature: End To End 3.4
     Then I wait some minutes
     And I click on "Create New Quiz" button
     Then I wait some minutes
-    When I type "Nhung Mix" in the "Title Of The Quiz *" field
+    When I type "Nhung Mix" in the "Title Of The Quiz *"
     And I click on Add Question button
     Then I wait some minutes
     When I add 9 questions which include 3 questions "Multiple-Choice", 3 questions "Single-Choice", and 3 questions "Textual"

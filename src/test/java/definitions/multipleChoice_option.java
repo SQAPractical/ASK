@@ -40,7 +40,7 @@ public class multipleChoice_option {
 
     }
 
-    @When("I type {string} in the {string} field")
+    @When("I type {string} in the {string}")
     public void iTypeInTheField(String text, String quiz) {
 
         getDriver().findElement(By.xpath("//*[@placeholder='" + quiz + "']")).sendKeys(text);
