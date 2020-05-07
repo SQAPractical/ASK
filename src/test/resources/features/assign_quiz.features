@@ -25,4 +25,8 @@ Feature: assign_quiz
     And I click Sign in button
     And click on Assignments on left menu
     Then click on Create New Assignment
-    And I select quiz
+    And I click on select quiz
+    And I click on Quiz name
+    And I click on Select All
+
+
