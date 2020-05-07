@@ -1,3 +1,4 @@
+@Regression
 Feature: Multiple Choice Question_Option
   Scenario: User can create multiple choice quiz successfully with 1000 characters
     Given I open login page

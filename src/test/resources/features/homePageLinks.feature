@@ -1,3 +1,4 @@
+@Regression
 Feature: Home page - Links
 
   Scenario Outline: Home page - Links

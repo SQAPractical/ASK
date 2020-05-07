@@ -1,3 +1,4 @@
+@Regression
 Feature: Quiz Name
 
   Scenario Outline: Quiz

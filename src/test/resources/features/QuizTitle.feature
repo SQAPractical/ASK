@@ -15,7 +15,7 @@ Feature: Quiz title automation
     And I click out of the Title of the Quiz field
     Then I should see error massage
 
-@test1
+  @Regression
   Scenario: Title - not empty
     Given I open login page
     When I type email "qa.sofi@gmail.com"

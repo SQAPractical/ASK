@@ -1,3 +1,4 @@
+@Regression
 Feature: 2.5 Teacher creates Quiz and assign it for 5 individual students
 
 Scenario: Teacher creates Quiz and assign it for 5 individual students

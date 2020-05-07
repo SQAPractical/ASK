@@ -1,3 +1,4 @@
+@Regression
 Feature: Registration with Email
 
   Scenario Outline: Register with Email

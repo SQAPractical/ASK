@@ -1,3 +1,4 @@
+@Regression
 Feature: assign_quiz
 
   Scenario: Assign quiz

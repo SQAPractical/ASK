@@ -1,3 +1,4 @@
+@Regression
 Feature: Single Choice Question - Options
 
   Background: Single Choice Question
