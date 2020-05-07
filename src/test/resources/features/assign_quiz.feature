@@ -1,4 +1,4 @@
-@Regression
+@Regression @gauri
 Feature: assign_quiz
 
   Scenario: Assign quiz
