@@ -13,6 +13,7 @@ Feature: Teacher Creates Quiz with 5 Multiple-Choice questions
     And I click on Add Question button
     Then I wait some minutes
     When I add 5 questions "Multiple-Choice"
+    And I click on "Save" button
     Then I wait some minutes
     Then "Nhung Question" will be displayed at List of Quizzes page
     When I click on "Nhung Question" that I have just created
