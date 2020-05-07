@@ -28,10 +28,10 @@ public class AssessmentGroup {
 //        }
 //    }
 
-    @When("I click on {string}")
-    public void iClickOn(String button) {
-        getDriver().findElement(By.xpath("//h5[contains(text(),'Assignments')]")).click();
-    }
+//    @When("I click on {string}")
+//    public void iClickOn(String button) {
+//        getDriver().findElement(By.xpath("//h5[contains(text(),'Assignments')]")).click();
+//    }
 
     @Then("element {string} contains text {string}")
     public void elementContainsText(String xpath, String text) {
@@ -119,13 +119,13 @@ public class AssessmentGroup {
         getDriver().findElement(By.xpath("//mat-option[1]//span[1]")).click();}
     }
 
-    @And("I click on Select All")
-    public void iClickOnSelectAll() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException ie){
-        getDriver().findElement(By.xpath("//html//body//ac-root//mat-sidenav-container//mat-sidenav-content//main//ac-create-assignment-page//mat-card//form//div//div//button//span")).click();}
-    }
+//    @And("I click on Select All")
+//    public void iClickOnSelectAll() {
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException ie){
+//        getDriver().findElement(By.xpath("//html//body//ac-root//mat-sidenav-container//mat-sidenav-content//main//ac-create-assignment-page//mat-card//form//div//div//button//span")).click();}
+//    }
 
     @When("I click on Go to my assignments button")
     public void iClickOnGoToMyAssignmentsButton() throws InterruptedException {

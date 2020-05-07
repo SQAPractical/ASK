@@ -21,11 +21,11 @@ public class AssignmentGreadedBy {
     }
 
 
-    @Then("I click on Give Assignment button")
-    public void iClickOnGiveAssignmentButton() {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Give Assignment')]")).click();
-
-    }
+//    @Then("I click on Give Assignment button")
+//    public void iClickOnGiveAssignmentButton() {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Give Assignment')]")).click();
+//
+//    }
     @When("I click on My Assignments")
     public void iClickOnMyAssignments() throws InterruptedException {
         Thread.sleep(2000);
@@ -79,11 +79,11 @@ public class AssignmentGreadedBy {
         getDriver().findElement(By.xpath("//input[@id='mat-input-2']")).sendKeys(QuizName);
     }
 
-    @Then("I click Add Question button")
-    public void iClickAddQuestionButton() {
-        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//span[1]")).click();
-
-    }
+//    @Then("I click Add Question button")
+//    public void iClickAddQuestionButton() {
+//        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//span[1]")).click();
+//
+//    }
 
     @Then("I click on Textual radio button")
     public void iClickOnTextualRadioButton() {
@@ -96,17 +96,16 @@ public class AssignmentGreadedBy {
 
     }
 
-    @Then("I click on Save button")
-    public void iClickOnSaveButton() {
+//    @Then("I click on Save button")
+//    public void iClickOnSaveButton() {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
+//    }
 
-        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
-    }
 
-
-    @Then("I click on {string} button")
-    public void iClickOnButton(String GiveAssignment) {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Give Assignment')]")).click();
-    }
+//    @Then("I click on {string} button")
+//    public void iClickOnButton(String GiveAssignment) {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Give Assignment')]")).click();
+//    }
 
     @Then("I click on Select Quiz To Assign drop down")
     public void iClickOnSelectQuizToAssignDropDown() {

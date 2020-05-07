@@ -12,17 +12,16 @@ Feature: Quiz Name
     Then I wait <sec> sec
     And I click radio button Single choice
     And type <question> in question field
-    Then I type in field <option>
-    And I type in field <option>
+    And I type option one "IJ Maven"
+    And I type option two "BDD"
     Then I wait 2 sec
-    And I type in field <option>
     And I click radio button Option 1
     And I click Save button
 
 
     Examples:
-      | email                             | pass            | title         | sec | question      | option     |
-      | "umzingelte@polioneis-reborb.com" | "mynewpassword" | "IJ cucumber" | 2   | "IJ cucumber" | "IJ Maven", "BDD" |
- #     | "umzingelte@polioneis-reborb.com" | "mynewpassword" | "IJ cucumber" | 2   | "IJ cucumber" | "BDD"      |
+      | email                             | pass            | title         | sec | question      |
+      | "umzingelte@polioneis-reborb.com" | "mynewpassword" | "IJ cucumber" | 2   | "IJ cucumber" |
+ #     | "umzingelte@polioneis-reborb.com" | "mynewpassword" | "IJ cucumber" | 2   | "IJ cucumber" |
 
 
