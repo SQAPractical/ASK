@@ -1,6 +1,6 @@
 @Regression
 Feature: Quiz Name
-
+  @Sofia
   Scenario Outline: Quiz
     Given I open login page
     When I type email <email>
