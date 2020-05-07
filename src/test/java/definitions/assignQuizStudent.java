@@ -68,7 +68,7 @@ public class assignQuizStudent {
     public void assignmentAppearsForStudentsWithTitleOfQuiz(int arg0, String arg1) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(getDriver(), 20);
 
-        wait.until(ExpectedConditions.invisibilityOf(getDriver().findElement(By.tagName("ac-spinner"))));
+//        wait.until(ExpectedConditions.invisibilityOf(getDriver().findElement(By.tagName("ac-spinner"))));
 
         WebElement row = getDriver().findElements(By.className("mat-expansion-panel")).get(0);
 
