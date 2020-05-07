@@ -44,10 +44,10 @@ Feature: AssignmentGradedBy
     Then I click ok
     Then I click on My Grades from left menu
     Then I verify finished quiz is present in the list <QuizName>
-    And I verify that quiz status is <Status>
+    And I verify that quiz status is "PENDING"
     Examples:
-      | email            | pass       |QuizName    | Status   |
-      | "katzem@mail.ru" |"student123"|"!Textual!" |"PENDING" |
+      | email            | pass       |QuizName    |
+      | "katzem@mail.ru" |"student123"|"!Textual!" |
 
 ##########################################################################################################
 
@@ -75,13 +75,13 @@ Feature: AssignmentGradedBy
     Then I type password <pass>
     And I click Sign in button
     Then I click on Submissions from left menu
-    Then I verify that submission is presented <StudentName>
+    Then I verify that submission is presented "Student Kate"
     And I click Grade button
     Then I click + button
     And I click save button
     Examples:
-      | email               | pass   | StudentName   |
-      |"felocipto@gmail.com"| "12345"| "Student Kate"|
+      | email               | pass   |
+      |"felocipto@gmail.com"| "12345"|
 
 ##########################################################################################################
 
@@ -93,11 +93,11 @@ Feature: AssignmentGradedBy
    And I wait 2 seconds
    Then I click on My Grades from left menu
    Then I verify finished quiz is present in the list <QuizName>
-   And I verify that quiz status is <Status>
+   And I verify that quiz status is "PASSED"
 
    Examples:
      | email            | pass       | QuizName   | Status  |
      | "katzem@mail.ru" |"student123"|"!Textual!" |"PASSED" |
-     |                  |            |            |"FAILED" |
+#     |                  |            |            |"FAILED" |
 
 ##########################################################################################################
