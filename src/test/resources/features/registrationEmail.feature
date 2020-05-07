@@ -1,3 +1,4 @@
+@Regression
 Feature: Registration with Email
 
   Scenario Outline: Register with Email
@@ -14,7 +15,7 @@ Feature: Registration with Email
     Examples:
       | FirstName   | LastName  | Email                  | Group  | Pass   | ConfirmPass                       |Message|
 #      1. Verify if user can create account with Alphanumeric & Special characters in Email
-      | "Fir1" | "Las1" | "Exam111*##@gmail.com" | "T001" | "12345" | "12345" | "You have been Registered." |
+      | "Fir1" | "Las1" | "2Exam111*##@gmail.com" | "T001" | "12345" | "12345" | "You have been Registered." |
 #      2. Verify User cannot create account without Email.
       | "Fir1" | "Las1" |   ""                   | "T001" | "12345" |"12345"| "This field is required" |
 #      3. Verify the user is not able to create account with maximum+1 characters in Email.
@@ -54,8 +55,8 @@ Feature: Registration with Email
     When I click on Delete User
     Then I wait some minutes
     And I wait some minutes
-    And confirmation popup appears
-    When I click on Delete on popup
+    And "Confirmation" popup appears
+    When I click on "Delete" on "Confirmation" popup
     Then I wait some minutes
     When I click on Log Out button
     Then I wait some minutes
