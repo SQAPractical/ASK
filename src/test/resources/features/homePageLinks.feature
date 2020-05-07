@@ -1,6 +1,6 @@
 @Regression
 Feature: Home page - Links
-
+@Home
   Scenario Outline: Home page - Links
     Given I open login page
     Then I type email <email>
