@@ -50,17 +50,3 @@
     you can go ahead and create Pull request on GitHub.
 
 14. Repeat steps 3-13 for each complete task
-
-
-------
-If conflict
-
-1. In file(s) that haighlited with read, fix mistakes by selecting correct version (master or head)
-
-2. Check if you can run Test cases
-
-3. git add . - add your changes to commit 
-
-4. git commit -m "resolved" - commit your changes 
-
-5. git push 

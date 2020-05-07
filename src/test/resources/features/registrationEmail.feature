@@ -14,7 +14,7 @@ Feature: Registration with Email
     Examples:
       | FirstName   | LastName  | Email                  | Group  | Pass   | ConfirmPass                       |Message|
 #      1. Verify if user can create account with Alphanumeric & Special characters in Email
-      | "Fir1" | "Las1" | "Exam111*##@gmail.com" | "T001" | "12345" | "12345" | "You have been Registered." |
+      | "Fir1" | "Las1" | "2Exam111*##@gmail.com" | "T001" | "12345" | "12345" | "You have been Registered." |
 #      2. Verify User cannot create account without Email.
       | "Fir1" | "Las1" |   ""                   | "T001" | "12345" |"12345"| "This field is required" |
 #      3. Verify the user is not able to create account with maximum+1 characters in Email.

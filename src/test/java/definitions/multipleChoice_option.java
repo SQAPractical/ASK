@@ -40,11 +40,9 @@ public class multipleChoice_option {
 
     }
 
-    @When("I type {string} in the {string} field")
-    public void iTypeInTheField(String text, String quiz) {
-
+    @When("I type text {string} in the {string} field")
+    public void iTypeTextInTheField(String text, String quiz) {
         getDriver().findElement(By.xpath("//*[@placeholder='" + quiz + "']")).sendKeys(text);
-
     }
 
     @Then("{string} will be displayed at List of Quizzes page")
@@ -170,4 +168,5 @@ public class multipleChoice_option {
         String xpath = "//*[contains(text(),'"+text+"')]/../..";
         Assert.assertTrue( getDriver().findElement(By.xpath(xpath)).isDisplayed());
     }
+
 }
