@@ -70,11 +70,11 @@ public class SingleChoiceText {
 
     }
 
-    @Then("I click Save button")
-    public void iClickSaveButton() {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]/..")).click();
-
-    }
+//    @Then("I click Save button")
+//    public void iClickSaveButton() {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]/..")).click();
+//
+//    }
 
     @Then("I select Option one as a correct answer")
     public void iSelectOptionOneAsACorrectAnswer() {
@@ -152,6 +152,11 @@ public class SingleChoiceText {
     @Then("I click button Add Question")
     public void iClickButtonAddQuestion() {
         getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).click();
+    }
+
+    @Then("I click button Save")
+    public void iClickButtonSave() {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]/..")).click();
     }
 
 //    @Then("I wait for {int} seconds")

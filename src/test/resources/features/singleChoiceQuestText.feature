@@ -17,7 +17,7 @@ Feature: Single choice question - Text
     Then I type "Option 1" as Option one
     Then I type "Option 2" as Option two
     Then I select Option one as a correct answer
-    Then I click Save button
+    Then I click button Save
     Then list of Quizzes appears
     Then I click on "Quiz Senina" quiz
     Then I click on Preview button
@@ -56,7 +56,7 @@ Feature: Single choice question - Text
     Then I type "Option 1" as Option one
     Then I type "Option 2" as Option two
     Then I select Option one as a correct answer
-    Then I click Save button
+    Then I click button Save
     Then text "This field is required" appears
 
 
@@ -80,7 +80,7 @@ Feature: Single choice question - Text
     Then I type "Option 1" as Option one
     Then I type "Option 2" as Option two
     Then I select Option one as a correct answer
-    Then I click Save button
+    Then I click button Save
     Then text "White spaces are not allowed" appears
 
 
@@ -104,6 +104,6 @@ Feature: Single choice question - Text
     Then I type "Option 1" as Option one
     Then I type "Option 2" as Option two
     Then I select Option one as a correct answer
-    Then I click Save button
+    Then I click button Save
     Then text "Too long. Can't be more than 1000 characters" appears
 
