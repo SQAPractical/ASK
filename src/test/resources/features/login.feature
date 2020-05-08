@@ -28,8 +28,6 @@ Feature: Login
 
 
   @Acceptance @test123@gauri
-
-
   Scenario: password in bullets
       Given I open login page
       And I type password "122345"
