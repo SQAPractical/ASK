@@ -40,8 +40,8 @@ public class multipleChoice_option {
 
     }
 
-    @When("I type text {string} in the {string} field")
-    public void iTypeTextInTheField(String text, String quiz) {
+    @When("I type {string} in the {string}")
+    public void iTypeInTheField(String text, String quiz) {
         getDriver().findElement(By.xpath("//*[@placeholder='" + quiz + "']")).sendKeys(text);
     }
 
