@@ -11,7 +11,7 @@ Feature: Single choice question - Text
     Then I click Create New Quiz button
     Then frame Title Of The Quiz appears
     Then I type title of the quiz "Quiz Senina"
-    Then I click Add Question button
+    Then I click button Add Question
     Then I choose the question type Single Choice
     Then I type text of the question "<textInitial>"
     Then I type "Option 1" as Option one
@@ -19,14 +19,14 @@ Feature: Single choice question - Text
     Then I select Option one as a correct answer
     Then I click Save button
     Then list of Quizzes appears
-    Then I click on "Quiz Senina"
+    Then I click on "Quiz Senina" quiz
     Then I click on Preview button
     Then PREVIEW MODE appears
     Then text of question should be "<textFinal>"
     Then I close PREVIEW MODE
-    Then I wait for 2 sec
+#    Then I wait for 2 sec
     Then I delete "Quiz Senina"
-    Then I wait for 3 sec
+#    Then I wait for 3 sec
 
     Examples:
       | textInitial                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | textFinal                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -50,7 +50,7 @@ Feature: Single choice question - Text
     Then I click Create New Quiz button
     Then frame Title Of The Quiz appears
     Then I type title of the quiz "Quiz Senina"
-    Then I click Add Question button
+    Then I click button Add Question
     Then I choose the question type Single Choice
     Then I type text of the question ""
     Then I type "Option 1" as Option one
@@ -74,7 +74,7 @@ Feature: Single choice question - Text
     Then I click Create New Quiz button
     Then frame Title Of The Quiz appears
     Then I type title of the quiz "Quiz Senina"
-    Then I click Add Question button
+    Then I click button Add Question
     Then I choose the question type Single Choice
     Then I type text of the question "  "
     Then I type "Option 1" as Option one
@@ -98,7 +98,7 @@ Feature: Single choice question - Text
     Then I click Create New Quiz button
     Then frame Title Of The Quiz appears
     Then I type title of the quiz "Quiz Senina"
-    Then I click Add Question button
+    Then I click button Add Question
     Then I choose the question type Single Choice
     Then I type text of the question "wwwwwwwwwwwwwwwwwwwwwwwweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewwwwwwwwwwwwwwwwwwwwwwwweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewwwwwwwwwwwwwwwwwwwwwwwweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffg"
     Then I type "Option 1" as Option one

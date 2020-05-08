@@ -41,10 +41,10 @@ public class SingleChoiceText {
     }
 
 
-    @Then("I click Add Question button")
-    public void iClickAddQuestionButton() {
-        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).click();
-    }
+//    @Then("I click Add Question button")
+//    public void iClickAddQuestionButton() {
+//        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).click();
+//    }
 
     @Then("I choose the question type Single Choice")
     public void iChooseTheQuestionTypeSingleChoice() {
@@ -81,11 +81,11 @@ public class SingleChoiceText {
         getDriver().findElement(By.xpath("//*[@placeholder='Option 1*']/../../../../..//*[@class='mat-radio-inner-circle']")).click();
     }
 
-    @Then("I click on {string}")
-    public void iClickOn(String titleOfQuiz) {
-        getDriver().findElement(By.xpath("//*[contains(text(),'" + titleOfQuiz + "')]/../..")).click();
-
-    }
+//    @Then("I click on {string}")
+//    public void iClickOn(String titleOfQuiz) {
+//        getDriver().findElement(By.xpath("//*[contains(text(),'" + titleOfQuiz + "')]/../..")).click();
+//
+//    }
 
     @Then("I click on Preview button")
     public void iClickOnPreviewButton() {
@@ -138,5 +138,33 @@ public class SingleChoiceText {
         getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(titleOfQuiz);
 
     }
+
+    @Then("I click on {string} quiz")
+    public void iClickOnQuiz(String titleOfQuiz) {
+        getDriver().findElement(By.xpath("//*[contains(text(),'" + titleOfQuiz + "')]/../..")).click();
+    }
+
+//    @Then("I click Add question button my")
+//    public void iClickAddQuestionButtonMy() {
+//        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).click();
+//    }
+
+    @Then("I click button Add Question")
+    public void iClickButtonAddQuestion() {
+        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).click();
+    }
+
+//    @Then("I wait for {int} seconds")
+//    public void iWaitForSeconds(int arg0) {
+//    }
+
+
+//    @Then("I click Add question button")
+//    public void iClickAddQuestionButton() {
+//    }
+
+//    @Then("I click Add Question Button")
+//    public void iClickAddQuestionButton() {
+//    }
 }
 
