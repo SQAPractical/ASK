@@ -1,3 +1,4 @@
+@Regression
 Feature: Assignment group
 
   Scenario Outline: Assignment group

@@ -4,9 +4,12 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import java.awt.desktop.SystemEventListener;
 
 import static java.lang.Thread.*;
 import static support.TestContext.getDriver;
@@ -64,7 +67,17 @@ public class registrationEmail {
 
     @And("I click on {string} on the left menu")
     public void iClickOnOnTheLeftMenu(String text) {
-        getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).click();
+
+//        if (text.contains("'")){
+//            getDriver().findElement(By.xpath("*[contains(text(),'"+ StringEscapeUtils.escapeJava(text)+"')]")).click();
+//        }else{
+            getDriver().findElement(By.xpath("//*[contains(text(),\""+text+"\")]")).click();
+
+
+//        }
+
+        //input[@text=\"WE'd like to hear from you\"]
+        //*[contains(text(),\"User's Management\")]
     }
 
     @And("I click on {string} tab")
@@ -82,14 +95,14 @@ public class registrationEmail {
         getDriver().findElement(By.xpath("//*[contains(text(),'delete')]")).click();
     }
 
-    @Then("confirmation popup appears")
-    public void confirmationPopupAppears() {
-        Assert.assertTrue(getDriver().findElement(By.xpath("//*[contains(text(),'Confirmation')]")).isDisplayed());
+    @Then("{string} popup appears")
+    public void confirmationPopupAppears(String confirmation) {
+        Assert.assertTrue(getDriver().findElement(By.xpath("//*[contains(text(),'"+confirmation+"')]")).isDisplayed());
     }
 
     @When("I click on Delete on popup")
     public void iClickOnDeleteOnPopup() {
-        getDriver().switchTo().activeElement().findElement(By.xpath("//span[contains(text(),'Delete')]")).click();
+        getDriver().switchTo().activeElement().findElement(By.xpath("//*[contains(text(),'Delete')]")).click();
     }
 
     @Then("User is deleted")
