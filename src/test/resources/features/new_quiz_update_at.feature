@@ -10,9 +10,11 @@ Feature: New_Quiz_update_at
     Then I click on create new quiz button
     When I type "something" on title of quiz
     Then I click on Add Question button
-    And I click on Single-Choice radio button
+#    And I click on Single-Choice radio button
+    And In "Q1", I select "Single-Choice" type
     Then I type "something" on Question name text area
-    And I click on Option one radio button
+    And In "Q1", I check on "Option 1*" is correct answer
+#    And I click on Option one radio button
     When I type "A" on name of options
     Then I click on Save button
     And I click on quiz that i have just created
@@ -21,7 +23,8 @@ Feature: New_Quiz_update_at
     And I wait for 5 sec
     And I click on edit button
     Then I click on Q one: something
-    And I click on Option two radio button
+#    And I click on Option two radio button
+    And In "Q1", I check on "Option 2*" is correct answer
     Then I click on Save button
     Then I click on quiz that i have just edited
     Then updated at field should be displayed

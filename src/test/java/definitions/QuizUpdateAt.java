@@ -34,10 +34,10 @@ public class QuizUpdateAt {
         getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
     }
 
-    @Then("^I wait for (\\d+) sec$")
-    public void iWaitForSec(int sec) throws Exception {
-        Thread.sleep(sec * 1000);
-    }
+//    @Then("^I wait for (\\d+) sec$")
+//    public void iWaitForSec(int sec) throws Exception {
+//        Thread.sleep(sec * 1000);
+//    }
 
     @Then("I click on sad quiz")
     public void iClickOnSadQuiz() {
@@ -72,11 +72,11 @@ public class QuizUpdateAt {
         }
     }
 
-    @Then("I click on Save button")
-    public void iClickOnSaveButton() {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]|.//div[@class='form-controls-container ng-star-inserted']//button[2]")).click();
-
-    }
+//    @Then("I click on Save button")
+//    public void iClickOnSaveButton() {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]|.//div[@class='form-controls-container ng-star-inserted']//button[2]")).click();
+//
+//    }
 
 
     @Then("updated at field should be displayed")
