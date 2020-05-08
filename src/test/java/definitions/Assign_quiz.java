@@ -43,11 +43,11 @@ public class Assign_quiz {
         getDriver().findElement(By.xpath("//*[contains(text(),'Q1')]/../../..//*[@placeholder='Option 2*']")).sendKeys(second);
     }
 
-    @Then("I select first Option is correct answer")
-    public void iSelectFirstOptionIsCorrectAnswer() throws InterruptedException {
-        Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//*[@placeholder='Option 1*']/../../../../..//*[@class='mat-radio-outer-circle']")).click();
-    }
+//    @Then("I select first Option is correct answer")
+//    public void iSelectFirstOptionIsCorrectAnswer() throws InterruptedException {
+//        Thread.sleep(2000);
+//        getDriver().findElement(By.xpath("//*[@placeholder='Option 1*']/../../../../..//*[@class='mat-radio-outer-circle']")).click();
+//    }
 
     @Then("I click on Save button")
     public void iClickOnSaveButton() throws InterruptedException {

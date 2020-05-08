@@ -1,3 +1,4 @@
+@Regression
 Feature: Teacher Creates Quiz with 5 Multiple-Choice questions
   Scenario: Teacher Creates Quiz with 5 Multiple-Choice questions
     Given I open login page

@@ -1,3 +1,4 @@
+@Regression
 Feature: AssignmentGradedBy
 
   Scenario Outline: Teacher crate and assign the quiz

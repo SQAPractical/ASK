@@ -1,3 +1,4 @@
+@Regression
 Feature: Registration with Email
 
   Scenario Outline: Register with Email
@@ -26,6 +27,7 @@ Feature: Registration with Email
 #        6. Verify user is not able to create the account without the last part of the domain name in Email.
       | "Fir1" | "Las1" | "sample@gmail" | "T001" | "12345"      |"12345"| "Should be a valid email address" |
 
+    @test123
   Scenario: Able to create account with maximun characters in Email
     Given I open login page
      When I click on Register Now button
