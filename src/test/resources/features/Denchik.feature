@@ -1,3 +1,12 @@
+@predefined10
+Scenario: Predefined steps for Boardreader
+Given I open url "http://boardreader.com"
+Then I should see page title as "Boardreader - Forum Search Engine"
+Then element with xpath "//input[@id='title-query']" should be displayed
+Then I click on element with xpath "//input[@id='title-query']"
+When I type "Behavior Driven Development" into element with xpath "//input[@id='title-query']"
+Then I wait for element with xpath "//div[@class='mdl-cell mdl-cell--12-col searchResultsBlock']" to be present
+Then element with xpath "//div[@class='mdl-cell mdl-cell--12-col searchResultsBlock']" should contain text "Cucumber"
 
 @predefined11
 Scenario: Predefined steps for Ecosia
