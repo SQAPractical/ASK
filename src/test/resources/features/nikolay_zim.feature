@@ -3,4 +3,4 @@ Feature:
 
     test1
     test2
- git   test3
+ git   test3пше сруслщге ьфыеук
