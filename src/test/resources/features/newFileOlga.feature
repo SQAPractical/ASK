@@ -1,2 +1,5 @@
-Scenario:
-Given I created ne file Olga
+Feature: two
+  Scenario: New file added
+    123
+    123
+    123
