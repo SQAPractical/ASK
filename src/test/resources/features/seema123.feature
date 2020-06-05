@@ -1,4 +1,4 @@
 Feature: abc
   Scenario: test1
-    Given
+    Hello world! 123
 
