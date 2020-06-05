@@ -6,7 +6,7 @@
     `git checkout -b name_of_your_branch`
     and create remote copy
     `ggitit push --set-upstream origin name_of_your_branch`
-    The name of your local branch mgust match the name of your remote branch.
+    The name of your local branch must match the name of your remote branch.
         Example (You can see in terminal):
         `* [new branch]      nik -> nik`
 
