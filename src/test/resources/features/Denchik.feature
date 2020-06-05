@@ -1,5 +1,5 @@
 @predefined10
-Scenario: Test conflict
+Scenario: Hello how are you
 Given I open url "http://boardreader.com"
 Then I should see page title as "Boardreader - Forum Search Engine"
 Then element with xpath "//input[@id='title-query']" should be displayed
