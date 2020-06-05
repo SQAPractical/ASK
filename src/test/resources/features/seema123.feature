@@ -1,4 +1,6 @@
 Feature: abc
   Scenario: test1
-    Hello world! 123
+    Given
+    When I click on
+
 
