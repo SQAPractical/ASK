@@ -1,7 +1,4 @@
 feature: dfdfdf
   scenerio:
 
-  dfd
-  dfgfg
-
-  fggfgf
+  Test the Search Engines in the homework
