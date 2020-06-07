@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.setMaxLengthForSingleLineDescription;
@@ -48,5 +49,45 @@ public class login {
 //        assertThat(actualtext.equalsIgnoreCase(expectedText)).isTrue();
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+expectedText+"')]")).isDisplayed()).isTrue();
 
+    }
+
+    @And("I leave {string} blank")
+    public void iLeaveBlank(String field) {
+        if (field.equalsIgnoreCase("email"))
+        { getDriver().findElement(By.xpath("//*[@formcontrolname='email']")).click();
+        }
+        else if (field.equalsIgnoreCase("password"))
+        {getDriver().findElement(By.xpath("//*[@formcontrolname='password']")).click();
+        }
+        else
+            System.out.println("field name is not supported");
+
+    }
+
+    @Then("password displays in bullets")
+    public void passwordDisplaysInBullets() {
+        WebElement pass = getDriver().findElement(By.xpath("//*[@formcontrolname='password']"));
+//        to verify that password should have TYPE attribute as PASSWORD
+        assertThat(((WebElement) pass).getAttribute("type")).isEqualTo("password");
+    }
+
+    @Then("cut menu item on password field is disabled")
+    public void cutMenuItemOnPasswordFieldIsDisabled() {
+        WebElement pass = getDriver().findElement(By.xpath("//*[@formcontrolname='password']"));
+        assertThat(((WebElement) pass).getAttribute("id")).isEqualTo("password");
+//                getDriver.getElementById('password').addEventListener('cut', function(e) {
+//            e.preventDefault();});
+
+    }
+
+    @Then("I logout with confirm message")
+    public void iLogoutWithConfirmMessage() {
+        getDriver().findElement(By.xpath("//*[contains(text(),'Log Out')]")).click();
+        getDriver().findElement(By.xpath("//span[text()='Log Out']")).click();
+    }
+
+    @And("I wait for {int} sec")
+    public void iWaitForSec(int milliSec) throws InterruptedException {
+        Thread.sleep(milliSec * 1000);
     }
 }
