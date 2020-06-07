@@ -1,4 +1,4 @@
-Feature:рорро
+gitFeature:рорро
   Scenario: kjnfkjv
 
     test
