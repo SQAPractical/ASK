@@ -5,6 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.setMaxLengthForSingleLineDescription;
@@ -68,13 +69,13 @@ public class login {
     public void passwordDisplaysInBullets() {
         WebElement pass = getDriver().findElement(By.xpath("//*[@formcontrolname='password']"));
 //        to verify that password should have TYPE attribute as PASSWORD
-        assertThat(((WebElement) pass).getAttribute("type")).isEqualTo("password");
+        assertThat(pass.getAttribute("type")).isEqualTo("password");
     }
 
     @Then("cut menu item on password field is disabled")
     public void cutMenuItemOnPasswordFieldIsDisabled() {
         WebElement pass = getDriver().findElement(By.xpath("//*[@formcontrolname='password']"));
-        assertThat(((WebElement) pass).getAttribute("id")).isEqualTo("password");
+        assertThat(pass.getAttribute("type")).isEqualTo("password");
 //                getDriver.getElementById('password').addEventListener('cut', function(e) {
 //            e.preventDefault();});
 
@@ -89,5 +90,17 @@ public class login {
     @And("I wait for {int} sec")
     public void iWaitForSec(int milliSec) throws InterruptedException {
         Thread.sleep(milliSec * 1000);
+    }
+
+    @Then("Error message {string} appears under email field")
+    public void errorMessageAppearsUnderEmailField(String text) {
+       String emailError =  "//input[@placeholder='Email *']/../../..//*[contains(text(),'"+text+"')]";
+        assertThat(getDriver().findElement(By.xpath(emailError)).isDisplayed()).isTrue();
+    }
+
+    @Then("Error message {string} appears under password field")
+    public void errorMessageAppearsUnderPasswordField(String text) {
+        String passError =  "//input[@placeholder='Password *']/../../..//*[contains(text(),'"+text+"')]";
+        assertThat(getDriver().findElement(By.xpath(passError)).isDisplayed()).isTrue();
     }
 }
