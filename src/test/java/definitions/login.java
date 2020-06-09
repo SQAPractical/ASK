@@ -5,10 +5,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.setMaxLengthForSingleLineDescription;
 import static support.TestContext.getDriver;
 
 public class login {
@@ -76,8 +74,6 @@ public class login {
     public void cutMenuItemOnPasswordFieldIsDisabled() {
         WebElement pass = getDriver().findElement(By.xpath("//*[@formcontrolname='password']"));
         assertThat(pass.getAttribute("type")).isEqualTo("password");
-//                getDriver.getElementById('password').addEventListener('cut', function(e) {
-//            e.preventDefault();});
 
     }
 
