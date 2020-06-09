@@ -40,7 +40,7 @@ Feature: test suit for total questions in the quiz
     And I click on "Save" button
     Then I verify error message "Quiz is not completed." appears
 
-  Scenario: Verify quize has to have maximum 50 questions
+  Scenario: Verify quiz has to have maximum 50 questions
     Given I navigate to "login" page
     When I type email "teacher1@gmail.com"
     And I type password "12345"
