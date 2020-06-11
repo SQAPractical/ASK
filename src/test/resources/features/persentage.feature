@@ -89,6 +89,5 @@ Feature: passing
     And I wait for 1 sec
     Then I click DETAILS button in quiz "Math"
     And I wait for 1 sec
-    Then "Actual points" should contain "20 of 25 / 80%"
 
 
