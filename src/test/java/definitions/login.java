@@ -96,26 +96,4 @@ public class login {
         String passError = "//input[@placeholder='Password *']/../../..//*[contains(text(),'" + text + "')]";
         assertThat(getDriver().findElement(By.xpath(passError)).isDisplayed()).isTrue();
     }
-
-    @When("I type {string} into element with xpath {string}")
-    public void iTypeIntoElementWithXpath(String text, String xpath) {
-        getDriver().findElement(By.xpath(xpath)).sendKeys(text);
-    }
-
-    @And("I click on element with xpath {string}")
-    public void iClickOnElementWithXpath(String xpath) throws InterruptedException {
-        Thread.sleep(2000);
-        getDriver().findElement(By.xpath(xpath)).click();
-    }
-
-    @Then("element with xpath {string} should be displayed")
-    public void elementWithXpathShouldBeDisplayed(String xpath) {
-        assertThat(getDriver().findElement(By.xpath(xpath)).isDisplayed()).isTrue();
-    }
-
-    @Then("element with xpath {string} should contain text {string}")
-    public void elementWithXpathShouldContainText(String xpath, String text) {
-        String actualText = getDriver().findElement(By.xpath(xpath)).getText();
-        assertThat(actualText).contains(text);
-    }
 }
