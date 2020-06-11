@@ -6,7 +6,7 @@ Feature: Email
     Given I navigate to "registration" page
     When I type "Mimi" into First Name input field
     And I type "Miss" into Last Name input field
-    And I type "olchiih_12@gmail.com" into Email field
+    And I type "olchiph_12@gmail.com" into Email field
     And I type "123" into Group Code field
     And I type "12345" into Password field
     And I type "12345" into Confirm Password field
