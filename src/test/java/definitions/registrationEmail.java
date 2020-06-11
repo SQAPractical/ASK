@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import static support.TestContext.getDriver;
 
-public class RegistrationEmail {
+public class registrationEmail {
     @When("I type {string} into First Name input field")
     public void iTypeIntoFirstNameInputField(String firstName) {
         getDriver().findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(firstName);

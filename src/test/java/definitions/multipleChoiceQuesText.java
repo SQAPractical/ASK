@@ -5,7 +5,7 @@ import cucumber.api.java.en.Given;
 import org.openqa.selenium.By;
 import static support.TestContext.getDriver;
 
-public class MultipleChoiceQuesText {
+public class multipleChoiceQuesText {
     @Given("I goto login page")
     public void iGotoLoginPage() {
         getDriver().get("http://ask-stage.portnov.com/#/login");
