@@ -7,7 +7,7 @@ Feature: Login
     And I type email "qa.sofi@gmail.com"
     And I type password "12345"
     And I click Sign In button
-    Then text "Elena Talley" appears
+    Then text "Sofia Teacher" appears
 
   @login2.1
   Scenario: invalid email (not registered) and valid password doesnot allow to login
@@ -52,14 +52,15 @@ Feature: Login
   Scenario: leading and trailing spaces not allowed in email
     Given I navigate to "login" page
     And I type email " qa.sofi@gmail.com"
-    And I type password "123456"
+    And I type password "12345"
+    And I wait for 2 sec
     Then Error message "Should be a valid email address" appears under email field
 
   @login6
   Scenario: leading and trailing spaces not allowed in password
     Given I navigate to "login" page
     And I type email "qa.sofi@gmail.com"
-    And I type password " 123456"
+    And I type password " 12345"
     And I click Sign In button
     Then Error message "Whitespaces are not allowed" appears under password field
 
@@ -69,14 +70,14 @@ Feature: Login
     And I type email "qa.sofi@gmail.com"
     And I type password "12345"
     And I click Sign In button
-    Then text "Elena Talley" appears
+    Then text "Sofia Teacher" appears
     Then I logout with confirm message
-    And I wait for 2 sec
+    And I wait for 5 sec
 #        to check with uppercase email id
     And I type email "QA.SOFI@GMAIL.COM"
     And I type password "12345"
     And I click Sign In button
-    Then text "Elena Talley" appears
+    Then text "Sofia Teacher" appears
 
   @login8
   Scenario: password field case sensitive
