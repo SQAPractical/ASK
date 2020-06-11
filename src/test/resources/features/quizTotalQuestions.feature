@@ -1,5 +1,5 @@
 Feature: test suit for total questions in the quiz
-
+  @Smoke
   Scenario: Create a quiz with 5 questions
     Given I navigate to "login" page
     When I type email "teacher1@gmail.com"

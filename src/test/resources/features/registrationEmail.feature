@@ -1,7 +1,7 @@
 @registration
 Feature: Email
 
-  @registration1
+  @registration1 @Smoke
     #Verify that email field accepts Alphanumeric & Special characters
   Scenario: Alphanumeric & Special characters
     Given I navigate to "registration" page
@@ -15,7 +15,7 @@ Feature: Email
     And I wait for 3 sec
     Then text "You have been Registered." appears
 
-  @registration2
+  @registration2 @Smoke
     #Verify that empty field is not allowed
   Scenario: Empty field
     Given I navigate to "registration" page
