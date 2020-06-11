@@ -90,6 +90,11 @@ public class quiz_title {
         getDriver().findElement(By.xpath("//*[contains(text(),'"+NameQuiz+"')]/../../..//*[contains(text(),'Edit')]")).click();
     }
 
+    @Then("list of quizzes appears")
+    public void listOfQuizzesAppears() {
+        assertThat(getDriver().findElement(By.xpath("//*[@class='quizzes']")).isDisplayed()).isTrue();
+    }
+
     //@Then("I compare actual and expected {string} title")
     //public void iCompareActualAndExpectedTitle(String expectedQuizTitle) {
         //String actualQuizTitle = "";

@@ -68,4 +68,3 @@
       Then text "Sofia Teacher" appears
       When I click "Quizzes"
       Then I delete quiz with title "New Quiz2"
-
