@@ -1,7 +1,7 @@
 @registration
 Feature: Registration - Email
 
-  @registration1
+  @registration1 @Acceptance
   Scenario: Alphanumeric & Special characters
     Given I navigate to "registration" page
     When I type "Mimi" into First Name input field
@@ -14,7 +14,7 @@ Feature: Registration - Email
     And I wait for 3 sec
     Then text "You have been Registered." appears
 
-  @registration2
+  @registration2 @Acceptance
     #Verify that empty field is not allowed
   Scenario: Empty field
     Given I navigate to "registration" page
