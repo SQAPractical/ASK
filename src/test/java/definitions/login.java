@@ -3,7 +3,6 @@ package definitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import cucumber.api.java8.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -50,9 +49,6 @@ public class login {
 
         Thread.sleep(2000);
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+expectedText+"')]")).isDisplayed()).isTrue();
-=======
-        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'" + expectedText + "')]")).isDisplayed()).isTrue();
-
     }
 
     @And("I leave {string} blank")
