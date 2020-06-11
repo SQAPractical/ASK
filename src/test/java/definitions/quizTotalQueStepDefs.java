@@ -17,11 +17,11 @@ public class quizTotalQueStepDefs {
 
     WebDriver driver;
 
-    @When("I click on Create New Quiz button")
-    public void iClickOnCreateNewQuizButton() {
-        getDriver().findElement(By.xpath("//span[text()='Create New Quiz']")).click();
-
-    }
+//    @When("I click on Create New Quiz button")
+//    public void iClickOnCreateNewQuizButton() {
+//        getDriver().findElement(By.xpath("//span[text()='Create New Quiz']")).click();
+//
+//    }
 
     @And("I type title {string} of the quiz")
     public void iTypeTitleOfTheQuiz(String title) {
@@ -33,10 +33,10 @@ public class quizTotalQueStepDefs {
         getDriver().findElement(By.xpath("//span[contains(text(),'" + button + "')]")).click();
     }
 
-    @And("I click on Add Question button")
-    public void iClickOnAddQuestionButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(), 'add_circle')]/..")).click();
-    }
+//    @And("I click on Add Question button")
+//    public void iClickOnAddQuestionButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*[contains(text(), 'add_circle')]/..")).click();
+//    }
 
     @Then("I find a quiz with title {string} from the list of quizzes and click on it")
     public void iFindAQuizWithTitleFromTheListOfQuizzesAndClickOnIt(String title) {
@@ -89,10 +89,10 @@ public class quizTotalQueStepDefs {
        assertThat(actualNum.equals(expectedNum));
     }
 
-    @Then("I click on {string} menu item")
-    public void iClickOnMenuItem(String item) {
-        getDriver().findElement(By.xpath("//h5[text()='Quizzes']/..")).click();
-    }
+//    @Then("I click on {string} menu item")
+//    public void iClickOnMenuItem(String item) {
+//        getDriver().findElement(By.xpath("//h5[text()='Quizzes']/..")).click();
+//    }
 
     @And("I delete a quiz with title {string}")
     public void iDeleteAQuizWithTitle(String title) throws InterruptedException {
