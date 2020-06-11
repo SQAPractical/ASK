@@ -9,17 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class quiz_title {
-    @And("I click Quizzes menu item")
-    public void iClickQuizzes() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Quizzes')]/..")).click();
-        Thread.sleep(2000);
-    }
 
-    @And("I click Create New Quiz button")
-    public void iClickCreateNewQuiz() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Create New Quiz')]/..")).click();
-        Thread.sleep(2000);
-    }
 
     @And("I type Title of the quiz {string}")
     public void iTypeQuizTitle(String pass) throws InterruptedException {
@@ -45,14 +35,9 @@ public class quiz_title {
         Thread.sleep(1000);
     }
 
-    @And("I click Save button")
-    public void iClickSaveButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(), 'Save')]/..")).click();
-        Thread.sleep(2000);
-    }
     @Then("quiz {string} appears")
     public void quizAppears(String expectedText) throws InterruptedException {
-        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+expectedText+"')]")).isDisplayed()).isTrue();
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+expectedText+"')]/..")).isDisplayed()).isTrue();
         Thread.sleep(2000);
     }
 

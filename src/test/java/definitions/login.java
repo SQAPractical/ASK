@@ -25,7 +25,8 @@ public class login {
     }
 
     @And("I type email {string}")
-    public void iTypeEmail(String email) {
+    public void iTypeEmail(String email) throws InterruptedException {
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//*[@formcontrolname='email']")).sendKeys(email);
     }
 
@@ -41,12 +42,14 @@ public class login {
     }
 
     @Then("text {string} appears")
-    public void textAppears(String expectedText) {
+    public void textAppears(String expectedText) throws InterruptedException {
 //        String actualtext = getDriver().findElement(By.xpath("//*[contains(text(),'"+expectedText+"')]")).getText();
 //        System.out.println(actualtext);
 //        assertThat(actualtext.equalsIgnoreCase(expectedText)).isTrue();
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'" + expectedText + "')]")).isDisplayed()).isTrue();
 
+        Thread.sleep(2000);
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+expectedText+"')]")).isDisplayed()).isTrue();
     }
 
     @And("I leave {string} blank")
@@ -75,7 +78,8 @@ public class login {
     }
 
     @Then("I logout with confirm message")
-    public void iLogoutWithConfirmMessage() {
+    public void iLogoutWithConfirmMessage() throws InterruptedException {
+        Thread.sleep(3000);
         getDriver().findElement(By.xpath("//*[contains(text(),'Log Out')]")).click();
         getDriver().findElement(By.xpath("//span[text()='Log Out']")).click();
     }
