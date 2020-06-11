@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.*;
 
-public class QuizTotalQueStepDefs {
+public class quizTotalQueStepDefs {
     WebDriver driver;
 
     @When("I click on Create New Quiz button")

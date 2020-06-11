@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static support.TestContext.getDriver;
 
-public class MultipleChoiceQuesText {
+public class multipleChoiceQuesText {
     @Given("I goto login page")
     public void iGotoLoginPage() {
         getDriver().get("http://ask-stage.portnov.com/#/login");
