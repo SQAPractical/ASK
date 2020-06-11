@@ -5,7 +5,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.setMaxLengthForSingleLineDescription;
 import static support.TestContext.getDriver;
@@ -39,7 +38,7 @@ public class login {
     @And("I click Sign In button")
     public void iClickSignInButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[@type='submit']")).click();
-    Thread.sleep(2000);
+    Thread.sleep(3000);
     }
 
     @Then("text {string} appears")
@@ -81,13 +80,34 @@ public class login {
     }
 
     @Then("I logout with confirm message")
-    public void iLogoutWithConfirmMessage() {
+    public void iLogoutWithConfirmMessage() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'Log Out')]")).click();
         getDriver().findElement(By.xpath("//span[text()='Log Out']")).click();
+        Thread.sleep(3000);
     }
 
     @And("I wait for {int} sec")
     public void iWaitForSec(int milliSec) throws InterruptedException {
         Thread.sleep(milliSec * 1000);
     }
+
+    @Then("I click on {string} in navigation menu")
+    public void iClickOnInNavigationMenuQuizz(String quizzMenu) {
+        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
+    }
+
+    @And("I click on Create New Quizz button")
+    public void iClickOnButton() {
+        WebElement newQuizz = getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]"));
+        newQuizz.click();
+    }
+
+    @Then("I type Title in the text field")
+    public void iTypeTitleInTheTextField() {
+        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys("Textual quizz 10");
+    }
+
+
+
+
 }
