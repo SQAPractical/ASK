@@ -1,7 +1,7 @@
 @login
 Feature: Login
 
-  @login1
+  @login1 @Acceptance
   Scenario: valid email and valid password allows to login
     Given I navigate to "login" page
     And I type email "qa.sofi@gmail.com"
