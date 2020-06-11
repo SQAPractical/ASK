@@ -46,11 +46,11 @@ public class TextualQuestion {
         getDriver().findElement(By.xpath("//mat-expansion-panel[1]//div[1]//div[1]//ac-question-body-form[1]//div[1]//div[2]//mat-form-field[1]//div[1]//div[1]//div[1]//textarea[1]")).sendKeys("Patria O Muerte");
     }
 
-    @And("I click Save button")
-    public void iClickSaveButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//div[@class='form-controls-container ng-star-inserted']//button[2]")).click();
-        Thread.sleep(3000);
-    }
+//    @And("I click Save button")
+//    public void iClickSaveButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//div[@class='form-controls-container ng-star-inserted']//button[2]")).click();
+//        Thread.sleep(3000);
+//    }
 
 
     @When("I click on Assignments menu")
