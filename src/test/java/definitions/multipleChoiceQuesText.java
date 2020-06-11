@@ -2,7 +2,11 @@ package definitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import static support.TestContext.getDriver;
 
 public class multipleChoiceQuesText {
@@ -12,12 +16,14 @@ public class multipleChoiceQuesText {
     }
 
     @And("I type title of quiz {string}")
-    public void iTypeTitleOfQuiz(String text) {
+    public void iTypeTitleOfQuiz(String text) throws InterruptedException {
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//*[contains(@placeholder,'Title Of The Quiz')]")).sendKeys(text);
     }
 
     @And("I type question {string}")
-    public void iTypeQuestion(String ques) {
+    public void iTypeQuestion(String ques) throws InterruptedException {
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//*[contains(@placeholder,'Question ')]")).sendKeys(ques);
     }
 
@@ -32,7 +38,13 @@ public class multipleChoiceQuesText {
                    getDriver().findElement(By.xpath("(//*[contains(@id, 'mat-checkbox')]/..)[4]")).click();
     }
 
-    @And("I type question with {int} characters")
+    @Then("^I wait for element with xpath \"([^\"]*)\" to be present$")
+    public void iWaitForElementWithXpathToBePresent(String xpath) {
+        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+    }
+
+
+        @And("I type question with {int} characters")
     public void iTypeQuestionWithCharacters(int totalChar) {
         int i=0;
         String question = "A";
@@ -45,7 +57,8 @@ public class multipleChoiceQuesText {
     }
 
     @And("I click {string}")
-    public void iClick(String text1) {
+    public void iClick(String text1) throws InterruptedException {
+        Thread.sleep(2000);
         String text = text1.toLowerCase();
         switch (text){
             case "sign in":
@@ -65,6 +78,35 @@ public class multipleChoiceQuesText {
                 break;
             case "save" :
                 getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
+                break;
+            case "textual":
+                getDriver().findElement(By.xpath("//*[contains(text(),'Textual')]")).click();
+                break;
+            case "assignments" :
+                getDriver().findElement(By.xpath("//h5[contains(text(),'Assignments')]")).click();
+                break;
+            case "create new assignment" :
+                String assignPath = "//span[contains(text(),'Create New Assignment')]";
+                new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(assignPath)));
+                getDriver().findElement(By.xpath(assignPath)).click();
+                break;
+            case "select quiz to assign" :
+                String quizpath = "//span[contains(text(),'Select Quiz To Assign')]";
+                new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(quizpath)));
+                getDriver().findElement(By.xpath(quizpath)).click();
+                break;
+            case "give assignment" :
+                String assignpath = "//span[contains(text(),'Give Assignment')]";
+                new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(assignpath)));
+                getDriver().findElement(By.xpath(assignpath)).click();
+                break;
+            case "my assignments" :
+                String assignMypath = "//h5[contains(text(),'My Assignments')]";
+                new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(assignMypath)));
+                getDriver().findElement(By.xpath(assignMypath)).click();
+                break;
+            case "close":
+                getDriver().findElement(By.xpath("//button[@aria-label='Close dialog']")).click();
                 break;
             default:
                 System.out.println("Unsupported button or field :"+text);
