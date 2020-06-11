@@ -28,20 +28,20 @@ public class persentage {
             Thread.sleep(2000);
         }
 
-        @Then("I click on Create New Quiz button")
-        public void iClickOnCreateNewQuizButton() {
-            getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
-        }
+//        @Then("I click on Create New Quiz button")
+//        public void iClickOnCreateNewQuizButton() {
+//            getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
+//        }
 
         @Then("I type name of quiz {string} into Title Of The Quiz")
         public void iTypeNameOfQuizIntoTitleOfTheQuiz(String text) {
             getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(text);
         }
 
-        @Then("I click on Add Question button")
-        public void iClickOnAddQuestionButton() {
-            getDriver().findElement(By.xpath("//mat-icon[@class='mat-icon material-icons']")).click();
-        }
+//        @Then("I click on Add Question button")
+//        public void iClickOnAddQuestionButton() {
+//            getDriver().findElement(By.xpath("//mat-icon[@class='mat-icon material-icons']")).click();
+//        }
 
         @When("I type the text of Question {int} : {string}")
         public void iTypeTheTextOfQuestion(int a, String text) {
@@ -96,10 +96,10 @@ public class persentage {
             getDriver().findElement(By.xpath("//h5[contains(text(),'My Assignments')]")).click();
     }
 
-    @Then("I click GO TO ASSESSMENT button on quiz {string}")
-    public void iClickGOTOASSESSMENTButtonOnQuiz(String text) {
-            getDriver().findElement(By.xpath("//tr[@class='ng-star-inserted']/../../..//*[contains(text(),'"+ text +"')]/../../..//*[@class='mat-raised-button mat-primary']")).click();
-    }
+//    @Then("I click GO TO ASSESSMENT button on quiz {string}")
+//    public void iClickGOTOASSESSMENTButtonOnQuiz(String text) {
+//            getDriver().findElement(By.xpath("//tr[@class='ng-star-inserted']/../../..//*[contains(text(),'"+ text +"')]/../../..//*[@class='mat-raised-button mat-primary']")).click();
+//    }
 
     @Then("I choose answer {int} in question {int}")
     public void iChooseAnswerInQuestion(int a, int b) {
