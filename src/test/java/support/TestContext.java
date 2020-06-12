@@ -11,7 +11,6 @@ import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -34,13 +33,6 @@ public class TestContext {
     public static void teardown() {
         driver.quit();
     }
-
-    public static WebDriverWait getWait() {
-        return new WebDriverWait(getDriver(), 5);
-    }
-
-    public static WebDriverWait getWait(int timeout) {
-        return new WebDriverWait(driver, 5);}
 
     public static void initialize(String browser, boolean isHeadless) {
         String osName = System.getProperty("os.name");

@@ -25,7 +25,7 @@ Feature: Login
     And I click Sign In button
     Then text "Authentication failed. User not found or password does not match" appears
 
-  @login2.3
+  @login2.3 @Smoke
   Scenario: blank email and blank password doesnot allow to login
     Given I navigate to "login" page
 #    And I leave "email" blank
@@ -33,14 +33,14 @@ Feature: Login
     And I click Sign In button
     Then text "This field is required" appears
 
-  @login3
+  @login3 @Smoke
   Scenario: password field displays input in bullets
     Given I navigate to "login" page
     And I type email "qa.sofi@gmail.com"
     And I type password "12345"
     Then password displays in bullets
 
-  @login4
+  @login4 @Smoke
   Scenario: "Cut/Copy" menu item on Password field is disabled
     Given I navigate to "login" page
     And I type email "qa.sofi@gmail.com"
@@ -94,4 +94,3 @@ Feature: Login
     And I click Sign In button
     Then text "Authentication failed. User not found or password does not match" appears
     And I wait for 5 sec
-
