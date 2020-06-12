@@ -102,7 +102,7 @@ Feature: Email
                 When I type "Anny" into element with xpath "//input[@placeholder='First Name']"
                 And I type "Anya" into element with xpath "//input[@placeholder='Last Name']"
                 And I type "Test ing@gmailcom" into element with xpath "//input[@placeholder='Email']"
-                And I type "123" into element with xpath "//input[@placeholder='Group Code']"
+                And I type "123" into element with xpathgit "//input[@placeholder='Group Code']"
                 And I type "12345" into element with xpath "//input[@placeholder='Password']"
                 And I type "12345" into element with xpath "//input[@placeholder='Confirm Password']"
                 And I click on element with xpath "//span[contains(text(),'Register Me')]"
