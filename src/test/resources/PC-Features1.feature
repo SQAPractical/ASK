@@ -4,4 +4,3 @@ Feature: test
     I eat a cucumber
     I check the refrigerator
     Then the shelf 3 in refrigerator is Empty
-    
