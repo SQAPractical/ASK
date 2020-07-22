@@ -1,2 +1,0 @@
-Feature: helentestfeature
-  Scenario: helentestscenario

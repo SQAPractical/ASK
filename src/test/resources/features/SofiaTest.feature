@@ -1,3 +1,0 @@
-Feature: fsgkdf
-  Ssfdsgva
-  sgdfvzdfsv
