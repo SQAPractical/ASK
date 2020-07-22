@@ -16,6 +16,8 @@ import org.junit.runner.RunWith;
 public class TestRunner {
     @BeforeClass
     public static void setup() {
+        //this is my test change
+        //this is my test change
         System.out.println("BeforeAll");
     }
 
