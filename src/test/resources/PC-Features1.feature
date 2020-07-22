@@ -1,4 +1,4 @@
-Feature: test
+gitFeature: test
   Scenario: Test 1
     I buy a cucumber
     I eat a cucumber
