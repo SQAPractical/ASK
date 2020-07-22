@@ -1,0 +1,12 @@
+today July 21 2020 git practice
+1 - git pull "   " -
+2 - git checkout -b QA2 - to create new branch and switch to that
+3 - git push --set-upstream origin "our branch"
+4 - git add  .  or path file - if . add every changes
+5 - git commit - m "message what changed" - leave changes with note what changed
+6 - git checkout master - switch to local master
+7 - git pull - get update local master.
+8 - git checkout QA2 - switch to branch
+9 - git merge master - copy changes to your branch when you in you branch.
+10 - git push - send local branch changes to remote branch
+11 -  git stash  delete changes on local master
