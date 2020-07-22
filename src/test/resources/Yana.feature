@@ -1,3 +1,3 @@
 Feature: test
-  Scenario: something hello hello 123
+  Scenario: something to do do be do
     tada
