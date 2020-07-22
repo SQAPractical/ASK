@@ -1,2 +1,2 @@
 Feature:test
-  Scenario: alakiiiii
+  Scenario: alakiiiii,dm,m,d,,END
