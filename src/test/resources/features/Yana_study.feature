@@ -1,3 +1,0 @@
-Feature: doesn't matter yet
-  Scenario: to be continued...
-    Given I open https://www.weather.com
