@@ -44,8 +44,9 @@ public class Registration_LastName {
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
     }
 
-    @Then("error message should appear")
-    public void errorMessageShouldAppear() {
+
+    @Then("Data too long error message should appear")
+    public void dataTooLongErrorMessageShouldAppear() {
         assertThat(getDriver().findElement(By.xpath("//div[@class='cdk-visually-hidden']")).isDisplayed()).isTrue();
     }
 }
