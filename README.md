@@ -49,4 +49,8 @@
 13. Once you collected all the changes on your remote branch,
     you can go ahead and create Pull request on GitHub.
 
-14. Repeat steps 3-13 for each complete task
+14. Switch to your branch `git checkout your_branch_name`
+
+15. Update your branch `git merge master`
+    
+Repeat steps 3-15 for each complete task
