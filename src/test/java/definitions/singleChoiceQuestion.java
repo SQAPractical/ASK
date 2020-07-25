@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import static support.TestContext.getDriver;
 
-public class quizzes {
+public class singleChoiceQuestion {
     @And("I click Quizzes in the left menu")
     public void iClickInQuizzesButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'Quizzes')]")).click();

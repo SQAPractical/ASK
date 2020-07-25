@@ -1,10 +1,10 @@
 Feature: Login
   Scenario: Valid email, valid password
     Given I open "login" page
-    When I type email "qa.sofi@gmail.com"
+    When I type email "assessment.portnov@gmail.com"
     And I type password "12345"
     And I click Sign in button
-    Then Text "Sofia Teacher" appears
+    Then Text "Jane Doe" appears
 
   Scenario: invalid email, valid password
     Given I open "login" page
