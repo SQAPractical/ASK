@@ -14,7 +14,7 @@ public class login {
     @Given("I open {string} page")
     public void iOpenPage(String page) {
         if (page.equalsIgnoreCase("login")) {
-            getDriver().get("http://ask-qa.portnov.com/#/login");}
+            getDriver().get("http://ask-qa.portnov.com/#/home");}
         else if (page.equalsIgnoreCase("registration")){
             getDriver().get("http://ask-qa.portnov.com/#/registration");
         }
@@ -45,6 +45,7 @@ public class login {
         WebElement passwordField = getDriver().findElement(By.xpath("//input[@placeholder='Password *']"));
         assertThat(passwordField.getAttribute("type")).isEqualTo("password");
     }
+
 }
 
 
