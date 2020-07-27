@@ -8,6 +8,7 @@ Feature: Quiz Editor Features
     And I click Quizzes in the left menu
     And I click Create New Quiz button
     And I type "Quiz PC-07272020A" in Title Of The Quiz *
+    And I click Add Question button
     And I add first "Multiple-Choice" question saying "What is the answer?"
     And I type "Choice A" in Option one
     And I type "Choice B" in Option two
