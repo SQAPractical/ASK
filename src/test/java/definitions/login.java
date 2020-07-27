@@ -14,7 +14,7 @@ public class login {
     @Given("I open {string} page")
     public void iOpenPage(String page) {
         if (page.equalsIgnoreCase("login")) {
-            getDriver().get("http://ask-qa.portnov.com/#/home");}
+            getDriver().get("http://ask-qa.portnov.com/#/login");}
         else if (page.equalsIgnoreCase("registration")){
             getDriver().get("http://ask-qa.portnov.com/#/registration");
         }
