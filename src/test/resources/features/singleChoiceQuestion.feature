@@ -1,4 +1,4 @@
-Feature:
+Feature: Single choice question/Other text area
   Scenario: Single choice question/Other text area
     Given I open "login" page
     When I type email "assessment.portnov@gmail.com"

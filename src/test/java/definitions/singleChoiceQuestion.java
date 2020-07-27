@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class singleChoiceQuestion {
@@ -13,14 +14,9 @@ public class singleChoiceQuestion {
         Thread.sleep(2000);
     }
 
-    @And("I click Create New Quiz button")
-    public void iClickCreateNewQuizButton() {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
-    }
-
     @And("I type {string} in Title Of The Quiz *")
     public void iTypeInTitleOfTheQuiz(String Title) throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(Title);
 
     }
@@ -53,13 +49,13 @@ public class singleChoiceQuestion {
     }
 
     @And("I click preview button")
-    public void iClickPreviewButton() {
+    public void iClickPreviewButton(){
         getDriver().findElement(By.xpath("//span[contains(text(),'Preview')]")).click();
     }
 
     @Then("Text field Other appears")
     public void textFieldOtherAppears() {
-        getDriver().findElement(By.xpath("//textarea[@placeholder='Other']")).isDisplayed();
+        assertThat(getDriver().findElement(By.xpath("//textarea[@placeholder='Other']")).isDisplayed()).isTrue();
     }
 
     @And("I type {string} in Option two")
