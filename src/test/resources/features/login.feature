@@ -22,3 +22,4 @@ Feature: Login
     Given I open "login" page
     And I type password "12345"
     Then password displays in bullets, copy, cut options disabled
+
