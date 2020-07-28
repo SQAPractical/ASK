@@ -45,6 +45,7 @@ public class login {
         WebElement passwordField = getDriver().findElement(By.xpath("//input[@placeholder='Password *']"));
         assertThat(passwordField.getAttribute("type")).isEqualTo("password");
     }
+
 }
 
 
