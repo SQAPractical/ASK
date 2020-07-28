@@ -7,7 +7,7 @@ Feature: Smoke
     Then Text "Sofia Teacher" appears
     And I click Quizzes button
     And I click Create New Quiz button
-    And I type "QMC-Other -- DO NOT DELETE000" in the Title Of The Quiz *
+    And I type "QMC-Other -- DO NOT DELETE1000" in the Title Of The Quiz *
     And I click Add Question button
     And I click Multiple Choice radio button
     And I type "What is software testing?1234!@#$" in Question *
@@ -15,9 +15,9 @@ Feature: Smoke
     And I type "A physical condition in which something is wrong with a part of someone's body" in Option two
     And I click Option one
     And I click Save
-    And I click "QMC-Other -- DO NOT DELETE000"
-    And I click Preview on quiz "QMC-Other -- DO NOT DELETE000"
+    And I click "QMC-Other -- DO NOT DELETE1000"
+    And I click Preview on quiz "QMC-Other -- DO NOT DELETE1000"
     Then Text "What is software testing?1234!@#$" appears
-    And I delete quiz "QMC-Other -- DO NOT DELETE000"
+    And I delete quiz "QMC-Other -- DO NOT DELETE1000"
 
 

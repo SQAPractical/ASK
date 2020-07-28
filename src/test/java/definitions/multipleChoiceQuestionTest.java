@@ -48,20 +48,21 @@ public class multipleChoiceQuestionTest {
        // getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'QMC-Other -- DO NOT DELETE')]")).click();
    // }
     @Then("I click {string}")
-    public void iClick(String arg0) throws InterruptedException {
-        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'QMC-Other -- DO NOT DELETE')]")).click();
+    public void iClick(String quizName) throws InterruptedException {
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizName+"')]")).click();
        Thread.sleep(2000);
     }
 
     @Then("I click Preview on quiz {string}")
     public void iClickPreviewOnQuiz(String quizName) throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'"+quizName+"')]/../../..//*[contains(text(), 'Preview')]")).click();
-        getDriver().findElement(By.xpath("//span[contains(text(),'Close')]")).click();
-        Thread.sleep(2000);
+
     }
 
     @And("I delete quiz {string}")
     public void iDeleteQuiz(String quizName) throws InterruptedException {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Close')]")).click();
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//*[contains(text(),'"+quizName+"')]/../../..//*[contains(text(), 'Delete')]")).click();
         getDriver().findElement(By.xpath("//*[contains(text(),'Confirmation')]/../..//span[contains(text(),'Delete')]")).click();
         Thread.sleep(2000);
