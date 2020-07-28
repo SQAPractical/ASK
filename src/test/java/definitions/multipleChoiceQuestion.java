@@ -39,4 +39,24 @@ public class multipleChoiceQuestion {
         Thread.sleep(2000);                // Give browser time to render question / options
         getDriver().findElement(By.xpath("//textarea[@placeholder='Question *']")).sendKeys(questionText);
     }
+
+    // ***************************************************************************
+    //  For Multiple-Choice questions indicate the correct answer
+    // ***************************************************************************
+    @And("I select option {int} as the correct answer")
+    public void iSelectOptionAsTheCorrectAnswer(int correctAnswer) {
+        String xField;
+        switch (correctAnswer) {
+            case 1:
+                xField = "//ac-question-body-form//div[1]/mat-checkbox[1]/label[1]/div[1]";
+                getDriver().findElement(By.xpath("//textarea[@placeholder='Option 1*']")).click();
+                break;
+            case 2:
+                xField = "//ac-question-body-form//div[2]/mat-checkbox[1]/label[1]/div[1]";
+                break;
+            default:
+                throw new IllegalStateException("This option number is invalid: " + correctAnswer);
+        }
+        getDriver().findElement(By.xpath(xField)).click();
+    }
 }

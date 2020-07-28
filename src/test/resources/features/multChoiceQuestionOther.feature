@@ -13,7 +13,7 @@ Feature: Quiz Editor Features
     And I type "Choice A" in Option one
     And I type "Choice B" in Option two
     And I click Include Other text area option for this question
-    And I click Option one radio button
+    And I select option 1 as the correct answer
     And I click preview button
     Then Text field Other appears
     And I click close button
