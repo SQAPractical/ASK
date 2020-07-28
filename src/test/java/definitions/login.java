@@ -33,11 +33,12 @@ public class login {
     @And("I click Sign in button")
     public void iClickSignInButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
     @Then("Text {string} appears")
-    public void textAppears(String text) {
+    public void textAppears(String text) throws InterruptedException {
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
+        Thread.sleep(3000);
     }
 
     @Then("password displays in bullets, copy, cut options disabled")
