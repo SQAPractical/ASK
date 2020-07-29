@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class textualQuestion {
+public class textualQuestionText {
     @And("I click {string} button")
     public void iClickButton(String Quizzes) throws InterruptedException {
         getDriver().findElement(By.xpath("//*[text()='Quizzes']")).click();

@@ -1,4 +1,5 @@
 Feature: Registration - Group code
+
   Scenario: Allowable characters: Alphanumeric
     Given I open "registration" page
     When I type name "Victor"
@@ -10,26 +11,26 @@ Feature: Registration - Group code
     And I click Register Me button
     Then text "You have been Registered" appears
 
-    Scenario: Allowable characters: Alphanumeric Special char
-      Given I open "registration" page
-      When I type name "Victor"
-      And I type Last Name "Victorov"
-      And I type email "student10@gmail.com" on registration page
-      And I type group code "Abc1*"
-      And I type password "12345" on registration page
-      And I type confirm password "12345"
-      And I click Register Me button
-      Then text "You have been Registered" appears
+  Scenario: Allowable characters: Alphanumeric Special char
+    Given I open "registration" page
+    When I type name "Victor"
+    And I type Last Name "Victorov"
+    And I type email "student10@gmail.com" on registration page
+    And I type group code "Abc1*"
+    And I type password "12345" on registration page
+    And I type confirm password "12345"
+    And I click Register Me button
+    Then text "You have been Registered" appears
 
-      Scenario: Group code field can’t be empty
-        Given I open "registration" page
-        When I type name "Victor"
-        And I type Last Name "Victorov"
-        And I type email "student10@gmail.com" on registration page
-        And I type password "12345" on registration page
-        And I type confirm password "12345"
-        And I click Register Me button
-        Then text "This field is required" appears
+  Scenario: Group code field can’t be empty
+    Given I open "registration" page
+    When I type name "Victor"
+    And I type Last Name "Victorov"
+    And I type email "student10@gmail.com" on registration page
+    And I type password "12345" on registration page
+    And I type confirm password "12345"
+    And I click Register Me button
+    Then text "This field is required" appears
 
   Scenario: Group Code- Min 1 character
     Given I open "registration" page

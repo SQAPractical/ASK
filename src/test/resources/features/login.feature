@@ -1,50 +1,24 @@
 Feature: Login
-  Scenario: Valid email, valid password
-    Given I open "Login" page
-    When I type email "student0@gmail.com"
-    And I type password "123456"
-    And I click Sign in button
-    Then Text "Victor Victorov" appears
 
-  Scenario: Invalid email, valid password
-    Given I open "Login" page
-    When I type email "student0@gmail.co"
-    And I type password "123456"
+  Scenario Outline: Valid email, valid password
+    Given I open <page> page
+    When I type email <email>
+    And I type password <pass>
     And I click Sign in button
-    Then simple snack bar appear
+    Then Text <text> appears
+    Examples:
+      | page    | email                   | pass     | text            |
+      | "login" | "qa.sofi@gmail.com"     | "123456" | "Sofia Teacher" |
+      | "login" | "qa.soefdfi@gmail.com"  | "123456" | "Authentication failed. User not found or password does not match" |
+      | "login" | "gal.gmail.com"         | "123456" | "Should be a valid email address" |
+      | "login" | ""                      | "123456" | "This field is required" |
+      | "login" | "qa.sofi@gmail.com"     | ""       | "This field is required" |
+      | "login" | " gal@gmail.com"        | "123456" | "Should be a valid email address" |
+      | "login" | "gal@gmail.com "        | "123456" | "Should be a valid email address" |
+      | "login" | "gal@gmail.com "        | " 123456" | "Whitespaces are not allowed" |
+      | "login" | "gal@gmail.com"         | "123456 " | "Whitespaces are not allowed" |
 
-  Scenario: Valid email, invalid password
-    Given I open "Login" page
-    When I type email "student0@gmail.com"
+  Scenario: password displays in bullets, copy, cut options disabled
+    Given I open "login" page
     And I type password "12345"
-    And I click Sign in button
-    Then simple snack bar appear
-
-  Scenario: Empty email, valid password
-    Given I open "Login" page
-    When I type password "123456"
-    And I click Sign in button
-    Then alert appears
-
-  Scenario: Valid email, empty password
-    Given I open "Login" page
-    When I type email "student0@gmail.com"
-    And I click Sign in button
-    Then alert appears
-
-
-  Scenario: Leading spaces not allowed
-    Given I open "Login" page
-    When I type email " student0@gmail.com"
-    And I type password "123456"
-    And I click Sign in button
-    Then alert "Should be a valid email address" appears
-
-
-
-
-
-
-
-
-
+    Then password displays in bullets, copy, cut options disabled

@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 
 import static support.TestContext.getDriver;
 
-public class RegGroupCode {
+public class registrationGroupCode {
     @When("I type name {string}")
     public void iTypeName(String name) {
         getDriver().findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(name);
