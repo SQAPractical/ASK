@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class singleChoiceQuestion {
+public class singleChoiceQuestionOtherTextArea {
     @And("I click Quizzes in the left menu")
     public void iClickInQuizzesButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'Quizzes')]")).click();
@@ -16,7 +16,6 @@ public class singleChoiceQuestion {
 
     @And("I type {string} in Title Of The Quiz *")
     public void iTypeInTitleOfTheQuiz(String Title) throws InterruptedException {
-        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(Title);
 
     }
@@ -24,7 +23,6 @@ public class singleChoiceQuestion {
     @And("I click Add Question button")
     public void iClickAddQuestionButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-icon[@class='mat-icon material-icons']")).click();
-        Thread.sleep(2000);
     }
 
     @And("I click Single-Choice radio button")
@@ -44,7 +42,7 @@ public class singleChoiceQuestion {
 
     @Then("I click Option one radio button")
     public void iClickOptionRadioButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//body/ac-root/mat-sidenav-container/mat-sidenav-content/main/ac-quiz-builder-page/form/main/mat-accordion/mat-expansion-panel/div/div/ac-question-body-form/div/div[2]/div[1]/mat-radio-group[1]/mat-radio-button[1]/label[1]/div[1]")).click();
+        getDriver().findElement(By.xpath("//textarea[@placeholder='Option 1*']/../../../../..//div[@class='mat-radio-outer-circle']")).click();
         Thread.sleep(2000);
     }
 
@@ -70,12 +68,15 @@ public class singleChoiceQuestion {
     }
 
     @And("I click close button")
-    public void iClickCloseButton() {
-        getDriver().findElement(By.xpath("//ac-quiz-preview[@class='ng-star-inserted']//button[@class='mat-raised-button mat-primary']")).click();
+    public void iClickCloseButton() throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//span[contains(text(),'Close')]")).click();
+        Thread.sleep(2000);
     }
 
     @And("I click Save button")
-    public void iClickSaveButton() {
-        getDriver().findElement(By.xpath("//ac-quiz-preview[@class='ng-star-inserted']//button[@class='mat-raised-button mat-primary']")).click();
+    public void iClickSaveButton() throws InterruptedException {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
+        Thread.sleep(2000);
     }
 }
