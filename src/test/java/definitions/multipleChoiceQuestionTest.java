@@ -61,8 +61,6 @@ public class multipleChoiceQuestionTest {
 
     @And("I delete quiz {string}")
     public void iDeleteQuiz(String quizName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Close')]")).click();
-        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//*[contains(text(),'"+quizName+"')]/../../..//*[contains(text(), 'Delete')]")).click();
         getDriver().findElement(By.xpath("//*[contains(text(),'Confirmation')]/../..//span[contains(text(),'Delete')]")).click();
         Thread.sleep(2000);

@@ -18,6 +18,7 @@ Feature: Smoke
     And I click "QMC-Other -- DO NOT DELETE1000"
     And I click Preview on quiz "QMC-Other -- DO NOT DELETE1000"
     Then Text "What is software testing?1234!@#$" appears
+    And I click close button
     And I delete quiz "QMC-Other -- DO NOT DELETE1000"
 
 

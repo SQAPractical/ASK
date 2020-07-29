@@ -30,8 +30,8 @@ public class Assignment_Students_number_and_name {
     }
 
     @And("I choose one student {string} from list of students")
-    public void iChooseOneStudentFromListOfStudents(String arg0) {
-        getDriver().findElement(By.xpath("//body//mat-list-option[34]")).click();
+    public void iChooseOneStudentFromListOfStudents(String studName) {
+        getDriver().findElement(By.xpath("//mat-list-option[contains(.,'"+studName+"')]")).click();
     }
 
     @And("I click on {string} button")
@@ -40,14 +40,14 @@ public class Assignment_Students_number_and_name {
     }
 
     @Then("new assignment {string} appears on the top of the list")
-    public void newAssignmentAppearsOnTheTopOfTheList(String arg0) throws InterruptedException {
-        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'Capitals')]")).isDisplayed()).isTrue();
+    public void newAssignmentAppearsOnTheTopOfTheList(String quizName) throws InterruptedException {
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+quizName+"')]")).isDisplayed()).isTrue();
         Thread.sleep(2000);
     }
 
     @And("I click on {string}")
-    public void iClickOn(String arg0) throws InterruptedException {
-        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Quiz: Capitals')]")).click();
+    public void iClickOn(String quiz) throws InterruptedException {
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quiz+"')]")).click();
         Thread.sleep(2000);
     }
 
@@ -56,13 +56,5 @@ public class Assignment_Students_number_and_name {
         assertThat(getDriver().findElement(By.xpath("//td[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
     }
 
-    @And("I choose second student {string} from list of students")
-    public void iChooseSecondStudentFromListOfStudents(String arg0) {
-        getDriver().findElement(By.xpath("//body//mat-list-option[18]")).click();
-    }
 
-    @And("I choose third student {string} from list of students")
-    public void iChooseThirdStudentFromListOfStudents(String arg0) {
-        getDriver().findElement(By.xpath("//body//mat-list-option[19]")).click();
-    }
 }

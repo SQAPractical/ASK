@@ -70,12 +70,15 @@ public class singleChoiceQuestion {
     }
 
     @And("I click close button")
-    public void iClickCloseButton() {
-        getDriver().findElement(By.xpath("//ac-quiz-preview[@class='ng-star-inserted']//button[@class='mat-raised-button mat-primary']")).click();
+    public void iClickCloseButton() throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//span[contains(text(),'Close')]")).click();
+        Thread.sleep(2000);
     }
 
     @And("I click Save button")
-    public void iClickSaveButton() {
-        getDriver().findElement(By.xpath("//ac-quiz-preview[@class='ng-star-inserted']//button[@class='mat-raised-button mat-primary']")).click();
+    public void iClickSaveButton() throws InterruptedException {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
+        Thread.sleep(2000);
     }
 }
