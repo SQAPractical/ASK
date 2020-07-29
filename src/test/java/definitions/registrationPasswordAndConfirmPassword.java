@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class RegistrationPasswordAndConfirmPassword {
+public class registrationPasswordAndConfirmPassword {
 
     @And("Text {string} should appear near field")
     public void textShouldAppearNearField(String text) {
