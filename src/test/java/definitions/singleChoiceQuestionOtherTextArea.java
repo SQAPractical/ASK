@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class singleChoiceQuestion {
+public class singleChoiceQuestionOtherTextArea {
     @And("I click Quizzes in the left menu")
     public void iClickInQuizzesButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'Quizzes')]")).click();

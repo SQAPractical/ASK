@@ -4,7 +4,6 @@ Feature: Quiz total questions
     When I type email "assessment.portnov@gmail.com"
     And I type password "12345"
     And I click Sign in button
-
     And I click on Quizzes
     And I click on Create New Quiz button
     And I type title of quiz "XYZ"
@@ -23,7 +22,7 @@ Feature: Quiz total questions
     And I click on Quizzes
     And I click on Create New Quiz button
     And I type title of quiz "XYZ"
-    And I add 50 questions to quiz
+    And I add 51 questions to quiz
     And I click on save button
     Then text "Error Message" appears
 
