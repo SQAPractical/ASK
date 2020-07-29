@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class Registration_LastName {
+public class registrationLastName {
     @Then("Text {string} should appear")
     public void textShouldAppear(String text) {
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();

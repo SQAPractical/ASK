@@ -16,7 +16,7 @@ public class textualQuestion {
     @And("I click Create New Quiz button")
     public void iClickCreateNewQuizButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
 
@@ -24,20 +24,17 @@ public class textualQuestion {
     @And("I type title of the quiz {string}")
     public void iTypeTitleOfTheQuiz(String Titleofthequiz) throws InterruptedException {
         getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(Titleofthequiz);
-        Thread.sleep(2000);
     }
 
     @And("I click Add Question")
     public void iClickAddQuestion() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'add_circle')]")).click();
-        Thread.sleep(2000);
     }
 
 
     @And("I click Textual radio button")
     public void iClickTextualRadioButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'Textual')]")).click();
-        Thread.sleep(2000);
     }
 
     @And("type question {string}")

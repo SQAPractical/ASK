@@ -16,7 +16,6 @@ public class singleChoiceQuestion {
 
     @And("I type {string} in Title Of The Quiz *")
     public void iTypeInTitleOfTheQuiz(String Title) throws InterruptedException {
-        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(Title);
 
     }
@@ -24,7 +23,6 @@ public class singleChoiceQuestion {
     @And("I click Add Question button")
     public void iClickAddQuestionButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-icon[@class='mat-icon material-icons']")).click();
-        Thread.sleep(2000);
     }
 
     @And("I click Single-Choice radio button")
@@ -44,7 +42,7 @@ public class singleChoiceQuestion {
 
     @Then("I click Option one radio button")
     public void iClickOptionRadioButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//body/ac-root/mat-sidenav-container/mat-sidenav-content/main/ac-quiz-builder-page/form/main/mat-accordion/mat-expansion-panel/div/div/ac-question-body-form/div/div[2]/div[1]/mat-radio-group[1]/mat-radio-button[1]/label[1]/div[1]")).click();
+        getDriver().findElement(By.xpath("//textarea[@placeholder='Option 1*']/../../../../..//div[@class='mat-radio-outer-circle']")).click();
         Thread.sleep(2000);
     }
 

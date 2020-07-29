@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import static support.TestContext.getDriver;
 
-public class showStoper {
+public class singleChoiceQuestionShowStopper {
 
     @Then("^I click on element using JavaScript with xpath \"([^\"]*)\"$")
     public void iClickOnElementUsingJavaScriptWithXpath(String xpath) throws InterruptedException {
@@ -17,13 +17,6 @@ public class showStoper {
         JavascriptExecutor executor = (JavascriptExecutor) getDriver();
         executor.executeScript("arguments[0].click();", element);
         Thread.sleep(2000);
-    }
-
-    @Then("I click Save button")
-    public void iClickSaveButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
-        Thread.sleep(2000);
-
     }
 
     @Then("I click on element with xpath {string}")

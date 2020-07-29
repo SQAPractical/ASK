@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class Assignment_Students_number_and_name {
+public class assignmentStudentNumberAndName {
     @And("I click Assignments button")
     public void iClickAssignmentsButton() {
         getDriver().findElement(By.xpath("//*[contains(text(),'Assignments')]")).click();

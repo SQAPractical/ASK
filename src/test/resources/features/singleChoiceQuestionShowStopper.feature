@@ -1,4 +1,4 @@
-Feature: ShowStoper
+Feature: Single Choice Question - Show-Stopper
   Scenario: Single Choice Question - Show-Stopper
     Given  I open "login" page
     When I type email "qa.sofi@gmail.com"
@@ -22,6 +22,7 @@ Feature: ShowStoper
     And I click on element using JavaScript with xpath "//mat-panel-title[contains(text(),'Test_Tamara')]"
     And I click on element with xpath "//mat-panel-title[contains(text(),'Test_Tamara')]/../../..//*[contains (text(),'Preview')]"
     Then Text "Show-Stopper Question" appears
+    And I click close button
     And I delete quiz "Test_Tamara"
     
 
