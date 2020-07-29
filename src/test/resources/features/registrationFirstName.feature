@@ -1,4 +1,5 @@
 Feature: Registration
+  @Smoke
   Scenario: Latin characters
     Given I open "registration" page
     When I type first name "Abc"
@@ -9,6 +10,7 @@ Feature: Registration
     And I type confirm password "12345"
     And I click Register Me button
     Then Text "You have been Registered." appears
+
   Scenario: First name field is required
     Given I open "registration" page
     When I type first name ""
