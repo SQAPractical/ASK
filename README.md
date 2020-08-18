@@ -49,8 +49,11 @@
 13. Once you collected all the changes on your remote branch,
     you can go ahead and create Pull request on GitHub.
 
-14. Switch to your branch `git checkout your_branch_name`
+14. Switch to local master to update it `git checkout master`
 
-15. Update your branch `git merge master`
+15. Then switch to your branch `git checkout your_branch_name`
+
+16. And update your branch `git merge master`
+(With this command you will take changes from your local master and copy it to your branch)
     
 Repeat steps 3-15 for each complete task
