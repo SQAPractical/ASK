@@ -1,3 +1,3 @@
 Feature:
   Scenario: New test
-    Different conflict resolve
+    Test test test 1234
