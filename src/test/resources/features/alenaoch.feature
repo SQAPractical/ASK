@@ -1,3 +1,3 @@
 Feature:
   Scenario: New test
-    Test Conflict
+    Different conflict resolve
