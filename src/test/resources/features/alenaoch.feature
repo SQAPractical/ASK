@@ -1,3 +1,3 @@
 Feature:
   Scenario: New test
-    Hello world
+    Test Conflict
