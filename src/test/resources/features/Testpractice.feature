@@ -1,4 +1,0 @@
-assd
-  mmd
-  rrt
-  dd
