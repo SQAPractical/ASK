@@ -1,7 +1,8 @@
 Feature: test
   Scenario: Bla
     djgd
-We need
-    to work
-    on
-    scenarios
+    find new
+    line
+    of
+    code
+    =100
