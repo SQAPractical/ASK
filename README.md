@@ -14,9 +14,9 @@
     (your currently branch will appear in green)
 
     ----
-3. Make your changes
+3. Make your changes - to create `new feature file` and add some feature and scenario, also steps
 
-4. Run `git status` - your changes will appear in red
+4.  Run `git status` - your changes will appear in red
 
 5. Add ALL your changes to staging by typing `git add .`
 
@@ -49,7 +49,7 @@
 13. Once you collected all the changes on your remote branch,
     you can go ahead and create Pull request on GitHub.
 
-14. Switch to local master to update it `git checkout master`
+14. Switch to local master to update it `git checkout master`, and `git pull`
 
 15. Then switch to your branch `git checkout your_branch_name`
 
