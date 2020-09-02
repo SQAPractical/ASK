@@ -5,4 +5,3 @@ We need
     to work
     on
     scenarios
-    git
