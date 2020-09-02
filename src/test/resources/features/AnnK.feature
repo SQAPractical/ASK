@@ -5,4 +5,3 @@ Feature: test
     line
     of
     code
-    5+10=15
