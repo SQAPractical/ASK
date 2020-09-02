@@ -5,3 +5,4 @@ Feature: test
     line
     of
     code
+    =100
