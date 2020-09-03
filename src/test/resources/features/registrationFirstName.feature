@@ -10,4 +10,19 @@ Feature: registration first name
     And I click register me button
     Then Text "You have been Registered." appears
 
+  Scenario Outline: registration first name field is required
+    Given I open <pageName> page
+    When I type first name <FirstName>
+    And I type last name <LastName>
+    And I type email <Email> on registration page
+    And I type group code <Groupcode>
+    And I type password <Password> on registration page
+    And I type confirm password <ConfirmPassword>
+    And I click register me button
+    Then Text <text> appears
+    Examples:
+      | pageName       | FirstName | LastName | Email            | Groupcode | Password | ConfirmPassword | text                     |
+      | "registration" | ""        | "Great"  | "test@gmail.com" | "AAA"     | "12345"  | "12345"         | "This field is required" |
+      | "registration" | " test"        | "Great"  | "test@gmail.com" | "AAA"     | "12345"  | "12345"         | "Whitespaces are not allowed" |
+
 
