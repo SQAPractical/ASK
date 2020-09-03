@@ -4,3 +4,4 @@ Feature: Login
     Then I type email "qa.sofi@gmail.com"
     And I type password "12345"
     And I click Sign in button
+    And I wait for 3 sec
