@@ -52,24 +52,34 @@ public class singleChoiceQuestionText {
 
     @And("I type {string} for first option")
     public void iTypeForFirstOption(String option1) {
-        String xPath = "//*[contains(text(),'Q1: new empty question')]/../../..//*[@placeholder='Option 1*']";
+        String xPath = "//*[contains(text(),'Q1:')]/../../..//*[@placeholder='Option 1*']";
         getDriver().findElement(By.xpath(xPath)).sendKeys(option1);
     }
 
     @And("I type {string} for second option")
     public void iTypeForSecondOption(String option2) {
-        String xPath = "//*[contains(text(),'Q1: new empty question')]/../../..//*[@placeholder='Option 2*']";
+        String xPath = "//*[contains(text(),'Q1:')]/../../..//*[@placeholder='Option 2*']";
         getDriver().findElement(By.xpath(xPath)).sendKeys(option2);
     }
 
     @And("I click first option as answer")
     public void iClickFirstOptionAsAnswer() {
-        String xPath = "//*[contains(text(),'Q1: new empty question')]/../../..//*[@placeholder='Option 1*']/../../../../..//div[@class='mat-radio-container']";
+        String xPath = "//*[contains(text(),'Q1:')]/../../..//*[@placeholder='Option 1*']/../../../../..//div[@class='mat-radio-container']";
         getDriver().findElement(By.xpath(xPath)).click();
     }
 
     @And("I click Save")
     public void iClickSave() {
         getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
+    }
+
+    @Then("List of Quizzes appears")
+    public void listOfQuizzesAppears() {
+        getDriver().findElement(By.xpath("//*[contains(text(),'List of Quizzes')]")).isDisplayed();
+    }
+
+    @Then("quiz {string} appears")
+    public void quizAppears(String quizName) {
+        getDriver().findElement(By.xpath("//*[contains(text(), '"+quizName+"')]")).isDisplayed();
     }
 }
