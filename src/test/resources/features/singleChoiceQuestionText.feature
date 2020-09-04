@@ -14,5 +14,13 @@ Feature: Single Choice Question Text
     Then Back To Quizzes List appears
     And I type Title "SQA Quiz"
     And I click Add Question
+    And I click on Single-Choice option
+    And I type "What is 5+4=?"
+    And I type "It's 9" for first option
+    And I type "It's %" for second option
+    And I wait for 3 sec
+    And I click first option as answer
+    And I click Save
+    And I wait for 3 sec
 
 
