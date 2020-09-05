@@ -70,7 +70,7 @@ public class singleChoiceQuestionText {
 
     @And("I click Save")
     public void iClickSave() {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
+        getDriver().findElement(By.xpath("//div[@class='form-controls-container ng-star-inserted']//button[2]")).click();
     }
 
     @Then("List of Quizzes appears")
