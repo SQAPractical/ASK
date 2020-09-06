@@ -60,14 +60,3 @@ Feature: Login
     And I type password "aaaaa "
     And I click Sign in button
     Then Text "Whitespaces are not allowed" appears
-
-  @login9
-  Scenario: Email field Case insensitive
-    Given I open "login" page
-    When I type email "qa.sofi@g" and field case is insensetive
-
-  @login10
-  Scenario: Password field Case sensitive
-    Given I open "login" page
-    When I type email "qa.sofi@g"
-    And
