@@ -40,6 +40,5 @@ public class registrationFirstName {
     @And("I click register me button")
     public void iClickRegisterMeButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Register Me')]")).click();
-        Thread.sleep(2000);
     }
 }
