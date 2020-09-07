@@ -1,4 +1,3 @@
-
 package definitions;
 
 import cucumber.api.java.en.And;
@@ -9,23 +8,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class login {
     @Given("I open {string} page")
-    public void iOpenPage(String pagenName) {
-        if (pagenName.equalsIgnoreCase("login")) {
+    public void iOpenPage(String pageName) {
+        if (pageName.equalsIgnoreCase("login")) {
             getDriver().get("http://ask-stage.portnov.com/#/login");
-        } else if (pagenName.equalsIgnoreCase("regestration")) {
+        } else if (pageName.equalsIgnoreCase("registration")) {
             getDriver().get("http://ask-stage.portnov.com/#/registration");
         }
     }
 
-
     @Then("I type in {string} in email")
     public void iTypeInInEmail(String email) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
+    }
+
+    @When("I type email {string}")
+    public void iTypeEmail(String email) {
         getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
     }
 
@@ -34,13 +36,17 @@ public class login {
         getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).sendKeys(password);
     }
 
-    @Then("I click Signin button")
-    public void iClickSigninButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
-        Thread.sleep(2000);
+    @And("I type password {string}")
+    public void iTypePassword(String pass) {
+        getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).sendKeys(pass);
     }
 
-    @Then("text {string} Appears")
+    @And("I click Sign in button")
+    public void iClickSignInButton() {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
+    }
+
+    @Then("Text {string} appears")
     public void textAppears(String text) {
         WebElement expectedText = getDriver().findElement(By.xpath("//*[contains(text(),'" + text + "')]"));
         assertThat(expectedText.isDisplayed()).isTrue();
@@ -60,13 +66,6 @@ public class login {
         getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(space);
     }
 
-    @Then("text {string} showes")
-    public void textShowes(String error) {
-        WebElement expectedText = getDriver().findElement(By.xpath("//mat-error[@id='mat-error-0,' '"+ error + "']"));
-        assertThat(expectedText.isDisplayed()).isTrue();
-    }
-
-
     @Then("I type  {string} with a white space in password")
     public void iTypeWithAWhiteSpaceInPassword(String space) {
         getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).sendKeys(space);
@@ -77,14 +76,8 @@ public class login {
         getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
     }
 
-    @Then("text {string} should show")
-    public void textShouldShow(String error2) {
-        WebElement expectedText = getDriver().findElement(By.xpath("//mat-error[@id='mat-error-0']],' '"+ error2 + "']"));
-        assertThat(expectedText.isDisplayed()).isTrue();
 
-    }
-
-//password
+    //password
     @Then("I click on {string} on the side")
     public void iClickOnOnTheSide(String settings) {
         getDriver().findElement(By.xpath("//h5[contains(text(),'Settings')]")).click();
@@ -101,11 +94,8 @@ public class login {
 
     }
 
-    @Then("message {string} appears")
-    public void messageAppears(String ts) {
-        WebElement expectedText = getDriver().findElement(By.xpath("//mat-error[@id='mat-error-3',' '"+ ts + "']"));
-        assertThat(expectedText.isDisplayed()).isTrue();
+    @And("I wait {int} seconds")
+    public void iWaitSeconds(int num) throws InterruptedException {
+        Thread.sleep(num*1000);
     }
-
 }
-
