@@ -11,8 +11,6 @@ public class registrationFirstName {
     public void iTypeFirstName(String FirstName) {
         getDriver().findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(FirstName);
 
-
-
     }
 
     @And("I type last name {string}")
