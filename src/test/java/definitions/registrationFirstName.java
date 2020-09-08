@@ -10,9 +10,6 @@ public class registrationFirstName {
     @When("I type first name {string}")
     public void iTypeFirstName(String FirstName) {
         getDriver().findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(FirstName);
-
-
-
     }
 
     @And("I type last name {string}")
@@ -23,13 +20,11 @@ public class registrationFirstName {
     @And("I type email {string} on registration page")
     public void iTypeEmailOnRegistrationPage(String Email) {
         getDriver().findElement(By.xpath("//input[@placeholder='Email']")).sendKeys((Email));
-
     }
 
     @And("I type group code {string}")
     public void iTypeGroupCode(String Groupcode) {
         getDriver().findElement(By.xpath("//input[@placeholder='Group Code']")).sendKeys(Groupcode);
-
     }
 
     @And("I type password {string} on registration page")
@@ -45,7 +40,5 @@ public class registrationFirstName {
     @And("I click register me button")
     public void iClickRegisterMeButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Register Me')]")).click();
-
-        Thread.sleep(2000);
     }
 }
