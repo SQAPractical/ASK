@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 // test comment
 
 import static support.TestContext.getDriver;
-public class Settings {
+public class settingsFullName {
     @And("I click settings button")
     public void iClickSettingsButton() {
         getDriver().findElement(By.xpath("//h5[contains(text(),'Settings')]")).click();

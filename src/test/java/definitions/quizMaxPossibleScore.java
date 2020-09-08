@@ -35,11 +35,11 @@ public class quizMaxPossibleScore {
         getDriver().findElement(By.xpath("//input[@formcontrolname = 'name']")).sendKeys(title);
     }
 
-//    @And("I click Add Question")
-//    public void iClickAddQuestion() throws InterruptedException {
-//        getDriver().findElement(By.xpath("//mat-icon[contains(text(), 'add_circle')]")).click();
-//        Thread.sleep(1000);
-//    }
+    @And("I click Add Question")
+    public void iClickAddQuestion() throws InterruptedException {
+        getDriver().findElement(By.xpath("//mat-icon[contains(text(), 'add_circle')]")).click();
+        Thread.sleep(1000);
+    }
 
     @And("I choose {string} type")
     public void iChooseType(String type) {

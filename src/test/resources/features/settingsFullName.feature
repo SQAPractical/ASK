@@ -15,7 +15,7 @@ Feature: Settings
   Scenario: Full Name - Alphanumeric and special char
     Given I open "login" page
     When I type email "0und@iel.pw"
-    And I type a password "98765"
+    And I type password "98765"
     And I click Sign in button
     And I click settings button
     And I click change your name button
@@ -27,7 +27,7 @@ Feature: Settings
   Scenario: Full Name - Can't be empty
     Given I open "login" page
     When I type email "0und@iel.pw"
-    And I type a password "98765"
+    And I type password "98765"
     And I click Sign in button
     And I click settings button
     And I click change your name button
@@ -38,7 +38,7 @@ Feature: Settings
   Scenario: Full Name - Max 256 Char
     Given I open "login" page
     When I type email "0und@iel.pw"
-    And I type a password "98765"
+    And I type password "98765"
     And I click Sign in button
     And I click settings button
     And I click change your name button
@@ -50,7 +50,7 @@ Feature: Settings
   Scenario: Full Name - Max 256 Char
     Given I open "login" page
     When I type email "0und@iel.pw"
-    And I type a password "98765"
+    And I type password "98765"
     And I click Sign in button
     And I click settings button
     And I click change your name button
@@ -62,7 +62,7 @@ Feature: Settings
   Scenario: Full Name - Min Char
     Given I open "login" page
     When I type email "0und@iel.pw"
-    And I type a password "98765"
+    And I type password "98765"
     And I click Sign in button
     And I click settings button
     And I click change your name button
@@ -74,7 +74,7 @@ Feature: Settings
   Scenario: Full Name - Min -1 Char
     Given I open "login" page
     When I type email "0und@iel.pw"
-    And I type a password "98765"
+    And I type password "98765"
     And I click Sign in button
     And I click settings button
     And I click change your name button
@@ -86,7 +86,7 @@ Feature: Settings
   Scenario: Full Name - Min -1 Char
     Given I open "login" page
     When I type email "0und@iel.pw"
-    And I type a password "98765"
+    And I type password "98765"
     And I click Sign in button
     And I click settings button
     And I click change your name button
@@ -98,7 +98,7 @@ Feature: Settings
   Scenario: Full Name - White spaces
     Given I open "login" page
     When I type email "0und@iel.pw"
-    And I type a password "98765"
+    And I type password "98765"
     And I click Sign in button
     And I click settings button
     And I click change your name button

@@ -31,8 +31,9 @@ public class quizTitle {
     }
 
     @And("I select question type textual")
-    public void iSelectQuestionTypeTextual() {
-        getDriver().findElement(By.xpath("//div[contains(text(),'Textual')]")).click();
+    public void iSelectQuestionTypeTextual() throws InterruptedException {
+        Thread.sleep(1000);
+        getDriver().findElement(By.xpath("//*[contains(text(), 'Textual')]/../..")).click();
     }
 
     @And("I type text in question")
@@ -46,17 +47,12 @@ public class quizTitle {
 
     }
 
-    @Then("I check if the quiz is created")
-    public void iCheckIfTheQuizIsCreated() throws InterruptedException {
+    @Then("I check if the quiz {string} is created")
+    public void iCheckIfTheQuizIsCreated(String quizName) throws InterruptedException {
         Thread.sleep(3000);
-        assertThat(getDriver().findElement(By.xpath("//mat-card[@class='page mat-card ng-star-inserted']")).isDisplayed());
-        //mat-expansion-panel[658]//mat-expansion-panel-header[1]//span[1]//mat-panel-title[1]
-        //getDriver().findElement(By.xpath("//mat-expansion-panel[658]//mat-expansion-panel-header[1]")).isDisplayed();
-        //getDriver().findElement(By.xpath("//*[@id='mat-expansion-panel-header-1125']")).isDisplayed();
-        //assertThat(getDriver().findElement(By.xpath("//*[@id='mat-expansion-panel-header-623']//*[contains(text(),'Test123$%')]")).isSelected()).isTrue();
+        String ListOfQuizzes = getDriver().findElement(By.xpath("//div[@class='quizzes']")).getText();
 
-        assertThat(getDriver().findElement(By.xpath("//mat-expansion-panel[658]//mat-expansion-panel-header[1]")).isDisplayed()).isTrue();
-
+        assertThat(ListOfQuizzes.contains(quizName)).isTrue();
     }
 
     @And("I click on Title of the quiz")
@@ -88,4 +84,6 @@ public class quizTitle {
 
 
     }
+
+
 }

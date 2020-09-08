@@ -12,12 +12,12 @@ import java.util.Random;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class singleChoiseQuestion {
+public class singleChoiceQuestionOtherTextArea {
 
-    @When("I click on Quizzes")
-    public void iClickOnQuizzes() {
-        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'edit')]")).click();
-    }
+//    @When("I click on Quizzes")
+//    public void iClickOnQuizzes() {
+//        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'edit')]")).click();
+//    }
 
     @And("I click [Create New Quizz] button")
     public void iClickCreateNewQuizzButton() {
@@ -143,8 +143,9 @@ public class singleChoiseQuestion {
     }
 
     @And("I confirm Log Out on Confirmation popup")
-    public void iConfirmLogOutOnConfirmationPopup() {
+    public void iConfirmLogOutOnConfirmationPopup() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Log Out')]")).click();
+        Thread.sleep(2000);
     }
 
     @And("I select My Assignments")

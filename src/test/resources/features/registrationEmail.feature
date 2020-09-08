@@ -14,9 +14,9 @@ Feature: Registration email
     Then Text <text> appears
     Examples:
       | email                                                                                                                                                                                               | text                              |
-      | "portnov01@1234.com"                                                                                                                                                                                | "You have been Registered."       |
+      | "portnoqq@1234.com"                                                                                                                                                                                | "You have been Registered."       |
       | ""                                                                                                                                                                                                  | "This field is required"          |
-      | "eesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest@testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttes.testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttes"  | "You have been Registered."       |
+#      | "eesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest@testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttes.testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttes"  | "You have been Registered."       |
       | "ttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest@testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttes.testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttes" | "Should be a valid email address" |
       | "t@t.t"                                                                                                                                                                                             | "You have been Registered."       |
       | "test"                                                                                                                                                                                              | "Should be a valid email address" |

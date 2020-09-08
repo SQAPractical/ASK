@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class Quiz_Updated_At {
+public class quizUpdatedAt {
     @Then("I click on element Quizzes")
     public void iClickOnElementQuizzes() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(), 'Quizzes')]")).click();
@@ -38,8 +38,10 @@ public class Quiz_Updated_At {
     }
 
     @And("I type question {string}")
-    public void iTypeQuestion(String question) {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Q1')]/../../..//div[@class='right']//textarea[@formcontrolname='question']")).sendKeys(question);
+    public void iTypeQuestion(String question) throws InterruptedException {
+        Thread.sleep(1000);
+//        getDriver().findElement(By.xpath("//*[contains(text(),'Q1')]/../../..//div[@class='right']//textarea[@formcontrolname='question']")).sendKeys(question);
+        getDriver().findElement(By.xpath("//*[contains(text(),'Q1')]/../../..//textarea[@placeholder='Question *']")).sendKeys(question);
     }
 
     @Then("I type {string} in Option one")
@@ -69,6 +71,10 @@ public class Quiz_Updated_At {
         WebElement created = getDriver().findElement(By.xpath("//*[contains(text(),'Geography Test 3')]/../../..//*[contains(text(), 'Created At')]/..//*[contains(text(), '20')]"));
         WebElement updated = getDriver().findElement(By.xpath("//*[contains(text(),'Geography Test 3')]/../../..//*[contains(text(), 'Updated At')]/..//*[contains(text(), '20')]"));
 
+        // Failed for me without clicking on quiz
+        getDriver().findElement(By.xpath("//*[contains(text(),'Geography Test 3')]/..")).click();
+        Thread.sleep(2000);
+
         String createdText = created.getText();
         String updatedText = updated.getText();
         assertThat(createdText).isEqualTo(updatedText);
@@ -96,8 +102,10 @@ public class Quiz_Updated_At {
     }
 
     @Then("I click on element Add Question")
-    public void iClickOnElementAddQuestion() {
-        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
+    public void iClickOnElementAddQuestion() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
+        Thread.sleep(1000);
+        getDriver().findElement(By.xpath("//div[@class='controls shift ng-star-inserted']//button[@class='mat-button mat-primary']")).click();
     }
 
     @And("I select Textual radio button")

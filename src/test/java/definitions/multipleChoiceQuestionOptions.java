@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class MultipleChoiceQuestionOptions {
+public class multipleChoiceQuestionOptions {
 //    @Then("I click Quizzes button")
 //    public void iClickQuizzesButton() throws InterruptedException {
 //        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();

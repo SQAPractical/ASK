@@ -70,24 +70,24 @@ Feature: Multiple Choice question - Options
     Then I wait 5 seconds
     Then Text "List of Quizzes" appears
     Then I delete Quiz "Test for Multiple choices 12!@#$%^"
-
-  Scenario Outline: Boundary test for text fields
-    When I click Quizzes button
-    Then I click Create New Quiz button
-    Then I type Quiz Title <QTitle>
-    Then I click Add Question button
-    Then I click Multiple-Choice button
-    And I type Question <question>
-    And T type <answ> in <NumOfOpt> options
-    And I choose correct answer
-    And I click on Save button
-    Then I wait <sec> seconds
-    Then Text <text> appears
-    Then I delete Quiz <QuizName>
-    Examples:
-      | QTitle | question | answ | NumOfOpt | sec | text              | QuizName |
-      | "№"    | "&"      | "A"  | 2        | 5   | "List of Quizzes" | "№"      |
-      | ""    | "&"      | "A"  | 2        | 5   | "List of Quizzes" | "№"      |
+#
+#  Scenario Outline: Boundary test for text fields
+#    When I click Quizzes button
+#    Then I click Create New Quiz button
+#    Then I type Quiz Title <QTitle>
+#    Then I click Add Question button
+#    Then I click Multiple-Choice button
+#    And I type Question <question>
+#    And T type <answ> in <NumOfOpt> options
+#    And I choose correct answer
+#    And I click on Save button
+#    Then I wait <sec> seconds
+#    Then Text <text> appears
+#    Then I delete Quiz <QuizName>
+#    Examples:
+#      | QTitle | question | answ | NumOfOpt | sec | text              | QuizName |
+#      | "№"    | "&"      | "A"  | 2        | 5   | "List of Quizzes" | "№"      |
+##      | ""    | "&"      | "A"  | 2        | 5   | "List of Quizzes" | "№"      |
 
 
 

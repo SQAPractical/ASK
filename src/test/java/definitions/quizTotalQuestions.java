@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import static support.TestContext.getDriver;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class quiz<attempt, i> {
+public class quizTotalQuestions<attempt, i> {
     @And("I click Quizzes button")
     public void iClickQuizzesButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
