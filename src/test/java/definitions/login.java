@@ -22,13 +22,11 @@ public class login {
     @Then("I type email {string}")
     public void iTypeInInEmail(String email) throws InterruptedException {
         getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
-        Thread.sleep ( 3000 );
     }
 
-    @Then("I type a password {string}")
+    @Then("I type password {string}")
     public void iTypeInInPassword(String password) throws InterruptedException {
         getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).sendKeys(password);
-        Thread.sleep ( 3000 );
     }
 
     @And("I click Sign in button")

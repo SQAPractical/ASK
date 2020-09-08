@@ -3,7 +3,7 @@ Feature: Settings
   Scenario: Full Name - Latin char
     Given I open "login" page
     Then I type email "0und@iel.pw"
-    Then I type a password "98765"
+    Then I type password "98765"
     And I click Sign in button
     And I click settings button
     And I click change your name button

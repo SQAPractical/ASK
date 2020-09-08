@@ -20,10 +20,10 @@ public class Multi_choice {
             Thread.sleep(2000);
     }
 
-    @Then("I type Quiz Title {string}")
-    public void iTypeQuizTitle(String QTitle) {
-        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(QTitle);
-    }
+//    @Then("I type Quiz Title {string}")
+//    public void iTypeQuizTitle(String QTitle) {
+//        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(QTitle);
+//    }
 
     @Then("I click Add Question button")
     public void iClickAddQuestionButton() throws InterruptedException {
