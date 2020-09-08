@@ -38,10 +38,10 @@ public class Multi_choice {
     }
 
 
-    @Then("I wait {int} seconds")
-    public void iWaitSeconds(int sec) throws InterruptedException {
-        Thread.sleep(sec * 1000);
-    }
+//    @Then("I wait {int} seconds")
+//    public void iWaitSeconds(int sec) throws InterruptedException {
+//        Thread.sleep(sec * 1000);
+//    }
 
     @And("I type Question {string}")
     public void iTypeQuestion(String question) {

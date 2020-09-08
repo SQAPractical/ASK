@@ -42,8 +42,9 @@ public class login {
     }
 
     @And("I click Sign in button")
-    public void iClickSignInButton() {
+    public void iClickSignInButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
+        Thread.sleep(2000);
     }
 
     @Then("Text {string} appears")
