@@ -127,7 +127,7 @@ Feature: Single Choice Question - Other text area
     And I select Automatically Graded
     And I wait 5 seconds
     And I click [Review] button related to "Student2 Volga" student and "NumberM" quiz
-    Then I validate Other text area contains 1000 characters
+    Then I validate Other text area contains 1006 characters
 
     Scenario: Single Choice Question - Other text area - Teacher could select 'Other'
       When I click on Quizzes
