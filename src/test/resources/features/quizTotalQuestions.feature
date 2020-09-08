@@ -10,6 +10,7 @@ Feature: Quiz - Total Questions
     And I click Create new quiz
     Then I type title of the quiz "SQA Quiz"
     And I click Add question
+    Then Text "Q1" appears
 
 
   Scenario: Verify if max number of questions possible is 50
