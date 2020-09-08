@@ -3,12 +3,21 @@ Feature: Settings - password
   @password1
   Scenario: Alphanumeric & Special characters
     Given I open "login" page
-    Then I type email "6thalaivaveriya@9phum.com"
-    Then I type password "Test123"
+    When I type email "6thalaivaveriya@9phum.com"
+    And I type password "Test123"
     And I click Sign in button
 #    And I wait 3 seconds
-    Then I click settings button
-    Then I Click "Change password" and I type in "Test123" in password and "Test123" in new password and "Test123" in confirm password
+    And I click settings button
+    And I Click "Change password" and I type in "Test123" in password and "Test123!" in new password and "Test123!" in confirm password
+    And I click [Log Out] button
+    And I confirm Log Out on Confirmation popup
+    And I type email "6thalaivaveriya@9phum.com"
+    And I type password "Test123!"
+    And I click Sign in button
+    Then Text "asd sada" appears
+    And I click settings button
+    And I Click "Change password" and I type in "Test123!" in password and "Test123" in new password and "Test123" in confirm password
+    And I wait 2 seconds
 
   @password2
   Scenario: Change Password-Less than 5 characters

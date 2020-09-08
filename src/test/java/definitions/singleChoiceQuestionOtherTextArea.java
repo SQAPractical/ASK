@@ -143,8 +143,9 @@ public class singleChoiceQuestionOtherTextArea {
     }
 
     @And("I confirm Log Out on Confirmation popup")
-    public void iConfirmLogOutOnConfirmationPopup() {
+    public void iConfirmLogOutOnConfirmationPopup() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Log Out')]")).click();
+        Thread.sleep(2000);
     }
 
     @And("I select My Assignments")
