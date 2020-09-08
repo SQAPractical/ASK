@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Feature: Login
 
   @login1
@@ -6,7 +6,7 @@ Feature: Login
     Given I open "login" page
     Then I type in "student1@gmail.com" in email
     Then I type in "12345Abc"in password
-    Then I click Signin button
+    Then I click Sign in button
     Then text "new john snow " Appears
 
   @login2
@@ -14,16 +14,19 @@ Feature: Login
     Given I open "login" page
     Then I type in "asdasd@gmail.com" in email
     Then I type in "12345Abc"in password
-    Then I click Signin button
+    Then I click Sign in button
     Then text "Authentication failed" Appears
 
   @login3
-  Scenario: valid email and invalid password
-    Given I open "login" page
-    Then I type in "student1@gmail.com" in email
-    Then I type in "pAsWoRd"in password
-    Then I click Signin button
+  Scenario Outline: valid email and invalid password
+    Given I open <pagenName> page
+    Then I type in <email> in email
+    Then I type in <password>in password
+    Then I click Sign in button
     Then text "Authentication failed" Appears
+    Examples:
+      | pagenName | email                | password  |
+      | "login"   | "student1@gmail.com" | "pAsWoRd" |
 
   @login4
   Scenario: Copy and cut options disable, password display in bullets
@@ -34,7 +37,7 @@ Feature: Login
   @login5
   Scenario: black email space not allowed
     Given I open "login" page
-    And I type  " _ " in email
+    Then I type in <email> in email
     Then I type in "12345Abc"in password
     Then text "Should be a valid email address" Appears
 
