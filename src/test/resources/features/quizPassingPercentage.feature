@@ -24,5 +24,3 @@ Feature:Quiz - Passing Percentage
 #    And I check "GK Quiz Automation" is displayed
     And I click on quiz "GK Quiz Automation"
     Then Passing percentage "50" is displayed for quiz "GK Quiz Automation"
-
-
