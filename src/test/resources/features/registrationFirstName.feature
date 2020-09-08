@@ -11,6 +11,7 @@ Feature: registration first name
     And I type password "12345" on registration page
     And I type confirm password "12345"
     And I click register me button
+    And I wait 3 seconds
     Then Text "You have been Registered." appears
 
   Scenario Outline: registration first name field is required
@@ -21,6 +22,7 @@ Feature: registration first name
     And I type password "12345" on registration page
     And I type confirm password "12345"
     And I click register me button
+    And I wait 2 seconds
     Then Text <text> appears
     Examples:
       | FirstName | text                          |
