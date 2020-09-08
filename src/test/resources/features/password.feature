@@ -3,54 +3,95 @@ Feature: password
   @password1
   Scenario: Alphanumeric & Special characters
     Given I open "login" page
+<<<<<<< HEAD
     Then I type email "6thalaivaveriya@9phum.com"
     Then I type a password "Test123"
     Then I click Sign in button
     And I click settings button
+=======
+    Then I type in "6thalaivaveriya@9phum.com" in email
+    Then I type in "Test123"in password
+    And I click Sign in button
+    And I wait 3 seconds
+    Then I click on "Settings" on the side
+>>>>>>> master
     Then I Click "Change password" and I type in "Test123" in password and "Test123!@" in new password and "Test123!@" in confirm password
 
   @password2
   Scenario: Change Password-Less than 5 characters
     Given I open "login" page
+<<<<<<< HEAD
     Then I type email "6thalaivaveriya@9phum.com"
     Then I type a password "Test123"
     Then I click Sign in button
     And I click settings button
+=======
+    Then I type in "6thalaivaveriya@9phum.com" in email
+    Then I type in "Test123"in password
+    And I click Sign in button
+    And I wait 3 seconds
+    Then I click on "Settings" on the side
+>>>>>>> master
     Then I Click "Change password" and I type in "Test123" in password and "Te" in new password and "Te" in confirm password
     Then Text "Too short. Should be at least 5 characters" appears
 
   @password3
   Scenario: password more then 35 characters
     Given I open "login" page
+<<<<<<< HEAD
     Then I type email "6thalaivaveriya@9phum.com"
     Then I type a password "Test123"
     Then I click Sign in button
     And I click settings button
+=======
+    Then I type in "6thalaivaveriya@9phum.com" in email
+    Then I type in "Test123"in password
+    And I click Sign in button
+    And I wait 3 seconds
+    Then I click on "Settings" on the side
+>>>>>>> master
     Then I Click "Change password" and I type in "Test123" in password and "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456!" in new password and "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456!" in confirm password
 
   @password4
   Scenario: white spaces not allowed
     Given I open "login" page
+<<<<<<< HEAD
     Then I type email "6thalaivaveriya@9phum.com"
     Then I type a password "Test123"
     Then I click Sign in button
     And I click settings button
+=======
+    Then I type in "6thalaivaveriya@9phum.com" in email
+    Then I type in "Test123"in password
+    And  I click Sign in button
+    And I wait 3 seconds
+    Then I click on "Settings" on the side
+>>>>>>> master
     Then I Click "Change password" and I type in "Test123" in password and "T e" in new password and "T e" in confirm password
     Then Text "Whitespaces are not allowed" appears
 
   @password5
   Scenario: Passwords must match
     Given I open "login" page
+<<<<<<< HEAD
     Then I type email "6thalaivaveriya@9phum.com"
     Then I type a password "Test123"
     Then I click Sign in button
     And I click settings button
+=======
+    Then I type in "6thalaivaveriya@9phum.com" in email
+    Then I type in "Test123"in password
+    And  I click Sign in button
+    And I wait 3 seconds
+    Then I click on "Settings" on the side
+>>>>>>> master
     Then I Click "Change password" and I type in "Test123" in password and "Tasdsade" in new password and "Tafdaae" in confirm password
     Then Text "Entered passwords should match" appears
 
   @password6
   Scenario: New password field cannot be blank
     Given I open "login" page
+<<<<<<< HEAD
     Then I type email "6thalaivaveriya@9phum.com"
     Then I type a password "Test123"
     Then I click Sign in button
@@ -66,4 +107,13 @@ Feature: password
 
 
 
+=======
+    Then I type in "6thalaivaveriya@9phum.com" in email
+    Then I type in "Test123"in password
+    And I click Sign in button
+    And I wait 3 seconds
+    Then I click on "Settings" on the side
+    Then I Click "Change password" and I type in "Test123" in password and "" in new password and "" in confirm password
+    Then Text "This field is required" appears
+>>>>>>> master
 
