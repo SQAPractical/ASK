@@ -64,8 +64,8 @@ public class login {
     public void iClickOn(String arg0) {
         getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
     }
-
-
+}
+/*
     //password
 
     @Then("I Click {string} and I type in {string} in password and {string} in new password and {string} in confirm password")
