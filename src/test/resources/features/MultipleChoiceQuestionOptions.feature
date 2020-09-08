@@ -1,4 +1,5 @@
-Feature: Multiple Choice question
+Feature: Multiple Choice question - Options
+
   Background:
     Given I open "login" page
     Then I type email "teacher3@gmail.com"

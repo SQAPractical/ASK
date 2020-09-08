@@ -8,11 +8,11 @@ import org.openqa.selenium.By;
 import static support.TestContext.getDriver;
 
 public class scShowStopper {
-    @When("I click on Quizzes")
-    public void iClickOnQuizzes() throws InterruptedException {
-        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
-        Thread.sleep(2000);
-    }
+//    @When("I click on Quizzes")
+//    public void iClickOnQuizzes() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
+//        Thread.sleep(2000);
+//    }
 
 
     @When("I click Create New Quiz button")
@@ -38,10 +38,10 @@ public class scShowStopper {
         Thread.sleep(2000);
     }
 
-    @When("I type question {string}")
-    public void iTypeQuestion(String ques) {
-        getDriver().findElement(By.xpath("//textarea[@placeholder='Question *']")).sendKeys(ques);
-    }
+//    @When("I type question {string}")
+//    public void iTypeQuestion(String ques) {
+//        getDriver().findElement(By.xpath("//textarea[@placeholder='Question *']")).sendKeys(ques);
+//    }
 
     @When("I type optiona {string}")
     public void iTypeOptiona(String opt1) {

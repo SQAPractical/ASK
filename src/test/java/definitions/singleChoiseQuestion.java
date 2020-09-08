@@ -39,10 +39,10 @@ public class singleChoiseQuestion {
         getDriver().findElement(By.xpath("//div[contains(text(),'Single-Choice')]")).click();
     }
 
-    @And("I wait {int} seconds")
-    public void iWaitSeconds(int sec) throws InterruptedException {
-        Thread.sleep(sec * 1000);
-    }
+//    @And("I wait {int} seconds")
+//    public void iWaitSeconds(int sec) throws InterruptedException {
+//        Thread.sleep(sec * 1000);
+//    }
 
     @And("I enter {string} question text in Question field")
     public void iEnterQuestionTextInQuestionField(String qText) {

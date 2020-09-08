@@ -7,11 +7,10 @@ import org.openqa.selenium.By;
 import static support.TestContext.getDriver;
 
 public class singleChoiceQuestionText {
-    @And("I click on Quizzes")
-    public void iClickOnQuizzes() {
-        getDriver().findElement(By.xpath("//div[@class='mat-list-text']/h5[contains(text(),'Quizzes')]")).click();
-
-    }
+//    @And("I click on Quizzes")
+//    public void iClickOnQuizzes() {
+//        getDriver().findElement(By.xpath("//div[@class='mat-list-text']/h5[contains(text(),'Quizzes')]")).click();
+//    }
 
     @And("I wait for {int} sec")
     public void iWaitForSec(int sec) throws InterruptedException {

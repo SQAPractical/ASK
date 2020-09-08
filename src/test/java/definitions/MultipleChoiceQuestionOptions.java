@@ -7,18 +7,18 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class Multi_choice {
-    @Then("I click Quizzes button")
-    public void iClickQuizzesButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
-        Thread.sleep(2000);
-    }
+public class MultipleChoiceQuestionOptions {
+//    @Then("I click Quizzes button")
+//    public void iClickQuizzesButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
+//        Thread.sleep(2000);
+//    }
 
-    @Then("I click Create New Quiz button")
-    public void iClickCreateNewQuizzButton() throws InterruptedException {
-            getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
-            Thread.sleep(2000);
-    }
+//    @Then("I click Create New Quiz button")
+//    public void iClickCreateNewQuizzButton() throws InterruptedException {
+//            getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
+//            Thread.sleep(2000);
+//    }
 
 //    @Then("I type Quiz Title {string}")
 //    public void iTypeQuizTitle(String QTitle) {
@@ -73,15 +73,15 @@ public class Multi_choice {
     }
 
 
-    @Then("I delete Quiz {string}")
-    public void iDeleteQuiz(String QuizName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(), '"+QuizName+"')]")).click();
-        getDriver().findElement(By.xpath("//*[contains(text(), '"+QuizName+"')]/../../..//*[contains(text(), 'Delete')]")).click();
-        Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//*[contains(text(), 'Confirmation')]/../..//*[contains(text(), 'Delete')]")).click();
-        Thread.sleep(5000);
-
-    }
+//    @Then("I delete Quiz {string}")
+//    public void iDeleteQuiz(String QuizName) throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*[contains(text(), '"+QuizName+"')]")).click();
+//        getDriver().findElement(By.xpath("//*[contains(text(), '"+QuizName+"')]/../../..//*[contains(text(), 'Delete')]")).click();
+//        Thread.sleep(2000);
+//        getDriver().findElement(By.xpath("//*[contains(text(), 'Confirmation')]/../..//*[contains(text(), 'Delete')]")).click();
+//        Thread.sleep(5000);
+//
+//    }
 
 
 

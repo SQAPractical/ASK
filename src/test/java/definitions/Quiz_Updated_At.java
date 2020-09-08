@@ -27,10 +27,10 @@ public class Quiz_Updated_At {
         getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(Q_title);
     }
 
-    @And("I click on Add Question button")
-    public void iClickOnAddQuestionButton() {
-        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']/button")).click();
-    }
+//    @And("I click on Add Question button")
+//    public void iClickOnAddQuestionButton() {
+//        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']/button")).click();
+//    }
 
     @And("choose single choice question type")
     public void chooseSingleChoiceQuestionType() {
