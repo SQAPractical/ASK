@@ -98,11 +98,11 @@ public class A6_286_QuizPassingPercentage {
         Thread.sleep(1000);
     }
 //Click on quiz name
-    @And("I click on {string}")
-    public void iClickOn(String arg0) throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(),'GK Quiz Automation')]")).click();
-        Thread.sleep(1000);
-    }
+ //   @And("I click on {string}")
+  //  public void iClickOn(String arg0) throws InterruptedException {
+  //      getDriver().findElement(By.xpath("//*[contains(text(),'GK Quiz Automation')]")).click();
+  //      Thread.sleep(1000);
+ //   }
 //Check if passing percentage is displayed correctly
     @Then("Passing percentage is displayed")
     public void passingPercentageIsDisplayed() {

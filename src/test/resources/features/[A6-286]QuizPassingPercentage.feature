@@ -20,7 +20,7 @@ Feature:Quiz - Passing Percentage
     Then I Set the passing rate.
     And I click on save button.
     And I check "GK Quiz Automation" is displayed
-    And I click on "Gk Quiz Automation"
+    And I click on quiz "Gk Quiz Automation"
     Then Passing percentage is displayed
 
 
