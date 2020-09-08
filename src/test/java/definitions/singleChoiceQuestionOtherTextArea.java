@@ -12,7 +12,7 @@ import java.util.Random;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class singleChoiseQuestion {
+public class singleChoiceQuestionOtherTextArea {
 
     @When("I click on Quizzes")
     public void iClickOnQuizzes() {

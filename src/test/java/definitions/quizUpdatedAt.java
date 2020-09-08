@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class QuizUpdatedAt {
+public class quizUpdatedAt {
     @Then("I click on element Quizzes")
     public void iClickOnElementQuizzes() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(), 'Quizzes')]")).click();

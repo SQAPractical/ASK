@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 
 import static support.TestContext.getDriver;
 
-public class scShowStopper {
+public class singleChoiceQuestionShowStopper {
 //    @When("I click on Quizzes")
 //    public void iClickOnQuizzes() throws InterruptedException {
 //        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
