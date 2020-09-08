@@ -2,6 +2,7 @@ package definitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java8.Th;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -49,5 +50,41 @@ public class quiz<attempt, i> {
         for (i = 1; i <= 50; i++) {
             buttonMax.click();
         }
+    }
+
+    @Then("I select Textual question type")
+    public void iSelectTextualQuestionType() {
+        getDriver().findElement(By.xpath("//mat-radio-button[@id='mat-radio-2']//div[contains(text(),'Textual')]")).click();
+
+    }
+
+    @And("I type text of question {string}")
+    public void iTypeTextOfQuestion(String textOfQuestion) {
+        getDriver().findElement(By.xpath("//textarea[@id='mat-input-3']")).sendKeys(textOfQuestion);
+
+    }
+
+    @And("I click Save button")
+    public void iClickSaveButton() throws InterruptedException {
+        getDriver().findElement(By.xpath("//div//button[2]//span[contains(text(),'Save')]")).click();
+        Thread.sleep(3000);
+    }
+
+    @Then("Quiz {string} is saved in list of quizzes")
+    public void quizIsSavedInListOfQuizzes(String quizTitle) throws InterruptedException {
+        WebElement expectedText=getDriver().findElement(By.xpath("//*[contains(text(),'" + quizTitle + "')]"));
+        assertThat(expectedText.isDisplayed()).isTrue();
+        Thread.sleep(2000);
+    }
+
+    @And("I click Title of the quiz field")
+    public void iClickTitleOfTheQuizField() {
+        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).click();
+    }
+
+    @And("I click outside of Title of the quiz field")
+    public void iClickOutsideOfTitleOfTheQuizField() throws InterruptedException {
+        getDriver().findElement(By.xpath("//ac-quiz-builder-page[@class='ng-star-inserted']")).click();
+        Thread.sleep(2000);
     }
 }
