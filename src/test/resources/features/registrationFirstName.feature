@@ -25,8 +25,9 @@ Feature: registration first name
     And I wait 2 seconds
     Then Text <text> appears
     Examples:
-      | FirstName | text                          |
-      | ""        | "This field is required"      |
-      | " test"   | "Whitespaces are not allowed" |
-
-
+      | FirstName | text                     |
+      | ""        | "This field is required" |
+      | " abc"    | "Whitespaces are not allowed" |
+      | "T"       | "You have been Registered" |
+      | "Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%ed" | "Too long. Should be no more than 254 characters" |
+      | "Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%e" | "You have been Registered" |

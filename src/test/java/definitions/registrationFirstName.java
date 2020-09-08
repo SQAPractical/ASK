@@ -1,14 +1,21 @@
 package definitions;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class registrationFirstName {
     @When("I type first name {string}")
     public void iTypeFirstName(String FirstName) {
+        getDriver().findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(FirstName);
+    }
+    @When("I type first name <FirstName>")
+    public void iTypeFirstNameFirstName(String FirstName) {
         getDriver().findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(FirstName);
     }
 
@@ -33,12 +40,20 @@ public class registrationFirstName {
     }
 
     @And("I type confirm password {string}")
-    public void iTypeConfirmPassword(String ConfirmPassword) throws InterruptedException {
+    public void iTypeConfirmPassword(String ConfirmPassword){
         getDriver().findElement(By.xpath("//input[@placeholder='Confirm Password']")).sendKeys(ConfirmPassword);
     }
 
     @And("I click register me button")
     public void iClickRegisterMeButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Register Me')]")).click();
+        Thread.sleep(2000);
+    }
+
+
+    @Then("Text <text> appears")
+    public void textTextAppears(String text) {
+        WebElement expectedText = getDriver().findElement(By.xpath("//*[contains(text(),'" + text + "')]"));
+        assertThat(expectedText.isDisplayed()).isTrue();
     }
 }
