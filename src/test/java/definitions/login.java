@@ -80,6 +80,43 @@ public class login {
 
     }
 
+// <<<<<<< Anna
+//     @Then("message {string} appears")
+//     public void messageAppears(String ts) {
+//         WebElement expectedText = getDriver().findElement(By.xpath("//mat-error[@id='mat-error-3',' '"+ ts + "']"));
+//         assertThat(expectedText.isDisplayed()).isTrue();
+//     }
+
+//     @When("I type email {string}")
+//     public void iTypeEmail(String email) {
+//         getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
+//     }
+//     @And("I type password {string}")
+//     public void iTypePassword(String pass) {
+//         getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).sendKeys(pass);
+//     }
+//     @And("I click Sign in button")
+//     public void iClickSignInButton() throws InterruptedException {
+//         getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
+//         Thread.sleep(2000);
+//     }
+//     @Then("Text {string} appears")
+//     public void textAppears(String text) {
+//         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
+//     }
+
+//     @Then("error message should appear")
+//     public void errorMessageShouldAppear() {
+//         assertThat(getDriver().findElement(By.xpath("//*[contains(text(), 'valid email')]")).isDisplayed()).isTrue();
+
+//     }
+
+//     @Then("password error message should appear")
+//     public void passwordErrorMessageShouldAppear() {
+//         assertThat(getDriver().findElement(By.xpath("//*[contains(text(), 'Whitespaces')]")).isDisplayed()).isTrue();
+//     }
+// }
+
     @And("I wait {int} seconds")
     public void iWaitSeconds(int num) throws InterruptedException {
         Thread.sleep(num*1000);
