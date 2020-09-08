@@ -31,7 +31,3 @@ Feature: registration first name
       | "T"       | "You have been Registered" |
       | "Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%ed" | "Too long. Should be no more than 254 characters" |
       | "Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%Test123$%e" | "You have been Registered" |
-
-
-
-
