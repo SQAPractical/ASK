@@ -5,7 +5,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -24,12 +23,12 @@ public class login {
     }
 
 
-    @Then("I type in {string} in email")
+    @Then("I type email {string}")
     public void iTypeInInEmail(String email) {
         getDriver ().findElement ( By.xpath ( "//input[@formcontrolname='email']" ) ).sendKeys ( email );
     }
 
-    @Then("I type in {string} in password")
+    @Then("I type a password {string}")
     public void iTypeInInPassword(String password) {
         getDriver ().findElement ( By.xpath ( "//input[@placeholder='Password *']" ) ).sendKeys ( password );
     }
@@ -78,16 +77,10 @@ public class login {
 
     }
 
-    @Then("text <text> appears")
-    public void textTextAppears(String text) {
-        assertThat ( getDriver ().findElement ( By.xpath ( "//*[contains(text(),'" + text + "')]" ) ).isDisplayed () ).isTrue ();
-    }
-
-
     //password
 
     @Then("I Click {string} and I type in {string} in password and {string} in new password and {string} in confirm password")
-    public void iClickAndITypeInInPasswordAndInNewPasswordAndInConfirmPassword(String arg0, String op, String np, String npc) {
+    public void iClickAndITypeInInPasswordAndInNewPasswordAndInConfirmPassword(String button, String op, String np, String npc) {
         getDriver ().findElement ( By.xpath ( "//span[contains(text(),'Change Your Password')]" ) ).click ();
         getDriver ().findElement ( By.xpath ( "//input[@placeholder='Password']" ) ).sendKeys ( op );
         getDriver ().findElement ( By.xpath ( "//input[@placeholder='New Password']" ) ).sendKeys ( np );
@@ -101,37 +94,4 @@ public class login {
         WebElement expectedText = getDriver ().findElement ( By.xpath ( "//mat-error[@id='mat-error-3',' '" + ts + "']" ) );
         assertThat ( expectedText.isDisplayed () ).isTrue ();
     }
-
-    // valentina_add_scenarios_settings
-
-    @And("I click settings button")
-    public void iClickSettingsButton() {
-        getDriver ().findElement ( By.xpath ( "//h5[contains(text(),'Settings')]" ) ).click ();
-    }
-
-    @And("I click change your name button")
-    public void iClickChangeYourNameButton() throws InterruptedException {
-        getDriver ().findElement ( By.xpath ( "//span[contains(text(),'Change Your Name')]" ) ).click ();
-        Thread.sleep ( 3000 );
-    }
-
-    @And("I type new name field {string}")
-    public void iTypeNewNameField(String NewName) {
-        getDriver ().findElement ( By.xpath ( "//input[@placeholder='New name']" ) ).sendKeys ( NewName );
-    }
-
-    @And("I clear new name field")
-    public void iDeleteNewNameField() throws InterruptedException {
-        WebElement toClear = getDriver ().findElement ( By.xpath ( "//input[@placeholder='New name']" ) );
-        while (!toClear.getAttribute ( "value" ).equals ( "" )) toClear.sendKeys ( Keys.BACK_SPACE );
-        Thread.sleep ( 3000 );
-    }
-
-    @And("I click change button")
-    public void iClickChangeButton() throws InterruptedException {
-        getDriver ().findElement ( By.xpath ( "//div[@class='mat-dialog-actions']//button[@class='mat-raised-button mat-primary']" ) ).click ();
-        Thread.sleep ( 3000 );
-    }
-
 }
-
