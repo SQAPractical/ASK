@@ -32,10 +32,11 @@ public class singleChoiceQuestionText {
         getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(title);
     }
 
-    @And("I click Add Question")
-    public void iClickAddQuestion() {
-        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).click();
-    }
+//    @And("I click Add Question")
+//    public void iClickAddQuestion() throws InterruptedException {
+//        Thread.sleep(1000);
+//        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).click();
+//    }
 
     @And("I click on Single-Choice option")
     public void iClickOnSingleChoiceOption() {

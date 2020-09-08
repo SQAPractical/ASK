@@ -31,8 +31,9 @@ public class quizTitle {
     }
 
     @And("I select question type textual")
-    public void iSelectQuestionTypeTextual() {
-        getDriver().findElement(By.xpath("//div[contains(text(),'Textual')]")).click();
+    public void iSelectQuestionTypeTextual() throws InterruptedException {
+        Thread.sleep(1000);
+        getDriver().findElement(By.xpath("//*[contains(text(), 'Textual')]/../..")).click();
     }
 
     @And("I type text in question")
