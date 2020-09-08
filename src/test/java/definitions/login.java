@@ -1,4 +1,3 @@
-
 package definitions;
 
 import cucumber.api.java.en.And;
@@ -15,29 +14,62 @@ public class login {
 
 
     @Given("I open {string} page")
+
     public void iOpenPage(String pagenName) {
         if (pagenName.equalsIgnoreCase ( "login" )) {
             getDriver ().get ( "http://ask-stage.portnov.com/#/login" );
         } else if (pagenName.equalsIgnoreCase ( "regestration" )) {
             getDriver ().get ( "http://ask-stage.portnov.com/#/registration" );
+
+    public void iOpenPage(String pageName) {
+        if (pageName.equalsIgnoreCase("login")) {
+            getDriver().get("http://ask-stage.portnov.com/#/login");
+        } else if (pageName.equalsIgnoreCase("registration")) {
+            getDriver().get("http://ask-stage.portnov.com/#/registration");
+
         }
     }
-
 
     @Then("I type in {string} in email")
     public void iTypeInInEmail(String email) {
         getDriver ().findElement ( By.xpath ( "//input[@formcontrolname='email']" ) ).sendKeys ( email );
     }
 
+
     @Then("I type in {string} in password")
+
+    @When("I type email {string}")
+    public void iTypeEmail(String email) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
+    }
+
+    @Then("I type in {string}in password")
+
     public void iTypeInInPassword(String password) {
         getDriver ().findElement ( By.xpath ( "//input[@placeholder='Password *']" ) ).sendKeys ( password );
     }
+
 
     @Then("I click Sign in button")
     public void iClickSigninButton() throws InterruptedException {
         getDriver ().findElement ( By.xpath ( "//span[contains(text(),'Sign In')]" ) ).click ();
         Thread.sleep ( 3000 );
+
+    @And("I type password {string}")
+    public void iTypePassword(String pass) {
+        getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).sendKeys(pass);
+    }
+
+    @And("I click Sign in button")
+    public void iClickSignInButton() {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
+    }
+
+    @Then("Text {string} appears")
+    public void textAppears(String text) {
+        WebElement expectedText = getDriver().findElement(By.xpath("//*[contains(text(),'" + text + "')]"));
+        assertThat(expectedText.isDisplayed()).isTrue();
+
     }
 
     @Then("Copy and cut options disable, password display in bullets")
@@ -53,6 +85,7 @@ public class login {
     public void iTypeInEmail(String space) {
         getDriver ().findElement ( By.xpath ( "//input[@formcontrolname='email']" ) ).sendKeys ( space );
     }
+
 
     @Then("text {string} showes")
     public void textShowes(String error) {
@@ -81,6 +114,13 @@ public class login {
     @Then("text <text> appears")
     public void textTextAppears(String text) {
         assertThat ( getDriver ().findElement ( By.xpath ( "//*[contains(text(),'" + text + "')]" ) ).isDisplayed () ).isTrue ();
+
+
+    //password
+    @Then("I click on {string} on the side")
+    public void iClickOnOnTheSide(String settings) {
+        getDriver().findElement(By.xpath("//h5[contains(text(),'Settings')]")).click();
+
     }
 
 
@@ -131,7 +171,10 @@ public class login {
     public void iClickChangeButton() throws InterruptedException {
         getDriver ().findElement ( By.xpath ( "//div[@class='mat-dialog-actions']//button[@class='mat-raised-button mat-primary']" ) ).click ();
         Thread.sleep ( 3000 );
+
+    @And("I wait {int} seconds")
+    public void iWaitSeconds(int num) throws InterruptedException {
+        Thread.sleep(num*1000);
+
     }
-
 }
-

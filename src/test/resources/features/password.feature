@@ -75,12 +75,3 @@ Feature: password
     Examples:
       | pagenName | email                       | password  | arg0              | op        | np | npc | text                     |
       | "login"   | "6thalaivaveriya@9phum.com" | "Test123" | "Change password" | "Test123" | "" | ""  | "This field is required" |
-
-
-
-
-
-
-
-
-
