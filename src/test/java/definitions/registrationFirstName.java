@@ -33,12 +33,13 @@ public class registrationFirstName {
     }
 
     @And("I type confirm password {string}")
-    public void iTypeConfirmPassword(String ConfirmPassword) throws InterruptedException {
+    public void iTypeConfirmPassword(String ConfirmPassword){
         getDriver().findElement(By.xpath("//input[@placeholder='Confirm Password']")).sendKeys(ConfirmPassword);
     }
 
     @And("I click register me button")
     public void iClickRegisterMeButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Register Me')]")).click();
+        Thread.sleep(2000);
     }
 }
