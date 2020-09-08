@@ -78,6 +78,11 @@ public class login {
 
     }
 
+    @Then("text <text> appears")
+    public void textTextAppears(String text) {
+        assertThat ( getDriver ().findElement ( By.xpath ( "//*[contains(text(),'" + text + "')]" ) ).isDisplayed () ).isTrue ();
+    }
+
 
     //password
 
@@ -98,11 +103,11 @@ public class login {
     }
 
     // valentina_add_scenarios_settings
+
     @And("I click settings button")
     public void iClickSettingsButton() {
         getDriver ().findElement ( By.xpath ( "//h5[contains(text(),'Settings')]" ) ).click ();
     }
-
 
     @And("I click change your name button")
     public void iClickChangeYourNameButton() throws InterruptedException {
@@ -128,5 +133,5 @@ public class login {
         Thread.sleep ( 3000 );
     }
 
-
 }
+
