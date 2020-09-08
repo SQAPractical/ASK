@@ -12,11 +12,23 @@ Feature: registration first name
     And I type confirm password "12345"
     And I click register me button
 <<<<<<< HEAD
+<<<<<<< HEAD
     Then Text <text> appears
 =======
     And I wait 3 seconds
     Then Text "You have been Registered." appears
 >>>>>>> master
+||||||| merged common ancestors
+<<<<<<<<< Temporary merge branch 1
+    And I wait 3 seconds
+    Then Text "You have been Registered." appears
+||||||||| merged common ancestors
+    Then Text "You have been Registered." appears
+=========
+    Then Text <text> appears
+>>>>>>>>> Temporary merge branch 2
+=======
+>>>>>>> 357da037ff4da5dd88874751fa028f3d3a10fb0b
 
   Scenario Outline: registration first name field is required
     When I type first name <FirstName>
