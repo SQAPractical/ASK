@@ -9,12 +9,12 @@ import org.openqa.selenium.WebElement;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static support.TestContext.getDriver;
 
-public class A6_286_QuizPassingPercentage {
+public class quizPassingPercentage {
 
     @Then("I click on Quizzes")
     public void iClickOnQuizzes() throws InterruptedException {
         getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 
     @When("I click on Create New Quiz button")
@@ -24,10 +24,10 @@ public class A6_286_QuizPassingPercentage {
     }
 
 
-    @Then("I type {string}")
-    public void iType(String quizTitle) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(quizTitle);
-    }
+//    @Then("I type {string}")
+//    public void iType(String quizTitle) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(quizTitle);
+//    }
 
     @Then("I click on Add question")
     public void iClickOnAddQuestion() {
@@ -89,14 +89,14 @@ public class A6_286_QuizPassingPercentage {
     @And("I click on save button.")
     public void iClickOnSaveButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 //Quiz is displayed in "List of Quizzes"
-    @And("I check {string} is displayed")
-    public void iCheckIsDisplayed(String arg0) throws InterruptedException {
-        assertThat(getDriver().findElement(By.xpath("//*[@id='mat-expansion-panel-header-1125']")).isDisplayed()).isTrue();
-        Thread.sleep(1000);
-    }
+//    @And("I check {string} is displayed")
+//    public void iCheckIsDisplayed(String quizName) throws InterruptedException {
+//        assertThat(getDriver().findElement(By.xpath("//*[@id='mat-expansion-panel-header-1125']")).isDisplayed()).isTrue();
+//        Thread.sleep(1000);
+//    }
 //Click on quiz name
  //   @And("I click on {string}")
   //  public void iClickOn(String arg0) throws InterruptedException {
@@ -106,7 +106,13 @@ public class A6_286_QuizPassingPercentage {
 //Check if passing percentage is displayed correctly
     @Then("Passing percentage is displayed")
     public void passingPercentageIsDisplayed() {
-        assertThat(getDriver().findElement(By.xpath("//td[contains(text(),'50')]/../td[contains(text(),'Passing Percentage:')]")).isDisplayed()).isTrue();
+//        assertThat(getDriver().findElement(By.xpath("//td[contains(text(),'50')]/../td[contains(text(),'Passing Percentage:')]")).isDisplayed()).isTrue();
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'GK Quiz Automation')]/../../..//td[contains(text(),'Passing Percentage:')]/..//*[contains(text(),'50')]")).isDisplayed()).isTrue();
+    }
+
+    @Then("Passing percentage {string} is displayed for quiz {string}")
+    public void passingPercentageIsDisplayedForQuiz(String percent, String quizName) {
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+quizName+"')]/../../..//td[contains(text(),'Passing Percentage:')]/..//*[contains(text(),'"+percent+"')]")).isDisplayed()).isTrue();
     }
 
 

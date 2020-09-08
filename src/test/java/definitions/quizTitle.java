@@ -51,7 +51,6 @@ public class quizTitle {
     public void iCheckIfTheQuizIsCreated(String quizName) throws InterruptedException {
         Thread.sleep(3000);
         String ListOfQuizzes = getDriver().findElement(By.xpath("//div[@class='quizzes']")).getText();
-        System.out.println(ListOfQuizzes);
 
         assertThat(ListOfQuizzes.contains(quizName)).isTrue();
     }

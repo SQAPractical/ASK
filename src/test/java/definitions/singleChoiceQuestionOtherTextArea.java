@@ -14,10 +14,10 @@ import static support.TestContext.getDriver;
 
 public class singleChoiceQuestionOtherTextArea {
 
-    @When("I click on Quizzes")
-    public void iClickOnQuizzes() {
-        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'edit')]")).click();
-    }
+//    @When("I click on Quizzes")
+//    public void iClickOnQuizzes() {
+//        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'edit')]")).click();
+//    }
 
     @And("I click [Create New Quizz] button")
     public void iClickCreateNewQuizzButton() {
