@@ -22,10 +22,10 @@ public class quiz<attempt, i> {
         Thread.sleep(2000);
     }
 
-    @Then("I type title of the quiz {string}")
-    public void iTypeTitleOfTheQuiz(String title) {
-        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(title);
-    }
+//    @Then("I type title of the quiz {string}")
+//    public void iTypeTitleOfTheQuiz(String title) {
+//        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(title);
+//    }
 
     @And("I click Add question")
     public void iClickAddQuestion() throws InterruptedException {
