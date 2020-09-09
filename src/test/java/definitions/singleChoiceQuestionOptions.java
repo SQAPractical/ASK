@@ -8,18 +8,18 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static support.TestContext.getDriver;
 
-public class quiz {
+public class singleChoiceQuestionOptions {
     @And("I click submit button")
     public void iClickSubmitButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[@class='mat-raised-button mat-primary']")).click();
         Thread.sleep(3000);
     }
 
-    @And("I click Quizzes")
-    public void iClickQuizzes() throws InterruptedException {
-        getDriver().findElement(By.xpath("//h5[contains(text(), 'Quizzes')]")).click();
-        Thread.sleep(3000);
-    }
+//    @And("I click Quizzes")
+//    public void iClickQuizzes() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//h5[contains(text(), 'Quizzes')]")).click();
+//        Thread.sleep(3000);
+//    }
 
     @And("I click Create New Quiz")
     public void iClickCreateNewQuiz() throws InterruptedException {
@@ -33,11 +33,11 @@ public class quiz {
         Thread.sleep(3000);
     }
 
-    @And("I click Add Question")
-    public void iClickAddQuestion() throws InterruptedException {
-        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).click();
-        Thread.sleep(3000);
-    }
+//    @And("I click Add Question")
+//    public void iClickAddQuestion() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted']//button[@class='mat-button mat-primary']")).click();
+//        Thread.sleep(3000);
+//    }
 
     @And("I click single choice button")
     public void iClickSingleChoiceButton() throws InterruptedException {
@@ -45,10 +45,10 @@ public class quiz {
         Thread.sleep(3000);
     }
 
-    @And("I type question {string}")
-    public void iTypeQuestion(String question) {
-        getDriver().findElement(By.xpath("//textarea[@placeholder='Question *']")).sendKeys(question);
-    }
+//    @And("I type question {string}")
+//    public void iTypeQuestion(String question) {
+//        getDriver().findElement(By.xpath("//textarea[@placeholder='Question *']")).sendKeys(question);
+//    }
 
     @And("I create {int} options")
     public void iCreateOptions(int totalOptions) {
@@ -66,11 +66,11 @@ public class quiz {
         Thread.sleep(3000);
     }
 
-    @And("I click Save")
-    public void iClickSave() throws InterruptedException {
-        getDriver().findElement(By.xpath("//div[@class='form-controls-container ng-star-inserted']//button[2]")).click();
-        Thread.sleep(3000);
-    }
+//    @And("I click Save")
+//    public void iClickSave() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//div[@class='form-controls-container ng-star-inserted']//button[2]")).click();
+//        Thread.sleep(3000);
+//    }
 
     @Then("message {string} shows")
     public void messageShows(String errorMessage) {

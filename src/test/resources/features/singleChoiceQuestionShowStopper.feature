@@ -18,7 +18,8 @@ Feature: Single choice Question show stopper
     When I type question "What is Polynominal?"
     When I type optiona "an expression of more than two algebraic terms, especially the sum of several terms that contain different powers of the same variable(s)."
     When I type optionb "ts an Exponent"
-    And I click on option1 radio button
+    And I select option2 as a correct answer in Question checkbox
+#    And I click on option1 radio button
     Then I click on Is "Show-Stopper" question?
     Then I click save button
     Then Text "List of Quizzes" appears

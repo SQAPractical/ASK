@@ -10,13 +10,15 @@ Feature: Single Choice Question - Other text area
 
   Scenario: Single Choice Question - Other text area - Alphanumeric and Special characters
     When I click on Quizzes
-    And I wait 10 seconds
+#    And I wait 10 seconds
     And I click [Create New Quizz] button
     And I wait 3 seconds
     And I enter "Number" quiz title on Create Quiz page
     And I click [Add Question] button
     And I select Single-choice option in Question type checkbox
-    And I enter "1234?" question text in Question field
+    And I wait for 2 sec
+    And I type question "1234?" for first question
+#    And I enter "1234?" question text in Question field
     And I enter "12" text in Option1 field
     And I enter "56" text in Option2 field
     And I select option2 as a correct answer in Question checkbox
@@ -28,13 +30,15 @@ Feature: Single Choice Question - Other text area
 
   Scenario: Single Choice Question - Other text area - max +1
     When I click on Quizzes
-    And I wait 10 seconds
+#    And I wait 10 seconds
     And I click [Create New Quizz] button
     And I wait 3 seconds
     And I enter "NumberM" quiz title on Create Quiz page
     And I click [Add Question] button
     And I select Single-choice option in Question type checkbox
-    And I enter "1234?" question text in Question field
+    And I wait for 2 sec
+    And I type question "1234?" for first question
+#    And I enter "1234?" question text in Question field
     And I enter "12" text in Option1 field
     And I enter "56" text in Option2 field
     And I select option2 as a correct answer in Question checkbox
