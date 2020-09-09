@@ -42,9 +42,9 @@ Feature: Quiz
     And I type text "Test%" in the Title of Quiz
     Then I click on Add Question button
     And I wait for 4 sec
-    Then I click Add Question button 51 times
+    Then I click Add Question 51 times
     Then I should see "Q51: new empty question"
-    Then I should see "No"
+
 
 
 

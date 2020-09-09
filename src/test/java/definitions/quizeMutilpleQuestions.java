@@ -23,6 +23,15 @@ public class quizeMutilpleQuestions {
     public void iShouldSee(String arg0) {
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q50: new empty question')]"));
     }
+
+    @Then("I click Add Question {int} times")
+    public void iClickAddQuestionTimes(int arg0) {
+        WebElement button = getDriver().findElement(By.xpath("//div[@class='controls ng-star-inserted shift']//span[1]"));
+        int b;
+        for (b = 1; b <= 51; b++) {
+            button.click();
+        }
+    }
 }
 
 //    WebElement webElement = (WebElement) iterator.next();
