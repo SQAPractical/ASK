@@ -50,10 +50,10 @@ public class registrationFirstName {
         Thread.sleep(2000);
     }
 
-
     @Then("Text <text> appears")
     public void textTextAppears(String text) {
         WebElement expectedText = getDriver().findElement(By.xpath("//*[contains(text(),'" + text + "')]"));
         assertThat(expectedText.isDisplayed()).isTrue();
     }
+
 }
