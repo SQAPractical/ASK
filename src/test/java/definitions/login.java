@@ -54,5 +54,7 @@ public class login {
     public void passwordErrorMessageShouldAppear() {
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(), 'Whitespaces')]")).isDisplayed()).isTrue();
     }
+
+
 }
 
