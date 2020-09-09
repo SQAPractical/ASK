@@ -1,3 +1,4 @@
+@Regression
 Feature: Registration email
 
   Background: Open registration page

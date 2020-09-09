@@ -1,10 +1,11 @@
+@Regression
 Feature: registration first name
 
   Background:
     Given I open "registration" page
 
-  Scenario: registration first name - alpha numeric characters
-    When I type first name "Jonny1"
+  Scenario: registration first name - latin characters
+    When I type first name "Jonny"
     And I type last name "Great"
     And I type email "test@gmail.com" on registration page
     And I type group code "AAA"

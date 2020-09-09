@@ -1,9 +1,11 @@
+@Regression
 Feature: Registration Last Name
 
-  Scenario: text field is Alphanumeric and Special Character
+
+  Scenario: text field is latin Character
     When I open "registration" page
     Then I type first name "Anna"
-    And I type last name "Ku1@"
+    And I type last name "Kursfdaw"
     And I type email "test@gmail.com" on registration page
     And I type group code "abc"
     And I type password "12345" on registration page
