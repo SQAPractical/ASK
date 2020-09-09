@@ -2,7 +2,7 @@ Feature: Quiz title
 
   Background:
     Given I open "login" page
-
+  @Sanity
     Scenario: Create Quiz with Alphanumeric & Sp. characters in 'Title'
       When I type email "elizabethstaging@gmail.com"
       And I type password "Pmej1234"

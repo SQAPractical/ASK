@@ -1,6 +1,6 @@
 Feature: Settings - password
 
-  @password1
+  @password1 @Sanity
   Scenario: Alphanumeric & Special characters
     Given I open "login" page
     When I type email "6thalaivaveriya@9phum.com"

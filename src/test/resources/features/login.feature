@@ -1,5 +1,5 @@
 Feature: Login
-
+@Sanity
   Scenario: Valid email and valid password
     Given I open "login" page
     When I type email "qa.sofi@gmail.com"
@@ -8,7 +8,7 @@ Feature: Login
     And I wait 3 seconds
     Then Text "MyNew Name" appears
     Then Text "TEACHER" appears
-
+  @Sanity
   Scenario: Invalid email and valid password
     Given I open "login" page
     When I type email "wtesfdgv@gmail.com"
