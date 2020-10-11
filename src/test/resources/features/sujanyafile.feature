@@ -1,3 +1,3 @@
 Feature: bbb
-  Scenario: aaaa
-    Given  ddddd
+  Scenario: cccc
+    Given  eeee
