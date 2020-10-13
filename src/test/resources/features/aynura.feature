@@ -1,3 +1,2 @@
-Feature: knlsd
-<<<<<<< HEAD
-  Scenario: some changes adjvksdbxkczbdkcvb ynura
+Feature:
+  Scenario: aynura bskddbflsdn
