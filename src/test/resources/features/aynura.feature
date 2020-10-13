@@ -1,2 +1,2 @@
 Feature: knlsd
-  Scenario: some changes
+  Scenario: my changes
