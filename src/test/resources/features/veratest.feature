@@ -2,10 +2,4 @@ Feature: Test
   Scenario: test
 
   @scenario1: Test
-    Given I open url url sample
-    Then I click on element with xpath
-    And element with xpath .... test 2 test 3 test 4 git
-
-
-
-
+    Test
