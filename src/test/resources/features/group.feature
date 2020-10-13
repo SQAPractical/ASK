@@ -1,5 +1,6 @@
 @Smoke
-Feature: Login Max
+Feature: Im changing the name here now
+
 
   Scenario: Valid email, valid password
     Given I open "login" page
