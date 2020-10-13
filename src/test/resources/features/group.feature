@@ -1,5 +1,5 @@
 @Smoke
-Feature: Login
+Feature: Im changing the name here now
 
   Scenario: Valid email, valid password
     Given I open "login" page
