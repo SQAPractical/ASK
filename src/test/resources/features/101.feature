@@ -1,8 +1,5 @@
 Feature: ercfrcfrcr
   Scenario: rere
-
-
-
-    Given test test 123
+    Given It's not easy
 
 
