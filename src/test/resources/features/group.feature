@@ -1,6 +1,7 @@
 @Smoke
 Feature: Im changing the name here now
 
+
   Scenario: Valid email, valid password
     Given I open "login" page
     When I type email "qa.sofi@gmail.com"
