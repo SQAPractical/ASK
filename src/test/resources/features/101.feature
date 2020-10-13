@@ -1,3 +1,5 @@
 Feature: ercfrcfrcr
   Scenario: rere
-    Given edeee
+    Given Hello everybody
+    Given Open the page
+    Then close the page
