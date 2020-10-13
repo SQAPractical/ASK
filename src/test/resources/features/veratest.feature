@@ -4,7 +4,8 @@ Feature: Test
   @scenario1: Test
     Given I open url url sample
     Then I click on element with xpath
-    And element with xpath
+    And element with xpath .... test 2
+
 
 
 
