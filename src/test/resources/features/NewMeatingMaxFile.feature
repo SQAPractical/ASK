@@ -1,1 +1,1 @@
-stats quo
+stats quo qa
