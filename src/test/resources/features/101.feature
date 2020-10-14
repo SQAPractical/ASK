@@ -1,4 +1,4 @@
 Feature: ercfrcfrcr
   Scenario: rere
     Given edeee
-    When I will get this
+    When Master lomaster
