@@ -1,5 +1,10 @@
 @Smoke
+<<<<<<< HEAD
 Feature: Login
+=======
+Feature: Log out
+
+>>>>>>> master
 
   Scenario: Valid email, valid password
     Given I open "login" page

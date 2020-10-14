@@ -1,3 +1,0 @@
-@practice
-  Scenario: practice
-  git
