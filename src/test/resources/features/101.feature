@@ -1,5 +1,4 @@
 Feature: ercfrcfrcr
   Scenario: rere
-    Given It's not easy
-
-
+    Given edeee
+    When I push this button
