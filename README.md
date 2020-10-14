@@ -14,7 +14,9 @@
     (your currently branch will appear in green)
 
     ----
-3. Make your changes - to create `new feature file` and add some feature and scenario, also steps
+3. Make your changes
+
+    ----
 
 4.  Run `git status` - your changes will appear in red
 

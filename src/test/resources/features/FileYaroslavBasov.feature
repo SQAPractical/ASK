@@ -1,3 +1,0 @@
-Feature: asdad
-  asdasdasdasdas
-  asdsrg
