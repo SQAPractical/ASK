@@ -3,8 +3,7 @@ Feature: Smoke Test
     Given I open the url "google"
     Then i open the table to view
     Then add some messages
-    Then i'm not Arab
-
+    Then make a payment
 
 
 
