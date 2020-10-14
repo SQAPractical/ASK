@@ -7,7 +7,7 @@ Feature: Smoke Test
     Then 12345Sveta Aynura
 
 =======
-    Then make a payment
+    Then make a payment Sveta
 >>>>>>> master
 
 
