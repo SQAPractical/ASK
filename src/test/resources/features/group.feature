@@ -1,5 +1,6 @@
 @Smoke
-Feature: Login
+Feature: Log out
+
 
   Scenario: Valid email, valid password
     Given I open "login" page
