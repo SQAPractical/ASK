@@ -1,3 +1,3 @@
 @java
   Feature: java learning
-    Given code1git
+    Given code1git new day
