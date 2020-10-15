@@ -1,5 +1,4 @@
-
-Feature:  aynuras try
+Feature:  Login
 
   Scenario: Login - valid email, valid password
     Given I open "login" page
