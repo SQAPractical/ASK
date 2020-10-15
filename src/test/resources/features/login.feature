@@ -1,4 +1,4 @@
-Feature: Log in
+Feature: Log in suja
   Scenario: Login - valid email, valid password
     Given I open "login" page
     When I type email "qa.sofi@gmail.com" on login page
