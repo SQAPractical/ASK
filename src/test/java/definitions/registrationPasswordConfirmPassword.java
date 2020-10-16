@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import static support.TestContext.getDriver;
 
-public class registration {
+public class registrationPasswordConfirmPassword {
     @When("I click Register now button")
     public void iClickRegisterNowButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[@class='mat-button mat-primary']")).click();
