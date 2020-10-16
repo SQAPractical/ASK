@@ -25,6 +25,6 @@ Feature: Registration
       | "login"  | "Vera" | "Hope" | "vera@hope.love" | "T100"    | " 12345"        | " 12345"           | "Whitespaces are not allowed" |
       | "login"  | "Vera" | "Hope" | "vera@hope.love" | "T100"    | "Abc123"        | "123Abc"           | "Entered passwords should match" |
 
-  Scenario: Login - Password displays in bullets, Copy, Cut disable
+  Scenario: Registration - Password displays in bullets, Copy, Cut disable
     Given I open "registration" page
     Then Password displays in bullets, Copy, Cut disable
