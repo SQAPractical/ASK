@@ -11,13 +11,31 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class registration {
-    @When("I type {string} into {string} field")
+    @When("I type {string} into {string} input field")
     public void iTypeIntoField(String text, String field) {
-        if (field.equalsIgnoreCase("Last Name")) {
-            getDriver().findElement(By.xpath("//input[@formcontrolname='lastName']")).sendKeys(text);
+        String fieldCase = field.toLowerCase();
+        switch(fieldCase) {
+            case "last name":
+                getDriver().findElement(By.xpath("//input[@formcontrolname='lastName']")).sendKeys(text);
+                break;
+            case "first name":
+                getDriver().findElement(By.xpath("//input[@formcontrolname='firstName']")).sendKeys(text);
+                break;
+                case "email":
+                getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(text);
+                break;
+                case "group code":
+                getDriver().findElement(By.xpath("//input[@formcontrolname='group']")).sendKeys(text);
+                break;
+                case "password":
+                getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(text);
+                break;
+                case "confirm password":
+                getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(text);
+                break;
+        }
 
         }
-    }
 
     @And("I click outside text field")
     public void iClickOutsideTextField() {
@@ -30,7 +48,7 @@ public class registration {
     }
 
 
-    @Then("{string} error appears")
+    @Then("{string} error message appears")
     public void appears(String error) {
         if(error.equalsIgnoreCase("no")) {
             Assert.assertEquals(0, getDriver().findElements(By.
@@ -50,5 +68,14 @@ public class registration {
         }
         }
 
+    @And("I click Register Me button;")
+    public void iClickRegisterMeButton() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        getDriver().findElement(By.xpath("//*[contains(text(),'Register Me')]")).click();
     }
+}
 

@@ -41,4 +41,12 @@ public class login {
         WebElement actualText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]"));
         assertThat(actualText.isDisplayed()).isTrue();
     }
+
+    @Then("Password displays in bullets, Copy, Cut disable")
+    public void passwordDisplaysInBulletsCopyCutDisable() {
+        WebElement passwordField = getDriver().findElement(By.xpath("//input[@formcontrolname='password']"));
+        String attribute = "type";
+        String attributeValue = "password";
+        assertThat(passwordField.getAttribute(attribute)).isEqualTo(attributeValue);
+    }
 }
