@@ -33,6 +33,10 @@ public class registration {
                 case "confirm password":
                 getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(text);
                 break;
+                case "title of the quiz":
+                getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(text);
+                break;
+
         }
 
         }
