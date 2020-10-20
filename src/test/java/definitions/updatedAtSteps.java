@@ -23,32 +23,32 @@ public class updatedAtSteps {
         getDriver().get("http://ask-stage.portnov.com/#/login");
     }
 
-    @When("I type email {string} on login page")
-    public void iTypeEmailOnLoginPage(String email) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
-    }
-
-    @And("I type password {string} on login page")
-    public void iTypePasswordOnLoginPage(String password) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
-    }
-
-    @And("I click Sign in button")
-    public void iClickSignInButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//button[@type='submit']")).click();
-        Thread.sleep(2000);
-    }
-
-    @Then("Text {string} appears")
-    public void textAppears(String text) {
-        WebElement actualText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]"));
-        assertThat(actualText.isDisplayed()).isTrue();
-    }
+//    @When("I type email {string} on login page")
+//    public void iTypeEmailOnLoginPage(String email) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
+//    }
+//
+//    @And("I type password {string} on login page")
+//    public void iTypePasswordOnLoginPage(String password) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
+//    }
+//
+//    @And("I click Sign in button")
+//    public void iClickSignInButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+//        Thread.sleep(2000);
+//    }
+//
+//    @Then("Text {string} appears")
+//    public void textAppears(String text) {
+//        WebElement actualText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]"));
+//        assertThat(actualText.isDisplayed()).isTrue();
+//    }
 
     @Then("I click on element with xpath {string}")
     public void iClickOnElementWithXpath(String xpath) throws InterruptedException {
         getDriver().findElement(By.xpath(xpath)).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
     }
 
     @Then("I type {string} into element with xpath {string}")
