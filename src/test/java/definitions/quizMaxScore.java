@@ -21,7 +21,7 @@ public class quizMaxScore {
     @Then("I click Create New Quiz button")
     public void iClickCreateNewQuizButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     @Then("I type title {string} in Quiz name")
@@ -32,12 +32,12 @@ public class quizMaxScore {
     @Then("I click Add Question button")
     public void iClickAddQuestionButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//div[contains(@class,'controls ng-star-inserted')]//span")).click();
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
     }
 
     @Then("I choose question type")
     public void iChooseQuestionType() throws InterruptedException {
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//mat-radio-button[contains(., 'Textual')]")).click();
     }
 
@@ -49,7 +49,7 @@ public class quizMaxScore {
     @Then("I click Save Quiz button")
     public void iClickSaveQuizButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     @Then("I click {string} quiz name")
