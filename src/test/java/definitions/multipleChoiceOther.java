@@ -1,21 +1,19 @@
 package definitions;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
+import static org.testng.AssertJUnit.assertEquals;
 import static support.TestContext.getDriver;
 
 public class multipleChoiceOther {
+    public static String textOther;
     @When("I click on {string} option button")
     public void iClickOnOptionButton(String text) {
         getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).click();
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        iSleep();
     }
 
     @When("I click on the button Add Question")
@@ -33,10 +31,71 @@ public class multipleChoiceOther {
     @And("I type {string} into Question {string} input field")
     public void iTypeIntoQuestionInputField(String text, String qNumber) {
         getDriver().findElement(By.xpath("//textarea[@placeholder='Option "+qNumber+"*']")).sendKeys(text);
+
+    }
+
+    @When("I click on checkbox button next to Option {string}")
+    public void iClickOnCheckboxButtonNextToOption(String qNumber) {
+        getDriver().findElement(By.xpath("//textarea[@placeholder='Option "+qNumber+"*']/../../../../..//mat-checkbox")).click();
+    }
+
+    @And("I sleep")
+    public void iSleep() {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    @When("I click {string} button in the quiz window title {string}")
+    public void iClickButtonInTheQuizWindowTitle(String button, String qName) {
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+qName+"')]/../../..//*[contains(text(),'"+button+"')]")).click();
+    }
+
+    @And("I choose student name {string} and click on the name")
+    public void iChooseStudentNameAncClickOnTheName(String sName) {
+        getDriver().findElement(By.xpath("//mat-list-option[contains(.,'"+sName+"')]")).click();
+    }
+
+    @And("I click on Log Out option button")
+    public void iClickOnLogOutOptionButton() {
+        getDriver().findElement(By.xpath("//*[contains(text(),'Log Out')]")).click();
+        getDriver().findElement(By.xpath("//span[contains(text(),'Log Out')]")).click();
+    }
+
+    @And("I click on Give Assignment option button")
+    public void iClickOnGiveAssignmentOptionButton() {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Give Assignment')]")).click();
+    }
+
+    @And("I click on Go To Assessment option button")
+    public void iClickOnGoToAssessmentOptionButton() {
+        getDriver().findElement(By.xpath("//*[contains(text(),'Quiz_Test1')]/..//*[contains(text(),'Go To Assessment')]")).click();
+    }
+
+    @When("I click on answer choice {string}")
+    public void iClickOnAnswerChoice(String answer) {
+        getDriver().findElement(By.xpath("//span[contains(@class, 'checkbox')][contains(text(),'"+answer+"')]")).click();
+    }
+
+    @And("I type text {string} into Other text field")
+    public void iTypeTextIntoOtherTextField(String text) {
+        textOther = text;
+        getDriver().findElement(By.xpath("//textarea[@placeholder='Other']")).sendKeys(textOther);
+    }
+
+    @Then("text typed into {string} input field can be seen")
+    public void textTypedIntoInputFieldCanBeSeen(String text) {
+        textOther = "test1";
+        String fieldText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]/..")).getText();
+        String[] actualText = fieldText.split(":\n");
+        assertEquals(textOther,actualText[1]);
+    }
+
+    @And("I click on Review button")
+    public void iClickOnReviewButton() {
+        getDriver().findElement(By.xpath("//table//*[contains(text(),'Dmitry Dmitriev')]/..//*[contains(text(),'Review')]")).click();
+
     }
 }

@@ -36,7 +36,8 @@ public class registration {
                 case "title of the quiz":
                 getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(text);
                 break;
-
+                default:
+                getDriver().findElement(By.xpath("//*[contains(text(),'"+field+"')]")).sendKeys(text);
         }
 
         }
