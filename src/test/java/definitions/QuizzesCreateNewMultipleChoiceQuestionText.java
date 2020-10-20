@@ -16,16 +16,16 @@ public class QuizzesCreateNewMultipleChoiceQuestionText {
 //        Thread.sleep(2000);
 //    }
 
-    @And("I click on Create New Quiz")
-    public void iClickOnCreateNewQuiz() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[text()='Create New Quiz']/..")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click on Create New Quiz")
+//    public void iClickOnCreateNewQuiz() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*[text()='Create New Quiz']/..")).click();
+//        Thread.sleep(2000);
+//    }
 
-    @And("I type {string} in Title Of The Quiz field")
-    public void iTypeInTitleOfTheQuizField(String quizName) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(quizName);
-    }
+//    @And("I type {string} in Title Of The Quiz field")
+//    public void iTypeInTitleOfTheQuizField(String quizName) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(quizName);
+//    }
 
     @And("I click on Add Question underneath the Title")
     public void iClickOnAddQuestionUnderneathTheTitle() throws InterruptedException {
@@ -39,10 +39,10 @@ public class QuizzesCreateNewMultipleChoiceQuestionText {
         java.lang.Thread.sleep(2000);
     }
 
-    @And("I type the question {string} in to Question field")
-    public void iTypeTheQuestionInToQuestionField(String question) {
-        getDriver().findElement(By.xpath("//textarea[@formcontrolname='question']")).sendKeys(question);
-    }
+//    @And("I type the question {string} in to Question field")
+//    public void iTypeTheQuestionInToQuestionField(String question) {
+//        getDriver().findElement(By.xpath("//textarea[@formcontrolname='question']")).sendKeys(question);
+//    }
 
     @And("I type text {string} for Option {int}")
     public void iTypeTextForOption(String textAnswer, int optionNumber) {
