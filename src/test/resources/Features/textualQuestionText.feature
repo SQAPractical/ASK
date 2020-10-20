@@ -154,7 +154,7 @@ Feature: Textual Question_Text
     #And I click delete button
     #Then I click delete on Conformation message
 
-    Examples:
-      | pageName | email              | password |
-      | "login"  | "qa.sofi@gmail.com" | "12345"  |
-
+#    Examples:
+#      | pageName | email              | password |
+#      | "login"  | "qa.sofi@gmail.com" | "12345"  |
+#

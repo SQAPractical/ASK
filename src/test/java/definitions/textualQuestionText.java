@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import static support.TestContext.getDriver;
 
-public class TextualQuestion_Text {
+public class textualQuestionText {
     @Then("I click Textual check-box")
     public void iClickTextualCheckBox() { getDriver().findElement(By.xpath("//*[@id='mat-radio-2']")).click();
     }
