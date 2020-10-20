@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import static support.TestContext.getDriver;
 
-public class firstName {
+public class registrationFirstName {
 
 
     @Then("I type FirstName {string} on registration page")
@@ -38,12 +38,12 @@ public class firstName {
         getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(confirmPassword);
     }
 
-    @Then("I click Register Me button")
-    public void iClickRegisterMeButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//button[@class='mat-raised-button mat-primary']")).click();
-        Thread.sleep(3000);
+//    @Then("I click Register Me button")
+//    public void iClickRegisterMeButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//button[@class='mat-raised-button mat-primary']")).click();
+//        Thread.sleep(3000);
 
-    }
+//    }
     //Scenario2
 
     @And("Click on FirstName field")

@@ -30,7 +30,7 @@ public class assignmentGradedBy {
 
     @And("I click on created quiz {string}")
     public void iClickOnCreatedQuiz(String quizName) {
-        getDriver().findElement(By.xpath("//span[contains(text(),'"+quizName+"')]")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+quizName+"')]")).click();
         assignmentGradedBy.quizName = quizName;
     }
 
