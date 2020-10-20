@@ -21,7 +21,6 @@ public class login {
         else if (pageName.equalsIgnoreCase("registration")) {
             getDriver().get("http://ask-stage.portnov.com/#/registration");
         }
-
     }
 
     @When("I type email {string} on login page")
