@@ -1,13 +1,12 @@
+//Created by Almir 10/19/20
 package definitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
-import java.awt.event.KeyEvent;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -18,6 +17,8 @@ import static support.TestContext.getDriver;
 public class quizCreatedAt {
     public static String timeStamp;
     public static String quizName;
+    public static int quizCounter = 1;
+    public static int pointsCounter;
     @And("I click quizzes on left menu")
     public void iClickQuizzesOnLeftMenu() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[text()='Quizzes']/..")).click();
@@ -43,29 +44,35 @@ public class quizCreatedAt {
 
     @And("I select Question type: Textual")
     public void iSelectQuestionTypeTextual() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Textual')]/..")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(), 'Q"+quizCounter+"')]/../../..//*[contains(text(),'Textual')]")).click();
         Thread.sleep(2000);
     }
 
-//    @And("I select Points per question:")
-//    public void iSelectPointsPerQuestion() throws InterruptedException {
-//        WebElement slider = getDriver().findElement(By.xpath("//ac-question-body-form//div[@class='mat-slider-thumb']"));
-//        slider.click();
-//        Thread.sleep(2000);
-//        for (int i=5; i<=10; i++) {
-//            slider.sendKeys(Keys.ARROW_RIGHT);
-//        }
-
-
+    @And("^I select Points per question: \"(\\d+)\"$")
+    public void iSelectPointsPerQuestion(int points) {
+        pointsCounter = pointsCounter + points;
+        WebElement slider = getDriver().findElement(By.xpath("//*[contains(text(), 'Q"+quizCounter+"')]/../../..//mat-slider"));
+        if (points >= 5) {
+            for (int i = 5; i < points; i++) {
+                slider.sendKeys(Keys.ARROW_RIGHT);
+            }
+        }
+        else if(points < 5) {
+            for (int i = 5; i > points; i--) {
+                slider.sendKeys(Keys.ARROW_LEFT);
+            }
+        }
+    }
 
     @And("I type the question {string} in to Question field")
     public void iTypeTheQuestionInToQuestionField(String question) {
-        getDriver().findElement(By.xpath("//textarea[@formcontrolname='question']")).sendKeys(question);
+        getDriver().findElement(By.xpath("//*[contains(text(), 'Q"+quizCounter+"')]/../../..//textarea[@formcontrolname='question']")).sendKeys(question);
+        quizCounter++;
     }
 
     @And("I note down the current DateTime")
     public void iNoteDownTheCurrentDateTime() {
-        String timeStamp = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
+        String timeStamp = new SimpleDateFormat("MM/dd/yyyy HH:mm").format(Calendar.getInstance().getTime());
         quizCreatedAt.timeStamp = timeStamp;
         System.out.println(timeStamp);
     }
@@ -86,8 +93,9 @@ public class quizCreatedAt {
     @Then("Created At: DateTime match with noted down")
     public void createdAtDateTimeMatchWithNotedDown() {
         String createdAt = getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizName+"')]/../../../div//td[text()='Created At:']/following-sibling::td")).getText();
-        System.out.println(createdAt);
-        assertThat(timeStamp).isEqualTo(createdAt);
+        String createdAtNew = createdAt.substring(0, createdAt.length()-3);
+        System.out.println(createdAtNew);
+        assertThat(timeStamp).isEqualTo(createdAtNew);
     }
 
 
