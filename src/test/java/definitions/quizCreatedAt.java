@@ -22,7 +22,7 @@ public class quizCreatedAt {
     @And("I click quizzes on left menu")
     public void iClickQuizzesOnLeftMenu() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[text()='Quizzes']/..")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
     }
 
     @And("I click on Create New Quiz at the bottom of the page")
