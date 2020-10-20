@@ -13,6 +13,7 @@ import static support.TestContext.getDriver;
 
 public class RegistrationGroupCode {
 
+    /* dublicates deleted */
 
     @And("I click Register Me button")
     public void iClickRegisterMeButton() throws InterruptedException {
