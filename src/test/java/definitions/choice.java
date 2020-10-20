@@ -79,8 +79,8 @@ public class choice {
         Thread.sleep(2000);
     }
 
-
-    @Then("I click on Preview button")
+/*
+    /@Then("I click on Preview button")
     public void iClickOnPreviewButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'QA Test')]/../../../div//button//span[contains(text(),'Preview')]")).click();
        // choice.buttonName = buttonName;
@@ -88,7 +88,7 @@ public class choice {
         Thread.sleep(2000);
    }
 
-
+                                        */
     //////
 
 

@@ -15,8 +15,8 @@ Feature: Single Choice Question
     And I click on the optionOne button
     Then I click Save button
     And I click on the created quiz "QA test" from the Quiz List
-    Then I click on Preview button
-    And Text "Other" appears
+    #Then I click on Preview button
+   # And Text "Other" appears
 
 
 Scenario: "Other" text area available for student
