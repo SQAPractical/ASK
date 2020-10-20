@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class registration {
+public class registrationLastName {
     @When("I type {string} into {string} input field")
     public void iTypeIntoField(String text, String field) {
         String fieldCase = field.toLowerCase();
