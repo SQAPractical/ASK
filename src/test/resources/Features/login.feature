@@ -33,11 +33,8 @@ Feature:  Login
     And I click Sign in button
     Then Text <text> appears
     Examples:
-     | email                | password  | text            |
-     | " qa.sofi@gmail.com" | "12345"   | "Should be a valid email address" |
-     | "qa.sofi@gmail.com " | "12345"   | "Should be a valid email address" |
-     | "qa.sofi@gmail.com"  | " 12345"  | "Whitespaces are not allowed" |
-     | "qa.sofi@gmail.com"  | "12345 "  | "Whitespaces are not allowed" |
-
-
-
+      | email                | password  | text            |
+      | " qa.sofi@gmail.com" | "12345"   | "Should be a valid email address" |
+      | "qa.sofi@gmail.com " | "12345"   | "Should be a valid email address" |
+      | "qa.sofi@gmail.com"  | " 12345"  | "Whitespaces are not allowed" |
+      | "qa.sofi@gmail.com"  | "12345 "  | "Whitespaces are not allowed" |
