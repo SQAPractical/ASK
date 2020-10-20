@@ -6,18 +6,16 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class login {
     @Given("I open {string} page")
-    public void iOpenPage(String pageName) {
-        if (pageName.equalsIgnoreCase("login")){
+    public void iOpenPage(String url) {
+        if(url.equalsIgnoreCase("login")) {
             getDriver().get("http://ask-stage.portnov.com/#/login");
-        }
-        else if (pageName.equalsIgnoreCase("registration")) {
+        } else if (url.equalsIgnoreCase("registration")){
             getDriver().get("http://ask-stage.portnov.com/#/registration");
         }
     }
@@ -34,8 +32,8 @@ public class login {
 
     @And("I click Sign in button")
     public void iClickSignInButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//button[@type='submit']")).click();
-        Thread.sleep(2000);
+        getDriver().findElement(By.xpath(("//button[@type='submit']"))).click();
+        Thread.sleep(3000);
     }
 
     @Then("Text {string} appears")
