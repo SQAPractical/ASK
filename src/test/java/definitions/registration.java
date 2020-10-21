@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import static definitions.multipleChoiceOther.quizName;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
@@ -35,6 +36,7 @@ public class registration {
                 break;
                 case "title of the quiz":
                 getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(text);
+                quizName = text;
                 break;
                 default:
                 getDriver().findElement(By.xpath("//*[contains(text(),'"+field+"')]")).sendKeys(text);
