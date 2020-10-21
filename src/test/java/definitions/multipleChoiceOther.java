@@ -17,7 +17,6 @@ public class multipleChoiceOther {
     @When("I click on {string} option button")
     public void iClickOnOptionButton(String text) {
         getDriver().findElement(By.xpath("//*[contains(text(),'" + text + "')]")).click();
-        quizName = text;
         iSleep();
     }
 
@@ -92,7 +91,6 @@ public class multipleChoiceOther {
 
     @Then("text typed into {string} input field can be seen")
     public void textTypedIntoInputFieldCanBeSeen(String text) {
-//        textOther = "checking for test";
         String fieldText = getDriver().findElement(By.xpath("//*[contains(text(),'" + text + "')]/..")).getText();
         String[] actualText = fieldText.split(":\n");
         assertEquals(textOther, actualText[1]);
