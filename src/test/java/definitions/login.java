@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
+
 public class login {
     @Given("I open {string} page")
     public void iOpenPage(String url) {
@@ -52,4 +53,6 @@ public class login {
         String attributeValue = "password";
         assertThat(passwordField.getAttribute(attribute)).isEqualTo(attributeValue);
     }
+
+
 }
