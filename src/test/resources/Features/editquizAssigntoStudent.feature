@@ -1,5 +1,5 @@
 Feature:  Login
-  Scenario: create quiz and assign to student
+  Scenario: edit quiz and assign to student
 
     Given I open "login" page
     When I type email "sujanyateacher@gmail.com" on login page
