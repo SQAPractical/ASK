@@ -234,7 +234,7 @@ public class textualQuestionShowstopper {
     @Then("I click on close button")
     public void iClickOnCloseButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Close')]")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
     }
 

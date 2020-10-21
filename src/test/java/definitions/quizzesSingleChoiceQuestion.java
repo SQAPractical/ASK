@@ -28,12 +28,12 @@ public class quizzesSingleChoiceQuestion {
         getDriver().findElement(By.xpath("//input[@id='mat-input-2']")).sendKeys(titleName);
         Thread.sleep(3000);
     }
-
-    @And("I click Add Question")
-    public void iClickAddQuestion() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(),'add_circle')]")).click();
-        Thread.sleep(2000);
-    }
+//
+//    @And("I click Add Question")
+//    public void iClickAddQuestion() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*[contains(text(),'add_circle')]")).click();
+//        Thread.sleep(2000);
+//    }
 
     @Then("Select Single Choice type of Question")
     public void selectSingleChoiceTypeOfQuestion() throws InterruptedException {
@@ -77,11 +77,11 @@ public class quizzesSingleChoiceQuestion {
         Thread.sleep(2000);
     }
 
-    @And("I click Save button")
-    public void iClickSaveButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click Save button")
+//    public void iClickSaveButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
+//        Thread.sleep(2000);
+//    }
 
     @And("I click on the field Question and leave it empty")
     public void iClickOnTheFieldQuestionAndLeaveItEmpty() {
@@ -112,11 +112,11 @@ public class quizzesSingleChoiceQuestion {
         Thread.sleep(2000);
     }
 
-    @Then("I click {string} quiz name")
-    public void iClickQuizName(String quizName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizName+"')]")).click();
-        Thread.sleep(2000);
-    }
+//    @Then("I click {string} quiz name")
+//    public void iClickQuizName(String quizName) throws InterruptedException {
+//        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizName+"')]")).click();
+//        Thread.sleep(2000);
+//    }
 
     @And("I click button {string} on Quiz {string}")
     public void iClickButtonOnQuiz(String delete, String quizName) throws InterruptedException {
