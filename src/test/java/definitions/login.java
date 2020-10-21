@@ -6,11 +6,15 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
+<<<<<<< HEAD
 public class Login {
     @Given("I open {string} page")
     public void iOpenPage(String pageName) {
@@ -18,6 +22,15 @@ public class Login {
             getDriver().get("http://ask-stage.portnov.com/#/login");
         }
         else if (pageName.equalsIgnoreCase("registration")){
+=======
+
+public class login {
+    @Given("I open {string} page")
+    public void iOpenPage(String url) {
+        if(url.equalsIgnoreCase("login")) {
+            getDriver().get("http://ask-stage.portnov.com/#/login");
+        } else if (url.equalsIgnoreCase("registration")){
+>>>>>>> master
             getDriver().get("http://ask-stage.portnov.com/#/registration");
         }
     }
@@ -34,8 +47,13 @@ public class Login {
 
     @And("I click Sign In button")
     public void iClickSignInButton() throws InterruptedException {
+<<<<<<< HEAD
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
         Thread.sleep(500);
+=======
+        getDriver().findElement(By.xpath(("//button[@type='submit']"))).click();
+        Thread.sleep(3000);
+>>>>>>> master
     }
 
     @Then("Text {string} appears")
@@ -43,4 +61,6 @@ public class Login {
         WebElement expectedText  = getDriver().findElement(By.xpath("//*[contains(text(), '"+text+"')]"));
         assertThat(expectedText.isDisplayed()).isTrue();
     }
+
+
 }
