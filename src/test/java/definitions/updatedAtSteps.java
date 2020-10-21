@@ -23,62 +23,45 @@ public class updatedAtSteps {
         getDriver().get("http://ask-stage.portnov.com/#/login");
     }
 
-//    @When("I type email {string} on login page")
-//    public void iTypeEmailOnLoginPage(String email) {
-//        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
-//    }
-//
-//    @And("I type password {string} on login page")
-//    public void iTypePasswordOnLoginPage(String password) {
-//        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
-//    }
-//
-//    @And("I click Sign in button")
-//    public void iClickSignInButton() throws InterruptedException {
-//        getDriver().findElement(By.xpath("//button[@type='submit']")).click();
-//        Thread.sleep(2000);
-//    }
-//
-//    @Then("Text {string} appears")
-//    public void textAppears(String text) {
-//        WebElement actualText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]"));
-//        assertThat(actualText.isDisplayed()).isTrue();
-//    }
-
-    @Then("I click on element with xpath {string}")
-    public void iClickOnElementWithXpath(String xpath) throws InterruptedException {
-        getDriver().findElement(By.xpath(xpath)).click();
-        Thread.sleep(4000);
+    @Then("I choose question type {string}")
+    public void iChooseQuestionType(String type) {
+        getDriver().findElement(By.xpath("//mat-radio-button[contains(., '"+type+"')]")).click();
     }
 
-    @Then("I type {string} into element with xpath {string}")
-    public void iTypeIntoElementWithXpath(String text, String xpath) {
-        getDriver().findElement(By.xpath(xpath)).sendKeys(text);
-        String QuizName  = getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).getText();
+    @Then("I type title {string} in Quiz name field")
+    public void iTypeTitleInQuizNameField(String QuizName) {
+        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(QuizName);
         updatedAtSteps.QuizName = QuizName;
     }
-
     @Then("I click on element just created by me")
     public void iClickOnElementJustCreatedByMe() throws InterruptedException {
         System.out.println(QuizName);
-        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'TestQuiz11')]")).click();
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+QuizName+"')]")).click();
         Thread.sleep(2000);
     }
 
     @And("I note down the current Date and Time")
     public void iNoteDownTheCurrentDateAndTime() {
-        String timeStamp = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
+        String timeStamp = new SimpleDateFormat("MM/dd/yyyy HH:mm").format(Calendar.getInstance().getTime());
         updatedAtSteps.timeStamp = timeStamp;
+
     }
 
     @Then("Updated At: DateTime match with noted down")
     public void updatedAtDateTimeMatchWithNotedDown() {
 
-        String updatedAt = getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'TestQuiz11')]/parent::span/parent::mat-expansion-panel-header//following-sibling::div//div//div//table//tbody//tr[5]//td[2]")).getText();
+        String updatedAt = getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+QuizName+"')]/parent::span/parent::mat-expansion-panel-header//following-sibling::div//div//div//table//tbody//tr[5]//td[2]")).getText();
         System.out.println(updatedAt);
-        assertThat(timeStamp).isEqualTo(updatedAt);
+        String updatedAtShort = updatedAt.substring(0, updatedAt.length()-3);
+        assertThat(timeStamp).isEqualTo(updatedAtShort);
+    }
+
+    @Then("I click on Edit button")
+    public void iClickOnEditButton() throws InterruptedException {
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+QuizName+"')]/../../..//*[contains(text(),'Edit')]")).click();
+        Thread.sleep(1000);
     }
 
 
-
+    //mat-panel-title[contains(text(),'TestQuiz11')]/parent::span/parent::mat-expansion-panel-header//following-sibling::div//div//div//div//a//button"
 }
