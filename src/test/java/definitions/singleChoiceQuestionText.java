@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class quizzesSingleChoiceQuestion {
+public class singleChoiceQuestionText {
 
     @Then("I click Quizzes from the left Menu")
     public void iClickQuizzesFromTheLeftMenu() throws InterruptedException {

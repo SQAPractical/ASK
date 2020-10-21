@@ -49,12 +49,12 @@ public class quizTotalQuestions<i> {
 //
 //    }
 
-    @And("I click save button")
-    public void iClickSaveButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
-        Thread.sleep(3000);
-
-    }
+//    @And("I click save button")
+//    public void iClickSaveButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
+//        Thread.sleep(3000);
+//
+//    }
 
     @Then("I check TotalQuestion of quiz {string}")
     public void iCheckTotalQuestionOfQuiz(String quizName) throws InterruptedException {
