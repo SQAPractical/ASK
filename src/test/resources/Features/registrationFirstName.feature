@@ -1,4 +1,5 @@
 # Created by Elena
+@fullregression
 Feature: firstName
 
   Scenario: Registration - first Name - latin characters allowed

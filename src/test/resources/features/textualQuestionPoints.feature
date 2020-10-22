@@ -1,4 +1,5 @@
 #Created by Almir 10/19/20
+@fullregression
 Feature: Textual Question - Points
 
   Scenario: Verify that Maximum possible score is calculated correctly at creating Quiz

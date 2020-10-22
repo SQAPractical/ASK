@@ -1,4 +1,5 @@
 #Created by Almir 10/19/20
+@fullregression
 Feature: Quiz - Created at
 
   Scenario: Verify "Created At: date/time" displayed correctly

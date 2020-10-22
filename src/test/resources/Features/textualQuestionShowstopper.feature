@@ -1,3 +1,4 @@
+@fullregression
 Feature:  Textual Question Showstopper
 
   Scenario: Textual Question - Show-Stopper - at creating Quiz
