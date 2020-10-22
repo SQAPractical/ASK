@@ -1,7 +1,7 @@
 #Created by Almir 10/19/20
 @fullregression
 Feature: Quiz - Created at
-
+  @Smoke
   Scenario: Verify "Created At: date/time" displayed correctly
     Given I open "login" page
     When I type email "qa.sofi@gmail.com" on login page
