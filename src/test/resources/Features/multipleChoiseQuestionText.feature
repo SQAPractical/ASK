@@ -1,3 +1,4 @@
+@fullregression
 Feature: Quizzes Create New Multiple Choice Question Text
 
   Scenario: Multiple Choice Question Text - Alphanumeric, Special characters
