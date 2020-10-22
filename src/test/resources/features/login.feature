@@ -1,4 +1,6 @@
-Feature: Login
+@fullregression
+Feature:  Login
+  @Smoke @Smoke1
   Scenario: Login - valid email, valid password
     Given I open "login" page
     When I type email "qa.sofi@gmail.com" on login page
@@ -6,7 +8,7 @@ Feature: Login
     And I click Sign in button
     Then Text "Sofia Teacher" appears
     Then Text "TEACHER" appears
-
+  @Smoke
   Scenario: Login - valid email, invalid password
     Given I open "login" page
     When I type email "qa.sofi@gmail.com" on login page
@@ -37,12 +39,3 @@ Feature: Login
       | "qa.sofi@gmail.com " | "12345"   | "Should be a valid email address" |
       | "qa.sofi@gmail.com"  | " 12345"  | "Whitespaces are not allowed" |
       | "qa.sofi@gmail.com"  | "12345 "  | "Whitespaces are not allowed" |
-
-
-
-
-
-
-
-
-
