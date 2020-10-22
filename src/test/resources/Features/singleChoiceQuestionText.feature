@@ -1,3 +1,4 @@
+@fullregression
 Feature: Single Choice Question Text field
   Scenario: Text field with Alphanumeric & Special Characters
     Given I open "Login" page

@@ -1,3 +1,4 @@
+@fullregression
 Feature:Quiz Total Questions
   Scenario: Quiz - Total Questions - Teacher can create Quiz (5 questions)
     Given I open "login" page

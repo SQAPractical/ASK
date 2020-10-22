@@ -1,3 +1,4 @@
+@fullregression
 Feature: Textual Question_Text
 
   Scenario Outline: Textual Question - Text - Alphanumeric characters is allowable

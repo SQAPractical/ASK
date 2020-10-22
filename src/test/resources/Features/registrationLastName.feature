@@ -1,3 +1,4 @@
+@fullregression
 Feature: Registration - Last Name
 
   Scenario Outline: Registration - Last Name - character input

@@ -1,3 +1,4 @@
+@fullregression
 Feature: Registration Group Code
 
   Scenario: Group Code - Alphanumeric & Special characters

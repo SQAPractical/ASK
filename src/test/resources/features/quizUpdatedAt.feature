@@ -1,3 +1,4 @@
+@fullregression
 Feature: Quiz Updated At
   Scenario: Verify that the date and time are displayed correctly when updating a quiz
     Given I open url "http://ask-stage.portnov.com/#/login"

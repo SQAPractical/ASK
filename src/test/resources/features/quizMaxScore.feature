@@ -1,3 +1,4 @@
+@fullregression
 Feature: quizMaxScore
   Scenario: Quiz - Maximum possible score is displayed correctly
     Given I open "login" page
