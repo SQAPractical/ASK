@@ -1,5 +1,4 @@
 # Created by Elena
-
 Feature: Single Choice Question
   Scenario: "Other" text area - "Other" text area is displayed for teacher
     Given I open "login" page

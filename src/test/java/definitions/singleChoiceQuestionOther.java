@@ -1,5 +1,4 @@
 // Created by Elena
-
 package definitions;
 
 import cucumber.api.java.en.And;
@@ -124,7 +123,7 @@ public class singleChoiceQuestionOther {
 
     @And("I click Preview button near quiz {string}")
     public void iClickPreviewButtonNearQuiz(String quizName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizName+"')]/../../..//*[contains(text(),'Preview')]")).click();
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizName+"')]/../../..//*[contains(text(),'')]")).click();
         Thread.sleep(1000);
     }
 
