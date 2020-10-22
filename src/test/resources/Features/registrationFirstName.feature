@@ -1,5 +1,4 @@
 # Created by Elena
-
 Feature: firstName
 
   Scenario: Registration - first Name - latin characters allowed

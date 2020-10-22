@@ -1,5 +1,4 @@
 // Created by Elena
-
 package definitions;
 
 import cucumber.api.java.en.Given;
