@@ -137,7 +137,7 @@ public class assignmentGradedBy {
     @And("I click on Save button")
     public void iClickOnSaveButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Save')]/..")).click();
-        Thread.sleep(5000);
+        Thread.sleep(1000);
     }
 
     @And("I click on assigned quiz {string}")
