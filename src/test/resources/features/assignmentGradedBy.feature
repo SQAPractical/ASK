@@ -1,4 +1,5 @@
 #Created by Almir 10/19/20
+@fullregression
 Feature: Assignment - Graded by
 
   Scenario Outline: Verify the Graded by field is displayed as Empty before the student submits the assignment

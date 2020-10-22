@@ -1,3 +1,4 @@
+@fullregression
 Feature: Multiple Choice Other text area
 
   Scenario: Multiple-Choice question includes "Other" text area

@@ -1,3 +1,4 @@
+@fullregression
 #Created by Elena
 Feature: User's management - Change role in Teacher's account-User can change the role of other user
   Scenario: User's management - Change role in Teacher's account-Teacher can change the role of other Teacher

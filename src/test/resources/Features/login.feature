@@ -1,3 +1,4 @@
+@fullregression
 Feature:  Login
 
   Scenario: Login - valid email, valid password

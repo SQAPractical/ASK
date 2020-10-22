@@ -1,4 +1,5 @@
 #Created by Elena
+@fullregression
 Feature: Home page - Links
   Scenario:Home page - Links "Go to My Assignments" link under the Student's account
     Given I open "login" the page
