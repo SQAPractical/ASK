@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class ShowStopper {
+public class singleChoiceQuestionShowstopper {
 //    @Given("I open {string} page")
 //    public void iOpenPage(String url) {
 //        if(url.equalsIgnoreCase("login")) {
