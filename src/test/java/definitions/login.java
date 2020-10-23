@@ -41,7 +41,8 @@ public class login {
     }
 
     @Then("Text {string} appears")
-    public void textAppears(String text) {
+    public void textAppears(String text) throws InterruptedException {
+        Thread.sleep(2000);
         WebElement expectedText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]"));
         assertThat(expectedText.isDisplayed()).isTrue();
     }

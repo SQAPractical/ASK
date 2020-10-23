@@ -8,12 +8,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class quizTotalQuestions<i> {
-    @Then("I click Quizzes button")
-    public void iClickQuizzesButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
-        Thread.sleep(2000);
-
-    }
+//    @Then("I click Quizzes button")
+//    public void iClickQuizzesButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
+//        Thread.sleep(2000);
+//
+//    }
 
 //    @And("I click on Create New Quiz")
 //    public void iClickOnCreateNewQuiz() throws InterruptedException {

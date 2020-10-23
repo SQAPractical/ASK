@@ -63,6 +63,7 @@ public class Quiz_Passing_Percent implements En {
             assertThat(actualText.isDisplayed()).isTrue();
         });
         And("^I click Edit button by Quiz id \"([^\"]*)\"$", (String QuizId) -> {
+            Thread.sleep(2000);
             getDriver().findElement(By.xpath("//a[@href='#/quiz-builder/"+QuizId+"']")).click();
             Thread.sleep(2000);
         });
@@ -102,5 +103,11 @@ public class Quiz_Passing_Percent implements En {
             WebElement actualText = getDriver().findElement(By.xpath("//h1[contains(text(),'"+PassRateInQuiz+"')]"));
             assertThat(actualText.isDisplayed()).isTrue();
         });
+
+        And("^I click on Edit button for quiz \"([^\"]*)\"$", (String QuizName) -> {
+            getDriver().findElement(By.xpath("//*[contains(text(),'"+QuizName+"')]/../../..//*[contains(text(),'Edit')]")).click();
+            Thread.sleep(2000);
+        });
     }
+
 }

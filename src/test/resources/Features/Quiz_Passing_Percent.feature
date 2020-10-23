@@ -33,13 +33,15 @@ Feature:  Quiz-Passing Percentage
     Then Text "TEACHER" appears
     When I click Quizzes button
     And Text "List of Quizzes" appears
-    Then I choose quiz that I created
-    And I click Edit button by Quiz id "23929"
+    And I click on quiz "T1-Testing Quizzes" from the quiz list
+#    Then I choose quiz that I created
+    And I click on Edit button for quiz "T1-Testing Quizzes"
+#    And I click Edit button by Quiz id "23929"
     Then Text "Passing Rate" appears
-    Then I decrease passing rate
-    Then I click Save button
-    Then I choose quiz that I created
-    And I click Edit button by Quiz id "23929"
-    And I check percent rate inside of quiz is equal to "50%"
-    Then I click Save button
-    Then I choose quiz that I created
+    And I decrease passing rate
+    And I click Save button
+    And I click on quiz "T1-Testing Quizzes" from the quiz list
+    And I click on Edit button for quiz "T1-Testing Quizzes"
+    Then I check percent rate inside of quiz is equal to "50%"
+    And I click Save button
+    And I choose quiz that I created
