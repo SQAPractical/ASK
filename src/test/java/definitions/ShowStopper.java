@@ -11,26 +11,26 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class ShowStopper {
-    @Given("I open {string} page")
-    public void iOpenPage(String url) {
-        if(url.equalsIgnoreCase("login")) {
-            getDriver().get("http://ask-stage.portnov.com/#/login");
-        } else if (url.equalsIgnoreCase("registration")){
-            getDriver().get("http://ask-stage.portnov.com/#/registration");
-        }
-    }
+//    @Given("I open {string} page")
+//    public void iOpenPage(String url) {
+//        if(url.equalsIgnoreCase("login")) {
+//            getDriver().get("http://ask-stage.portnov.com/#/login");
+//        } else if (url.equalsIgnoreCase("registration")){
+//            getDriver().get("http://ask-stage.portnov.com/#/registration");
+//        }
+//    }
 
-    @And("I type email {string} on login page")
-    public void iTypeEmailOnLoginPage(String email) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
-    }
+//    @And("I type email {string} on login page")
+//    public void iTypeEmailOnLoginPage(String email) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
+//    }
 
 
 
-    @And("I type password {string} on login page")
-    public void iTypepasswordOnLoginPage(String password) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
-    }
+//    @And("I type password {string} on login page")
+//    public void iTypepasswordOnLoginPage(String password) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
+//    }
 
 
     @Then("I click on Sign in button")
@@ -90,10 +90,10 @@ public class ShowStopper {
         getDriver().findElement(By.xpath("//textarea[@placeholder='Question *']")).sendKeys(question);
     }
 
-    @And("I type {string} in Option {int}")
-    public void iTypeInOption(String Option, int arg1) {
-        getDriver().findElement(By.xpath("//textarea[@placeholder='Option "+arg1+"*']")).sendKeys(Option);
-    }
+//    @And("I type {string} in Option {int}")
+//    public void iTypeInOption(String Option, int arg1) {
+//        getDriver().findElement(By.xpath("//textarea[@placeholder='Option "+arg1+"*']")).sendKeys(Option);
+//    }
 
 
     @And("I choose right answer {int}")
@@ -125,10 +125,10 @@ public class ShowStopper {
 
     }
 
-    @And("I click on Save button")
-    public void iClickOnSaveButton() {
-        getDriver().findElement(By.xpath("//button/*[contains(text(), 'Save')]")).click();
-    }
+//    @And("I click on Save button")
+//    public void iClickOnSaveButton() {
+//        getDriver().findElement(By.xpath("//button/*[contains(text(), 'Save')]")).click();
+//    }
 
     @And("I click on recently created Quiz in the List of Quizzes")
     public void iClickOnRecentlyCreatedQuizInTheListOfQuizzes() throws InterruptedException {
