@@ -26,32 +26,25 @@ public class login {
     public void iTypeEmailOnLoginPage(String email) {
 
             getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
-
     }
 
     @And("I type password {string} on login page")
     public void iTypePasswordOnLoginPage(String password) {
 
             getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
-
     }
 
     @And("I click Sign in button")
     public void iClickSignInButton() throws InterruptedException {
-
-
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
-        Thread.sleep(2000);
-
+        Thread.sleep(3000);
     }
 
     @Then("Text {string} appears")
-    public void textAppears(String text) {
-
+    public void textAppears(String text) throws InterruptedException {
+        Thread.sleep(2000);
         WebElement expectedText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]"));
         assertThat(expectedText.isDisplayed()).isTrue();
-
-
     }
 
     @Then("Password displays in bullets, Copy, Cut disable")

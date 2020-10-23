@@ -14,10 +14,10 @@ import static support.TestContext.getDriver;
 
 public class registrationGroupCode {
 
-    @When("I type first name {string} on registration page")
-    public void iTypeFirstNameOnRegistrationPage(String firstName) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='firstName']")).sendKeys(firstName);
-    }
+//    @When("I type first name {string} on registration page")
+//    public void iTypeFirstNameOnRegistrationPage(String firstName) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='firstName']")).sendKeys(firstName);
+//    }
 
 //    @And("I type last name {string} on registration page")
 //    public void iTypeLastNameOnRegistrationPage(String lastName) {

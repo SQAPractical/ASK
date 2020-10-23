@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class SingleChoiceQuestion {
+public class singleChoiceQuestionOptions {
     @And("I select Question Type Single-Choice")
     public void iSelectQuestionTypeSingleChoice() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'Single-Choice')]/..")).click();
@@ -101,6 +101,14 @@ public class SingleChoiceQuestion {
     public void iClickOnTheCloseMenuButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Close Menu')]")).click();
         Thread.sleep(2000);
+    }
+
+    @Then("Option {int} moved down to option {int}")
+    public void optionMovedDownToOption(int arg0, int arg1) {
+        String textOfOption4 = getDriver().findElement(By.xpath("//*[@placeholder=\"Option 4*\"]")).getText();
+        System.out.println("TestOfOpt4 = " + textOfOption4);
+        String textOfOption3 = "3333";
+        assertThat(textOfOption4.contains(textOfOption3)).isTrue();
     }
 
 

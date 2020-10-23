@@ -12,8 +12,12 @@ Feature: User's management - Change role in Teacher's account-User can change th
     And I click on the option button
     Then I click on Change User's Role button
     Then I click Change role confirmation button
+    And I refresh page
     And I Click on User's Management button
     Then text "Diana Brown" appears in Student list
+    And I click on Student Name "Diana Brown"
+    And I click on the option button
+    And I click on Change User's Role button
 
 
 

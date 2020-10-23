@@ -5,7 +5,9 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class changeRoleTeacher {
@@ -26,7 +28,7 @@ public class changeRoleTeacher {
 
     @Then("I click to teachers Name {string}")
     public void iClickToString(String teacherName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//h4[contains(text(),'"+teacherName+"')]")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+teacherName+"')]")).click();
         Thread.sleep(2000);
 
     }
@@ -45,21 +47,23 @@ public class changeRoleTeacher {
     }
 
     @Then("I click Change role confirmation button")
-    public void iClickChangeRoleConfirmationButton() {
+    public void iClickChangeRoleConfirmationButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(normalize-space(),'Change Role')]")).click();
+        Thread.sleep(3000);
     }
 
 
     @And("I Click on User's Management button")
     public void iClickOnUserSManagementButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//h5[contains(normalize-space(),\"User's Management\")]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     @Then("text {string} appears in Student list")
-    public void textAppearsAtStudentList(String DianaBrown) {
-        getDriver().findElement(By.xpath("//ac-user-management-page[@class='ng-star-inserted']")).getText();
-        System.out.println("Diana Brown appears in the Student list");
+    public void textAppearsAtStudentList(String studentName) {
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+studentName+"')]")).isDisplayed()).isTrue();
+        System.out.println(studentName + "appears in the Student list");
     }
+
 
 }

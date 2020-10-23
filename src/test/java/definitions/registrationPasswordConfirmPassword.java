@@ -10,10 +10,11 @@ public class registrationPasswordConfirmPassword {
     @When("I click Register now button")
     public void iClickRegisterNowButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[@class='mat-button mat-primary']")).click();
+        Thread.sleep(2000);
     }
 
-    @And("I type name {string} on registration page")
-    public void iTypeNameOnRegistrationPage(String firstName) {
+    @And("I type first name {string} on registration page")
+    public void iTypeFirstNameOnRegistrationPage(String firstName) {
         getDriver().findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(firstName);
     }
 
