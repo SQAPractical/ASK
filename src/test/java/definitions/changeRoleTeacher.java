@@ -5,7 +5,9 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class changeRoleTeacher {
@@ -54,13 +56,13 @@ public class changeRoleTeacher {
     @And("I Click on User's Management button")
     public void iClickOnUserSManagementButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//h5[contains(normalize-space(),\"User's Management\")]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     @Then("text {string} appears in Student list")
-    public void textAppearsAtStudentList(String DianaBrown) {
-        getDriver().findElement(By.xpath("//ac-user-management-page[@class='ng-star-inserted']")).getText();
-        System.out.println("Diana Brown appears in the Student list");
+    public void textAppearsAtStudentList(String studentName) {
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+studentName+"')]")).isDisplayed()).isTrue();
+        System.out.println(studentName + "appears in the Student list");
     }
 
 
