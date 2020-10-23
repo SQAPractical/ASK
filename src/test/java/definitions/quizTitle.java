@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 
-public class QuizTitle {
+public class quizTitle {
 
     @And("I click on Quizzes")
     public void iClickOnQuizzes() throws InterruptedException {
@@ -68,5 +68,26 @@ public class QuizTitle {
     public void iClickOutsideTheTitleField() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[@class='ng-star-inserted']")).click();
         Thread.sleep(2000);
+    }
+
+    @Then("Text equals to {string}")
+    public void textEqualsTo(String text) {
+
+    }
+
+    @Then("Quiz title equals to {string}")
+    public void quizTitleEqualsTo(String expectedQuizTitle) {
+        String actualQuizTitle = getDriver().findElement(By.xpath("//mat-panel-title[contains(text(), '"+expectedQuizTitle+"')]")).getText();
+        System.out.println("actualQuizTitle = " + actualQuizTitle);
+        System.out.println("expectedQuizTitle = " + expectedQuizTitle);
+
+        assertThat(actualQuizTitle.equals(expectedQuizTitle)).isTrue();
+
+    }
+
+    @Then("Quiz name {string} appears on preview mode")
+    public void quizNameAppearsOnPreviewMode(String quizName) {
+        WebElement quizTitle = getDriver().findElement(By.xpath("//h4[contains(text(),'"+quizName+"')]"));
+        assertThat(quizTitle.isDisplayed()).isTrue();
     }
 }

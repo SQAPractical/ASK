@@ -11,14 +11,17 @@ Feature: Single Choice Question
     And I select Question Type Single-Choice
     And I type "What is Regression?" in the question title field
     And I click on Add Option button
-    And I type "text" in Option 1
-    And I type "text" in Option 2
-    And I type "text" in Option 3
+    And I type "Option1" in Option 1
+    And I type "Option2" in Option 2
+    And I type "Option3" in Option 3
     And I click on the Option one radio button
     And I click SAVE
     And I click on quiz "text for field Quiz 22" from the quiz list
     And I click on Preview button near "text for field Quiz 22"
-    Then Text "text for field Quiz 22" appears
+    Then Text "Option3" appears
+    And I click on close button
+    And I click "Delete" button on quiz "text for field Quiz 22"
+    Then I confirm "Delete"
 
   Scenario: Single Choice Question - Options - add 15 options
     Given I open "login" page
@@ -58,12 +61,15 @@ Feature: Single Choice Question
     And I type "text" in Option 12
     And I type "text" in Option 13
     And I type "text" in Option 14
-    And I type "text" in Option 15
+    And I type "text15" in Option 15
     And I click on the Option one radio button
     And I click SAVE
     And I click on quiz "Quiz 1" from the quiz list
     And I click on Preview button near "Quiz 1"
-    Then Text "Quiz 1" appears
+    Then Text "text15" appears
+    And I click on close button
+    And I click "Delete" button on quiz "Quiz 1"
+    Then I confirm "Delete"
 
   Scenario: Single Choice Question - Options - Max+1 options
     Given I open "login" page
@@ -166,6 +172,7 @@ Feature: Single Choice Question
      And I click on the Option one radio button
      And I click on the Settings button on the right of option 3
      And I click on the Move Down button
+#     Then Option 3 moved down to option 4
      And I click on the Preview button
      Then the text "4444" displays on the third place
 
