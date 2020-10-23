@@ -26,7 +26,7 @@ public class changeRoleTeacher {
 
     @Then("I click to teachers Name {string}")
     public void iClickToString(String teacherName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//h4[contains(text(),'"+teacherName+"')]")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+teacherName+"')]")).click();
         Thread.sleep(2000);
 
     }
@@ -45,8 +45,9 @@ public class changeRoleTeacher {
     }
 
     @Then("I click Change role confirmation button")
-    public void iClickChangeRoleConfirmationButton() {
+    public void iClickChangeRoleConfirmationButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(normalize-space(),'Change Role')]")).click();
+        Thread.sleep(3000);
     }
 
 
@@ -61,5 +62,6 @@ public class changeRoleTeacher {
         getDriver().findElement(By.xpath("//ac-user-management-page[@class='ng-star-inserted']")).getText();
         System.out.println("Diana Brown appears in the Student list");
     }
+
 
 }

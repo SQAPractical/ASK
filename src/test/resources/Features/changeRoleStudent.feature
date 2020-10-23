@@ -7,19 +7,24 @@ Feature: Change role in Student's account
     And I click Sign in button
     And I click Go to Users Management button
     And I click on Student button
-    And I click on Student Name "David Davidov "
+    And I click on Student Name "David Davidov"
     And I click on the option button
     And I click on Change User's Role button
     And I click Change role confirmation button
     And I Click on User's Management button
-    Then text "TEACHER" appears
+    And I Click on User's Management button
+    And I click on Quizzes
+    And I refresh page
+    And I Click on User's Management button
+#    Then text "TEACHER" appears
     And I click on teachers button
-    Then text "David Davidov " appears in Teacher list
+#    Then text "David Davidov" appears in Teacher list
+    Then Text "David Davidov" appears
 #   To change role back
-    Then I click to teachers Name "David Davidov "
+    Then I click to teachers Name "David Davidov"
     And I click on the option button
     Then I click on Change User's Role button
     Then I click Change role confirmation button
     Then text "STUDENT" appears
     And I Click on User's Management button
-    Then text "Victor Victorov " appears in Student list
+    Then text "David Davidov" appears in Student list

@@ -4,7 +4,7 @@ Feature: Registration
   Scenario Outline: Registration-Password/Confirm Password - Alphanumeric & Special characters are accepted
     Given I open <pageName> page
     When I click Register now button
-    And I type name <firstName> on registration page
+    And I type first name <firstName> on registration page
     And I type last name <lastName> on registration page
     And I type email <email> on registration page
     And I type group code <groupCode> on registration page
