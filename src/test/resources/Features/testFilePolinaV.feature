@@ -1,2 +1,2 @@
-Feature: tregdsfsf
+Feature: practiceWithGitHub
   Scenario: test
