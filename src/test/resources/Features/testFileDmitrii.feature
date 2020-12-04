@@ -1,3 +1,3 @@
 Feature: test
-    Scenario: test
-      Given I testgirt Git
+
+  Here is must be a super duper scenario!!!
