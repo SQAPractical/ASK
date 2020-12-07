@@ -1,2 +1,0 @@
-Feature: fefefe
-  Scenario: fsdsffs
