@@ -1,4 +1,5 @@
 
+df
 
 *HOW TO PUSH YOUR CHANGES TO GIT HUB*
 
@@ -6,7 +7,7 @@
 1. Cut your own branch from `master` locally, typing:
     `git checkout -b name_of_your_branch`
     and create remote copy
-    `git `
+    `git push --set-upstream origin name_of_your_branch`
     The name of your local branch must match the name of your remote branch.
         Example (You can see in terminal):
         `* [new branch]      nik -> nik`
