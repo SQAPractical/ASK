@@ -1,2 +1,2 @@
 Feature: testme
-  Scenario: test
+  Scenario: Hello world
