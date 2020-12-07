@@ -1,4 +1,5 @@
 
+df
 
 *HOW TO PUSH YOUR CHANGES TO GIT HUB*
 
@@ -6,7 +7,7 @@
 1. Cut your own branch from `master` locally, typing:
     `git checkout -b name_of_your_branch`
     and create remote copy
-    `git `
+    `git push --set-upstream origin name_of_your_branch`
     The name of your local branch must match the name of your remote branch.
         Example (You can see in terminal):
         `* [new branch]      nik -> nik`
@@ -31,7 +32,7 @@
 6. Type `git status` to check that you added all the changes
     (they will be shown in green)
 
-7. To add your changes from stage to your branch, type `git commit -m "[ADDED] your_message_explaining_what_you_modified"`
+7. To add your changes from stage to your branch, type `gitgit commit -m "[ADDED] your_message_explaining_what_you_modified"`
     Use different labels [ADDED] [CHANGED] [IMPROVED] [Fgit
     to better understand what you did on branch
 
