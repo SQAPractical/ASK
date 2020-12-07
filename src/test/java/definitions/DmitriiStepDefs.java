@@ -8,5 +8,6 @@ public class DmitriiStepDefs {
         System.out.println(" THis is my code");
         System.out.println("Another one");
         System.out.println("And again");
+        System.out.println("And third timegit");
     }
 }
