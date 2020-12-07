@@ -1,4 +1,5 @@
 
+df
 
 *HOW TO PUSH YOUR CHANGES TO GIT HUB*
 
@@ -32,7 +33,7 @@
     (they will be shown in green)
 
 7. To add your changes from stage to your branch, type `git commit -m "[ADDED] your_message_explaining_what_you_modified"`
-    Use different labels [ADDED] [CHANGED] [IMPROVED] [FIXED] [DELETED]
+    Use different labels [ADDED] [CHANGED] [IMPROVED] [Fgit
     to better understand what you did on branch
 
 8. Switch to master to update code on master branch
