@@ -1,2 +1,2 @@
 Feature: Tester test
-  Scenario: Testg
+  Scenario: When i type Google.com
