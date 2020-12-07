@@ -7,5 +7,6 @@ public class DmitriiStepDefs {
     public void gitHubPractise() {
         System.out.println(" THis is my code");
         System.out.println("Another one");
+        System.out.println("And again");
     }
 }
