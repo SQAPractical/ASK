@@ -1,2 +1,0 @@
-Feature: testGermash
-  Scenario: test

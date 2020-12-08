@@ -1,3 +1,0 @@
-Feature: testme
-  Scenario: newTest
-

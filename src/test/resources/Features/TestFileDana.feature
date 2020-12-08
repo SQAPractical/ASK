@@ -1,2 +1,0 @@
-Feature: ksnvwrvwr
-  Scenario: test

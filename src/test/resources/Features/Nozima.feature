@@ -1,2 +1,0 @@
-Feature: FirstTest
-  Scenario: Nozi

@@ -1,2 +1,0 @@
-Feature: tregferg
-    Scenario: test
