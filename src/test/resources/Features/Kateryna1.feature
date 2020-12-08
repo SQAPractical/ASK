@@ -1,2 +1,2 @@
-Feature: smth
-  Scenario: smth
+Feature: smth test
+  Scenario: smth test
