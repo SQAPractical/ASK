@@ -1,2 +1,2 @@
 Feature:qwwervln
-Scegitnario:
+Scenario:erkgksnjbk
