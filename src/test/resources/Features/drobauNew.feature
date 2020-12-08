@@ -1,3 +1,3 @@
 Feature: testMsg
-  Scenario: test1
+  Scenario: test conflict Valentina
 
