@@ -1,3 +1,3 @@
 Feature: practiceWithGitHub_NewChange
-  Scenario: test
-    Background: 000000
+  Scenario: Local conflict
+  Background: 000000

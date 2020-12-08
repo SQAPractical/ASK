@@ -1,2 +1,0 @@
-Feature:ffsdfs
-  Scenario: test
