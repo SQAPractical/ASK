@@ -1,3 +1,3 @@
 Feature: practiceWithGitHub_NewChange
-  Scenario: test
+  Scenario: NewTest
     Background: 000000
