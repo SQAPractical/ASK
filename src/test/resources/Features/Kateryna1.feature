@@ -1,2 +1,3 @@
-Feature: test2
-  Scenario: test2
+<<<<<<< HEAD
+Feature: smth
+  Scenario: smth
