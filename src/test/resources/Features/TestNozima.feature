@@ -1,5 +1,5 @@
 Feature: Hello
-Scenario: Privetttttt
+  Scenario Outline: Test started
 
 
 
