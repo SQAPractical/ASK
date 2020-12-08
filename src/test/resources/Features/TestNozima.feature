@@ -1,5 +1,5 @@
 Feature: Hello
 
-  Scenario: Different scenario name eradsdas
-#  Scenario: Assalomu aleykum
+  Scenario: The world is beautiful
+
 
