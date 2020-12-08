@@ -1,3 +1,4 @@
 Feature: fghkdug
-  Scenario: Completely Fatal
+<<<<<<< HEAD
+  Scenario: local changes 2 :-)
 
