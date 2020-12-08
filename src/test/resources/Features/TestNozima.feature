@@ -1,5 +1,3 @@
 Feature: Hello
-Scenario: Privetttttt
-
-
+Scenario: Dana said - It's total FATAL )))))))
 
