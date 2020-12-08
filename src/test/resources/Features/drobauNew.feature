@@ -1,2 +1,2 @@
 Feature: testMsg
-  Scenario: test
+  Scenario: test1
