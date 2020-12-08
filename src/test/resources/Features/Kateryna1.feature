@@ -1,0 +1,2 @@
+Feature: smth
+  Scenario: smth
