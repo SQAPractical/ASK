@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 Feature:qwwervln
-Scegitnario:
+Scenario:erkgksnjbk
+=======
+Feature:test
+Scegitnario:test
+>>>>>>> master
