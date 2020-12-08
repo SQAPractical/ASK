@@ -1,4 +1,2 @@
 Feature: testMsg
-  Scenario: test add conflict Serge
-
-
+ Scenario: test conflict Valentina
