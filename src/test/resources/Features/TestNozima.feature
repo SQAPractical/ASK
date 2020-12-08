@@ -1,5 +1,3 @@
 Feature: Hello
-  Scenario Outline: Test started
-
-
+Scenario: Dana said - It's total FATAL )))))))
 
