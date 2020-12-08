@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Feature: Anatoli test333
 
-  Scenario: test444
+  Scenario: test4445
