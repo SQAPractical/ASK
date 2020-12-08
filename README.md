@@ -1,6 +1,3 @@
-
-df
-
 *HOW TO PUSH YOUR CHANGES TO GIT HUB*
 
 
@@ -32,8 +29,8 @@ df
 6. Type `git status` to check that you added all the changes
     (they will be shown in green)
 
-7. To add your changes from stage to your branch, type `gitgit commit -m "[ADDED] your_message_explaining_what_you_modified"`
-    Use different labels [ADDED] [CHANGED] [IMPROVED] [Fgit
+7. To add your changes from stage to your branch, type `git commit -m "[ADDED] your_message_explaining_what_you_modified"`
+    Use different labels [ADDED] [CHANGED] [IMPROVED] [DELETED]
     to better understand what you did on branch
 
 8. Switch to master to update code on master branch
