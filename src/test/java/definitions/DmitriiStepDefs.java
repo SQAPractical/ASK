@@ -9,5 +9,7 @@ public class DmitriiStepDefs {
         System.out.println("Another one");
         System.out.println("And again");
         System.out.println("And third timegit");
+        System.out.println("And fifth time. There will be session soon");
+        System.out.println("And the last one. I make a changes in all files. Thank you!!!");
     }
 }

@@ -1,2 +1,0 @@
-Feature:jhffggsd
-  Scenario: test

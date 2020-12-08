@@ -1,2 +1,4 @@
-Feature: super useful feature
-  Scenario: the most simple scenario ever executed
+
+
+Feature: super useful feature Nadyagit status 0208
+Scenario: the most simple scenario ever executed
