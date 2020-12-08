@@ -1,5 +1,5 @@
 Feature: Hello
+Scenario: Privetttttt
 
-  Scenario: The world is beautiful
 
 
