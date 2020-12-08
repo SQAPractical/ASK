@@ -1,3 +1,4 @@
 Feature: testMsg
-  Scenario: test1
+  Scenario: test add conflict Serge
+
 
