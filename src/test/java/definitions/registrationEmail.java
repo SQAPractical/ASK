@@ -6,7 +6,6 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
@@ -24,7 +23,6 @@ public class registrationEmail {
     @And("I type last name {string}")
     public void iTypeLastName(String lName) {
         getDriver().findElement(By.xpath("//input[@formcontrolname = 'lastName']")).sendKeys(lName);
-
     }
 
     @And("I type email {string}")
@@ -38,27 +36,24 @@ public class registrationEmail {
     }
 
     @And("I type password {string}")
-    public void iTypePassword(String password) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname = 'password']")).sendKeys(password);
+    public void iTypePassword(String pswrd) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname = 'password']")).sendKeys(pswrd);
     }
 
-    @And("I type confirm password {string}")
-    public void iTypeConfirmPassword(String confPassword) {
-        getDriver().findElement(By.xpath("//*[@placeholder='Confirm Password']")).sendKeys(confPassword);
+    @And("I type to confirm password {string}")
+    public void iTypeToConfirmPassword(String cPswrd) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname = 'confirmPassword']")).sendKeys(cPswrd);
     }
 
-    @And("I click Register me button")
-    public void iClickRegisterMeButton() {
+    @Then("I click on Register Me button")
+    public void iClickOnRegisterMeButton() {
         getDriver().findElement(By.xpath("//span[text()='Register Me']")).click();
     }
 
-    @Then("Text {string} appears")
+    @Then("text {string} appears")
     public void textAppears(String text) throws InterruptedException {
         Thread.sleep(2000);
         WebElement expectedText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]"));
         assertThat(expectedText.isDisplayed()).isTrue();
-
-        //assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]")).isDisplayed()).isTrue();
-
     }
 }
