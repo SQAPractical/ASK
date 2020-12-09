@@ -12,7 +12,12 @@ import static support.TestContext.getDriver;
 public class registrationEmail {
     @When("I open {string} page")
     public void iOpenPage(String pageName) {
-        getDriver().get("http://ask-stage.portnov.com/#/registration");
+        if (pageName.equalsIgnoreCase("registration")) {
+            getDriver().get("http://ask-stage.portnov.com/#/registration");
+        }
+        else if (pageName.equalsIgnoreCase("login")){
+            getDriver().get("http://ask-stage.portnov.com/#/login");
+        }
     }
 
     @And("I type first name {string}")
