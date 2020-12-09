@@ -10,7 +10,7 @@ Feature: Registration - Email
     Then I click on Register Me button
     Then text "You have been Registered." appears
 
-  Scenario: Registration - Email - Correct format
+  Scenario: Registration - Email - Correct format with +1
     When I open "registration" page
     And I type first name "Nozima"
     And I type last name "Botirova"
