@@ -129,25 +129,25 @@ public class singleChoiceQuestionText {
     @And("I delete the question")
     public void iDeleteTheQuestion() throws InterruptedException {
 
-        String os = System.getProperty("os.name");
-        if (os.equals("WINDOWS")){
-            Keys.chord(Keys.CONTROL, "a");
-        }else {
-            Keys.chord(Keys.COMMAND, "a");
-        }
-//        getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+//        String os = System.getProperty("os.name");
+//        if (os.equals("WINDOWS")){
+//            Keys.chord(Keys.CONTROL, "a");
+//        }else {
+//            Keys.chord(Keys.COMMAND, "a");
+//        }
+        getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
         getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.DELETE);
         getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.BACK_SPACE);
 
         Thread.sleep(200);
     }
 
-    @Then("This field is required message appear")
-    public void thisFieldIsRequiredMessageAppear() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*//*[@placeholder='Question *']/../../..//*[contains(@id,'mat-error')][contains(text(),'This field is required')]")).sendKeys();
-        Thread.sleep(2000);
-
-    }
+//    @Then("This field is required message appear")
+//    public void thisFieldIsRequiredMessageAppear() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*//*[@placeholder='Question *']/../../..//*[contains(@id,'mat-error')][contains(text(),'This field is required')]")).sendKeys();
+//        Thread.sleep(2000);
+//
+//    }
 
     @Then("This is too long, should be not more than max characters message appear")
     public void thisIsTooLongShouldBeNotMoreThanMaxCharactersMessageAppear() throws InterruptedException {

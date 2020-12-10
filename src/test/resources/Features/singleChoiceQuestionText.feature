@@ -45,7 +45,8 @@ Feature: Single Choice Question - Text
     And I click Question filed
     And I Type "c" as question
     And I delete the question
-    Then This field is required message appear
+    Then text "This field is required" appears
+#    Then This field is required message appear
 
   Scenario: Single Choice Question - Text - Min 1 character
     When I open "Login" page
