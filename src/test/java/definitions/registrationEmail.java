@@ -11,7 +11,7 @@ import static support.TestContext.getDriver;
 
 public class registrationEmail {
     @When("I open {string} page")
-    public void iOpenPage(String pageName) {
+    public void iOpenPage(String arg0) {
         getDriver().get("http://ask-stage.portnov.com/#/registration");
     }
 
@@ -25,35 +25,35 @@ public class registrationEmail {
         getDriver().findElement(By.xpath("//input[@formcontrolname = 'lastName']")).sendKeys(lName);
     }
 
+    @And("I type group code {string}")
+    public void iTypeGroupCode(String gCode) {
+        getDriver().findElement(By.xpath("//*[@placeholder='Group Code']")).sendKeys(gCode);
+    }
+
+    @And("I type password {string}")
+    public void iTypePassword(String password) {
+        getDriver().findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(password);
+    }
+
+    @And("I type confirm password {string}")
+    public void iTypeConfirmPassword(String confirmPassword) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(confirmPassword);
+    }
+
     @And("I type email {string}")
     public void iTypeEmail(String email) {
         getDriver().findElement(By.xpath("//input[@formcontrolname = 'email']")).sendKeys(email);
     }
 
-    @And("I type group code {string}")
-    public void iTypeGroupCode(String gCode) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname = 'group']")).sendKeys(gCode);
-    }
-
-    @And("I type password {string}")
-    public void iTypePassword(String pswrd) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname = 'password']")).sendKeys(pswrd);
-    }
-
-    @And("I type to confirm password {string}")
-    public void iTypeToConfirmPassword(String cPswrd) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname = 'confirmPassword']")).sendKeys(cPswrd);
-    }
-
-    @Then("I click on Register Me button")
-    public void iClickOnRegisterMeButton() {
-        getDriver().findElement(By.xpath("//span[text()='Register Me']")).click();
-    }
-
-    @Then("text {string} appears")
+    @Then("Text {string} appears")
     public void textAppears(String text) throws InterruptedException {
         Thread.sleep(2000);
-        WebElement expectedText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]"));
+        WebElement expectedText = getDriver().findElement(By.xpath("//*[contains(text(),'" + text + "')]"));
         assertThat(expectedText.isDisplayed()).isTrue();
+    }
+
+    @And("I click register me button")
+    public void iClickRegisterMeButton() {
+        getDriver().findElement(By.xpath("//span[text()='Register Me']")).click();
     }
 }
