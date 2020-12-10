@@ -57,7 +57,7 @@ Feature: Single Choice Question - Text
     And I click Title field
     And I type "Module 2" for the name of quiz
     And I click "Add Question"
-    And I click "Single Choice" radio button
+    And I click "Single-Choice" radio button
     And I click Question filed
     And I Type "c" as question
     And I click option 1 answer
@@ -81,7 +81,7 @@ Feature: Single Choice Question - Text
     And I click Title field
     And I type "Module 1" for the name of quiz
     And I click "Add Question"
-    And I click "Single Choice" radio button
+    And I click "Single-Choice" radio button for question 1
     And I click Question filed
     And I Type "bmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobo" as question
     And I click option 1 answer
@@ -105,7 +105,7 @@ Feature: Single Choice Question - Text
     And I click Title field
     And I type "Module 1" for the name of quiz
     And I click "Add Question"
-    And I click "Single Choice" radio button
+    And I click "Single-Choice" radio button
     And I click Question filed
     And I Type "bmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkbobonb!@#$svevetgetgeggwgtgbmdkboboq" as question
     And I click option 1 answer
