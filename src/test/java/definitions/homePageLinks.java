@@ -3,7 +3,9 @@ package definitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class homePageLinks {
@@ -15,7 +17,8 @@ public class homePageLinks {
 
     @Then("Submission page loaded")
     public void submissionPageLoaded() {
-        getDriver().get("http://ask-stage.portnov.com/#/submissions/0");
+        WebElement textOnSubmissionPage = getDriver().findElement(By.xpath("//h4[contains(text(), 'Submissions')]"));
+        assertThat(textOnSubmissionPage.isDisplayed()).isTrue();
     }
 
     @And("I click Go To Assignments")
@@ -26,7 +29,8 @@ public class homePageLinks {
 
     @Then("Assignments page loaded")
     public void assignmentsPageLoaded() {
-        getDriver().get("http://ask-stage.portnov.com/#/assignments");
+        WebElement textOnSubmissionPage = getDriver().findElement(By.xpath("//h4[contains(text(), 'Assignments')]"));
+        assertThat(textOnSubmissionPage.isDisplayed()).isTrue();
     }
 
     @And("I click Go To Users Management")
@@ -37,7 +41,8 @@ public class homePageLinks {
 
     @Then("User's Management page loaded")
     public void userSManagementPageLoaded() {
-        getDriver().get("http://ask-stage.portnov.com/#/users-management");
+        WebElement textOnSubmissionPage = getDriver().findElement(By.xpath("//h4[contains(text(), 'Management')]"));
+        assertThat(textOnSubmissionPage.isDisplayed()).isTrue();
     }
 
     @And("I click Go To My Assignments")
@@ -48,7 +53,8 @@ public class homePageLinks {
 
     @Then("My Assignments page loaded")
     public void myAssignmentsPageLoaded() {
-        getDriver().get("http://ask-stage.portnov.com/#/my-assignments");
+        WebElement textOnSubmissionPage = getDriver().findElement(By.xpath("//h4[contains(text(), 'My Assignments')]"));
+        assertThat(textOnSubmissionPage.isDisplayed()).isTrue();
     }
 
     @And("I click Go To My Grades")
@@ -59,6 +65,7 @@ public class homePageLinks {
 
     @Then("My Grades page loaded")
     public void myGradesPageLoaded() {
-        getDriver().get("http://ask-stage.portnov.com/#/my-grades");
+        WebElement textOnSubmissionPage = getDriver().findElement(By.xpath("//h4[contains(text(), 'My Grades')]"));
+        assertThat(textOnSubmissionPage.isDisplayed()).isTrue();
     }
 }
