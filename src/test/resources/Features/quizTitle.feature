@@ -21,7 +21,7 @@ Feature: Quiz - Title
     And I click Sign In button
     And I click on "Quizzes" menu item
     And I click "Create New Quiz" button
-    And I type title "abc@#$123"
+    And I type title "3"
     And I delete title
     And I click Add Question button
     Then text "This field is required" appears

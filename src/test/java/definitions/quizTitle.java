@@ -35,7 +35,7 @@ public class quizTitle {
 
     @And("I delete title")
     public void iDeleteTitle() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(Keys.chord(Keys.COMMAND, "a"));
 
 
         getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(Keys.DELETE);
