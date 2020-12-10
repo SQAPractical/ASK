@@ -38,6 +38,8 @@ public class settingsFullName {
 
     @And("I deleted name on settings page")
     public void iDeletedNameOnSettingsPage() throws InterruptedException {
+        getDriver().findElement(By.xpath("//*[@placeholder='New name']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+
 
         getDriver().findElement(By.xpath("//*[@placeholder='New name']")).sendKeys(Keys.DELETE);
         getDriver().findElement(By.xpath("//*[@placeholder='New name']")).sendKeys(Keys.BACK_SPACE);

@@ -13,17 +13,17 @@ Feature: Settings - Full Name
     And I type new name "Sofia Teacher"
     And I click Change button
 
-#  Scenario: Settings - Full Name - Field is required
-#    When I open "login" page
-#    And I type email "qa.sofi@gmail.com"
-#    And I type password "12345"
-#    And I click Sign In button
-#    And I click on "Settings" menu item
-#    And I click "Change Your Name" button
-#    And I deleted name on settings page
-#    And I click on text Changing User's Name
-#    And I click Change button
-#    Then text "This field is required" appears
+  Scenario: Settings - Full Name - Field is required
+    When I open "login" page
+    And I type email "qa.sofi@gmail.com"
+    And I type password "12345"
+    And I click Sign In button
+    And I click on "Settings" menu item
+    And I click "Change Your Name" button
+    And I deleted name on settings page
+    And I click on text Changing User's Name
+    And I click Change button
+    Then text "This field is required" appears
 
   Scenario: Settings - Full Name - Max 256 characters including 1 space between two words
     When I open "login" page
