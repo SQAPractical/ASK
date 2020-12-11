@@ -129,17 +129,19 @@ public class singleChoiceQuestionText {
     @And("I delete the question")
     public void iDeleteTheQuestion() throws InterruptedException {
 
-//        String os = System.getProperty("os.name");
-//        if (os.equals("WINDOWS")){
-//            Keys.chord(Keys.CONTROL, "a");
-//        }else {
-//            Keys.chord(Keys.COMMAND, "a");
-//        }
-        getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        String os = System.getProperty("os.name");
+        if (os.equals("Mac")){
+            getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.chord(Keys.COMMAND, "a"));
+        }
+        else {
+            getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        }
+       // getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
         getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.DELETE);
         getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.BACK_SPACE);
 
         Thread.sleep(200);
+        System.out.println(os);
     }
 
 //    @Then("This field is required message appear")
