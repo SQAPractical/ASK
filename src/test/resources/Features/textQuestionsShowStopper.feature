@@ -32,7 +32,7 @@ Feature: Textual Questions - Show Stopper
     And I click on "Assignments" menu item
     And I click Create New Assignment button
     And I click Select Quiz To Assign
-    And I click "Quiz9"
+    And I click "Quiz9" item
     And I click student "Mikhail Portnov" check box
     And I click "Give Assignment" button
     And I click on "Log Out" menu item
