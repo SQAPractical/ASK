@@ -1,7 +1,5 @@
 Feature: test
   Scenario: DANA ARTUR ANTON
-    When
-    And
-    Then
 
-    Victory we made it
+    NEW VERSION FOR THE SECOND TASK
+    New York, Texas, New J
