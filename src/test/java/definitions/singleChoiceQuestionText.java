@@ -131,7 +131,7 @@ public class singleChoiceQuestionText {
     public void iDeleteTheQuestion() throws InterruptedException {
 
         String os = System.getProperty("os.name");
-        if (os.equals("Mac")){
+        if (os.contains("Mac")){
             getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.chord(Keys.COMMAND, "a"));
         }
         else {

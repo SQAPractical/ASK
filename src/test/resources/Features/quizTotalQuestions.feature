@@ -41,7 +41,8 @@ Feature: Quiz - Total Questions
     And I type Title Of The Quiz "Test 51 question"
     And I created 51 questions
     And I click on Save button
-    Then List of Quizzes page loads
-    Then List of Quizzes contain quiz "Test 51 questions"
-    And I click on quiz "Test 51 questions"
-    And I delete quiz "Test 51 questions"
+    Then text "No more than 50 question allowed" appears
+#    Then List of Quizzes page loads
+#    Then List of Quizzes contain quiz "Test 51 questions"
+#    And I click on quiz "Test 51 questions"
+#    And I delete quiz "Test 51 questions"
