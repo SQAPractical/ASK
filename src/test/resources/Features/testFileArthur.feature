@@ -1,2 +1,6 @@
 Feature: mine
-  Scenario: test
+  Scenario: Test By Arthur
+
+    Arthur
+    Anton
+    Dana
