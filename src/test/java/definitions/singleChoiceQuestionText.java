@@ -10,8 +10,9 @@ import static support.TestContext.getDriver;
 
 public class singleChoiceQuestionText {
     @And("I click on {string} button")
-    public void iClickOnButton(String createNewQuiz) throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
+    public void iClickOnButton(String buttonName) throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+buttonName+"')]")).click();
         Thread.sleep(2000);
     }
     @And("I click {string} field")

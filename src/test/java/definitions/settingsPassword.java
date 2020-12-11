@@ -22,8 +22,8 @@ public class settingsPassword {
         getDriver().findElement(By.xpath("//*[@placeholder='Confirm New Password']")).sendKeys(cnfrmPswrd);
     }
 
-    @And("I click on {string} button")
-    public void iClickOnButton(String changeButton) {
+    @And("I click on Change button")
+    public void iClickOnChangeButton() {
         getDriver().findElement(By.xpath("//button[@type='button'][@aria-label='Close dialog']/span[text() ='Change']")).click();
     }
 
@@ -46,5 +46,10 @@ public class settingsPassword {
     @And("I click on Confirm New Password field")
     public void iClickOnConfirmNewPasswordField() {
         getDriver().findElement(By.xpath("//*[@placeholder='Confirm New Password']")).click();
+    }
+
+    @And("I wait for {int} sec")
+    public void iWaitForSec(int numOfSecond) throws InterruptedException {
+        Thread.sleep(numOfSecond*1000);
     }
 }
