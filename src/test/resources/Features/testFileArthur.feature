@@ -1,6 +1,7 @@
 Feature: test
   Scenario: DANA ARTUR ANTON
-  NY NJ TX
 
 
-    Local conflict
+    NEW VERSION FOR THE SECOND TASK
+    New York, Texas, New Jersey, Florida
+
