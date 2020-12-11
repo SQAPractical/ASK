@@ -19,12 +19,13 @@ public class settingsFullName {
     @And("I click on {string} menu item")
     public void iClickOnMenuItem(String menuItem) throws InterruptedException {
        getDriver().findElement(By.xpath("//h5[contains(text(),'"+menuItem+"')]")).click();
-       Thread.sleep(2000);
+       Thread.sleep(3000);
     }
 
     @And("I click {string} button")
     public void iClickButton(String buttonName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(),'"+buttonName+"')]")).click();
+        getDriver().findElement(By.xpath("//*[text()='"+buttonName+"']")).click();
+        Thread.sleep(3000);
     }
 
     @And("I type new name {string}")
@@ -51,4 +52,6 @@ public class settingsFullName {
     public void iClickOnTextChangingUserSName() {
         getDriver().findElement(By.xpath("//*[contains(text(), 'Changing User')]")).click();
     }
+
+
 }
