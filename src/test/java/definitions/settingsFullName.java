@@ -20,7 +20,7 @@ public class settingsFullName {
     }
 
     @And("I click {string} button")
-    public void iClickButton(String buttonName) {
+    public void iClickButton(String buttonName) throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'"+buttonName+"')]")).click();
     }
 

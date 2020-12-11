@@ -68,35 +68,18 @@ Feature: Quiz - Title
     Then text "Q1: new empty question" appears
     And text "Too long. Should be no more than 1000 characters" appears
 
-  Scenario: Quiz - Title - Leading and trailing space characters should be eliminated
-    When I open "Login" page
-    And I type email "1arbnora.rexhaj@walmart-web.com"
-    And I type password "12345"
-    And I click Sign In button
-    And I click on "Quizzes" menu item
-    And I click "Create New Quiz" button
-    And I type title " abc@#$123 "
-    And I click Add Question button
-    Then text "Q1: new empty question" appears
-    When I click "Textual" radio button
-    And I type question "New Question"
-    And I click "Save" button
-    Then text "abc@#$123" appears
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  ##Scenario: Quiz - Title - Leading and trailing space characters should be eliminated - could not be automated because it is impossible to verify
+    ##When I open "Login" page
+    ##And I type email "1arbnora.rexhaj@walmart-web.com"
+    ##And I type password "12345"
+    ##And I click Sign In button
+    ##And I click on "Quizzes" menu item
+    ##And I click "Create New Quiz" button
+    ##And I type title " abcd "
+    ##And I click Add Question button
+    ##Then text "Q1: new empty question" appears
+    ##When I click "Textual" radio button
+    ##And I type question "New Question"
+    ##And I click "Save" button
+    ##Then text without whitespaces "abcd" appears
 
