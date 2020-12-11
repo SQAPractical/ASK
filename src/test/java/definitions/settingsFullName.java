@@ -13,7 +13,7 @@ public class settingsFullName {
     public void iClickSignInButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
         getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        //Thread.sleep(2000);
+        Thread.sleep(2000);
     }
 
     @And("I click on {string} menu item")

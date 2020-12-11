@@ -1,5 +1,7 @@
 @fullRegression
+
 Feature: Home Page-Links
+  @Smoke
   Scenario: Link "Go To Submissions" for Teacher User
     When I open "login" page
     And I type email "qa.sofi@gmail.com"
@@ -24,10 +26,10 @@ Feature: Home Page-Links
     And I click Go To Users Management
     Then User's Management page loaded
 
-
+  @Smoke
   Scenario: Link "Go To My Assignments" for Student User
     When I open "login" page
-    And I type email "student9@gmail.com"
+    And I type email "student5@gmail.com"
     And I type password "12345Abc"
     And I click Sign In button
     And I click Go To My Assignments
@@ -35,7 +37,7 @@ Feature: Home Page-Links
 
   Scenario: Link "Go To My Grades" for Student User
     When I open "login" page
-    And I type email "student9@gmail.com"
+    And I type email "student5@gmail.com"
     And I type password "12345Abc"
     And I click Sign In button
     And I click Go To My Grades
