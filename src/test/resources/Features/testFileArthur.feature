@@ -1,7 +1,6 @@
 Feature: test
   Scenario: DANA ARTUR ANTON
-    When
-    And
-    Then
+  NY NJ TX
 
-    Victory we made it
+
+    Local conflict
