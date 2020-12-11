@@ -1,4 +1,4 @@
-*HOW TO PUSH YOUR CHANGES TO GIT HUB*
+~~__~~*HOW TO PUSH YOUR CHANGES TO GIT HUB*
 
 
 1. Cut your own branch from `master` locally, typing:
@@ -45,11 +45,11 @@
 11. Run project to double check if it is not broken (if you fixed something, you need
 to commit changes one more time)
 
-12. If there is no conflicts, you can push to github.
+12. If there are no conflicts, you can push to github.
     Being on your branch, type `git push`
 
 13. Once you collected all the changes on your remote branch,
-    you can go ahead and create Pull request on GitHub.
+    you can go ahead and create a Pull request on GitHub.
 
 14. Switch to local master to update it `git checkout master`, and `git pull`
 

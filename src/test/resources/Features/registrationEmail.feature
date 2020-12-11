@@ -1,5 +1,5 @@
 Feature: Registration - Email
-  Scenario: Registration - Email - Correct format
+  Scengitario: Registration - Email - Correct format
     When I open "registration" page
     And I type first name "Nozima"
     And I type last name "Botirova"
