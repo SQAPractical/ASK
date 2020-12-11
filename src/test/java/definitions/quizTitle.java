@@ -1,10 +1,13 @@
 package definitions;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class quizTitle {
@@ -50,5 +53,18 @@ public class quizTitle {
         getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(Keys.BACK_SPACE);
 
         Thread.sleep(2000);
+    }
+
+    @And("I click Log Out on pop up menu")
+    public void iClickLogOutOnPopUpMenu() {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Log Out')]")).click();
+    }
+
+
+    @Then("text without whitespaces {string} appears")
+    public void textWithoutWhitespacesAppears(String arg0) throws InterruptedException {
+        Thread.sleep(2000);
+        WebElement expectedText = getDriver().findElement(By.xpath("//*[text() = 'abcd')]"));
+        assertThat(expectedText.isDisplayed()).isTrue();
     }
 }
