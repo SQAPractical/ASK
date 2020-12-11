@@ -22,7 +22,15 @@ public class quizTitle {
     @When("I click {string} radio button")
     public void iClickRadioButton(String radioButtonTypeQuestion) throws InterruptedException {
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//div[contains(text(),'"+radioButtonTypeQuestion+"')]")).click();
+       getDriver().findElement(By.xpath("//div[contains(text(),'"+radioButtonTypeQuestion+"')]")).click();
+//        getDriver().findElement(By.xpath("//label[@class='mat-radio-label']/div[contains(text(), 'Single')]")).click();
+
+    }
+
+    @And("I click {string} radio button for question {int}")
+    public void iClickRadioButtonForQuestion(String radioButtonTypeQuestion, int questionNumber) throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//*[contains(text(),'Q"+questionNumber+"')]/../../..//div[contains(text(),'"+radioButtonTypeQuestion+"')]")).click();
     }
 
 
