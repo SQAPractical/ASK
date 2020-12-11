@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Quiz - Total Questions
   Scenario: Quiz - Total Questions - Happy Path (with for loop)
     When I open "login" page

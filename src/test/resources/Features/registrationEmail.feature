@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Registration - Email
   Scengitario: Registration - Email - Correct format
     When I open "registration" page

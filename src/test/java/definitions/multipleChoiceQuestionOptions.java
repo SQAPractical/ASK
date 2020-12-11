@@ -13,6 +13,7 @@ import org.testng.Assert;
 import static support.TestContext.getDriver;
 
 public class multipleChoiceQuestionOptions {
+
     public WebDriverWait wait = new WebDriverWait(getDriver(), 10);
 
     @And("I type login email {string}")

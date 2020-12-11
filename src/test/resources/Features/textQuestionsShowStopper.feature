@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Textual Questions - Show Stopper
   Scenario: Question Show Stopper on Teacher Side
     When I open "login" page

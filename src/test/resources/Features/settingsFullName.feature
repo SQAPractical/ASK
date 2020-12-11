@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Settings - Full Name
   Scenario: Settings - Full Name - Latin char
     When I open "login" page

@@ -15,11 +15,11 @@ public class textQuestionShowStopper {
         getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(qTitle);
     }
 
-    @And("I click on {string} button")
-    public void iClickOnButton(String arg0) throws InterruptedException {
-        Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
-            }
+//    @And("I click on {string} button")
+//    public void iClickOnButton(String arg0) throws InterruptedException {
+//        Thread.sleep(2000);
+//        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
+//            }
 
     @And("I check Textual ratio button")
     public void iCheckRatioButton() throws InterruptedException {
@@ -27,12 +27,12 @@ public class textQuestionShowStopper {
         getDriver().findElement(By.xpath("//mat-radio-button[@id='mat-radio-2']")).click();
             }
 
-    @And("I type question {string}")
-    public void iTypeQuestion(String question) {
-        getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(question);
-
-
-    }
+//    @And("I type question {string}")
+//    public void iTypeQuestion(String question) {
+//        getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(question);
+//
+//
+//    }
 
     @And("I check Is Show Stopper Question check box")
     public void iCheckIsShowStopperQuestionCheckBox() throws InterruptedException {
@@ -57,11 +57,11 @@ public class textQuestionShowStopper {
 
     }
 
-    @And("I click {string}")
-    public void iClick(String quizAssign) throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(),'"+quizAssign+"')]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click {string}")
+//    public void iClick(String quizAssign) throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*[contains(text(),'"+quizAssign+"')]")).click();
+//        Thread.sleep(2000);
+//    }
 
     @And("I click student {string} check box")
     public void iClickStudentCheckBox(String stName) throws InterruptedException {
@@ -96,17 +96,17 @@ public class textQuestionShowStopper {
         getDriver().findElement(By.xpath("//button/*[contains(text(),'"+buttonName+"')]")).click();
     }
 
-    @And("I click Save button")
-    public void iClickSaveButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//button/span[contains(text(), 'Save')]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click Save button")
+//    public void iClickSaveButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//button/span[contains(text(), 'Save')]")).click();
+//        Thread.sleep(2000);
+//    }
 
-    @And("I click Create New Assignment button")
-    public void iClickCreateNewAssignmentButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Create New Assignment')]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click Create New Assignment button")
+//    public void iClickCreateNewAssignmentButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*[contains(text(),'Create New Assignment')]")).click();
+//        Thread.sleep(2000);
+//    }
 }
 
 

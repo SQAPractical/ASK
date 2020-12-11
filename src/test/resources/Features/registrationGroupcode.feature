@@ -1,3 +1,4 @@
+@fullRegression
 Feature:Registration - Group Code
   Scenario: Registration - Group Code - Alphabetical characters
     When I open "registration" page

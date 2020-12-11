@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Home Page-Links
   Scenario: Link "Go To Submissions" for Teacher User
     When I open "login" page
@@ -39,3 +40,6 @@ Feature: Home Page-Links
     And I click Sign In button
     And I click Go To My Grades
     Then My Grades page loaded
+
+
+
