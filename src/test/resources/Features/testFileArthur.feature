@@ -1,6 +1,7 @@
-Feature: mine
-  Scenario: Test By Arthur
+Feature: test
+  Scenario: DANA ARTUR ANTON
+    When
+    And
+    Then
 
-    Arthur
-    Anton
-    Dana
+    Victory we made it
