@@ -4,13 +4,16 @@ import cucumber.api.java.en.And;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
+import java.util.concurrent.TimeUnit;
+
 import static support.TestContext.getDriver;
 
 public class settingsFullName {
     @And("I click Sign In button")
     public void iClickSignInButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
-        Thread.sleep(2000);
+        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //Thread.sleep(2000);
     }
 
     @And("I click on {string} menu item")

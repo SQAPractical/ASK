@@ -5,13 +5,16 @@ import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
+import java.util.concurrent.TimeUnit;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class singleChoiceQuestionText {
     @And("I click on {string} button")
-    public void iClickOnButton(String createNewQuiz) throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Create New Quiz')]")).click();
+    public void iClickOnButton(String buttonName) throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+buttonName+"')]")).click();
         Thread.sleep(2000);
     }
     @And("I click {string} field")
@@ -129,17 +132,19 @@ public class singleChoiceQuestionText {
     @And("I delete the question")
     public void iDeleteTheQuestion() throws InterruptedException {
 
-//        String os = System.getProperty("os.name");
-//        if (os.equals("WINDOWS")){
-//            Keys.chord(Keys.CONTROL, "a");
-//        }else {
-//            Keys.chord(Keys.COMMAND, "a");
-//        }
-        getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        String os = System.getProperty("os.name");
+        if (os.contains("Mac")){
+            getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.chord(Keys.COMMAND, "a"));
+        }
+        else {
+            getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        }
+       // getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
         getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.DELETE);
         getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(Keys.BACK_SPACE);
 
         Thread.sleep(200);
+        System.out.println(os);
     }
 
 //    @Then("This field is required message appear")

@@ -39,4 +39,20 @@ public class quizTotalQuestions {
         getDriver().findElement(By.xpath("//*[contains(text(),'Save')]")).click();
         Thread.sleep(2000);
     }
+
+    @And("I created {int} questions")
+    public void iCreatedQuestions(int steps) throws InterruptedException {
+        int variable = 0;
+        for(int i=0; i<steps; i++){
+            variable = i+1;
+            getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
+            Thread.sleep(2000);
+            getDriver().findElement(By.xpath("//*[contains(text(),'Q"+variable+"')]/../../..//div[contains(text(), 'Textual')]")).click();
+            Thread.sleep(2000);
+            getDriver().findElement(By.xpath("//*[contains(text(),'Q"+variable+"')]/../../..//*[@formcontrolname='question']")).click();
+            getDriver().findElement(By.xpath("//*[contains(text(),'Q"+variable+"')]/../../..//*[@formcontrolname='question']")).sendKeys("My question " + variable);
+            Thread.sleep(2000);
+
+        }
+    }
 }
