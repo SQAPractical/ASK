@@ -24,6 +24,7 @@ Feature: Quiz - Total Questions
     And I click on Save button
     Then text "Test 50 questions" appears
 
+
   Scenario: Quiz - Total Questions - Boundary (51 Questions)
     When I open "login" page
     And I type email "qa.sofi@gmail.com"

@@ -14,10 +14,10 @@ public class quizTitle {
         getDriver().findElement(By.xpath("//*[@placeholder='Title Of The Quiz *']")).sendKeys(title);
     }
 
-//    @And("I click Add Question button")
-//    public void iClickAddQuestionButton() {
-//        getDriver().findElement(By.xpath("//span//mat-icon[@role = 'img']")).click();
-//    }
+    @And("I click Add Question button")
+    public void iClickAddQuestionButton() {
+        getDriver().findElement(By.xpath("//span//mat-icon[@role = 'img']")).click();
+    }
 
     @When("I click {string} radio button")
     public void iClickRadioButton(String radioButtonTypeQuestion) throws InterruptedException {

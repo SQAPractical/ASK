@@ -14,12 +14,12 @@ public class quizTotalQuestions {
         getDriver().findElement(By.xpath("//*[@formcontrolname='name']")).sendKeys(Test0001);
     }
 
-    @And("I click Add Question button")
-    public void iClickAddQuestionButton() throws InterruptedException {
-        Thread.sleep(1000);
-        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click Add Question button")
+//    public void iClickAddQuestionButton() throws InterruptedException {
+//        Thread.sleep(1000);
+//        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
+//        Thread.sleep(2000);
+//    }
 
     @And("I check Textual Q{int} radio button")
     public void iCheckRadioButton(int num) {
