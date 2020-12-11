@@ -96,6 +96,12 @@ public class textQuestionShowStopper {
         getDriver().findElement(By.xpath("//button/*[contains(text(),'"+buttonName+"')]")).click();
     }
 
+    @And("I click {string} item")
+    public void iClick(String quizAssign) throws InterruptedException {
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+quizAssign+"')]")).click();
+        Thread.sleep(2000);
+    }
+
 //    @And("I click Save button")
 //    public void iClickSaveButton() throws InterruptedException {
 //        getDriver().findElement(By.xpath("//button/span[contains(text(), 'Save')]")).click();
