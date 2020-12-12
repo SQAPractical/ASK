@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Assignment-Quiz Name
   Scenario: Assignment - Quiz name
     When I open "Login" page

@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Settings-Password
   Scenario: Settings-Password-Alphanum and special chars
     When I open "login" page
