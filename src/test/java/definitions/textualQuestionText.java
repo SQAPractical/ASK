@@ -1,14 +1,17 @@
 package definitions;
 
 import cucumber.api.java.en.And;
+import org.openqa.selenium.By;
 
 import static support.TestContext.getDriver;
 
-public class textualQuestiontext {
+public class textualQuestionText {
+
+
     @And("I click on {string} on item menu")
     public void iClickOnMenuItem(String menuItem) throws InterruptedException {
         getDriver().findElement(By.xpath("//h5[contains(text(),'" + menuItem + "')]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     @And("I type {string} for the name og quiz")
@@ -17,19 +20,10 @@ public class textualQuestiontext {
         Thread.sleep(2000);
     }
 
-
-
-    @And("I Type {string} as question")
-    public void iTypeAsQuestion(String qname) throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(qname);
-        Thread.sleep(2000);
-    }
-
-
-
-    @And("I type {string} as question")
+    @And("I type {string}  as question")
     public void iTypeAsQuestion(String qname) throws InterruptedException {
         getDriver().findElement(By.xpath("//*[@placeholder='Question *']")).sendKeys(qname);
         Thread.sleep(2000);
     }
 }
+

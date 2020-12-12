@@ -26,6 +26,7 @@ public class quizTitle {
     public void iClickRadioButton(String radioButtonTypeQuestion) throws InterruptedException {
         Thread.sleep(2000);
        getDriver().findElement(By.xpath("//div[contains(text(),'"+radioButtonTypeQuestion+"')]")).click();
+        Thread.sleep(2000);
 //        getDriver().findElement(By.xpath("//label[@class='mat-radio-label']/div[contains(text(), 'Single')]")).click();
 
     }
