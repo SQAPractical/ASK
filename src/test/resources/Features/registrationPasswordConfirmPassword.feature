@@ -1,3 +1,4 @@
+@fullRegression
 Feature: registration - Password/Confirm Password
   Scenario: AC29-224 - Happy path for Password/Confirm Password
     When I open "registration" page

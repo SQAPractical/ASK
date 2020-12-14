@@ -28,7 +28,8 @@ public class homePageLinks {
     }
 
     @Then("Assignments page loaded")
-    public void assignmentsPageLoaded() {
+    public void assignmentsPageLoaded() throws InterruptedException {
+        Thread.sleep(2000);
         WebElement textOnSubmissionPage = getDriver().findElement(By.xpath("//h4[contains(text(), 'Assignments')]"));
         assertThat(textOnSubmissionPage.isDisplayed()).isTrue();
     }
@@ -47,12 +48,14 @@ public class homePageLinks {
 
     @And("I click Go To My Assignments")
     public void iClickGoToMyAssignments() throws InterruptedException {
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//span[contains(text(),'My Assignments')]")).click();
         Thread.sleep(2000);
     }
 
     @Then("My Assignments page loaded")
-    public void myAssignmentsPageLoaded() {
+    public void myAssignmentsPageLoaded() throws InterruptedException {
+        Thread.sleep(2000);
         WebElement textOnSubmissionPage = getDriver().findElement(By.xpath("//h4[contains(text(), 'My Assignments')]"));
         assertThat(textOnSubmissionPage.isDisplayed()).isTrue();
     }
@@ -64,7 +67,8 @@ public class homePageLinks {
     }
 
     @Then("My Grades page loaded")
-    public void myGradesPageLoaded() {
+    public void myGradesPageLoaded() throws InterruptedException {
+        Thread.sleep(2000);
         WebElement textOnSubmissionPage = getDriver().findElement(By.xpath("//h4[contains(text(), 'My Grades')]"));
         assertThat(textOnSubmissionPage.isDisplayed()).isTrue();
     }

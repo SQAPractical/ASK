@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Multiple Choice Question - Options
   Scenario: Multiple Choice Question - 2 Options
     When I open "login" page

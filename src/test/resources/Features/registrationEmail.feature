@@ -1,5 +1,6 @@
+@fullRegression
 Feature: Registration - Email
-  Scenario: Registration - Email - Correct format
+  Scenario:  Registration - Email - Correct format
     When I open "registration" page
     And I type first name "Nozima"
     And I type last name "Botirova"
@@ -53,6 +54,7 @@ Feature: Registration - Email
     Then I click on Register Me button
     Then text "You have been Registered." appears
 
+    @Smoke
   Scenario: Registration - Email - Length of local port (64+1 char), domain (63+1 char), last part of domain (63+1char)
     When I open "registration" page
     And I type first name "Nozima"

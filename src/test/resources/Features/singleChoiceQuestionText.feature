@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Single Choice Question - Text
   Scenario: Single Choice Question - Text- Allowable characters: Alphanumeric & Sp. characters
     When I open "Login" page
@@ -43,7 +44,7 @@ Feature: Single Choice Question - Text
     And I click "Add Question"
     And I click "Single-Choice" radio button
     And I click Question filed
-    And I Type "c" as question
+    And I Type "ctwegrf" as question
     And I delete the question
     Then text "This field is required" appears
 #    Then This field is required message appear
