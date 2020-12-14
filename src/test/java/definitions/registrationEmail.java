@@ -14,8 +14,7 @@ public class registrationEmail {
     public void iOpenPage(String pageName) {
         if (pageName.equalsIgnoreCase("registration")) {
             getDriver().get("http://ask-stage.portnov.com/#/registration");
-        }
-        else if (pageName.equalsIgnoreCase("login")){
+        } else if (pageName.equalsIgnoreCase("login")) {
             getDriver().get("http://ask-stage.portnov.com/#/login");
         }
     }
@@ -58,7 +57,19 @@ public class registrationEmail {
     @Then("text {string} appears")
     public void textAppears(String text) throws InterruptedException {
         Thread.sleep(2000);
-        WebElement expectedText = getDriver().findElement(By.xpath("//*[contains(text(),'"+text+"')]"));
+        WebElement expectedText = getDriver().findElement(By.xpath("//*[contains(text(),'" + text + "')]"));
         assertThat(expectedText.isDisplayed()).isTrue();
     }
+
+    @Then("Password displays in bullets, copy, cut disable")
+    public void passwordDisplaysInBulletsCopyCutDisable() {
+        String attribute = "type";
+        String attributeValue = "password";
+        WebElement passwordField = getDriver().findElement(By.xpath("//*[@placeholder='Password *']"));
+        System.out.println(passwordField.getAttribute(attribute));
+        assertThat(passwordField.getAttribute(attribute)).isEqualTo(attributeValue);
+
+    }
 }
+
+
