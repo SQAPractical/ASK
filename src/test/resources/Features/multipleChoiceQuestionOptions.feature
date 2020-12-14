@@ -121,8 +121,12 @@ Feature: Multiple Choice Question - Options
     And I click Assignments menu item
     And I click Create New Assignment button
     And I choose Quiz to Assign "Multiple-Choice question - graded automatically"
-    And I click "Olga Nikolaeva" name
+    And I click "Nikolaeva" name
     And I click Give Assignment button
+    And I click Assignments menu item
+    Then Assignment with name "Multiple-Choice question - graded automatically" is present
+
+
 
 
 

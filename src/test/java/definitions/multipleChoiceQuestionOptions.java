@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -102,18 +103,26 @@ public class multipleChoiceQuestionOptions {
 
     @And("I choose Quiz to Assign {string}")
     public void iChooseQuizToAssign(String quizTitle) {
-
+        getDriver().findElement(By.xpath("//span[contains(text(),'Select Quiz To Assign')]")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(),'" + quizTitle + "')]/..")).click();
     }
 
     @And("I click {string} name")
     public void iClickName(String name) {
-        getDriver().findElement(By.xpath("//span[contains(text(), '" + name + "')]")).click();
+        getDriver().findElement(By.xpath("//div[contains(span/following-sibling::text(),'" + name + "')]")).click();
     }
 
     @And("I click Give Assignment button")
     public void iClickGiveAssignmentButton() {
         getDriver().findElement(By.xpath("//span[contains(text(), 'Give Assignment')]")).click();
     }
+
+    @Then("Assignment with name {string} is present")
+    public void assignmentWithNameIsPresent(String assignmentName) {
+        WebElement assignment = getDriver().findElement(By.xpath("//*[contains(text(), '" + assignmentName +"')]"));
+        Assert.assertTrue(assignment.isDisplayed());
+    }
+
 }
 
 
