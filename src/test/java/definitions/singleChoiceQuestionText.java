@@ -118,9 +118,9 @@ public class singleChoiceQuestionText {
 
     @And("I click Save button")
     public void iClickSaveButton() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         getDriver().findElement(By.xpath("//span[contains(text(),'Save')]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     @Then("List of Quizzes page loads")
