@@ -1,2 +1,2 @@
 Feature: ABC
-  Scenario:TEST1
+  Scenario:New Test
