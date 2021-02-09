@@ -1,2 +1,2 @@
 Feature: test
-  Scenario:
+  Scenario: something on 2nd line
