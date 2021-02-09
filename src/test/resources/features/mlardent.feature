@@ -1,2 +1,3 @@
 Feature: whatadst
-  Scenario: adfaskd
+  Scenario: adfask
+    Given I do nothing
