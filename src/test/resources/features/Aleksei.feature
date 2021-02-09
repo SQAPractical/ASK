@@ -1,3 +1,3 @@
-Feature: test
-  Scenario: Hello world 1234
+Feature: test123
+  Scenario: Hello test test
 
