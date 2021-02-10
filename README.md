@@ -4,18 +4,18 @@
 1. Cut your own branch from `master` locally, typing:
     `git checkout -b name_of_your_branch`
     and create remote copy
-    `git push --set-upstream origin name_of_your_branch`
+    `git push --set-upstream origin name_of_your_branchgit co`
     The name of your local branch must match the name of your remote branch.
         Example (You can see in terminal):
         `* [new branch]      nik -> nik`
 
 2. Type `git branch` to verify that you created the branch
     (your currently branch will appear in green)
-
+git
     ----
 3. Make your changes
 
-    ----
+    ----Neetu
 
 4.  Run `git status` - your changes will appear in red
 
@@ -42,7 +42,7 @@
 
 10. Type `git merge master` to make sure there won't be any conflicts in your future PR.
 
-11. Run project to double check if it is not broken (if you fixed something, you need
+gi11. Run project to double check if it is not broken (if you fixed something, you need
 to commit changes one more time)
 
 12. If there are no conflicts, you can push to github.

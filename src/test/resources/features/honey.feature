@@ -1,2 +1,0 @@
-Feature: dsafs
-  Scenario: sdfasd
