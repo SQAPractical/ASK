@@ -1,2 +1,2 @@
 Feature: Sign up
-  Scenario: "The user ate a sandwich"
+  Scenario: "The user ate a burrito"
