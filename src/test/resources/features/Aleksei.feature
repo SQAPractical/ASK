@@ -1,3 +1,2 @@
 Feature: test
-  Scenario: Hello world 1234
-
+  Scenario: Baby Yoda
