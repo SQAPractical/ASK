@@ -1,3 +1,3 @@
 Feature: Sign up
-  Scenario: run job
-    User navigate to the page
+  Scenario: User sign up via Facebook
+    User navigate to the pagegit status

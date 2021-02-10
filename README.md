@@ -42,7 +42,7 @@
 
 10. Type `git merge master` to make sure there won't be any conflicts in your future PR.
 
-11. Run project to double check if it is not broken (if you fixed something, you need
+gi11. Run project to double check if it is not broken (if you fixed something, you need
 to commit changes one more time)
 
 12. If there are no conflicts, you can push to github.
