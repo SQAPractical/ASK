@@ -1,3 +1,3 @@
 Feature: test123
-  Scenario: Hello test test
+  Scenario: Baby Yoda
 
