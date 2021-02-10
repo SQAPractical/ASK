@@ -30,10 +30,10 @@
     (they will be shown in green)
 
 7. To add your changes from stage to your branch, type `git commit -m "[ADDED] your_message_explaining_what_you_modified"`
-    Use different labels [ADDED] [CHANGED] [IMPROVED] [DELETED]
+    Use different labels [ADDED] [CHANGED] [IMPROVED] [DELETED]git
     to better understand what you did on branch
 
-8. Switch to master to update code on master branch
+8. Switch to master to update code on maste branch
     Type: `git checkout master`
     And then: `git pull`
 
