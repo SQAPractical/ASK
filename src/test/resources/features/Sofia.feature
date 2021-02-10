@@ -1,2 +1,0 @@
-Feature: efgd
-  Scenario: wergfefv

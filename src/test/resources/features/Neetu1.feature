@@ -1,2 +1,0 @@
-Feature: dqeyfq
-  Scenario: hbcfjhbefqe
