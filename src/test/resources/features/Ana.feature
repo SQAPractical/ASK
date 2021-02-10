@@ -1,4 +1,3 @@
 Feature: Sign up
-  Scenario: User able to sign up
+  Scenario: run job
     User navigate to the page
-    Then click on the "open" button
