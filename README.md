@@ -40,7 +40,7 @@ git
 9. Switch to your branch again
     Type `git checkout name_of_your_branch`
 
-10. Type `git merge master` to make sure there won't be any conflicts in your future PR.
+10. Type `git merge master` to make sure there won't be any conflicts in your futuregit pushg.
 
 gi11. Run project to double check if it is not broken (if you fixed something, you need
 to commit changes one more time)
