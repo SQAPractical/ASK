@@ -15,7 +15,7 @@ git
     ----
 3. Make your changes
 
-    ----Neetu
+    ----
 
 4.  Run `git status` - your changes will appear in red
 
