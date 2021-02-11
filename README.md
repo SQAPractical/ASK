@@ -15,7 +15,7 @@ git
     ----
 3. Make your changes
 
-    ----Neetu
+    ----
 
 4.  Run `git status` - your changes will appear in red
 
@@ -42,7 +42,7 @@ git
 
 10. Type `git merge master` to make sure there won't be any conflicts in your futuregit pushg.
 
-gi11. Run project to double check if it is not broken (if you fixed something, you need
+11. Run project to double check if it is not broken (if you fixed something, you need
 to commit changes one more time)
 
 12. If there are no conflicts, you can push to github.
