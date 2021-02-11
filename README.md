@@ -30,10 +30,10 @@ git
     (they will be shown in green)
 
 7. To add your changes from stage to your branch, type `git commit -m "[ADDED] your_message_explaining_what_you_modified"`
-    Use different labels [ADDED] [CHANGED] [IMPROVED] [DELETED]
+    Use different labels [ADDED] [CHANGED] [IMPROVED] [DELETED]git
     to better understand what you did on branch
 
-8. Switch to master to update code on master branch
+8. Switch to master to update code on maste branch
     Type: `git checkout master`
     And then: `git pull`
 
@@ -42,7 +42,7 @@ git
 
 10. Type `git merge master` to make sure there won't be any conflicts in your future PR.
 
-11. Run project to double check if it is not broken (if you fixed something, you need
+gi11. Run project to double check if it is not broken (if you fixed something, you need
 to commit changes one more time)
 
 12. If there are no conflicts, you can push to github.

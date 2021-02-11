@@ -1,3 +1,0 @@
-Feature: edge
-  Scenario: etrwuyfg
-
