@@ -73,4 +73,15 @@ Feature: Registration - First Name
     And I type password "12345"
     And I confirm password "12345"
     And I click Register Me
-    Then Message "Special Characters Not Allowed" Appears
+    Then Message "Only latin characters allowed" Appears
+
+  Scenario: Registration - First Name - numbers
+    Given I navigate to registration page
+    When I type first name "11311"
+    And I type last name "Ivanov"
+    And I type email "test@test.test"
+    And I type group code "SSS"
+    And I type password "12345"
+    And I confirm password "12345"
+    And I click Register Me
+    Then Message "Only latin characters allowed" Appears
