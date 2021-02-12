@@ -12,14 +12,14 @@ Feature: Login
     When I type email "student@gmail.com" on login page
     And I type password "12345Abc" on login page
     And I click on sing in button
-    Then message "Authentication failed. User not found or password does not match" appears
+    Then Message "Authentication failed. User not found or password does not match" Appears
 
   Scenario: valid email and invalid password
     Given I navigate to login page
     When I type email "student0@gmail.com" on login page
     And I type password "12345678" on login page
     And I click on sing in button
-    Then message "Authentication failed. User not found or password does not match" appears
+    Then Message "Authentication failed. User not found or password does not match" Appears
 
   Scenario: Password field displays input in bullets
     Given I navigate to login page
@@ -62,7 +62,7 @@ Feature: Login
     When I type email "student0@gmail.com" on login page
     And I type password "12345abc" on login page
     And I click on sing in button
-    Then message "Authentication failed. User not found or password does not match" appears
+    Then Message "Authentication failed. User not found or password does not match" Appears
 
   Scenario: check "I forgot my password" link
     Given I navigate to login page
