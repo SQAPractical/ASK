@@ -4,14 +4,14 @@
 1. Cut your own branch from `master` locally, typing:
     `git checkout -b name_of_your_branch`
     and create remote copy
-    `git push --set-upstream origin name_of_your_branch`
+    `git push --set-upstream origin name_of_your_branchgit co`
     The name of your local branch must match the name of your remote branch.
         Example (You can see in terminal):
         `* [new branch]      nik -> nik`
 
 2. Type `git branch` to verify that you created the branch
     (your currently branch will appear in green)
-
+git
     ----
 3. Make your changes
 
@@ -30,17 +30,17 @@
     (they will be shown in green)
 
 7. To add your changes from stage to your branch, type `git commit -m "[ADDED] your_message_explaining_what_you_modified"`
-    Use different labels [ADDED] [CHANGED] [IMPROVED] [DELETED]
+    Use different labels [ADDED] [CHANGED] [IMPROVED] [DELETED]git
     to better understand what you did on branch
 
-8. Switch to master to update code on master branch
+8. Switch to master to update code on maste branch
     Type: `git checkout master`
     And then: `git pull`
 
 9. Switch to your branch again
     Type `git checkout name_of_your_branch`
 
-10. Type `git merge master` to make sure there won't be any conflicts in your future PR.
+10. Type `git merge master` to make sure there won't be any conflicts in your futuregit pushg.
 
 11. Run project to double check if it is not broken (if you fixed something, you need
 to commit changes one more time)

@@ -1,2 +1,0 @@
-Feature: asdfs
-  Scenario: asdg
