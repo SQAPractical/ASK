@@ -1,109 +1,109 @@
 Feature: Registration - Email
   Scenario: Email - Alphanumeric Characters and @ special char
-    Given I navigate to registration webpage
-    And I fill out first name "ot"
-    And I fill out last name "ggg"
-    And I fill out email "nah78belh@ci87cawow.guru"
-    And I fill out group "ttt"
-    And I fill out password "abcde"
-    And I fill out confirm password "abcde"
-    And I click Register Me button
-    Then Message "You have been Registered." appears
+    Given I navigate to registration page
+    And I type first name "ot"
+    And I type last name "ggg"
+    And I type email "nah78belh@ci87cawow.guru"
+    And I type group code "ttt"
+    And I type password "abcde"
+    And I confirm password "abcde"
+    And I click Register Me
+    Then Message "You have been Registered." Appears
 
   Scenario: Email - Alphanumeric Characters and @ including other special char
-    Given I navigate to registration webpage
-    And I fill out first name "ot"
-    And I fill out last name "ggg"
-    And I fill out email "nahmed%belh@cing&cawow.guru"
-    And I fill out group "ttt"
-    And I fill out password "abcde"
-    And I fill out confirm password "abcde"
-    And I click Register Me button
-    Then Message "Should be a valid email address" appears
+    Given I navigate to registration page
+    And I type first name "ot"
+    And I type last name "ggg"
+    And I type email "nahmed%belh@cing&cawow.guru"
+    And I type group code "ttt"
+    And I type password "abcde"
+    And I confirm password "abcde"
+    And I click Register Me
+    Then Message "Should be a valid email address" Appears
 
   Scenario: Email - field required
-    Given I navigate to registration webpage
-    And I fill out first name "ot"
-    And I fill out last name "ggg"
-    And I fill out group "ttt"
-    And I fill out password "abcde"
-    And I fill out confirm password "abcde"
-    And I click Register Me button
-    Then Message "This field is required" appears
+    Given I navigate to registration page
+    And I type first name "ot"
+    And I type last name "ggg"
+    And I type group code "ttt"
+    And I type password "abcde"
+    And I confirm password "abcde"
+    And I click Register Me
+    Then Message "This field is required" Appears
 
   Scenario: Email - 64 char in front, 63 in middle, 63 in end
-    Given I navigate to registration webpage
-    And I fill out first name "ot"
-    And I fill out last name "ggg"
-    And I fill out email "bgdfkjbgdskjlbgdmmmjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljbg@bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb.bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb"
-    And I fill out group "ttt"
-    And I fill out password "abcde"
-    And I fill out confirm password "abcde"
-    And I click Register Me button
-    Then Message "You have been Registered." appears
+    Given I navigate to registration page
+    And I type first name "ot"
+    And I type last name "ggg"
+    And I type email "bgdfkjbgdskjlbgdmmmjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljbg@bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb.bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb"
+    And I type group code "ttt"
+    And I type password "abcde"
+    And I confirm password "abcde"
+    And I click Register Me
+    Then Message "You have been Registered." Appears
 
   Scenario: Email - 65 char in front, 63 in middle, 63 in end
-    Given I navigate to registration webpage
-    And I fill out first name "ot"
-    And I fill out last name "ggg"
-    And I fill out email "bgldfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljbg@bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb.bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb"
-    And I fill out group "ttt"
-    And I fill out password "abcde"
-    And I fill out confirm password "abcde"
-    And I click Register Me button
-    Then Message "Should be a valid email address" appears
+    Given I navigate to registration page
+    And I type first name "ot"
+    And I type last name "ggg"
+    And I type email "bgldfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljbg@bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb.bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb"
+    And I type group code "ttt"
+    And I type password "abcde"
+    And I confirm password "abcde"
+    And I click Register Me
+    Then Message "Should be a valid email address" Appears
 
   Scenario: Email - 64 char in front, 64 in middle, 63 in end
-    Given I navigate to registration webpage
-    And I fill out first name "ot"
-    And I fill out last name "ggg"
-    And I fill out email "bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljbg@bgdfkjbgdsgkjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb.bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb"
-    And I fill out group "ttt"
-    And I fill out password "abcde"
-    And I fill out confirm password "abcde"
-    And I click Register Me button
-    Then Message "Should be a valid email address" appears
+    Given I navigate to registration page
+    And I type first name "ot"
+    And I type last name "ggg"
+    And I type email "bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljbg@bgdfkjbgdsgkjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb.bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb"
+    And I type group code "ttt"
+    And I type password "abcde"
+    And I confirm password "abcde"
+    And I click Register Me
+    Then Message "Should be a valid email address" Appears
 
   Scenario: Email - 64 char in front, 63 in middle, 64 in end
-    Given I navigate to registration webpage
-    And I fill out first name "ot"
-    And I fill out last name "ggg"
-    And I fill out email "bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljbg@bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb.bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkfbgdskljb"
-    And I fill out group "ttt"
-    And I fill out password "abcde"
-    And I fill out confirm password "abcde"
-    And I click Register Me button
-    Then Message "Should be a valid email address" appears
+    Given I navigate to registration page
+    And I type first name "ot"
+    And I type last name "ggg"
+    And I type email "bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljbg@bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkbgdskljb.bgdfkjbgdskjlbgdfskjlbgdsjkbgklskjbgskjbgjafdngdskjjfdkfbgdskljb"
+    And I type group code "ttt"
+    And I type password "abcde"
+    And I confirm password "abcde"
+    And I click Register Me
+    Then Message "Should be a valid email address" Appears
 
   Scenario: Email - No White Spaces Before Email
-    Given I navigate to registration webpage
-    And I fill out first name "ot"
-    And I fill out last name "ggg"
-    And I fill out email " nahbelh@og.com"
-    And I fill out group "ttt"
-    And I fill out password "abcde"
-    And I fill out confirm password "abcde"
-    And I click Register Me button
-    Then Message "Should be a valid email address" appears
+    Given I navigate to registration page
+    And I type first name "ot"
+    And I type last name "ggg"
+    And I type email " nahbelh@og.com"
+    And I type group code "ttt"
+    And I type password "abcde"
+    And I confirm password "abcde"
+    And I click Register Me
+    Then Message "Should be a valid email address" Appears
 
   Scenario: Email - No White Spaces Before Email
-    Given I navigate to registration webpage
-    And I fill out first name "ot"
-    And I fill out last name "ggg"
-    And I fill out email " nah belh@og.com"
-    And I fill out group "ttt"
-    And I fill out password "abcde"
-    And I fill out confirm password "abcde"
-    And I click Register Me button
-    Then Message "Should be a valid email address" appears
+    Given I navigate to registration page
+    And I type first name "ot"
+    And I type last name "ggg"
+    And I type email " nah belh@og.com"
+    And I type group code "ttt"
+    And I type password "abcde"
+    And I confirm password "abcde"
+    And I click Register Me
+    Then Message "Should be a valid email address" Appears
 
   Scenario: Email - No White Spaces Before Email
-    Given I navigate to registration webpage
-    And I fill out first name "ot"
-    And I fill out last name "ggg"
-    And I fill out email "nahbelh @og.com"
-    And I fill out group "ttt"
-    And I fill out password "abcde"
-    And I fill out confirm password "abcde"
-    And I click Register Me button
-    Then Message "Should be a valid email address" appears
+    Given I navigate to registration page
+    And I type first name "ot"
+    And I type last name "ggg"
+    And I type email "nahbelh @og.com"
+    And I type group code "ttt"
+    And I type password "abcde"
+    And I confirm password "abcde"
+    And I click Register Me
+    Then Message "Should be a valid email address" Appears
