@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 
-public class quizzesTextualQuestion {
+public class textualQuestionText {
     @Given("I navigate to login website page")
     public void iNavigateToLoginWebsitePage() throws InterruptedException {
         getDriver().get("http://ask-stage.portnov.com/#/login");
@@ -53,11 +53,11 @@ public class quizzesTextualQuestion {
         Thread.sleep(2000);
     }
 
-    @And("I click on Add Question button")
-    public void iClickOnAddQuestionButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//body/ac-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/ac-quiz-builder-page[1]/form[1]/div[1]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click on Add Question button")
+//    public void iClickOnAddQuestionButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//body/ac-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/ac-quiz-builder-page[1]/form[1]/div[1]")).click();
+//        Thread.sleep(2000);
+//    }
 
     @And("I click on Textual radio button")
     public void iClickOnTextualRadioButton() throws InterruptedException {
@@ -82,10 +82,10 @@ public class quizzesTextualQuestion {
         Thread.sleep(2000);
     }
 
-    @Then("Message {string} appears")
-    public void messageAppears(String message) throws InterruptedException {
-        assertThat(getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'My test quiz')]")).isDisplayed()).isTrue();
-        Thread.sleep(4000);
-    }
+//    @Then("Message {string} appears")
+//    public void messageAppears(String quizName) throws InterruptedException {
+//        assertThat(getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizName+"')]")).isDisplayed()).isTrue();
+//        Thread.sleep(4000);
+//    }
 
 }
