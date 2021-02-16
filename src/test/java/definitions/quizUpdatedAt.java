@@ -119,7 +119,7 @@ public class quizUpdatedAt {
     }
 
     @Then("Time on Updated At for {string} do not match current time")
-    public void timeOnUpdatedAtForDoNotMatchCurrentTime(String arg0) throws InterruptedException {
+    public void timeOnUpdatedAtForDoNotMatchCurrentTime(String quizTitle) throws InterruptedException {
         DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
         Date date = new Date();
         String date1 = dateFormat.format(date);
