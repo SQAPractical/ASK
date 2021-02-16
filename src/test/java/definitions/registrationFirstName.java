@@ -54,6 +54,6 @@ public class registrationFirstName {
 
     @Then("Message {string} Appears")
     public void messageAppears(String message) {
-        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+message+"')]")).isDisplayed()).isTrue();
+        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'" + message + "')]")).isDisplayed()).isTrue();
     }
 }
