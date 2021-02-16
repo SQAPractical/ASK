@@ -6,14 +6,19 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import javax.swing.*;
 import java.security.Key;
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -22,9 +27,9 @@ import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
 import static support.TestContext.getDriver;
 
-public class usrManagm {
+public class usersManagmStRole {
 
-    WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+    WebDriverWait wait = new WebDriverWait(getDriver(), 5);
 
     private final String signIn = "//*[text()='Sign In']";
     private final String email = "//input[@formcontrolname='email']";
@@ -123,8 +128,6 @@ public class usrManagm {
         } catch (Exception e) {
             assertFalse(roleA.isDisplayed());
         }
-
-
     }
 
 
@@ -169,6 +172,30 @@ public class usrManagm {
     @And("I change status back to Student")
     public void iChangeStatusBackToStudent() throws InterruptedException {
 
+//        getDriver().findElement(By.xpath("//span[@class='mat-button-wrapper']/mat-icon")).click();
+//
+//        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//        Actions a = new Actions(getDriver());
+//        WebElement roleB = getDriver().findElement(By.xpath("//div[@class='cdk-overlay-container']/div/div/div/button"));
+//
+//        WebElement roleA = getDriver().findElement(By.xpath("//div[@class='cdk-overlay-container']/div/div/div/button[2]"));
+//
+//        try {
+//            a.moveToElement(wait.until(ExpectedConditions.elementToBeClickable(roleB))).moveToElement(roleA).click().build().perform();
+//        } catch (Exception e) {
+//            assertFalse(roleA.isDisplayed());
+//        }
+//
+//        WebElement chRoleButton = getDriver().findElement(By.xpath("//span[text()='Change Role']"));
+//
+//        wait.until(ExpectedConditions.elementToBeClickable(chRoleButton));
+//        chRoleButton.click();
+//        Thread.sleep(1000);
+
+        changeRoleToStudent();
+    }
+
+    private void changeRoleToStudent() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[@class='mat-button-wrapper']/mat-icon")).click();
 
         getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -188,9 +215,5 @@ public class usrManagm {
         wait.until(ExpectedConditions.elementToBeClickable(chRoleButton));
         chRoleButton.click();
         Thread.sleep(1000);
-
-
-
-
     }
 }
