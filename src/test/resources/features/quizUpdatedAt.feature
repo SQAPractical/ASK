@@ -22,6 +22,6 @@ Feature: Quiz - Updated At
     And I modify text of Question 1
     And I save quiz
     And I find "test quiz r784" in list of quizzes
-    Then Time on Updated At for "test quiz r784" matches current time
+    Then Time on Updated At for "test quiz r784" do not match current time
 
 

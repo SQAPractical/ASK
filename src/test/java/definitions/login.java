@@ -49,10 +49,10 @@ public class login {
     @Then("{string} page loaded")
     public void pageLoaded(String text) {
         WebDriverWait wait = new WebDriverWait(getDriver(), 5);
-        wait.until(ExpectedConditions.urlContains("/" + text));
+        wait.until(ExpectedConditions.urlContains(text));
 
         String url = getDriver().getCurrentUrl();
-        assertThat(url).endsWith("/" + text);
+        assertThat(url).endsWith(text);
     }
 
     @Then("password field display input in bullets")
