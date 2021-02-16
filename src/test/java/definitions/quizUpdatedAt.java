@@ -117,4 +117,16 @@ public class quizUpdatedAt {
         String updatedAt = getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizTitle+"')]/../../..//div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[5]/td[2]")).getText();
         Assert.assertEquals(date1, updatedAt);
     }
+
+    @Then("Time on Updated At for {string} do not match current time")
+    public void timeOnUpdatedAtForDoNotMatchCurrentTime(String arg0) throws InterruptedException {
+        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        Date date = new Date();
+        String date1 = dateFormat.format(date);
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizTitle+"')]/../../..//div[1]/div[1]/div[1]/table[1]")).click();
+        Thread.sleep(2000);
+        String updatedAt = getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizTitle+"')]/../../..//div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[5]/td[2]")).getText();
+        Assert.assertNotEquals(date1, updatedAt);
+    }
 }
