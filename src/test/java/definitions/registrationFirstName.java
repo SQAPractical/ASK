@@ -13,6 +13,7 @@ import static support.TestContext.getDriver;
 public class registrationFirstName {
     @Given("I navigate to registration page")
     public void iNavigateToRegistrationPage() {
+
         getDriver().get("http://ask-stage.portnov.com/#/registration");
     }
 
