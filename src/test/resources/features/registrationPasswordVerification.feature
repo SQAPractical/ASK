@@ -63,13 +63,13 @@ Feature: Registration - Password/Confirm Password Verification
     And I click Register Me
     Then Message "Entered passwords should match" Appears
 
-
-
-
-
-
-
-
-
-
-
+  Scenario: Password - Maximum Characters + 1
+    Given I navigate to registration page
+    When I type first name "Test"
+    And I type last name "Test123"
+    And I type email "qa@test.com"
+    And I type group code "RRRR"
+    And I type password "QatestQatestQatestQatestQatestQatestQatestQatestQatestQatest"
+    And I confirm password "QatestQatestQatestQatestQatestQatestQatestQatestQatestQatest"
+    And I click Register Me
+    Then Message "You have been Registered." Appears
