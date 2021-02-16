@@ -72,4 +72,4 @@ Feature: Registration - Password/Confirm Password Verification
     And I type password "QatestQatestQatestQatestQatestQatestQatestQatestQatestQatest"
     And I confirm password "QatestQatestQatestQatestQatestQatestQatestQatestQatestQatest"
     And I click Register Me
-    Then Message "You have been Registered." Appears
+    Then Message "Too long. Should be no more than 32 characters" Appears
