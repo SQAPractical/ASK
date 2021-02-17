@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class password {
+public class settingsPassword {
     @Then("I click on Settings")
     public void iClickOnSettings() {
         getDriver().findElement(By.xpath("//h5[contains(text(),'Settings')]")).click();
