@@ -9,21 +9,21 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static support.TestContext.getDriver;
 
-public class martaAuto {
-    @Given("I navigate to login page")
-    public void iNavigateToLoginMPage() {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
-    }
+public class settingsFullName {
+//    @Given("I navigate to login page")
+//    public void iNavigateToLoginMPage() {
+//        getDriver().get("http://ask-stage.portnov.com/#/login");
+//    }
 
-    @When("I type email {string}")
-    public void iTypeEmail(String email) {
-        getDriver().findElement(By.xpath("//input[@placeholder='Email *']")).sendKeys(email);
-    }
+//    @When("I type email {string}")
+//    public void iTypeEmail(String email) {
+//        getDriver().findElement(By.xpath("//input[@placeholder='Email *']")).sendKeys(email);
+//    }
 
-    @And("I type password {string} on login page")
-    public void iTypePasswordOnLoginPage(String pass) {
-        getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).sendKeys(pass);
-    }
+//    @And("I type password {string} on login page")
+//    public void iTypePasswordOnLoginPage(String pass) {
+//        getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).sendKeys(pass);
+//    }
 
     @And("I click Sign in button")
     public void iClickSignInButton() throws InterruptedException {
@@ -41,15 +41,16 @@ public class martaAuto {
         getDriver().findElement(By.xpath("//span[contains(text(),'Change Your Name')]")).click();
     }
 
-    @And("I type new name {string}")
-    public void iTypeNewName(String newName) {
-        getDriver().findElement(By.xpath("//input[@placeholder='New name']")).clear();
-        getDriver().findElement(By.xpath("//input[@placeholder='New name']")).sendKeys(newName);
-    }
+//    @And("I type new name {string}")
+//    public void iTypeNewName(String newName) {
+//        getDriver().findElement(By.xpath("//input[@placeholder='New name']")).clear();
+//        getDriver().findElement(By.xpath("//input[@placeholder='New name']")).sendKeys(newName);
+//    }
 
     @And("I click Change button")
-    public void iClickChangeButton() {
+    public void iClickChangeButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[@class='mat-raised-button mat-primary'][@aria-label='Close dialog']")).click();
+        Thread.sleep(2000);
     }
 
     @And("I delete user name")
