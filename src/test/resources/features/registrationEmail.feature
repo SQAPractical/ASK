@@ -1,4 +1,5 @@
 @fullRegression
+@partialRegression
 Feature: Registration - Email
   Scenario: Email - Alphanumeric Characters and @ special char
     Given I navigate to registration page

@@ -1,5 +1,7 @@
 @fullRegression
+@partialRegression
 Feature: Registration - First Name
+  @Smoke
   Scenario: Registration - First Name - latin characters
     Given I navigate to registration page
     When I type first name "Ivan"

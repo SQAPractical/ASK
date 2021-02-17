@@ -1,4 +1,5 @@
 @fullRegression
+@partialRegression
 Feature: Registration - Group Code
   Scenario: Group Code - accepts alphanumeric and special characters
     Given I navigate to registration page

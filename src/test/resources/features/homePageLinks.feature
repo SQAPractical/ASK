@@ -1,5 +1,5 @@
 Feature: Home page links
-
+  @partialRegression
   Scenario: Go to Assignments
     Given I navigate to login page
     When I type email "crimean75@yahoo.com" on login page
@@ -8,7 +8,7 @@ Feature: Home page links
     Then "home" page loaded
     And I click on "Go To Assignments" link on home page
     Then Message "List of Assignments" Appears
-
+  @partialRegression
   Scenario:  Submissions
     Given I navigate to login page
     When I type email "crimean75@yahoo.com" on login page
@@ -17,7 +17,7 @@ Feature: Home page links
     Then "home" page loaded
     And I click on "Go To Submissions" link on home page
     Then Submissions page will display
-
+  @partialRegression
   Scenario: User's Management
     Given  I navigate to login page
     When I type email "crimean75@yahoo.com" on login page

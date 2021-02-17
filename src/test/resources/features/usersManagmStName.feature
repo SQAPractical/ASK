@@ -1,4 +1,5 @@
 @fullRegression
+@partialRegression
 Feature: Change name
 
   Scenario: Change name - Leading spaces are not allowed

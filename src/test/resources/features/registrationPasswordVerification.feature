@@ -1,4 +1,5 @@
 @fullRegression
+@partialRegression
 Feature: Registration - Password/Confirm Password Verification
   Scenario: Validate whether password field allows alphanumeric and special characters
     Given I navigate to registration page
@@ -63,6 +64,7 @@ Feature: Registration - Password/Confirm Password Verification
     And I confirm password "44444"
     And I click Register Me
     Then Message "Entered passwords should match" Appears
+
 
   Scenario: Password - Maximum Characters + 1
     Given I navigate to registration page

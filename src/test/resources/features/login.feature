@@ -1,13 +1,14 @@
 @fullRegression
 Feature: Login
 
+  @Smoke
   Scenario: valid email and valid password
     Given I navigate to login page
     When I type email "student0@gmail.com" on login page
     And I type password "12345Abc" on login page
     And I click on sing in button
     Then "home" page loaded
-
+  @Smoke
   Scenario: invalid email and valid password
     Given I navigate to login page
     When I type email "student@gmail.com" on login page

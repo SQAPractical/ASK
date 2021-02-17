@@ -51,11 +51,12 @@ public class registrationFirstName {
     @And("I click Register Me")
     public void iClickRegisterMe() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Register Me')]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     @Then("Message {string} Appears")
-    public void messageAppears(String message) {
+    public void messageAppears(String message) throws InterruptedException {
+        Thread.sleep(2000);
         assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'" + message + "')]")).isDisplayed()).isTrue();
     }
 

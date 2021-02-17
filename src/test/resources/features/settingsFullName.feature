@@ -1,4 +1,6 @@
+@partialRegression
 Feature: Settings - Full Name
+
   Scenario: Settings - Full Name - Latin Character
     Given I navigate to login page
     When I type email "dsgsdssdd@gmail.com" on login page
