@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Registration - First Name
   Scenario: Registration - First Name - latin characters
     Given I navigate to registration page

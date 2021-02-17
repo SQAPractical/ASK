@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Registration - Password/Confirm Password Verification
   Scenario: Validate whether password field allows alphanumeric and special characters
     Given I navigate to registration page

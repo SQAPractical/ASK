@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Textual Question - Text
   Scenario: Textual Question - Text - alphanumeric and special characters
     Given I navigate to login website page

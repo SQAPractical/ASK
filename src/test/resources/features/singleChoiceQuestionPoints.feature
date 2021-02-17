@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Single Choice Question - Points
 
   Scenario: Single Choice Question - Points - Maximum Points

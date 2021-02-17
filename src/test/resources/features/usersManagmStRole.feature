@@ -1,3 +1,4 @@
+@fullRegression
 @usrmanage
 Feature: User's management - Options in Student's account
   @usrmanage1

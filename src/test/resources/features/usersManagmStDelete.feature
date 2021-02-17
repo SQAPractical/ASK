@@ -1,3 +1,4 @@
+@fullRegression
 Feature: User's management - Options in Student's account
 
   Scenario: First - Create test account

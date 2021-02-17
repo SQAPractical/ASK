@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Quiz - Updated At
   Scenario: Updated at Same Time as Created At
     Given I navigate to staging webpage
