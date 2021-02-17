@@ -105,4 +105,14 @@ public class login {
     public void iClickOnLinkOnLoginPage(String text) {
         getDriver().findElement(By.xpath("//*[contains(text(),'" + text + "')]")).click();
     }
+
+    @And("I click on sign in button")
+    public void iClickOnSignInButton() {getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
+    }
+
+
+    @And("I click on {string}")
+    public void iClickOn(String arg0) {
+    }
 }
+
