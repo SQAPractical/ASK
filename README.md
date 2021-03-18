@@ -11,7 +11,7 @@
 
 2. Type `git branch` to verify that you created the branch
     (your currently branch will appear in green)
-git
+
     ----
 3. Make your changes
 
@@ -29,9 +29,7 @@ git
 6. Type `git status` to check that you added all the changes
     (they will be shown in green)
 
-7. To add your changes from stage to your branch, type `git commit -m "[ADDED] your_message_explaining_what_you_modified"`
-    Use different labels [ADDED] [CHANGED] [IMPROVED] [DELETED]git
-    to better understand what you did on branch
+7. To add your changes from stage to your branch, type `git commit -m "your_message_explaining_what_you_modified"`
 
 8. Switch to master to update code on master branch
     Type: `git checkout master`
@@ -40,7 +38,7 @@ git
 9. Switch to your branch again
     Type `git checkout name_of_your_branch`
 
-10. Type `git merge master` to make sure there won't be any conflicts in your futuregit pushg.
+10. Type `git merge master` to make sure there won't be any conflicts in your future pull request.
 
 11. Run project to double check if it is not broken (if you fixed something, you need
 to commit changes one more time)
@@ -58,4 +56,4 @@ to commit changes one more time)
 16. And update your branch `git merge master`
 (With this command you will take changes from your local master and copy it to your branch)
     
-Repeat steps 3-15 for each complete task
+Repeat steps 3-16 for each complete task
