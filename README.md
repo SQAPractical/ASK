@@ -4,7 +4,7 @@
 1. Cut your own branch from `master` locally, typing:
     `git checkout -b name_of_your_branch`
     and create remote copy
-    `git push --set-upstream origin name_of_your_branchgit co`
+    ` name_of_your_branchgit co`
     The name of your local branch must match the name of your remote branch.
         Example (You can see in terminal):
         `* [new branch]      nik -> nik`
@@ -17,7 +17,7 @@
 
     ----
 
-4.  Run `git status` - your changes will appear in red
+4.  Run `git` - your changes will appear in red
 
 5. Add ALL your changes to staging by typing `git add .`
 
