@@ -3,7 +3,7 @@
 
 1. Cut your own branch from `master` locally, typing:    
     `git checkout -b name_of_your_branch`    
-    and create remote copy    
+    and create remote copy    git status
     `git push --set-upstream origin name_of_your_branch`    
     The name of your local branch must match the name of your remote branch.
     Example (You can see in terminal):
@@ -23,7 +23,8 @@
 
     OR
 
-   To add some of the changes, instead `git add .` you can assign path to the file
+   To add some of the changes, instead `git add .` you can ass
+   ign path to the file
     you want to commit after adding
     Example: `git add /Users/sofia/IdeaProjects/AssessmentControl/src/test/resources/features/1.ObjectsPropertiesMethods/firstTest.feature`
 6. Type `git status` to check that you added all the changes
