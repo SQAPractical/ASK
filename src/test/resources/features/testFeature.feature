@@ -1,6 +1,7 @@
+Feature: Kirill Test
+  Scenario: Kirill Test
+    Hello guys
 
-Feature: bcgftqwer
-  Scenario: azsxdcfvasdasd
 
 
 
