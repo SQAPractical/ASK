@@ -1,12 +1,19 @@
 *HOW TO PUSH YOUR CHANGES TO GIT HUB*
 
 
+<<<<<<< HEAD
 1. Cut your own branch from `master` locally, typing:    
     `git checkout -b name_of_your_branch`    
     and create remote copy    git status
     `git push --set-upstream origin name_of_your_branch`    
+=======
+1. Cut your own branch from `master` locally, typing:
+    `git checkout -b name_of_your_branch`
+    and create remote copy
+    `git push --set-upstream origin name_of_your_branch`
+>>>>>>> master
     The name of your local branch must match the name of your remote branch.
-    Example (You can see in terminal):
+    Example (You can see in terminal):
     `* [new branch]      nik -> nik`
 
 2. Type `git branch` to verify that you created the branch
