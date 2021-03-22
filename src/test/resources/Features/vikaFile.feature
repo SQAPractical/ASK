@@ -1,2 +1,3 @@
-Feature: fjod
+Feature: project
   Scenario: mkmld
+    test
