@@ -34,7 +34,6 @@
 8. Switch to master to update code on master branch
     Type: `git checkout master`
     And then: `git pull`
-
 9. Switch to your branch again
     Type `git checkout name_of_your_branch`
 
