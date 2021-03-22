@@ -1,6 +1,6 @@
-
-Feature: fdxtbbe
-  Scenario: azsxdcfvasdasd
+Feature: Kirill Test
+  Scenario: Kirill Test
+    Hello guys
 
 
 
