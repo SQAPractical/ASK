@@ -3,3 +3,5 @@ Feature:abcd
   pineapple
   mango
   apple
+    custard apple
+    strawberries
