@@ -1,2 +1,0 @@
-Feature: dds
-  Scenario:ddsds
