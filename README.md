@@ -50,7 +50,7 @@ to commit changes one more time)
 13. Once you collected all the changes on your remote branch,
     you can go ahead and create a Pull request on GitHub.
 
-14. Switch to local master to update it `git checkout master`, and `git pull`
+14. Switch to local master to update it `git`, and `git pull`
 
 15. Then switch to your branch `git checkout your_branch_name`
 
