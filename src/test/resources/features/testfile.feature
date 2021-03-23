@@ -1,3 +1,3 @@
 Scenario testing
   Feature: testing testing
-    testing testing testing Vitalija
+    testing testing lena3
