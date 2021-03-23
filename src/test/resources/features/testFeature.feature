@@ -1,6 +1,7 @@
-Feature: Kirill Test Message from Yulia
-  Scenario: Kirill Test
-    Hello guys , lalalala
+Feature: Kirill Test
+  Scenario: Kirill
+bla bla bla
+
 
 
 
