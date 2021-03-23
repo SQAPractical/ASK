@@ -1,2 +1,0 @@
-Feature: jvldij
-  Scenario: kldfel
