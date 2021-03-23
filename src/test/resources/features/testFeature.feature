@@ -1,6 +1,7 @@
 Feature: Kirill Test
-  Scenario: Kirill Test
-    Hello guys , lalalala
+  Scenario: Kirill
+bla bla bla
+
 
 
 
