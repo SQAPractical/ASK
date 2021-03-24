@@ -22,8 +22,7 @@
 
     OR
 
-   To add some of the changes, instead `git add .` you can ass
-   ign path to the file
+   To add some of the changes, instead `git add .` you can assign path to the file
     you want to commit after adding
     Example: `git add /Users/sofia/IdeaProjects/AssessmentControl/src/test/resources/features/1.ObjectsPropertiesMethods/firstTest.feature`
 6. Type `git status` to check that you added all the changes
@@ -49,7 +48,7 @@ to commit changes one more time)
 13. Once you collected all the changes on your remote branch,
     you can go ahead and create a Pull request on GitHub.
 
-14. Switch to local master to update it `git checkout master`, and `git pull`
+14. Switch to local master to update it `git`, and `git pull`
 
 15. Then switch to your branch `git checkout your_branch_name`
 
