@@ -21,7 +21,7 @@ public class login {
         getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
     }
 
-    @Then("Password displays in bullets and copy\\/cut disabled")
+    @Then("Password displays in bullets and copy cut disabled")
     public void passwordDisplaysInBulletsAndCopyCutDisabled() {
         String attribute = "type";
         String attributeValue = "password";

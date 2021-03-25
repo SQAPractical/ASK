@@ -23,5 +23,5 @@ Feature: Log in
   Scenario: Log in : Password displays in bullets and copy/cut disabled
     When I navigate to login page
     And I type password "12345wdedcAbc"
-    Then Password displays in bullets and copy/cut disabled
+    Then Password displays in bullets and copy cut disabled
 
