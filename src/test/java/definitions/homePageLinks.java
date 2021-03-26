@@ -15,10 +15,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class homePageLinks {
-    @Given("I navigate to login page")
-    public void iNavigateToLoginPage() {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
-    }
+//    @Given("I navigate to login page")
+//    public void iNavigateToLoginPage() {
+//        getDriver().get("http://ask-stage.portnov.com/#/login");
+//    }
 
     @And("I type Email {string}")
     public void iTypeEmail(String expectedEmail) {
