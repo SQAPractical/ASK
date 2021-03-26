@@ -32,5 +32,4 @@ public class login {
         assertThat(expectedAttribute).isEqualTo(attributeValue);
 
     }
-
 }
