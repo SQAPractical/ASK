@@ -1,6 +1,6 @@
 Feature: Log in
   Scenario: Log in : Valid email and valid password
-    When I navigate to login page
+    When  I navigate to login page
     And I type email "teacher1@gmail.com"
     And I type password "12345Abc"
     And I click on Sign In button
