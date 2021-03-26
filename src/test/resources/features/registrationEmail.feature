@@ -36,3 +36,8 @@ Feature: Registration - Email
     And I confirm password "12345"
     And I click Register me button
     Then Text "Should be a valid email address" appears
+
+  Scenario: Log in : Password displays in bullets and copy/cut disabled
+    When I navigate to login page
+    And I type password "12345wdedcAbc"
+    Then Password displays in bullets and copy cut disabled
