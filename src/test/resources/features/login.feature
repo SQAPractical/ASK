@@ -8,7 +8,7 @@ Feature: Log in
 
   Scenario: Log in : Invalid email and valid password
     When I navigate to login page
-    And I type email "teacheroo@gmail.com"
+    And I type email "teacherw1@gmail.com"
     And I type password "12345Abc"
     And I click on Sign In button
     Then Text "Authentication failed. User not found or password does not match" appears
@@ -16,18 +16,45 @@ Feature: Log in
   Scenario: Log in : Valid email and invalid password
     When I navigate to login page
     And I type email "teacher1@gmail.com"
-    And I type password "12345Abccccc"
+    And I type password "12345Abcs"
     And I click on Sign In button
     Then Text "Authentication failed. User not found or password does not match" appears
 
-  Scenario: Log in : Invalid email and invalid password
+  Scenario: Log in : Password displays in bullets and copy/cut disabled
     When I navigate to login page
-    And I type email "teacher1ccc@gmail.com"
-    And I type password "12345Abccccc"
-    And I click on Sign In button
-    Then Text "Authentication failed. User not found or password does not match" appears
+    And I type password "12345wdedcAbc"
+    Then Password displays in bullets and copy cut disabled
 
-    Scenario: Log in: verify Password displays in bullets/ Cut/Copy menu item on "Password" field is disabled
-      When I navigate to login page
-      And I type password "12345Abccccc"
-      Then password displays in bullets and Cut\\/Copy are disabled
+  Scenario: Log in : Email - Leading spaces not allowed
+    When I navigate to login page
+    And I type email " teacher1@gmail.com"
+    And I click on Sign In button
+    Then Text "Should be a valid email" appears
+
+  Scenario: Log in : Email - Trailing spaces not allowed
+    When I navigate to login page
+    And I type email "teacher1@gmail.com "
+    And I click on Sign In button
+    Then Text "Should be a valid email" appears
+
+  Scenario: Log in : Password - Leading spaces not allowed
+    When I navigate to login page
+    And I type email "teacher1@gmail.com"
+    And I type password " 12345wdedcAbc"
+    And I click on Sign In button
+    Then Text "Whitespaces are not allowed" appears
+
+  Scenario: Log in : Password - Trailing spaces not allowed
+    When I navigate to login page
+    And I type email "teacher1@gmail.com"
+    And I type password "12345wdedcAbc "
+    And I click on Sign In button
+    Then Text "Whitespaces are not allowed" appears
+
+  Scenario: Log in : Email field Case insensitive
+    When I navigate to login page
+    And I type email "TEACHER@GMAIL.COM"
+    And I type password "12345wdedcAbc"
+    And I click on Sign In button
+    Then Text "Anna Ivanova" appears
+
