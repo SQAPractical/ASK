@@ -61,4 +61,11 @@ public class registrationFirstName {
     public void iClickOnLastNameField() {
         getDriver().findElement(By.xpath("//*[@formcontrolname='lastName']")).click();
     }
+
+    //For the Secon Name verify whitespaces are not allowed
+    @And("I click on email field")
+    public void iClickOnEmailField() {
+
+        getDriver().findElement(By.xpath("//input[@placeholder='Email']")).click();
+    }
 }

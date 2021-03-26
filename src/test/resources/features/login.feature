@@ -58,7 +58,3 @@ Feature: Log in
     And I click on Sign In button
     Then Text "Anna Ivanova" appears
 
-
-
-
-
