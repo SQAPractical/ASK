@@ -76,7 +76,7 @@ Feature: Registration - Password/Confirm password
     And I click Register me button
     Then Text "Whitespaces are not allowed" appears
 
-  Scenario: Registration - Password/Confirm password - Password don't match Confirm password
+  Scenario: Registration - Password/Confirm password - Password doesn't match
     When I navigate to registration page
     And I type first name "test"
     And I type last name "Test"
