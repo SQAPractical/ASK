@@ -20,4 +20,35 @@ Feature: Log in
     And I click on Sign in button
     Then Text "Authentication failed. User not found or password does not match" appears
 
-    Scenario: Log in :
+  Scenario: Log in : Email - Leading spaces not allowed
+    When I navigate to login page
+    And I type email " teacher1@gmail.com"
+    And I click on Sign in button
+    Then Text "Should be a valid email" appears
+
+  Scenario: Log in : Email - Trailing spaces not allowed
+    When I navigate to login page
+    And I type email "teacher1@gmail.com "
+    And I click on Sign in button
+    Then Text "Should be a valid email" appears
+
+  Scenario: Log in : Password - Leading spaces not allowed
+    When I navigate to login page
+    And I type email "teacher1@gmail.com"
+    And I type password " 12345wdedcAbc"
+    And I click on Sign in button
+    Then Text "Whitespaces are not allowed" appears
+
+  Scenario: Log in : Password - Trailing spaces not allowed
+    When I navigate to login page
+    And I type email "teacher1@gmail.com"
+    And I type password "12345wdedcAbc "
+    And I click on Sign in button
+    Then Text "Whitespaces are not allowed" appears
+
+  Scenario: Log in : Email field Case insensitive
+    When I navigate to login page
+    And I type email "TEACHER@GMAIL.COM"
+    And I type password "12345wdedcAbc"
+    And I click on Sign in button
+    Then Text "Anna Ivanova" appears
