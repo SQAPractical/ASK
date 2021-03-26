@@ -54,7 +54,3 @@ Feature: Registration - First Name
     And I type first name "Ivan ivan"
     And I click on last name field
     Then Text "Whitespaces are not allowed" appears
-
-Feature: Registration - Password/Confirm password
-  Scenario: Registration - Password/Confirm password - Alphanumeric and special characters
-    When I navigate to registration page

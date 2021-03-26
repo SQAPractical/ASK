@@ -1,4 +1,3 @@
-
 #AC-493 / AC-189 original Registartion Last Name
 Feature: Registration - Last Name
 
@@ -63,11 +62,11 @@ Feature: Registration - Last Name
     And I click on email field
     Then Text "Should contain only latin characters" appears
 
-    Scenario: Registration - Last Name - Alphanumeric but no special characters
-      When I navigate to registration page
-      And I type first name "Ivan"
-      And I type last name "Test@!%^&"
-      And I click on email field
-      Then Text "Should contain only latin characters" appears
+  Scenario: Registration - Last Name - Alphanumeric but no special characters
+    When I navigate to registration page
+    And I type first name "Ivan"
+    And I type last name "Test@!%^&"
+    And I click on email field
+    Then Text "Should contain only latin characters" appears
 
 
