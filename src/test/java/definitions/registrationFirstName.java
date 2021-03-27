@@ -61,4 +61,5 @@ public class registrationFirstName {
     public void iClickOnLastNameField() {
         getDriver().findElement(By.xpath("//*[@formcontrolname='lastName']")).click();
     }
+
 }
