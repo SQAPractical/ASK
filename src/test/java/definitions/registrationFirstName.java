@@ -44,7 +44,7 @@ public class registrationFirstName {
 
     @Then("Text {string} appears")
     public void textAppears(String expectedText) throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         String xpath = "//*[contains(text(),'"+expectedText+"')]";
         WebElement element = getDriver().findElement(By.xpath(xpath));
