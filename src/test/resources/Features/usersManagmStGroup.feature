@@ -11,7 +11,7 @@ Feature: Change User's Group
     And I clear text field "New User's Group"
     And I type newGroup "New User's Group" "ABC"
     And I click on "Change"
-    Then "ABC" appears
+    Then group name "ABC" appears
 
 
 

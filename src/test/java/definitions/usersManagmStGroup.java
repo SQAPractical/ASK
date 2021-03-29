@@ -34,15 +34,15 @@ public class usersManagmStGroup {
     }
 
 
-    @Then("{string} appears")
-    public void textAppears(String nameGroup) throws InterruptedException {
-        Thread.sleep(5000);
-
-        String xpath = "//tr[contains(., \"Group\")][contains(., " + nameGroup +")]";
-        WebElement element = getDriver().findElement(By.xpath(xpath));
-
-        assertThat(element.isDisplayed()).isTrue();
-    }
+//    @Then("{string} appears")
+//    public void textAppears(String nameGroup) throws InterruptedException {
+//        Thread.sleep(5000);
+//
+//        String xpath = "//tr[contains(., \"Group\")][contains(., " + nameGroup +")]";
+//        WebElement element = getDriver().findElement(By.xpath(xpath));
+//
+//        assertThat(element.isDisplayed()).isTrue();
+//    }
 
 
     @And("I click on the {string}")
@@ -58,4 +58,13 @@ public class usersManagmStGroup {
         Thread.sleep(5000);
     }
 
+    @Then("group name {string} appears")
+    public void groupNameAppears(String nameGroup) throws InterruptedException {
+        Thread.sleep(5000);
+
+        String xpath = "//tr[contains(., \"Group\")][contains(., " + nameGroup +")]";
+        WebElement element = getDriver().findElement(By.xpath(xpath));
+
+        assertThat(element.isDisplayed()).isTrue();
+    }
 }
