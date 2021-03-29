@@ -1,3 +1,4 @@
+@Regression
 Feature: Registration - First Name
   Scenario: Registration - First name - Latin characters
     When I navigate to registration page

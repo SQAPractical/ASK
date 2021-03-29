@@ -1,6 +1,6 @@
 #AC-493 / AC-189 original Registartion Last Name
+@Regression
 Feature: Registration - Last Name
-
 
   Scenario: Registration - Last name - Latin characters
     When I navigate to registration page

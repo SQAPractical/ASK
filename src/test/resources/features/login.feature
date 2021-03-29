@@ -1,3 +1,4 @@
+@Regression
 Feature: Log in
   Scenario: Log in : Valid email and valid password
     When I navigate to login page
@@ -53,8 +54,8 @@ Feature: Log in
 
   Scenario: Log in : Email field Case insensitive
     When I navigate to login page
-    And I type email "TEACHER@GMAIL.COM"
-    And I type password "12345wdedcAbc"
+    And I type email "TEACHER1@GMAIL.COM"
+    And I type password "12345Abc"
     And I click on Sign In button
-    Then Text "Anna Ivanova" appears
+    Then Text "Should be a valid email" appears
 
