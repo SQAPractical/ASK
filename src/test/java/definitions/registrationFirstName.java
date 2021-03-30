@@ -44,11 +44,7 @@ public class registrationFirstName {
 
     @Then("Text {string} appears")
     public void textAppears(String expectedText) throws InterruptedException {
-<<<<<<< HEAD
-        Thread.sleep(2000);
-=======
         Thread.sleep(3000);
->>>>>>> master
 
         String xpath = "//*[contains(text(),'"+expectedText+"')]";
         WebElement element = getDriver().findElement(By.xpath(xpath));
@@ -66,13 +62,12 @@ public class registrationFirstName {
         getDriver().findElement(By.xpath("//*[@formcontrolname='lastName']")).click();
     }
 
-<<<<<<< HEAD
-=======
-    //For the Secon Name verify whitespaces are not allowed
+
+    //For the Second Name verify whitespaces are not allowed
     @And("I click on email field")
     public void iClickOnEmailField() {
 
         getDriver().findElement(By.xpath("//input[@placeholder='Email']")).click();
     }
->>>>>>> master
+
 }

@@ -9,29 +9,30 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class usersManagementTeacherOptions {
-    @And("I click on User's Management button")
-    public void iClickOnUserSManagementButton() throws InterruptedException {
-        Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//*[contains(@href,'users-management')]")).click();
-    }
+//    @And("I click on User's Management button")
+//    public void iClickOnUserSManagementButton() throws InterruptedException {
+//        Thread.sleep(2000);
+//        getDriver().findElement(By.xpath("//*[contains(@href,'users-management')]")).click();
+//    }
 
-    @And("I click on Teachers button")
-    public void iClickOnTeachersButton() throws InterruptedException {
-        Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//div[contains(text(),'Teachers')]")).click();
-    }
+//    @And("I click on Teachers button")
+//    public void iClickOnTeachersButton() throws InterruptedException {
+//        Thread.sleep(2000);
+//        getDriver().findElement(By.xpath("//div[contains(text(),'Teachers')]")).click();
+//    }
 
     @And("I click on {string} name")
-    public void iClickOnName(String personName) {
+    public void iClickOnName(String personName) throws InterruptedException {
+        Thread.sleep(2000);
         String xpath = "//*[contains(text(),'"+personName+"')]";
         getDriver().findElement(By.xpath(xpath)).click();
     }
 
-    @And("I click on Options button")
-    public void iClickOnOptionsButton() throws InterruptedException {
-        Thread.sleep(1000);
-        getDriver().findElement(By.xpath("//*[@class='mat-raised-button mat-accent']")).click();
-    }
+//    @And("I click on Options button")
+//    public void iClickOnOptionsButton() throws InterruptedException {
+//        Thread.sleep(1000);
+//        getDriver().findElement(By.xpath("//*[@class='mat-raised-button mat-accent']")).click();
+//    }
 
     @And("I click on Change User's Name button")
     public void iClickOnChangeUserSNameButton() throws InterruptedException {
@@ -84,15 +85,15 @@ public class usersManagementTeacherOptions {
         getDriver().findElement(By.xpath("//*[contains(text(),'close')]/../..")).click();
     }
 
-    @And("I click on Change User's Role button")
-    public void iClickOnChangeUserSRoleButton() throws InterruptedException {
-        Thread.sleep(1000);
-        getDriver().findElement(By.xpath("//button[contains(.,'Role')]")).click();
-    }
+//    @And("I click on Change User's Role button")
+//    public void iClickOnChangeUserSRoleButton() throws InterruptedException {
+//        Thread.sleep(1000);
+//        getDriver().findElement(By.xpath("//button[contains(.,'Role')]")).click();
+//    }
 
-    @And("I click on {string} button")
-    public void iClickOnButton(String actionsWithRole) throws InterruptedException {
-        Thread.sleep(1000);
-        getDriver().findElement(By.xpath("//span[contains(text(),'"+actionsWithRole+"')]")).click();
-    }
+//    @And("I click on {string} button")
+//    public void iClickOnButton(String actionsWithRole) throws InterruptedException {
+//        Thread.sleep(1000);
+//        getDriver().findElement(By.xpath("//span[contains(text(),'"+actionsWithRole+"')]")).click();
+//    }
 }
