@@ -44,7 +44,7 @@ public class registrationFirstName {
 
     @Then("Text {string} appears")
     public void textAppears(String expectedText) throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         String xpath = "//*[contains(text(),'"+expectedText+"')]";
         WebElement element = getDriver().findElement(By.xpath(xpath));
@@ -72,4 +72,13 @@ public class registrationFirstName {
     public void iClickButton(String arg0) {
 
     }
+
+
+    //For the Second Name verify whitespaces are not allowed
+    @And("I click on email field")
+    public void iClickOnEmailField() {
+
+        getDriver().findElement(By.xpath("//input[@placeholder='Email']")).click();
+    }
+
 }
