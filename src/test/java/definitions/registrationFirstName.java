@@ -57,9 +57,20 @@ public class registrationFirstName {
         getDriver().findElement(By.xpath("//input[@formcontrolname='firstName']")).click();
     }
 
+
     @And("I click on last name field")
     public void iClickOnLastNameField() {
-        getDriver().findElement(By.xpath("//*[@formcontrolname='lastName']")).click();
+        getDriver().findElement(By.xpath("//input[@formcontrolname='lName']")).click();
+    }
+
+    @And("I click Change User's Role")
+    public void iClickChangeUserSRole() {
+        
+    }
+
+    @And("I click {string} button")
+    public void iClickButton(String arg0) {
+
     }
 
 
