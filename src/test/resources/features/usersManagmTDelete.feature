@@ -13,34 +13,34 @@ Feature: User's management - Options in Teacher's account - Delete user
     And I type password "12345M"
     And I confirm password "12345M"
     And I click Register me button
-    Then Text "Users already exist and activated" appears
+    Then Text "You have been Registered." appears
 
-    Scenario: With teacher's account can be change Student account to Teacher account
+  Scenario: With teacher's account can be change Student account to Teacher account
+    When I navigate to login page
+    And I type email "Teacher3@gmail.com"
+    And I type password "12345Abc"
+    And I click on Sign In button
+    And I push the  button User's management
+    And I click the button Student
+    And I click "Teacher M" name
+    And I click the button Option
+    And I click on Change User's Role button
+    And I click Change Role button
+    Then Text "TEACHER" appears
+
+
+
+  Scenario: With teacher's account can be deleted the user from Teachers list
     When I navigate to login page
     And I type email "teacher3@gmail.com"
     And I type password "12345Abc"
     And I click on Sign In button
     And I push the  button User's management
-      And I click the button Student
-      And I click "Teacher M" name
-      And I click the button Option
-      And I click Change User's Role
-      And  I click "Change Role" button
-      Then User became a teacher
-
-
-      Scenario: With teacher's account can be deleted the user from Teachers list
-        When I navigate to login page
-        And I type email "teacher3@gmail.com"
-        And I type password "12345Abc"
-        And I click on Sign In button
-        And I push the  button User's management
-        And I push the  button Teacher
-        And I click "Teacher Management" name
-        And I click the button Option
-        And I click "Delete User" button
-        And I click "Delete" button
-        Then Text "User was deleted. " appears
+    And I push the  button Teacher
+    And I click "A B" name
+    And I click the button Option
+    And I click on Delete User button
+    And I click Delete button
 
 
 

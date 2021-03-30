@@ -83,7 +83,7 @@ public class usersManagmTDelete {
 
     @Then("User became a teacher")
     public void userBecameATeacher() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         getDriver().findElement(By.xpath("//td[contains(text(),'TEACHER')]")).click();
     }
 
@@ -97,6 +97,26 @@ public class usersManagmTDelete {
     }
 
 
+    @And("I click on Delete User button")
+    public void iClickOnDeleteUserButton() throws InterruptedException {
+        Thread.sleep(1000);
+        getDriver().findElement(By.xpath("//button[contains(.,'Delete')]")).click();
+    }
+
+
+    @And("I click Delete button")
+    public void iClickDeleteButton() throws InterruptedException {
+        Thread.sleep(1000);
+        getDriver().findElement(By.xpath("//span[contains(text(),'Delete')]")).click();
+    }
+
+    @Then("User Delete")
+    public void userDelete() throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//div[@class='mat-tab-labels']")).click();
+    }
 }
+
+
 
 
