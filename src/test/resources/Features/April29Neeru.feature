@@ -1,5 +1,6 @@
 Feature:test
-  Scenario:test1234
+  Scenario:test2
+    This is our second try
     Hello
     Hi how r u?
     How is everyone doing?
@@ -7,6 +8,7 @@ Feature:test
     here is the new changes.
 
 
+>>>>>>> master
 
 
 
