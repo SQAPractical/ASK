@@ -1,6 +1,10 @@
 Feature:test
-  Scenario:How is everyone doing?
+  Scenario:test1234
+    Hello
+    Hi how r u?
+    How is everyone doing?
     zzzzzzzzzz
+
 
 
 
