@@ -1,6 +1,6 @@
 Feature: Test
-  Scenario: Hello hello 123 Sofia
-    Test001
+  Scenario: My scenario name (Sofia)
+    12345ABC Abc
     test
     Change
     56789
