@@ -1,5 +1,4 @@
-Feature: text
-  Scenario: 234
-    Hello
-    hi
+Feature: Hello
+  Scenario: 123098
+    Iys Friday
 Helllloooo
