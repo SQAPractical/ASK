@@ -1,5 +1,5 @@
 Feature: good morning
-  Scenario: 123
-    Hello
-    hi
-Hello how are you
+  Scenario: 123098
+    Iys Friday
+Helllloooo
+
