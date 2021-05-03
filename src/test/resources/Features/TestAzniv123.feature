@@ -1,4 +1,0 @@
-sfdnk
-  vsf
-  dsdfbd
-  dvdg
