@@ -27,11 +27,10 @@ public class registrationFirstName {
         getDriver().findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys(LName);
     }
 
-    @And("I type {string}")
-    public void iType(String Email) {
+    @And("I type Email {string}")
+    public void iTypeEmail(String Email) {
         getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(Email);
     }
-
 
     @And("I type Group Code {string}")
     public void iTypeGroupCode(String GCode) {
@@ -70,4 +69,5 @@ public class registrationFirstName {
         assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isFalse();
 
     }
+
 }
