@@ -1,7 +1,7 @@
 Feature: Registration - First name
   Scenario: Registration - First name - Latin char
     When I navigate to registration page
-    And I type First Name "Barbara"
+    And I typeirst Name "Barbara"
     And I type Last Name "Smith"
     And I type "barbara@gmail.com"
     And I type Group Code "Test"
