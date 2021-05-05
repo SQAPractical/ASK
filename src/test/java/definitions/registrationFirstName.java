@@ -43,11 +43,6 @@ public class registrationFirstName {
         getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(Password);
     }
 
-    @And("I confirm Password {string}")
-    public void iConfirmPassword(String CPassword) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(CPassword);
-    }
-
     @And("I click on Register Me button")
     public void iClickOnRegisterMeButton() {
         getDriver().findElement(By.xpath("//*[@type='submit']")).click();
@@ -70,4 +65,8 @@ public class registrationFirstName {
 
     }
 
+    @And("I type confirm Password {string}")
+    public void iConfirmPassword(String CPassword) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(CPassword);
+    }
 }

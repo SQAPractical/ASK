@@ -32,4 +32,7 @@ public class login {
         assertThat(actualAttributeValue).isEqualTo(attributeValue);
 
     }
-}
+
+    @And("I confirm Password {string}")
+    public void iConfirmPassword(String arg0) {
+    }
