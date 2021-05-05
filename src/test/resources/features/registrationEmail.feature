@@ -49,7 +49,7 @@ Feature: Registration - Email
     When I navigate to registration page
     And I type First Name "Barbara"
     And I type Last Name "Smith"
-    And I type Email "ttudent1student1student1student1student1student1student1student1@gmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgma.comcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcom"
+    And I type Email "ptudent1student1student1student1student1student1student1student1@gmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgma.comcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcom"
     And I type Group Code "ABC"
     And I type Password "12345Abc"
     And I confirm Password "12345Abc"
