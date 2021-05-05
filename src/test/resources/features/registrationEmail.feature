@@ -49,12 +49,12 @@ Feature: Registration - Email
     When I navigate to registration page
     And I type First Name "Barbara"
     And I type Last Name "Smith"
-    And I type Email "qtudent1student1student1student1student1student1student1student1@gmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgma.comcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcom"
+    And I type Email "ttudent1student1student1student1student1student1student1student1@gmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgma.comcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcom"
     And I type Group Code "ABC"
     And I type Password "12345Abc"
     And I confirm Password "12345Abc"
     And I click on Register Me button
-    Then Text "This field is required" appears
+    Then Text "You have been Registered." appears
 
   Scenario: Registration - Email - Local part with 63+1 characters followed by (.)
     When I navigate to registration page
