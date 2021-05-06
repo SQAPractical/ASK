@@ -16,8 +16,9 @@ public class login {
     }
 
     @And("I click on Sign In button")
-    public void iClickOnSignInButton() {
+    public void iClickOnSignInButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+        Thread.sleep(2000);
     }
 
     @Then("Password displays in bullets, copy and cut disabled")

@@ -9,28 +9,28 @@ import org.openqa.selenium.WebElement;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class SettingsPassword {
-    @When("I navigate to login page")
-    public void iNavigateToLoginPage() {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
+public class settingsPassword {
+//    @When("I navigate to login page")
+//    public void iNavigateToLoginPage() {
+//        getDriver().get("http://ask-stage.portnov.com/#/login");
+//
+//    }
 
-    }
+//    @And("I type Email {string}")
+//    public void iTypeEmail(String Email) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(Email);
+//    }
 
-    @And("I type Email {string}")
-    public void iTypeEmail(String Email) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(Email);
-    }
+//    @And("I type Password {string}")
+//    public void iTypePassword(String Password) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(Password);
+//    }
 
-    @And("I type Password {string}")
-    public void iTypePassword(String Password) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(Password);
-    }
-
-    @And("I click Sign In button")
-    public void iClickSignInButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
-        Thread.sleep(3000);
-    }
+//    @And("I click Sign In button")
+//    public void iClickSignInButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
+//        Thread.sleep(3000);
+//    }
 
     @And("I click Settings")
     public void iClickSettings() {
@@ -69,7 +69,7 @@ public class SettingsPassword {
 
     @Then("Error {string} appears")
     public void errorAppears(String Error) {
-        String xPath = "//*[normalize-space()='Entered passwords should match']";
+        String xPath = "//*[contains(text(), '"+Error+"')]";
         assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isTrue();
 
 
@@ -81,4 +81,11 @@ public class SettingsPassword {
 
     }
 
+    @And("I click on Log Out on left menu")
+    public void iClickOnLogOutOnLeftMenu() throws InterruptedException {
+        getDriver().findElement(By.xpath("//h5[contains(text(),'Log Out')]")).click();
+        Thread.sleep(1000);
+        getDriver().findElement(By.xpath("//span[contains(text(),'Log Out')]")).click();
+        Thread.sleep(2000);
+    }
 }
