@@ -14,14 +14,15 @@ public class assignGradedBy {
         Thread.sleep(2000);
     }
 
-    @And("I click on Create New Quiz button")
-    public void iClickOnCreateNewQuizButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[text()='Create New Quiz']")).click();
-        Thread.sleep(3000);
-    }
+//    @And("I click on Create New Quiz button")
+//    public void iClickOnCreateNewQuizButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//span[text()='Create New Quiz']")).click();
+//        Thread.sleep(3000);
+//    }
 
     @And("I type {string} in the title of the quiz")
-    public void iTypeInTheTitleOfTheQuiz(String quiz) {
+    public void iTypeInTheTitleOfTheQuiz(String quiz) throws InterruptedException {
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(quiz);
     }
 
@@ -75,9 +76,11 @@ public class assignGradedBy {
 
     @And("I Select created {string} quiz to assign")
     public void iSelectCreatedQuizToAssign(String Nquiz) throws InterruptedException{
-        getDriver().findElement(By.xpath("//div[@class='mat-select-arrow-wrapper'][@xpath='1']")).sendKeys(Nquiz);
+        getDriver().findElement(By.xpath("//span[contains(text(),'Select Quiz To Assign')]/..")).click();
+
+        getDriver().findElement(By.xpath("//span[contains(text(),'"+Nquiz+"')]")).click();
         Thread.sleep(1000);
-        sendKeys(Keys.ENTER);
+//        sendKeys(Keys.ENTER);
     }
 
     //choose group wwww in the filter and click Enter
@@ -87,6 +90,19 @@ public class assignGradedBy {
         Thread.sleep(1000);
     // getDriver().findElement(By.xpath("//*[text()='wwww'][@xpath='8']")).click();
     // press enter with sendKeys method
+        sendKeys(Keys.ENTER);
+        Thread.sleep(5000);
+    }
+
+
+    @And("I click on group filter {string}")
+    public void iClickOnGroupFilter(String group) throws InterruptedException {
+        getDriver().findElement(By.xpath("//mat-select[@placeholder='Group Filter']")).click();
+        getDriver().findElement(By.xpath("//mat-select[@placeholder='Group Filter']")).click();
+
+        Thread.sleep(1000);
+        // getDriver().findElement(By.xpath("//*[text()='wwww'][@xpath='8']")).click();
+        // press enter with sendKeys method
         sendKeys(Keys.ENTER);
         Thread.sleep(5000);
     }
@@ -102,19 +118,38 @@ public class assignGradedBy {
     //    getDriver().findElement(By.xpath("//mat-pseudo-checkbox[@class='mat-pseudo-checkbox mat-pseudo-checkbox-checked']")).click();
     }
 
+
+    @And("I choose student {string} from the list")
+    public void iChooseStudentFromTheList(String studName) throws InterruptedException {
+        getDriver().findElement(By.xpath("//div[@class='mat-list-text'][contains(.,'"+studName+"')]")).click();
+        Thread.sleep(2000);
+    }
+
     @And("I click on give Assignment button")
     public void iClickOnGiveAssignmentButton() {
         getDriver().findElement(By.xpath("//span[text()='Give Assignment']")).click();
     }
 
-    @And("I click on Dropdown icon from the right in the List of Assignments")
-    public void iClickOnDropdownIconFromTheRightInTheListOfAssignments() {
-        getDriver().findElement(By.xpath("//span[@class='mat-expansion-indicator ng-tns-c16-33390 ng-trigger ng-trigger-indicatorRotate ng-star-inserted']")).click();
-    }
 
-    @And("I verify if a quiz can be graded by nobody {string} when assignment is not submitted")
-    public void iVerifyIfAQuizCanBeGradedByNobodyWhenAssignmentIsNotSubmitted(String NB) {
-        String result = getDriver().findElement(By.xpath("//td[@class='graded-by'][@xpath='1']")).getText();
-        Assertions.assertThat(result).contains(NB);
+
+    @And("I click on Dropdown icon for quiz {string} in the List of Assignments")
+    public void iClickOnDropdownIconForQuizInTheListOfAssignments(String QuizName) throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Quiz: "+QuizName+"')]")).click();
+
+    }
+//    @And("I verify if a quiz can be graded by nobody {string} when assignment is not submitted")
+//    public void iVerifyIfAQuizCanBeGradedByNobodyWhenAssignmentIsNotSubmitted(String NB) {
+//        String result = getDriver().findElement(By.xpath("//td[@class='graded-by'][@xpath='1']")).getText();
+//        Assertions.assertThat(result).contains(NB);
+//    }
+
+    @And("I verify if a quiz {string} graded by {string}")
+    public void iVerifyIfAQuizGradedBy(String QuizName, String GradedBy) throws InterruptedException {
+        Thread.sleep(2000);
+        String result = getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Quiz: "+QuizName+"')]/../../..//td[@class='graded-by']")).getText();
+        System.out.println("Text from element: " + result);
+        Assertions.assertThat(result).contains(GradedBy);
+
     }
 }

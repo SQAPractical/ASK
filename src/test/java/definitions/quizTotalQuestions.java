@@ -20,7 +20,7 @@ public class quizTotalQuestions {
 
     @And("I type Title Of The Quiz {string}")
     public void iTypeTitleOfTheQuiz(String quizName) throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(quizName);
     }
 
