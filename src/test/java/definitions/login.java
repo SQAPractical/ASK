@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import static java.lang.Thread.sleep;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
@@ -31,4 +32,4 @@ public class login {
 
         assertThat(actualAttributeValue).isEqualTo(attributeValue);
     }
-}
+    }

@@ -1,5 +1,5 @@
-Feature: Log In
-  Scenario: Log In - Valid email / valid password
+Feature: Log in
+  Scenario: Log in - Valid email / valid password
     When I navigate to login page
     And I type Email "student0@gmail.com"
     And I type Password "12345Abc"
@@ -17,3 +17,4 @@ Feature: Log In
     When I navigate to login page
     And I type Password "12345Abc"
     Then Password displays in bullets, copy and cut disabled
+
