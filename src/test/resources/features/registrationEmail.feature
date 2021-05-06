@@ -45,7 +45,7 @@ Feature: Registration - Email
 
   Scenario: Registration - Email - Local part with 64, 63, 63 characters
   # Scenario covers TC A5-237, A5-239, A5-243, A5-245
-  # Change first char in the email every time before running (unable to create more then one account with the same email)
+  # Change first char in the email every time before running (unable to create more then one account with this email format)
     When I navigate to registration page
     And I type First Name "Barbara"
     And I type Last Name "Smith"
