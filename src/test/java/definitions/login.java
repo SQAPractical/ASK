@@ -18,7 +18,7 @@ public class login {
     public void iNavigateToLoginPage() {
         getDriver().get("http://ask-stage.portnov.com/#/login");
     }
-    @And("I click  on Sign-In button")
+    @And("I click on Sign In button")
     public void iClickOnSignInButton() {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
     }
