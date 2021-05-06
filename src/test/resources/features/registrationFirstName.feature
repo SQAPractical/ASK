@@ -3,7 +3,7 @@ Feature: Registration - First name
     When I navigate to registration page
     And I type First Name "Barbara"
     And I type Last Name "Smith"
-    And I type "barbara@gmail.com"
+    And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
     And I confirm Password "12345Abc"
@@ -14,7 +14,7 @@ Feature: Registration - First name
     When I navigate to registration page
     And I type First Name ""
     And I type Last Name "Smith"
-    And I type "barbara@gmail.com"
+    And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
     And I confirm Password "12345Abc"
@@ -25,7 +25,7 @@ Feature: Registration - First name
     When I navigate to registration page
     And I type First Name "maxcharactersmaxcharactersmaxcharactersmaxcharactersmaxcharactersmaxcharactersmaxcharactersmaxchar"
     And I type Last Name "Smith"
-    And I type "barbara@gmail.com"
+    And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
     And I confirm Password "12345Abc"
@@ -36,7 +36,7 @@ Feature: Registration - First name
     When I navigate to registration page
     And I type First Name "maxcharactersmaxcharactersmaxcharactersmaxcharactersmaxcharactersmaxcharactersmaxcharactersmaxcharm"
     And I type Last Name "Smith"
-    And I type "barbara@gmail.com"
+    And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
     And I confirm Password "12345Abc"
@@ -47,7 +47,7 @@ Feature: Registration - First name
     When I navigate to registration page
     And I type First Name "B"
     And I type Last Name "Smith"
-    And I type "barbara@gmail.com"
+    And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
     And I confirm Password "12345Abc"
@@ -58,7 +58,7 @@ Feature: Registration - First name
     When I navigate to registration page
     And I type First Name "B arbara"
     And I type Last Name "Smith"
-    And I type "barbara@gmail.com"
+    And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
     And I confirm Password "12345Abc"
@@ -69,7 +69,7 @@ Feature: Registration - First name
     When I navigate to registration page
     And I type First Name "B12345"
     And I type Last Name "Smith"
-    And I type "barbara@gmail.com"
+    And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
     And I confirm Password "12345Abc"
@@ -80,7 +80,7 @@ Feature: Registration - First name
     When I navigate to registration page
     And I type First Name "B@&%"
     And I type Last Name "Smith"
-    And I type "barbara@gmail.com"
+    And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
     And I confirm Password "12345Abc"

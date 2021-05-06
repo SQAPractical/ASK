@@ -1,6 +1,7 @@
 package definitions;
 
 import cucumber.api.java.en.And;
+
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
@@ -12,6 +13,7 @@ public class registrationFirstName {
     @When("I navigate to registration page")
     public void iNavigateToRegistrationPage() {
         getDriver().get("http://ask-stage.portnov.com/#/registration");
+
     }
 
     @And("I type First Name {string}")
@@ -21,14 +23,14 @@ public class registrationFirstName {
 
     @And("I type Last Name {string}")
     public void iTypeLastName(String LName) {
+
         getDriver().findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys(LName);
     }
 
-    @And("I type {string}")
-    public void iType(String Email) {
+    @And("I type Email {string}")
+    public void iTypeEmail(String Email) {
         getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(Email);
     }
-
 
     @And("I type Group Code {string}")
     public void iTypeGroupCode(String GCode) {
@@ -59,7 +61,7 @@ public class registrationFirstName {
         String xPath = "//*[contains(text(),'"+text+"')]";
         assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isTrue();
     }
-
+  
     @Then("Text {string} should not appears")
     public void textShouldNotAppears(String Msg) throws InterruptedException{
         Thread.sleep(2000);
@@ -67,4 +69,5 @@ public class registrationFirstName {
         assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isFalse();
 
     }
+
 }

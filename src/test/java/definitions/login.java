@@ -15,20 +15,19 @@ public class login {
         getDriver().get("http://ask-stage.portnov.com/#/login");
     }
 
-    @And("I click sign-in button")
-    public void iClickSignInButton() {
+    @And("I click on Sign In button")
+    public void iClickOnSignInButton() {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
     }
 
-       @Then("Password displays in bullets, copy and cut disabled")
+    @Then("Password displays in bullets, copy and cut disabled")
     public void passwordDisplaysInBulletsCopyAndCutDisabled() {
         String attribute = "type";
         String attributeValue = "password";
 
-           WebElement passwordField = getDriver().findElement(By.xpath("//*[@formcontrolname='password']"));
-           String actualAttributeValue = passwordField.getAttribute(attribute);
+        WebElement passwordField = getDriver().findElement(By.xpath("//input[@formcontrolname='password']"));
+        String actualAttributeValue = passwordField.getAttribute(attribute);
 
-           assertThat(actualAttributeValue).isEqualTo(attributeValue);
-
+        assertThat(actualAttributeValue).isEqualTo(attributeValue);
     }
 }
