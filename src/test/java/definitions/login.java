@@ -35,31 +35,31 @@ public class login {
     @And("I click on User's Management button")
     public void iClickOnUserSManagementButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[normalize-space()=\"User's Management\"]")).click();
-        sleep(7000);
+        sleep(6000);
     }
 
     @And("click on Options button")
     public void clickOnOptionsButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[@class='mat-raised-button mat-accent']")).click();
-        sleep(7000);
+        sleep(6000);
     }
 
     @And("click on Change User's Roll")
     public void clickOnChangeUserSRoll() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[2]")).click();
-        sleep(7000);
+        sleep(6000);
     }
 
     @And("click on Change Role button")
     public void clickOnChangeRoleButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[normalize-space()='Change Role']")).click();
-        sleep(7000);
+        sleep(6000);
     }
 
     @And("click on Delete User button")
     public void clickOnDeleteUserButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[3]")).click();
-        sleep(7000);
+        sleep(6000);
     }
 
     @Then("account Elis Fox can't be found in the Teachers list")
@@ -73,27 +73,25 @@ public class login {
     @And("click on Teachers button")
     public void clickOnTeachersButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//div[contains(text(),'Teachers')]")).click();
-        sleep(7000);
+        sleep(6000);
     }
 
     @And("I click on Elis Fox")
     public void iClickOnElisFox() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[normalize-space()='Elis Fox']")).click();
-        sleep(7000);
+        sleep(6000);
     }
 
     @And("click on Delete button")
     public void clickOnDeleteButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[@class='mat-button mat-warn']")).click();
-        sleep(7000);
+        sleep(6000);
     }
 
-    @Then("I'm NOT navigated to the {string}")
-    public void iMNOTNavigatedToThe(String arg0) throws InterruptedException {
-        Thread.sleep(2000);
-        String Msg = "Elis Fox";
-        String xPath = "//*[contains(text(),'"+Msg+"')]";
-        assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isFalse();
+    @And("I verify that there is no teacher {string}")
+    public void iVerifyThatThereIsNoTeacher(String TeacherName) throws InterruptedException {
+            Thread.sleep(6000);
+            String xPath = "//*[contains(text(),'"+TeacherName+"')]";
+            assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isFalse();
+        }
     }
-}
-

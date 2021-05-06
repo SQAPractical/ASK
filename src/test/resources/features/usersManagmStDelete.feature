@@ -26,4 +26,4 @@ Feature: User's management
     And click on Delete User button
     And click on Delete button
     And click on Teachers button
-    Then I'm NOT navigated to the "Elis Fox"
+    And I verify that there is no teacher "Elis Fox"
