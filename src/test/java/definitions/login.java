@@ -20,7 +20,6 @@ public class login {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
     }
 
-
     @Then("Password displays in bullets, copy and cut disabled")
     public void passwordDisplaysInBulletsCopyAndCutDisabled() {
         String attribute = "type";
@@ -30,6 +29,5 @@ public class login {
         String actualAttributeValue = passwordField.getAttribute(attribute);
 
         assertThat(actualAttributeValue).isEqualTo(attributeValue);
-
     }
 }
