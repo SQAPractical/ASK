@@ -1,2 +1,0 @@
-Feature: teest
-  Scenario: test
