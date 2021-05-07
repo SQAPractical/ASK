@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class Login {
+public class login {
     @When("I navigate to login page")
     public void iNavigateToLoginPage() {
         getDriver().get("http://ask-stage.portnov.com/#/login");
@@ -19,6 +19,10 @@ public class Login {
     @And("I click on sign-in button")
     public void iClickOnSignInButton() {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+    }
+
+    @Then("text {string} appears")
+    public void textAppears(String arg0) {
     }
 
     @Then("Password displays in bullets, copy and cut disabled")
