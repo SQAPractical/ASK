@@ -29,14 +29,14 @@ public class A5564 {
     }
     @And("I click on {string} menu item")
     public void iClickOnMenuItem(String arg0) throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(500);
         getDriver().findElement(By.xpath("//a[@href='/#/users-management']")).click();
     }
 
     @And("I click on {string} account")
-    public void iClickOnAccount(String arg0) throws InterruptedException {
-        Thread.sleep(3000);
-        getDriver().findElement(By.xpath("//*[contains(text(), 'Jon Snow')]/..//*[contains(text(), 'Group: 1234')]")).click();
+    public void iClickOnAccount(String userName) throws InterruptedException {
+        Thread.sleep(500);
+        getDriver().findElement(By.xpath("//*[contains(text(), '"+userName+"')]/..//*[contains(text(), 'Group: 1234')]")).click();
     }
 
     @And("I click on {string} button")
@@ -55,20 +55,29 @@ public class A5564 {
         Thread.sleep(500);
         String xpath =  "//input[@formcontrolname='name']";
         getDriver().findElement(By.xpath(xpath)).clear();
-        getDriver().findElement(By.xpath(xpath)).sendKeys("ABC");
+        getDriver().findElement(By.xpath(xpath)).sendKeys(arg0);
     }
 
     @And("I click on {string} changeButton")
-    public void iClickOnChangeButton(String arg0) {
+    public void iClickOnChangeButton(String arg0) throws InterruptedException {
+        Thread.sleep(3000);
         getDriver().findElement(By.xpath("//button[@class='mat-raised-button mat-primary']")).click();
     }
 
     @Then("displayed Group {string}")
     public void displayedGroup(String arg0) {
+        getDriver().findElement(By.xpath("//*[text()[contains(.,'ABC')]]"));
     }
 
     @Then("disabled {string} button")
     public void disabledButton(String arg0) {
         getDriver().findElement(By.xpath("//mat-dialog-container//..//button[@disabled]"));
     }
+
+    @And("I delete data in {string} input field")
+    public void iDeleteDataInInputField(String arg0) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).clear();
+    }
+
+
 }
