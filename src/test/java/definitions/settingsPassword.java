@@ -60,11 +60,11 @@ public class settingsPassword {
     }
 
 
-    @Then("text {string} appears")
-    public void textAppears(String text) {
-        String xPath = "//mat-form-field[1]//div[1]//div[3]";
-        assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isTrue();
-    }
+//    @Then("text {string} appears")
+//    public void textAppears(String text) {
+//        String xPath = "//mat-form-field[1]//div[1]//div[3]";
+//        assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isTrue();
+//    }
 
 
     @Then("Error {string} appears")
