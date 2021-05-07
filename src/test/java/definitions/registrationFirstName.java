@@ -13,7 +13,6 @@ public class registrationFirstName {
     @When("I navigate to registration page")
     public void iNavigateToRegistrationPage() {
         getDriver().get("http://ask-stage.portnov.com/#/registration");
-
     }
 
     @And("I type First Name {string}")
@@ -27,33 +26,25 @@ public class registrationFirstName {
         getDriver().findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys(LName);
     }
 
-    @And("I type {string}")
-    public void iType(String Email) {
+    @And("I type Email {string}")
+    public void iTypeEmail(String Email) {
         getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(Email);
     }
-
 
     @And("I type Group Code {string}")
     public void iTypeGroupCode(String GCode) {
         getDriver().findElement(By.xpath("//input[@formcontrolname='group']")).sendKeys(GCode);
     }
 
-
     @And("I type Password {string}")
     public void iTypePassword(String Password) {
         getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(Password);
-    }
-
-    @And("I confirm Password {string}")
-    public void iConfirmPassword(String CPassword) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(CPassword);
     }
 
     @And("I click on Register Me button")
     public void iClickOnRegisterMeButton() {
         getDriver().findElement(By.xpath("//*[@type='submit']")).click();
     }
-
 
     @Then("Text {string} appears")
     public void textAppears(String text) throws InterruptedException {
@@ -68,6 +59,10 @@ public class registrationFirstName {
         Thread.sleep(2000);
         String xPath = "//*[contains(text(),'"+Msg+"')]";
         assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isFalse();
+    }
 
+    @And("I type confirm Password {string}")
+    public void iConfirmPassword(String CPassword) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(CPassword);
     }
 }
