@@ -20,18 +20,22 @@ Feature: Quiz-Title
     When I navigate to login page
     And I type Email "teacher1@gmail.com"
     And I type Password "12345Abc"
-    And I click on Sign In button
+    And I click on sign-in button
     And I click on Quizzes button
     And I click on Create New Quiz button
-    And I click in Title of the Quiz field
-    And I click outside Title of the Quiz field
-    Then Message "This field is required" appears
+    And I type Title Of The Quiz "123"
+    And I delete Title of Quiz
+#    And I click in Title of the Quiz field
+    And I click on Add Question
+#    And I click outside Title of the Quiz field
+    Then Text "This field is required" appears
+
 
   Scenario: Title Max 128 characters
     When I navigate to login page
     And I type Email "teacher1@gmail.com"
     And I type Password "12345Abc"
-    And I click on Sign In button
+    And I click on sign-in button
     And I click on Quizzes button
     And I click in Title of the Quiz field
     And I type Title Of The Quiz "ahjhjhhhhhssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss&&&&&&&&&&&&&&&&&&&&&&&&"
@@ -44,21 +48,21 @@ Feature: Quiz-Title
     When I navigate to login page
     And I type Email "teacher1@gmail.com"
     And I type Password "12345Abc"
-    And I click on Sign In button
+    And I click on sign-in button
     And I click on Quizzes button
     And I click on Create New Quiz button
     And I type Title Of The Quiz "ahjhjhhhhhssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss&&&&&&&&&&&&&&&&&&&&&&&&a"
     And I click on Add Question
     And I click on Select "Textual" question type
     And I type text "Test"
-    And Text "ahjhjhhhhhssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss&&&&&&&&&&&&&&&&&&&&&&&&a" appears
+    And Text "Too long, should be no more than 128 characters" appears
     #Then Page "http://ask-stage.portnov.com/#/quiz-builder" appears
 
   Scenario: Quiz - Title- Min 1 Characters
     When I navigate to login page
     And I type Email "teacher1@gmail.com"
     And I type Password "12345Abc"
-    And I click on Sign In button
+    And I click on sign-in button
     And I click on Quizzes button
     And I click on Create New Quiz button
     And I type Title Of The Quiz "a"
