@@ -80,3 +80,4 @@ Feature: Log In
     And I Highlight the password
     And I Press COMMAND + C on your keyboard
     Then Copy fails
+
