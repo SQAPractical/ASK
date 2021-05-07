@@ -1,10 +1,13 @@
 package definitions;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
 import static java.lang.Thread.sleep;
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class usersManagement {
@@ -34,8 +37,9 @@ public class usersManagement {
     }
 
     @And("I choose {string}")
-    public void iChoose(String AlexTeacher)  {
-        getDriver().findElement(By.xpath("//*[contains(text(), 'Alex Teacher')]/.. ")).click();
+    public void iChoose(String StudName) throws InterruptedException {
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//*[contains(text(), '"+StudName+"')]/..")).click();
 
 
     }
@@ -48,8 +52,9 @@ public class usersManagement {
     }
 
     @And("I select Change User's Name")
-    public void iSelectChangeUserSName()  {
+    public void iSelectChangeUserSName() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[@role='menuitem'][1]")).click();
+        Thread.sleep(2000);
 
     }
 
@@ -60,11 +65,33 @@ public class usersManagement {
 
 
     @And("I click on Change button")
-    public void iClickOnChangeButton() {
+    public void iClickOnChangeButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[@class='mat-raised-button mat-primary']")).click();
+        Thread.sleep(3000);
     }
 
 
+    @And("I delete previous name")
+    public void iDeletePreviousName() throws InterruptedException {
+        getDriver().findElement(By.xpath("//*[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.COMMAND, "a"));
+        getDriver().findElement(By.xpath("//*[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.DELETE));
+
+        getDriver().findElement(By.xpath("//*[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        getDriver().findElement(By.xpath("//*[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.DELETE));
+
+
+
+
+        Thread.sleep(3000);
+    }
+
+    @Then("New student name is {string}")
+    public void newStudentNameIs(String NewStudName) {
+        String actualStudentName = getDriver().findElement(By.xpath("//*[@class='horizontal-group']")).getText();
+        System.out.println(actualStudentName);
+        assertThat(actualStudentName).contains(NewStudName);
+
+    }
 }
 
 
