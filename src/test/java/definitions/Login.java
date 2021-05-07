@@ -30,6 +30,7 @@ public class Login {
         String attribute = "type";
         String attributeValue = "password";
 
+
         WebElement passwordField = getDriver().findElement(By.xpath("//input[@formcontrolname='password']"));
           String actualAttributeValue = passwordField.getAttribute(attribute);
 
