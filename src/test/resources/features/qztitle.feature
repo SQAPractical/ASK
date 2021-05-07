@@ -3,7 +3,7 @@ Feature: Quiz-Title
     When I navigate to login page
     And I type Email "teacher1@gmail.com"
     And I type Password "12345Abc"
-    And I click on Sign In button
+    And I click on sign-in button
     And I click on Quizzes button
     And I click on Create New Quiz button
     And I type Title Of The Quiz "Ras123$#$%^^^&&"
