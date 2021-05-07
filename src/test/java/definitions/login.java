@@ -21,6 +21,10 @@ public class Login {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
     }
 
+    @Then("text {string} appears")
+    public void textAppears(String arg0) {
+    }
+
     @Then("Password displays in bullets, copy and cut disabled")
     public void passwordDisplaysInBulletsCopyAndCutDisabled() {
         String attribute = "type";
