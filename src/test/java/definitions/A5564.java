@@ -67,5 +67,8 @@ public class A5564 {
     public void displayedGroup(String arg0) {
     }
 
-
+    @Then("disabled {string} button")
+    public void disabledButton(String arg0) {
+        getDriver().findElement(By.xpath("//mat-dialog-container//..//button[@disabled]"));
+    }
 }
