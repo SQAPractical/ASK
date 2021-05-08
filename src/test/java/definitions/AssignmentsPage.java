@@ -26,7 +26,7 @@ public class AssignmentsPage {
 
     @And("I select a student {string}")
     public void iSelectAStudent(String Student) throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'"+Student+"')]")).click();
+        getDriver().findElement(By.xpath("//div[@class='mat-list-text'][contains(.,'"+Student+"')]")).click();
         Thread.sleep(2000);
     }
 
@@ -34,5 +34,10 @@ public class AssignmentsPage {
     public void iClickGiveAssignmentButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Give Assignment')]")).click();
         Thread.sleep(2000);
+    }
+
+    @And("I click on a new Assignment")
+    public void iClickOnANewAssignment() {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Give Assignment')]")).click();
     }
 }
