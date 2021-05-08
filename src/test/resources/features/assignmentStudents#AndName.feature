@@ -9,3 +9,4 @@ Feature: Assignments -Students# and name
     And I click on Select Quiz To Assign
     And I select "Test_2" quiz
     And I select a student "Alex Teacher"
+    And I click Give Assignment button
