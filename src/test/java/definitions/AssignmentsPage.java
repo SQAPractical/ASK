@@ -3,6 +3,7 @@ package definitions;
 import cucumber.api.java.en.And;
 import org.openqa.selenium.By;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class AssignmentsPage {
@@ -38,6 +39,18 @@ public class AssignmentsPage {
 
     @And("I click on a new Assignment")
     public void iClickOnANewAssignment() {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Give Assignment')]")).click();
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Quiz: Test_2')]")).click();
+    }
+
+    @And("I verify that a {string} present there")
+    public void iVerifyThatAPresentThere(String Student) {
+        assertThat(getDriver().findElement(By.xpath("//td[contains(text(),'"+Student+"')]")).isDisplayed()).isTrue();
+    }
+
+    @And("I delete the assignment")
+    public void iDeleteTheAssignment() {
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Quiz: Test_2')]//..//*[contains(text(),'more_vert')]")).click();
+        getDriver().findElement(By.xpath("//span[contains(text(),'Delete Assignment')]")).click();
+        getDriver().findElement(By.xpath("//span[contains(text(),'Delete')]")).click();
     }
 }

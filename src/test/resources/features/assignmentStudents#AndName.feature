@@ -11,6 +11,8 @@ Feature: Assignments -Students# and name
     And I select a student "Alex Teacher"
     And I click Give Assignment button
     And I click on a new Assignment
+    And I verify that a "Alex Teacher" present there
+    And I delete the assignment
 
   Scenario: Assignments -Student#and name - Teacher can assign quiz for students individually- several students
     When I navigate to login page
