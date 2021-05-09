@@ -28,8 +28,3 @@ Feature: Quiz Total Questions
     And I type "Quiz" in different question fields 51 times
     And I click on save button
     Then I'm NOT navigated to the "List of Quizzes"
-
-
-
-
-

@@ -1,3 +1,92 @@
+Feature: Registration - First Name
+  Scenario: Registration - First Name - Latin char
+    When I navigate to registration page
+    And I type First Name "Ivan"
+    And I type Last Name "Ivanov"
+    And I type Email "test@test.com"
+    And I type Group Code "QWE"
+    And I type Password "12345"
+    And I type confirm Password "12345"
+    And I click on Register Me button
+    Then Text "You have been Registered." appears
+
+
+    Scenario: Registration - First Name - Field required
+        When I navigate to registration page
+        And I type Last Name "Ivanov"
+        And I type Email "test@test.com"
+        And I type Group Code "QWE"
+        And I type Password "12345"
+        And I type confirm Password "12345"
+        And I click on Register Me button
+        Then TextOne "This field is required" appears
+
+    Scenario: Registration - First Name - Max char
+        When I navigate to registration page
+        And I type First Name2 "Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!"
+        And I type Last Name "I"
+        And I type Email "test@test.com"
+        And I type Group Code "QWE"
+        And I type Password "12345"
+        And I type confirm Password "12345"
+        And I click on Register Me button
+        Then TextThree "Should contain only latin characters" appears
+
+  Scenario: Registration - First Name - Max+1 char
+    When I navigate to registration page
+    And I type First Name4 "Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!o"
+    And I type Last Name "I"
+    And I type Email "test@test.com"
+    And I type Group Code "QWE"
+    And I type Password "12345"
+    And I type confirm Password "12345"
+    And I click on Register Me button
+    Then TextThree "Should contain only latin characters" appears
+
+
+  Scenario: Registration - First Name - Min char
+    When I navigate to registration page
+    And I type First Name5 "I"
+    And I type Last Name "Ivanov"
+    And I type Email "test@test.com"
+    And I type Group Code "QWE"
+    And I type Password "12345"
+    And I type confirm Password "12345"
+    And I click on Register Me button
+    Then Text "You have been Registered." appears
+
+  Scenario: Registration - First Name - Whitespaces are not allowed
+    When I navigate to registration page
+    And I type First Name6 "Iva n123!@$"
+    And I type Last Name "Ivanov"
+    And I type Email "test@test.com"
+    And I type Group Code "QWE"
+    And I type Password "12345"
+    And I type confirm Password "12345"
+    And I click on Register Me button
+    Then TextThree "Should contain only latin characters" appears
+
+  Scenario: Registration - First Name - Digits
+    When I navigate to registration page
+    And I type First Name7 "5555"
+    And I type Last Name "Ivanov"
+    And I type Email "test@test.com"
+    And I type Group Code "QWE"
+    And I type Password "12345"
+    And I type confirm Password "12345"
+    And I click on Register Me button
+    Then TextThree "Should contain only latin characters" appears
+
+  Scenario: Registration - First Name - Spacial Characters
+    When I navigate to registration page
+    And I type First Name8 "!@#"
+    And I type Last Name "Ivanov"
+    And I type Email "test@test.com"
+    And I type Group Code "QWE"
+    And I type Password "12345"
+    And I type confirm Password "12345"
+    And I click on Register Me button
+    Then TextThree "Should contain only latin characters" appears
 Feature: Registration - First name
   Scenario: Registration - First name - Latin char
     When I navigate to registration page
