@@ -52,7 +52,7 @@ public class quizMaximumPossibleScore {
 
     @And("I select {string} in the List of Quizzes")
     public void iSelectInTheListOfQuizzes(String quizName) throws InterruptedException {
-            Thread.sleep(500);
+            Thread.sleep(1000);
             getDriver().findElement(By.xpath("(//*[contains(text(), '"+quizName+"')]/../../..)[last()]")).click();
     }
 
@@ -66,7 +66,7 @@ public class quizMaximumPossibleScore {
 
     @And("I delete {string} from the list of quizzes")
     public void iDeleteFromTheListOfQuizzes(String quizToDelete) throws InterruptedException {
-
+        Thread.sleep(1000);
         String deleteButton = "(//*[contains(text(), '"+quizToDelete+"')]/../../..)[last()]//*[contains(text(),'Delete')]";
         String deleteButtonConfirmation = "//button[@aria-label='Close dialog'][*[contains(text(), 'Delete')]]";
 
