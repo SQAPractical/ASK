@@ -10,9 +10,10 @@ import static support.TestContext.getDriver;
 
 public class quizMaximumPossibleScore {
     @And("I click on a single-choice radio-button for {int} times in {int} quizzes")
-    public void iClickOnASingleChoiceRadioButtonForTimesInQuizzes(int numberOfTimes, int arg1) {
+    public void iClickOnASingleChoiceRadioButtonForTimesInQuizzes(int numberOfTimes, int arg1) throws InterruptedException {
         for (int j = 1; j <= numberOfTimes; j++) {
             getDriver().findElement(By.xpath("//*[contains(text(), 'Q" + j + "')]/..")).click();
+            Thread.sleep(2000);
             getDriver().findElement(By.xpath("(//*[contains(text(), 'Single-Choice')]/.)[" + j + "]")).click();
         }
     }
@@ -27,9 +28,10 @@ public class quizMaximumPossibleScore {
     }
 
     @And("I click on option {int} radio-button {int} times in {int} quizzes")
-    public void iClickOnOptionRadioButtonTimesInQuizzes(int arg0, int arg1, int numberOfQuizzes) {
+    public void iClickOnOptionRadioButtonTimesInQuizzes(int arg0, int arg1, int numberOfQuizzes) throws InterruptedException {
         for (int j = 1; j <= numberOfQuizzes; j++) {
             getDriver().findElement(By.xpath("//*[contains(text(), 'Q" + j + "')]/..")).click();
+            Thread.sleep(1000);
             getDriver().findElement(By.xpath("(//textarea[@placeholder='Option 1*']/../../../../../mat-radio-button)[" + j + "]")).click();
         }
     }
@@ -56,7 +58,8 @@ public class quizMaximumPossibleScore {
 
 
     @Then("{string} quiz has a maximum possible score of {int}")
-    public void quizHasAMaximumPossibleScoreOf(String quizName, int maxScore) {
+    public void quizHasAMaximumPossibleScoreOf(String quizName, int maxScore) throws InterruptedException {
+        Thread.sleep(1000);
         String maxPointsChosen = "(//*[contains(text(),'"+quizName+"')])[last()]/../../..//table//td[contains(text(), 'Maximum')]/following-sibling::td[text()='" +maxScore+ "']";
         assertThat(getDriver().findElement(By.xpath(maxPointsChosen)).isDisplayed()).isTrue();
     }
