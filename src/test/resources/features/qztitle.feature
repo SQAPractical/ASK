@@ -1,5 +1,6 @@
 @fullRegression
 Feature: Quiz-Title
+  @Smoke
   Scenario: Allowable characters: Alphanumeric and Sp characters
     When I navigate to login page
     And I type Email "teacher1@gmail.com"

@@ -1,5 +1,6 @@
 @fullRegression
 Feature: Registration - First Name
+  @Smoke
   Scenario: Registration - First Name - Latin char
     When I navigate to registration page
     And I type First Name "Ivan"
