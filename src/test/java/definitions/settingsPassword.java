@@ -33,7 +33,8 @@ public class settingsPassword {
 //    }
 
     @And("I click Settings")
-    public void iClickSettings() {
+    public void iClickSettings() throws InterruptedException {
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//h5[normalize-space()='Settings']")).click();
     }
 
