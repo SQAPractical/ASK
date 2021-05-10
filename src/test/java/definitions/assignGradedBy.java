@@ -76,8 +76,9 @@ public class assignGradedBy {
 
     @And("I Select created {string} quiz to assign")
     public void iSelectCreatedQuizToAssign(String Nquiz) throws InterruptedException{
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//span[contains(text(),'Select Quiz To Assign')]/..")).click();
-
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//span[contains(text(),'"+Nquiz+"')]")).click();
         Thread.sleep(1000);
 //        sendKeys(Keys.ENTER);
