@@ -63,12 +63,14 @@ public class quizMaximumPossibleScore {
 
     @And("I delete {string} from the list of quizzes")
     public void iDeleteFromTheListOfQuizzes(String quizToDelete) throws InterruptedException {
-        getDriver().findElement(By.xpath("(//*[contains(text(), '"+quizToDelete+"')])[last()]/../..")).click();
-        String deleteButton = "//(*[contains(text(),'"+quizToDelete+"')])[last()]/../../..//button[span[text()='Delete']]";
+
+        String deleteButton = "(//*[contains(text(), '"+quizToDelete+"')]/../../..)[last()]//*[contains(text(),'Delete')]";
         String deleteButtonConfirmation = "//button[@aria-label='Close dialog'][*[contains(text(), 'Delete')]]";
+
         getDriver().findElement(By.xpath(deleteButton)).click();
         Thread.sleep(2000);
         getDriver().findElement(By.xpath(deleteButtonConfirmation)).click();
+        Thread.sleep(3000);
 
     }
 

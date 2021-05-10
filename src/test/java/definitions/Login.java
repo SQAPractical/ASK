@@ -32,9 +32,9 @@ public class Login {
 
 
         WebElement passwordField = getDriver().findElement(By.xpath("//input[@formcontrolname='password']"));
-          String actualAttributeValue = passwordField.getAttribute(attribute);
+        String actualAttributeValue = passwordField.getAttribute(attribute);
 
-          assertThat(actualAttributeValue).isEqualTo(attributeValue);
+        assertThat(actualAttributeValue).isEqualTo(attributeValue);
 
     }
 }
