@@ -6,8 +6,6 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
-//import org.openqa.selenium.interactions.Actions;
-import java.awt.datatransfer.Clipboard;
 import java.awt.Toolkit;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
