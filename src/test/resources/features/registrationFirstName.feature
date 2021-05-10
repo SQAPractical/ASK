@@ -79,14 +79,14 @@ Feature: Registration - First Name
 
   Scenario: Registration - First Name - Spacial Characters
     When I navigate to registration page
-    And I type First Name8 "!@#"
+    And I type First Name "!@#"
     And I type Last Name "Ivanov"
     And I type Email "test@test.com"
     And I type Group Code "QWE"
     And I type Password "12345"
     And I type confirm Password "12345"
     And I click on Register Me button
-    Then TextThree "Should contain only latin characters" appears
+    Then Text "Should contain only latin characters" appears
 Feature: Registration - First name
   Scenario: Registration - First name - Latin char
     When I navigate to registration page
@@ -172,6 +172,6 @@ Feature: Registration - First name
     And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "Should contain only latin characters" appears

@@ -6,7 +6,7 @@ Feature: Registration - Email
     And I type Email "barbara00000@gmail.com"
     And I type Group Code "ABC"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "You have been Registered." appears
 
@@ -17,7 +17,7 @@ Feature: Registration - Email
     And I type Email "barbara+1@gmail.com"
     And I type Group Code "ABC"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "You have been Registered." appears
 
@@ -28,7 +28,7 @@ Feature: Registration - Email
     And I type Email "barbara@gmail.com"
     And I type Group Code "ABC"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "You have been Registered." appears
 
@@ -39,7 +39,7 @@ Feature: Registration - Email
     And I type Email ""
     And I type Group Code "ABC"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "This field is required" appears
 
@@ -52,7 +52,7 @@ Feature: Registration - Email
     And I type Email "ptudent1student1student1student1student1student1student1student1@gmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgma.comcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcom"
     And I type Group Code "ABC"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "You have been Registered." appears
 
@@ -63,7 +63,7 @@ Feature: Registration - Email
     And I type Email "student1@gmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmai.com"
     And I type Group Code "ABC"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "Should be a valid email address" appears
 
@@ -74,7 +74,7 @@ Feature: Registration - Email
     And I type Email "student1student1student1student1student1student1student1student11@gmail.com"
     And I type Group Code "ABC"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "Should be a valid email address" appears
 
@@ -85,7 +85,7 @@ Feature: Registration - Email
     And I type Email "student1@gmail.comcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomm"
     And I type Group Code "ABC"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "Should be a valid email address" appears
 
@@ -96,7 +96,7 @@ Feature: Registration - Email
     And I type Email "sstudent1student1student1student1student1student1student1student1@ggmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgmailgma.comcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomm"
     And I type Group Code "ABC"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "Should be a valid email address" appears
 
@@ -107,7 +107,7 @@ Feature: Registration - Email
     And I type Email "student 1@gmail.com"
     And I type Group Code "ABC"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "Should be a valid email address" appears
 
