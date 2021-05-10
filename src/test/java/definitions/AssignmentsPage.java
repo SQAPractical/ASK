@@ -58,9 +58,7 @@ public class AssignmentsPage {
         Thread.sleep(1000);
         getDriver().findElement(By.xpath("//span[contains(text(),'Delete Assignment')]")).click();
         Thread.sleep(1000);
-        getDriver().switchTo().activeElement().click();
-        String del = getDriver().findElement(By.xpath("//span[contains(text(),'Delete')]")).getText();
-        System.out.println(del);
-        getDriver().findElement(By.xpath("//body/div[2]/div[3]/div[1]/mat-dialog-container[1]/ac-modal-confirmation[1]/div[2]/button[2]")).click();
+        getDriver().findElement(By.xpath("(//*[@aria-label='Close dialog'])[2]")).click();
+        Thread.sleep(2000);
     }
 }

@@ -23,7 +23,12 @@ Feature: Assignments -Students# and name
     And I click on Create New Assignment button
     And I click on Select Quiz To Assign
     And I select "Test_2" quiz
-    And I select a student "Alex Teacher"
+    And I select a student "Olga S"
     And I select a student "Ivan Ivanov"
     And I select a student "T Pavlova"
     And I click Give Assignment button
+    And I click on a new Assignment
+    And I verify that a "Olga S" present there
+    And I verify that a "Ivan Ivanov" present there
+    And I verify that a "T Pavlova" present there
+    And I delete the assignment
