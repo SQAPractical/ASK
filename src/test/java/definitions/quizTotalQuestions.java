@@ -58,6 +58,7 @@ public class quizTotalQuestions {
 
     @And("I click on save button")
     public void iClickOnSaveButton() throws InterruptedException {
+        Thread.sleep(3000);
         getDriver().findElement(By.xpath("//*[contains(text(),'Save')]/..")).click();
         Thread.sleep(7000);
     }
