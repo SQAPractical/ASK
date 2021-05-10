@@ -6,7 +6,7 @@ Feature: Registration - Group Code
     And I type Email "barbara@gmail.com"
     And I type Group Code "An12!$"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "You have been Registered." appears
 
@@ -16,7 +16,7 @@ Feature: Registration - Group Code
     And I type Last Name "Smith"
     And I type Email "barbara@gmail.com"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "This field is required" appears
 
@@ -27,7 +27,7 @@ Feature: Registration - Group Code
     And I type Email "barbara@gmail.com"
     And I type Group Code "1"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "You have been Registered." appears
 
@@ -38,7 +38,7 @@ Feature: Registration - Group Code
     And I type Email "barbara@gmail.com"
     And I type Group Code "123456"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "You have been Registered." appears
 
@@ -49,7 +49,7 @@ Feature: Registration - Group Code
     And I type Email "barbara@gmail.com"
     And I type Group Code "1234567"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "Too long. Should be no more than 6 characters" appears
 
@@ -60,6 +60,6 @@ Feature: Registration - Group Code
     And I type Email "barbara@gmail.com"
     And I type Group Code "12 456"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "Whitespaces are not allowed" appears
