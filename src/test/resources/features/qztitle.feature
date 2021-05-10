@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Quiz-Title
   Scenario: Allowable characters: Alphanumeric and Sp characters
     When I navigate to login page

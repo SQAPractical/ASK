@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Assignment - Graded by
   Scenario: Assignment - Graded by - Nobody
     When I navigate to login page

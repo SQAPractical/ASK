@@ -1,3 +1,4 @@
+@fullRegression
 Feature: User's management
   Scenario: User's management - Options in Teacher's account - Delete Teacher
   # Create student account

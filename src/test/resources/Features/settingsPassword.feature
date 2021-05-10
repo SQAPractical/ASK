@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Settings - Password
   Scenario: Settings - Password - Allowable characters: Alphanumeric and special characters
     When I navigate to login page
