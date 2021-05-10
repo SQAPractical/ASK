@@ -10,6 +10,16 @@ Feature: Registration - First Name
     And I click on Register Me button
     Then Text "You have been Registered." appears
 
+  Scenario: Registration - First name - special characters not allowed
+    When I navigate to registration page
+    And I type First Name "B@&%"
+    And I type Last Name "Smith"
+    And I type Email "barbara@gmail.com"
+    And I type Group Code "Test"
+    And I type Password "12345Abc"
+    And I type confirm Password "12345Abc"
+    And I click on Register Me button
+    Then Text "Should contain only latin characters" appears
 
     Scenario: Registration - First Name - Field required
         When I navigate to registration page
@@ -19,34 +29,34 @@ Feature: Registration - First Name
         And I type Password "12345"
         And I type confirm Password "12345"
         And I click on Register Me button
-        Then TextOne "This field is required" appears
+        Then Text "This field is required" appears
 
     Scenario: Registration - First Name - Max char
         When I navigate to registration page
-        And I type First Name2 "Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!"
+        And I type First Name "wergwrewergwerfwwergwrewergwerfwwergwrewergwerfwwergwrewergwerfwwergwrewergwerfwwergwrewergwerfwrr"
         And I type Last Name "I"
         And I type Email "test@test.com"
         And I type Group Code "QWE"
         And I type Password "12345"
         And I type confirm Password "12345"
         And I click on Register Me button
-        Then TextThree "Should contain only latin characters" appears
+        Then Text "You have been Registered." appears
 
   Scenario: Registration - First Name - Max+1 char
     When I navigate to registration page
-    And I type First Name4 "Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!@$Ivan123!o"
+    And I type First Name "wergwrerwergwerfwwergwrewergwerfwwergwrewergwerfwwergwrewergwerfwwergwrewergwerfwwergwrewergwerfwrr"
     And I type Last Name "I"
     And I type Email "test@test.com"
     And I type Group Code "QWE"
     And I type Password "12345"
     And I type confirm Password "12345"
     And I click on Register Me button
-    Then TextThree "Should contain only latin characters" appears
+    Then Text "Should be no more than 98 char" appears
 
 
   Scenario: Registration - First Name - Min char
     When I navigate to registration page
-    And I type First Name5 "I"
+    And I type First Name "I"
     And I type Last Name "Ivanov"
     And I type Email "test@test.com"
     And I type Group Code "QWE"
@@ -57,25 +67,25 @@ Feature: Registration - First Name
 
   Scenario: Registration - First Name - Whitespaces are not allowed
     When I navigate to registration page
-    And I type First Name6 "Iva n123!@$"
+    And I type First Name "Iva n123!@$"
     And I type Last Name "Ivanov"
     And I type Email "test@test.com"
     And I type Group Code "QWE"
     And I type Password "12345"
     And I type confirm Password "12345"
     And I click on Register Me button
-    Then TextThree "Should contain only latin characters" appears
+    Then Text "Should contain only latin characters" appears
 
   Scenario: Registration - First Name - Digits
     When I navigate to registration page
-    And I type First Name7 "5555"
+    And I type First Name "5555"
     And I type Last Name "Ivanov"
     And I type Email "test@test.com"
     And I type Group Code "QWE"
     And I type Password "12345"
     And I type confirm Password "12345"
     And I click on Register Me button
-    Then TextThree "Should contain only latin characters" appears
+    Then Text "Should contain only latin characters" appears
 
   Scenario: Registration - First Name - Spacial Characters
     When I navigate to registration page
@@ -87,7 +97,7 @@ Feature: Registration - First Name
     And I type confirm Password "12345"
     And I click on Register Me button
     Then Text "Should contain only latin characters" appears
-Feature: Registration - First name
+
   Scenario: Registration - First name - Latin char
     When I navigate to registration page
     And I type First Name "Barbara"
@@ -95,7 +105,7 @@ Feature: Registration - First name
     And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "You have been Registered." appears
 
@@ -106,7 +116,7 @@ Feature: Registration - First name
     And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "This field is required" appears
 
@@ -117,20 +127,9 @@ Feature: Registration - First name
     And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "You have been Registered." appears
-
-  Scenario: Registration - First name - Max characters 98+1
-    When I navigate to registration page
-    And I type First Name "maxcharactersmaxcharactersmaxcharactersmaxcharactersmaxcharactersmaxcharactersmaxcharactersmaxcharm"
-    And I type Last Name "Smith"
-    And I type Email "barbara@gmail.com"
-    And I type Group Code "Test"
-    And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
-    And I click on Register Me button
-    Then Text "You have been Registered." should not appears
 
   Scenario: Registration - First name - Min 1 character
     When I navigate to registration page
@@ -139,7 +138,7 @@ Feature: Registration - First name
     And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "You have been Registered." appears
 
@@ -150,7 +149,7 @@ Feature: Registration - First name
     And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
+    And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "Should contain only latin characters" appears
 
@@ -161,17 +160,8 @@ Feature: Registration - First name
     And I type Email "barbara@gmail.com"
     And I type Group Code "Test"
     And I type Password "12345Abc"
-    And I confirm Password "12345Abc"
-    And I click on Register Me button
-    Then Text "Should contain only latin characters" appears
-
-  Scenario: Registration - First name - Allowable characters: special characters
-    When I navigate to registration page
-    And I type First Name "B@&%"
-    And I type Last Name "Smith"
-    And I type Email "barbara@gmail.com"
-    And I type Group Code "Test"
-    And I type Password "12345Abc"
     And I type confirm Password "12345Abc"
     And I click on Register Me button
     Then Text "Should contain only latin characters" appears
+
+
