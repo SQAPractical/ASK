@@ -8,20 +8,20 @@ import org.openqa.selenium.By;
 import static support.TestContext.getDriver;
 
 public class A5564 {
-    @When("I navigate to login page")
-    public void iNavigateToLoginPage() {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
-    }
+//    @When("I navigate to login page")
+//    public void iNavigateToLoginPage() {
+//        getDriver().get("http://ask-stage.portnov.com/#/login");
+//    }
 
-    @And("I type {string}")
-    public void iType(String email) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
-    }
+//    @And("I type {string}")
+//    public void iType(String email) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
+//    }
 
-    @And("I type Password {string}")
-    public void iTypePassword(String password) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
-    }
+//    @And("I type Password {string}")
+//    public void iTypePassword(String password) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
+//    }
 
     @And("I click on Sing In button")
     public void iClickOnSingInButton() {
@@ -29,14 +29,15 @@ public class A5564 {
     }
     @And("I click on {string} menu item")
     public void iClickOnMenuItem(String arg0) throws InterruptedException {
-        Thread.sleep(500);
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//a[@href='/#/users-management']")).click();
     }
 
     @And("I click on {string} account")
     public void iClickOnAccount(String userName) throws InterruptedException {
-        Thread.sleep(500);
-        getDriver().findElement(By.xpath("//*[contains(text(), '"+userName+"')]/..//*[contains(text(), 'Group: 1234')]")).click();
+        Thread.sleep(1000);
+//        getDriver().findElement(By.xpath("//*[contains(text(), '"+userName+"')]/..//*[contains(text(), 'Group: 1234')]")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(), '"+userName+"')]")).click();
     }
 
     @And("I click on {string} button")
