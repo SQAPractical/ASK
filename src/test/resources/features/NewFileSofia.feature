@@ -1,5 +1,0 @@
- ergerawf
-  awfdswaef
-  awfds
-
-  vsx
