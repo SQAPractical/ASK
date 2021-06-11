@@ -1,4 +1,4 @@
 Scenario:
-  Test Kate&Elena
+  Kate's changes
   Test Lena
   Test.....
