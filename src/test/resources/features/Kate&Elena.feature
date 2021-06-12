@@ -1,4 +1,4 @@
 Scenario:
-  Kate's changes
+  2 Scenario conflict/Local conflicts
   Test Lena
   Test.....
