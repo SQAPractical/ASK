@@ -1,4 +1,4 @@
 Scenario:
-  2 Scenario conflict/Local conflicts
+  Kate's changes today Friday
   Test Lena
   Test.....
