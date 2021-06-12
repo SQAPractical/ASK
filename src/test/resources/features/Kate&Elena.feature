@@ -1,4 +1,4 @@
 Scenario:
-  Kate's changes
+  Kate's changes today Friday
   Test Lena
   Test.....
