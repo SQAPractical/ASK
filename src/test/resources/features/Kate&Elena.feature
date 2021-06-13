@@ -9,3 +9,4 @@ Conflict line hayley evans
 Given I navigate to url
   When I open url
   Then some info present
+  And I will do some changes
