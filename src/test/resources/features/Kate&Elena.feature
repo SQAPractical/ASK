@@ -1,6 +1,6 @@
 Scenario:
   Test.....with Kate
-  2 Line
+  2 Line with changes for local conflict
   3 Line
   Saturday Elena
   Conflict line
