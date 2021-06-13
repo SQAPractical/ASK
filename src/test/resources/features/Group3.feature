@@ -4,3 +4,4 @@ Test1
   Sunday
   Test3 KateMate
   Test4 KateMate local conflict
+  Test4 Elena Ch did change this line
