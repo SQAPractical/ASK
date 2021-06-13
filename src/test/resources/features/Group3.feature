@@ -1,5 +1,5 @@
-Conflict line 1
-  Test2
+hayleys line
+Test2
   Conflict group3
   Sunday Funday
 This is a test
