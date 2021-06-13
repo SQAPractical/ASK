@@ -1,6 +1,5 @@
-New conflict
-  conflict 2
-hayleys line
+Conflict line 1 We are doing great job!
+  Test2
 Test2
   Conflict group3
   Sunday Funday
