@@ -1,5 +1,5 @@
-Conflict line 1
-  Test2
+New conflict
+  conflict 2
   Conflict group3
   Sunday Funday
 This is a test
@@ -16,3 +16,4 @@ Test4 KateMate local conflict
   Test conflict Ellen
   Test 5
   Hello world, hi girls it is nice to work with you!
+  Test conflicts
