@@ -3,4 +3,4 @@ Test1
   Conflict group3
   Sunday
   Test3 KateMate
-  Test4
+  Test4 KateMate local conflict
