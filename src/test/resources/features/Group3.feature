@@ -1,4 +1,4 @@
-Conflict line 1
+Conflict line 1 We are doing great job!
   Test2
   Conflict group3
   Sunday Funday
