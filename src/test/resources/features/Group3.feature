@@ -1,7 +1,12 @@
 Conflict line 1 We are doing great job!
   Test2
+Test2
   Conflict group3
   Sunday Funday
+Conflict line 123 Kate
+Line 2
+Line 3
+Conflict group3
 This is a test
 Test2
   Conflict group3
@@ -16,3 +21,7 @@ Test4 KateMate local conflict
   Test conflict Ellen
   Test 5
   Hello world, hi girls it is nice to work with you!
+  Test conflicts
+Today no conflict!!!
+Test conflict Ellen
+Hello world, hi girls it is nice to work with you!
