@@ -1,4 +1,6 @@
 Test1
   Test2
-  Test3 Conflict from Elena Ch
+  Conflict group3
+  Sunday
+  Test3 KateMate
   Test4
