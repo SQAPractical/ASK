@@ -1,4 +1,4 @@
 Scenario:
   Kate's changes today Friday
-  Test Lena saturday
-  Test.....is going well
+  Test Lena Saturday
+  Test.....with Kate
