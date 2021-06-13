@@ -1,3 +1,7 @@
+Conflict line 1
+  Test2
+  Conflict group3
+  Sunday Funday
 This is a test
 Test2
   Conflict group3
@@ -9,6 +13,6 @@ Test1 Scenario1: GitHub conflict
   Test3 KateMate
   Today no conflict!!!
 Test4 KateMate local conflict
+  Test conflict Ellen
   Test 5
   Hello world, hi girls it is nice to work with you!
-
