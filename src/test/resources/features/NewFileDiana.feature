@@ -1,5 +1,0 @@
- qwerty
-  asdfg
-  zxcv
-
-  zxcvbn

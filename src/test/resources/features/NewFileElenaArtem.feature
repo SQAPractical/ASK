@@ -1,3 +1,0 @@
-Feature:
-  Elena
-  Artemenkova
