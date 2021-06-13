@@ -1,4 +1,7 @@
 Scenario:
   Kate's changes today Friday
-  Test Lena Saturday
   Test.....with Kate
+  Saturday Kate
+  Conflict line
+  Test.....
+
