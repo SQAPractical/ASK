@@ -4,7 +4,7 @@ Scenario:
   2 Line with changes for local conflict
   3 Line
   Saturday Elena
-  Conflict line
+  New Conflict Group3
 Given I navigate to url
   When I open url
   Then some info present
