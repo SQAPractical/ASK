@@ -4,4 +4,5 @@ Scenario:
   Saturday Kate
   Conflict line
   Test.....
-
+Given I navigate to url
+  When I open url
