@@ -1,4 +1,4 @@
 Test1
   Test2
-  Test3
+  Conflict group3
   Test4
