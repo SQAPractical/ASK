@@ -1,3 +1,3 @@
 Feature: test
   Scenario: 123
-    Scenario:
+    Given i open
