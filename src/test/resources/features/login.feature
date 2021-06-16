@@ -9,4 +9,4 @@ Feature: Login
   Scenario: Login - password displays in bullets, copy, cut - disabled
     When I navigate to login page
     And I type password "12345Abc"
-    Then password displays in bullets, copy, cut - disabled
+    Then Password displays in bullets, copy, cut - disabled
