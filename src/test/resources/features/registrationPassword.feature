@@ -1,7 +1,6 @@
 Feature: Registration Password
   Scenario: Registration-Password/Confirm password-Alphanumeric and special characters are allowed
    When I navigate to registration page
-    And I click on register me button
     And I type first name "Ana"
     And I type last name "T"
     And I type email "qa123@gmail.com"
@@ -13,7 +12,6 @@ Feature: Registration Password
 
    Scenario: Registration-Password/Confirm password-Field is required
     When I navigate to registration page
-    And I click on register me button
     And I type first name "Ana"
     And I type last name "T"
     And I type email "qa123@gmail.com"
@@ -25,7 +23,6 @@ Feature: Registration Password
 
     Scenario: Registration-password/confirm password-minimum 5 characters are allowed
      When I navigate to registration page
-     And I click on register me button
      And I type first name "Ana"
      And I type last name "T"
      And I type email "qa123@gmail.com"
@@ -37,7 +34,6 @@ Feature: Registration Password
 
      Scenario: Registration-Password/Confirm Password-maximum 32 characters are allowed
       When I navigate to registration page
-      And I click on register me button
       And I type first name "Ana"
       And I type last name "T"
       And I type email "qa123@gmail.com"
@@ -49,7 +45,6 @@ Feature: Registration Password
 
       Scenario: Registration-Password/Confirm Password- 4 characters are not allowed
        When I navigate to registration page
-       And I click on register me button
        And I type first name "Ana"
        And I type last name "T"
        And I type email "qa123@gmail.com"
@@ -61,7 +56,6 @@ Feature: Registration Password
 
        Scenario: Registration-Password/Confirm Password- 33 characters are not allowed
         When I navigate to registration page
-        And I click on register me button
         And I type first name "Ana"
         And I type last name "T"
         And I type email "qa123@gmail.com"
@@ -69,11 +63,10 @@ Feature: Registration Password
         And I type password "012345678901234567890123456789123"
         And I confirm password "012345678901234567890123456789123"
         And I click on register me button
-        Then Text "Whitespaces are not allowed" appears
+        Then Text "Too Long. Should be no more than 32 characters" appears
 
         Scenario: Registration-Password/Confirm Password-Leading spaces are not allowed
          When I navigate to registration page
-         And I click on register me button
          And I type first name "Ana"
          And I type last name "T"
          And I type email "qa123@gmail.com"
@@ -84,7 +77,6 @@ Feature: Registration Password
 
          Scenario: Registration-Password/Confirm password- Whitespace between the Password/Confirm Password are not allowed
           When I navigate to registration page
-          And I click on register me button
           And I type first name "Ana"
           And I type last name "T"
           And I type email "qa123@gmail.com"
@@ -95,7 +87,6 @@ Feature: Registration Password
 
           Scenario: Registration-Password/Confirm Password- Whitespace at the end are not allowed
            When I navigate to registration page
-           And I click on register me button
            And I type first name "Ana"
            And I type last name "T"
            And I type email "qa123@gmail.com"
@@ -106,7 +97,6 @@ Feature: Registration Password
 
            Scenario: Registration-Password/Confirm Password-Password and Confirm Password should match each other
             When I navigate to registration page
-            And I click on register me button
             And I type first name "Ana"
             And I type last name "T"
             And I type email "qa123@gmail.com"
