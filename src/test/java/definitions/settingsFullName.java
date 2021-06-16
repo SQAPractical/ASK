@@ -51,16 +51,7 @@ public class settingsFullName {
         getDriver().findElement(By.xpath("//*[@class='mat-button-wrapper'][text()='Change']")).click();
         Thread.sleep(3000);
     }
-    @Then("Message {string} is displayed")
-    public void messageIsDisplayed(String element) {
-        String elementOnField= "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/ac-modal-adjust-user[1]/form[1]/div[1]/mat-form-field[1]";
-        String xPath = "//mat-error[contains(text(),'"+element+"')]";
-
-        WebDriverWait wait = new WebDriverWait(getDriver(), 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elementOnField)));
-        assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isTrue();
-    }
-
+   
 
     @And("I type {string} space {string} in the text field")
     public void iTypeSpaceInTheTextField(String char1, String char2) {
