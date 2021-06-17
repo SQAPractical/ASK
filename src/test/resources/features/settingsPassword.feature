@@ -49,7 +49,7 @@ Feature: Settings - Password
     And I click on Sign In button
     Then Element with text "Log Out" is displayed on home page
 
-  Scenario: Settings - Password - Alphanumeric and sp char - Min 5 char
+  Scenario: Settings - Password - Min 5 char
     When I navigate to login page
     And I type email "hmarwan_skomar@asifboot.com"
     And I type password "qqwdhqk23!!hqqkjjehkqjhrkqqjrhqk"
