@@ -41,7 +41,7 @@ Feature: Single Choice Question - Text
       And I type secondOption "False789*()"
       And I click on firstOption button as correct answer
       And I click on Save button
-      And Message "This field is required" displayed on single choice question field
+      Then Message "This field is required" displayed on single choice question field
       Then Pop-up message "Quiz is not completed. Check highlighted with red areas" appears
 
       Scenario: Single Choice Question - Text - Min characters - Letter
