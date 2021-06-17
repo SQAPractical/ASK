@@ -26,7 +26,7 @@ public class login {
 
     @Then("Element with text {string} is displayed on home page")
     public void elementWithTextIsDisplayedOnHomePage(String element) {
-        String elementOnHomePage = "//*[contains(text(),'Go To Assignments')]";
+        String elementOnHomePage = "//footer[contains(text(),'Assessment Control @ Portnov')]";
         String xPath = "//*[contains(text(),'"+element+"')]";
 
         WebDriverWait wait = new WebDriverWait(getDriver(), 5);

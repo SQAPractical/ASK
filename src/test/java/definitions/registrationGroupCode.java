@@ -54,7 +54,8 @@ public class registrationGroupCode {
     }
 
     @Then("Text {string} appears")
-    public void textAppears(String expectedText) {
+    public void textAppears(String expectedText) throws InterruptedException {
+        Thread.sleep(2000);
         String xPath = "//*[contains(text(),'"+expectedText+"')]";
         WebElement textElement = getDriver().findElement(By.xpath(xPath));
         assertThat(textElement.isDisplayed()).isTrue();
