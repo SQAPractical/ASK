@@ -33,20 +33,21 @@ public class quiztitle {
         Thread.sleep(2000);
     }
 
-    @And("I click on Quizzes button")
-    public void iClickOnQuizzesButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Quizzes')]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click on Quizzes button")
+//    public void iClickOnQuizzesButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*[contains(text(),'Quizzes')]")).click();
+//        Thread.sleep(2000);
+//    }
 
-    @And("I click on Create New Quiz button")
-    public void iClickOnCreateNewQuizButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Create New Quiz')]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click on Create New Quiz button")
+//    public void iClickOnCreateNewQuizButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*[contains(text(),'Create New Quiz')]")).click();
+//        Thread.sleep(2000);
+//    }
 
     @And("I type Quiz Title {string}")
-    public void iTypeQuizTitle(String QTitle) {
+    public void iTypeQuizTitle(String QTitle) throws InterruptedException {
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//*[@placeholder = 'Title Of The Quiz *']")).sendKeys(QTitle);
     }
 

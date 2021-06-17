@@ -100,7 +100,8 @@ public class singleChoiceQuestionText {
 
     @Then("Element with text {string} is displayed on the top")
     public void elementWithTextIsDisplayedOnTheTop(String element) {
-        String elementOnTheTop = "//*[contains(text(),'List of Quizzes')]";
+        String elementOnTheTop = "//*[contains(text(),'"+element+"')]";
+
         WebDriverWait wait = new WebDriverWait(getDriver(),5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elementOnTheTop)));
         assertThat(getDriver().findElement(By.xpath(elementOnTheTop)).isDisplayed()).isTrue();
@@ -116,10 +117,9 @@ public class singleChoiceQuestionText {
 
 
     @Then("Element with text {string} is not displayed on the top  because of error")
-    public void elementWithTextIsNotDisplayedOnTheTopBecauseOfError(String element) {
-        String elementNotVisible = "//*[contains(text(),'Quiz is not completed.')]";
-        WebDriverWait wait = new WebDriverWait(getDriver(),5);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elementNotVisible)));
+    public void elementWithTextIsNotDisplayedOnTheTopBecauseOfError(String element) throws InterruptedException {
+        String elementNotVisible = "//*[contains(text(),'"+element+"')]";
+        Thread.sleep(2000);
         assertThat(getDriver().findElement(By.xpath(elementNotVisible)).isDisplayed()).isFalse();
     }
 }
