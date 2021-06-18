@@ -27,7 +27,7 @@ public class TestContext {
     }
 
     public static void initialize() {
-        initialize("chrome", false);
+        initialize("firefox", false);
     }
 
     public static void teardown() {

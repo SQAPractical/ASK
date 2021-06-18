@@ -22,6 +22,7 @@ public class login {
     public void iClickOnSignInButton() {
         getDriver().findElement(By.xpath("//span[contains(.,'Sign In')]")).click();
 
+
     }
 
     @Then("Element with text {string} is displayed on home page")
