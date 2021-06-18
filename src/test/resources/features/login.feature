@@ -10,3 +10,4 @@ Feature: Login
     When I navigate to login page
     And I type password "12345Abc"
     Then Password displays in bullets, copy, cut - disabled
+
