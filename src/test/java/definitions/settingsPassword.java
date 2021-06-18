@@ -28,10 +28,10 @@ public class settingsPassword {
         getDriver().findElement(By.xpath("//input[@formcontrolname='newPassword']")).sendKeys(Npass);
     }
 
-
     @And("I click on Change button")
-    public void iClickOnChangeButton() {
+    public void iClickOnChangeButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[text()='Change']")).click();
+        Thread.sleep(3000);
     }
 
     @And("I click on Log Out button")
@@ -57,16 +57,25 @@ public class settingsPassword {
     }
 
 
-    @And("I click on empty space")
-    public void iClickOnEmptySpace() throws InterruptedException {
-        wait(1000);
-        getDriver().findElement(By.xpath("//div[@class='mat-dialog-actions']")).click();
-        wait(1000);
+    @Then("New Password displays in bullets, copy, cut - disabled")
+    public void newPasswordDisplaysInBulletsCopyCutDisabled() {
+        String xPath = "//*[@formcontrolname='newPassword']";
+        String attribute = "type";
+        String attributeValue = "password";
+
+        String expectedAttributeValue = getDriver().findElement(By.xpath(xPath)).getAttribute(attribute);
+        assertThat(expectedAttributeValue).isEqualTo(attributeValue);
     }
 
+    @Then("Confirm New Password displays in bullets, copy, cut - disabled")
+    public void confirmNewPasswordDisplaysInBulletsCopyCutDisabled() {
+        String xPath = "//*[@formcontrolname='confirmPassword']";
+        String attribute = "type";
+        String attributeValue = "password";
 
-
-
+        String expectedAttributeValue = getDriver().findElement(By.xpath(xPath)).getAttribute(attribute);
+        assertThat(expectedAttributeValue).isEqualTo(attributeValue);
+    }
 }
 
 
