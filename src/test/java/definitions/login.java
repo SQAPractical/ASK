@@ -22,11 +22,12 @@ public class login {
     public void iClickOnSignInButton() {
         getDriver().findElement(By.xpath("//span[contains(.,'Sign In')]")).click();
 
+
     }
 
     @Then("Element with text {string} is displayed on home page")
     public void elementWithTextIsDisplayedOnHomePage(String element) {
-        String elementOnHomePage = "//*[contains(text(),'Go To Assignments')]";
+        String elementOnHomePage = "//*[contains(text(),'Log Out')]";
         String xPath = "//*[contains(text(),'"+element+"')]";
 
         WebDriverWait wait = new WebDriverWait(getDriver(), 5);
