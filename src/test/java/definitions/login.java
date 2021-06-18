@@ -25,12 +25,12 @@ public class login {
         Thread.sleep(2000);
     }
 
-//    @Then("Element with text {string} is displayed on home page")
-//    public void elementWithTextIsDisplayedOnHomePage(String footerText) {
-//        String xPath = "//footer[@class='padded']";
-//        WebElement textElement = getDriver().findElement(By.xpath(xPath));
-//        assertThat(textElement.isDisplayed()).isTrue();
-//    }
+    @Then("Element with text {string} is displayed on home page")
+    public void elementWithTextIsDisplayedOnHomePage(String footerText) {
+        String xPath = "//footer[@class='padded']";
+        WebElement textElement = getDriver().findElement(By.xpath(xPath));
+        assertThat(textElement.isDisplayed()).isTrue();
+    }
 
     @Then("Snackbar with text {string} is displayed")
     public void snackbarWithTextIsDisplayed(String authenticationFailed) {
@@ -39,18 +39,7 @@ public class login {
         assertThat(textElement.isDisplayed()).isTrue();
     }
 
-
-    @Then("Element with text {string} is displayed on home page")
-    public void elementWithTextIsDisplayedOnHomePage(String element) throws InterruptedException {
-        String elementOnHomePage = "//footer[contains(text(),'Assessment Control @ Portnov')]";
-        String xPath = "//*[contains(text(),'"+element+"')]";
-        Thread.sleep(1000);
-        WebDriverWait wait = new WebDriverWait(getDriver(), 5);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elementOnHomePage)));
-        assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isTrue();
-    }
-
-    @Then("Password displays in bullets, copy, cut - disabled")
+    @Then("password displays in bullets, copy, cut - disabled")
     public void passwordDisplaysInBulletsCopyCutDisabled() {
         String xPath = "//*[@formcontrolname='password']";
         String attribute = "type";
@@ -78,11 +67,4 @@ public class login {
         Thread.sleep(2000);
     }
 
-//}
-//
-//
-//        String expectedAttributeValue = getDriver().findElement(By.xpath(xPath)).getAttribute(attribute);
-//        assertThat(expectedAttributeValue).isEqualTo(attributeValue);
-//    }
 }
-
