@@ -22,5 +22,5 @@ Feature: Multiple Choice Question - Text
     And I click on Add Option button N
     And I click on Add Option button N
     And I click on Add Option button N
-    And I click on Add Option button N^X
+    And I click on Add Option button N
     Then Button Add Option is disabled
