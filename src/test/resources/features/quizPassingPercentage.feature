@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Quiz - Passing Percentage
   Scenario: Quiz - Passing Percentage - 0%
     When I navigate to login page

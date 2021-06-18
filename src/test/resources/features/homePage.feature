@@ -1,4 +1,4 @@
-@homePage
+@homePage @fullRegression
 Feature: Home Page
   @Smoke
   Scenario: Student - go to my assignments

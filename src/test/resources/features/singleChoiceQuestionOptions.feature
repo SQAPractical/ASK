@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Single Choice Question - Options
   Scenario: Single Choice Question - Options - Option name alphanumeric and special characters
     When I navigate to login page

@@ -1,3 +1,4 @@
+@fullRegression
 Feature: User's management - Options in Student's account
   Scenario: Change User's Group -Alphanumeric and sp char
     When I navigate to login page

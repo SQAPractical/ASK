@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Textual Question - Text
   Scenario: Text - Alphanumeric and special char
     When I navigate to login page

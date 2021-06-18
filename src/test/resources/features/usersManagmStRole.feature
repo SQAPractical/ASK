@@ -1,3 +1,4 @@
+@fullRegression
 Feature: User's management - Change User's Role
   Scenario: Change User's Role
     When I navigate to login page

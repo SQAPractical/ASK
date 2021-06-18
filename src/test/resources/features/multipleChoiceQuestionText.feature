@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Multiple Choice Question - Text
   Scenario: Multiple Choice Question - Text - Not allowed to have over 15 options
     When I navigate to login page

@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Single Choice Question - Text
   @Smoke
   Scenario: Single Choice Question - Text - Alphanumeric and spec char

@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Setting - Full Name
   @Smoke
   Scenario: Settings - Full Name - Clicking on "Cancel" button name will remain unchanged

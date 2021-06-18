@@ -1,3 +1,4 @@
+@fullRegression
 Feature: Settings - Password
   Scenario: Settings - Password - Alphanumeric and sp char
     When I navigate to login page
