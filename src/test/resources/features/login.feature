@@ -1,12 +1,11 @@
-@Login
 Feature: Login
-  @Smoke
   Scenario: Log In with valid credentials
     When I navigate to login page
     And I type email "teacher3@gmail.com"
     And I type password "12345Abc"
-    And I click on Sign In button at login page
-    Then Element with text "Log Out" is displayed on home page
+    And I click on Sign In button
+    Then Element with text "Assessment Control" is displayed on home page
+
 
   Scenario: Log in with valid email/invalid password should be rejected
     When I navigate to login page
@@ -25,7 +24,7 @@ Feature: Login
   Scenario: Login - password displays in bullets, copy, cut - disabled
     When I navigate to login page
     And I type password "12345Abc"
-    Then Password displays in bullets, copy, cut - disabled
+    Then password displays in bullets, copy, cut - disabled
 
   Scenario: Login - Leading space not allowed on email field
     When I navigate to login page

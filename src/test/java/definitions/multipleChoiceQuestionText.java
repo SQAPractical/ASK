@@ -25,11 +25,11 @@ public class multipleChoiceQuestionText {
         Thread.sleep(1000);
     }
 
-//    @And("I click on Add Option button")
-//    public void iClickOnAddOptionButton() throws InterruptedException {
-//        getDriver().findElement(By.xpath("//*[contains(text(),'Add Option')]")).click();
-//        Thread.sleep(500);
-//    }
+    @And("I click on Add Option button")
+    public void iClickOnAddOptionButton() throws InterruptedException {
+        getDriver().findElement(By.xpath("//*[contains(text(),'Add Option')]")).click();
+        Thread.sleep(500);
+    }
 
 
     @Then("Button Add Option is disabled")

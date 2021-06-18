@@ -23,4 +23,3 @@ Feature: Multiple Choice Question - Text
     And I click on Add Option button
     And I click on Add Option button
     Then Button Add Option is disabled
-
