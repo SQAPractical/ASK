@@ -1,4 +1,6 @@
+@homePage
 Feature: Home Page
+  @Smoke
   Scenario: Student - go to my assignments
     When I navigate to login page
     And I type email "student0@gmail.com"

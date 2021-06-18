@@ -1,4 +1,5 @@
 Feature: Single Choice Question - Text
+  @Smoke
   Scenario: Single Choice Question - Text - Alphanumeric and spec char
     When I navigate to login page
     And I type email "teacher1@gmail.com"
