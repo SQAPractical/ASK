@@ -4,6 +4,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -26,8 +28,8 @@ public class quizPassingPercentage {
         assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isTrue();
     }
 
-    @Then("I click on Create New Quiz button")
-    public void iClickOnCreateNewQuizButton() {
+    @Then("I click the Create New Quiz button")
+    public void iClickTheCreateNewQuizButton() {
         getDriver().findElement(By.xpath("//*[contains(text(), 'Create New Quiz')]/..")).click();
     }
 
@@ -90,11 +92,12 @@ public class quizPassingPercentage {
         getDriver().findElement(By.xpath("//*/span[contains(text(), 'Save')]")).click();
     }
 
-    @And("I set passing rate slider to {int}")
-    public void iSetPassingRateSliderTo(int passRate) {
+    @And("I set passing rate slider to {int} using buttons")
+    public void iSetPassingRateSliderToUsingButtons(int passRate) {
         String slider = "//mat-slider[@aria-valuemax='100']";
         String att = "aria-valuenow";
         int sliderVal = Integer.parseInt(getDriver().findElement(By.xpath(slider)).getAttribute(att));
+        WebElement sliderPass = getDriver().findElement(By.xpath(slider));
 
         if(sliderVal == passRate) {
             //Do nothing
@@ -109,6 +112,26 @@ public class quizPassingPercentage {
         }
     }
 
+    @And("I set passing rate slider to {int} using arrow keys")
+    public void iSetPassingRateSliderToUsingArrowKeys(int passRate) {
+        String slider = "//mat-slider[@aria-valuemax='100']";
+        String att = "aria-valuenow";
+        int sliderVal = Integer.parseInt(getDriver().findElement(By.xpath(slider)).getAttribute(att));
+        WebElement sliderPass = getDriver().findElement(By.xpath(slider));
+
+        if(sliderVal == passRate) {
+            //Do nothing
+        } else if(sliderVal > passRate) {
+            while(Integer.parseInt(getDriver().findElement(By.xpath(slider)).getAttribute(att)) > passRate) {
+                sliderPass.sendKeys(Keys.ARROW_LEFT);
+            }
+        } else if(sliderVal < passRate) {
+            while(Integer.parseInt(getDriver().findElement(By.xpath(slider)).getAttribute(att)) < passRate) {
+                sliderPass.sendKeys(Keys.ARROW_RIGHT);
+            }
+        }
+    }
+
     @Then("The created quiz appears with name {string} and passing rate {string}")
     public void theCreatedQuizAppearsWithNameAndPassingRate(String quizName, String passRate) {
         String quizTitle = "(//*[contains(text(), '"+quizName+"')])[1]";
@@ -118,5 +141,20 @@ public class quizPassingPercentage {
 
         WebDriverWait wait = new WebDriverWait(getDriver(), 3);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(quizPassRate)));
+    }
+
+    @And("I wait")
+    public void iWait() throws InterruptedException{
+        Thread.sleep(1000);
+    }
+
+    @And("I click the delete button to delete the created quiz with name {string}")
+    public void iClickTheDeleteButtonToDeleteTheCreatedQuizWithName(String quizName) {
+        getDriver().findElement(By.xpath("(//*[contains(text(), 'Delete')])[1]")).click();
+    }
+
+    @And("I click the confirmation delete button")
+    public void iClickTheConfirmationDeleteButton() {
+        getDriver().findElement(By.xpath("//button[@class='mat-button mat-warn']")).click();
     }
 }
