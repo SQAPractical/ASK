@@ -1,4 +1,7 @@
 Feature: Setting - Full Name
+@fullRegression
+Feature: Setting - Full Name
+  @Smoke
   Scenario: Settings - Full Name - Clicking on "Cancel" button name will remain unchanged
     When I navigate to login page
     And I type email "teacher1@gmail.com"
