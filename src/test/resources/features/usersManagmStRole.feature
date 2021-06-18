@@ -6,7 +6,8 @@ Feature: User's management - Change User's Role
     And I click on Sign In button
     And I click on User's management option
     And I click on David Davidov student's name
-    And I click on Option button
+#    And I click on Option button
+    And I click on Options button
     And I click on Change User's Role button
     And I click Change Role button
     And I click on Log out button
@@ -26,6 +27,7 @@ Feature: User's management - Change User's Role
       And I click on User's management option
       And I click on label Teachers
       And I click on David Davidov name
+      And I click on Options button
       And I click on Change User's Role button
       And I click Change Role button
 

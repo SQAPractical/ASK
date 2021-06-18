@@ -53,13 +53,14 @@ public class usersmanagement {
 
     @And("I click on label Teachers")
     public void iClickOnLabelTeachers() throws InterruptedException {
-        getDriver().findElement(By.xpath("//div[contains(.,'Teachers')]")).click();
+        Thread.sleep(2000);
+        getDriver().findElement(By.xpath("//div[contains(text(),'Teachers')]")).click();
         Thread.sleep(2000);
     }
 
     @And("I click on David Davidov name")
     public void iClickOnDavidDavidovName() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//*[@class='mat-list-item-content'][contains(.,'David Davidov ')]")).click();
     }
 }
