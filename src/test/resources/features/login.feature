@@ -1,4 +1,6 @@
+@Login
 Feature: Login
+  @Smoke
   Scenario: Log In with valid credentials
     When I navigate to login page
     And I type email "teacher3@gmail.com"
