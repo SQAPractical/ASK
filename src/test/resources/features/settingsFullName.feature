@@ -1,3 +1,4 @@
+Feature: Setting - Full Name
 @fullRegression
 Feature: Setting - Full Name
   @Smoke
