@@ -6,7 +6,7 @@ Feature: Login
     And I type email "teacher3@gmail.com"
     And I type password "12345Abc"
     And I click on Sign In button at login page
-    Then Element with text "Assessment Control" is displayed on home page
+    Then Element with text "Log Out" is displayed on home page
 
   Scenario: Log in with valid email/invalid password should be rejected
     When I navigate to login page
