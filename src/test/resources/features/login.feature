@@ -6,6 +6,7 @@ Feature: Login
     And I click on Sign In button
     Then Element with text "Assessment Control" is displayed on home page
 
+
   Scenario: Log in with valid email/invalid password should be rejected
     When I navigate to login page
     And I type email "teacher3@gmail.com"
