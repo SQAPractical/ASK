@@ -42,7 +42,7 @@ public class login {
 
     @Then("Element with text {string} is displayed on home page")
     public void elementWithTextIsDisplayedOnHomePage(String element) throws InterruptedException {
-        String elementOnHomePage = "//footer[contains(text(),'Assessment Control @ Portnov')]";
+        String elementOnHomePage = "//footer[contains(text(),'Assessment Control')]";
         String xPath = "//*[contains(text(),'"+element+"')]";
         Thread.sleep(1000);
         WebDriverWait wait = new WebDriverWait(getDriver(), 5);
