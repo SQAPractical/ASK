@@ -28,11 +28,11 @@ public class settingsPassword {
         getDriver().findElement(By.xpath("//input[@formcontrolname='newPassword']")).sendKeys(Npass);
     }
 
-    @And("I click on Change button")
-    public void iClickOnChangeButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[text()='Change']")).click();
-        Thread.sleep(3000);
-    }
+//    @And("I click on Change button")
+//    public void iClickOnChangeButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//span[text()='Change']")).click();
+//        Thread.sleep(3000);
+//    }
 
     @And("I click on Log Out button")
     public void iClickOnLogOutButton()  {

@@ -9,7 +9,7 @@ Feature: User's management - Options in Student's account
     And I click on Options button
     And I click on Change User's Group button
     And I delete text
-    And I type "ABCD1$"
+    And I type new student group "ABCD1$"
     And I click on Change button
     Then Element with text "Log Out" is displayed on home page
 
@@ -23,7 +23,7 @@ Feature: User's management - Options in Student's account
       And I click on Options button
       And I click on Change User's Group button
       And I delete text
-      And I type "ABCD1$"
+      And I type new student group "ABCD1$"
       And I click on Change button
       Then Element with text "Log Out" is displayed on home page
       And I click on Log Out button
@@ -60,7 +60,7 @@ Feature: User's management - Options in Student's account
         And I click on Options button
         And I click on Change User's Group button
         And I delete text
-        And I type "Abc d"
+        And I type new student group "Abc d"
         And I click on Change button
         Then Error message "" appears
 
@@ -74,7 +74,7 @@ Feature: User's management - Options in Student's account
           And I click on Options button
           And I click on Change User's Group button
           And I delete text
-          And I type "CBAABC"
+          And I type new student group "CBAABC"
           And I click on Change button
           Then Element with text "Log Out" is displayed on home page
 
@@ -88,7 +88,7 @@ Feature: User's management - Options in Student's account
     And I click on Options button
     And I click on Change User's Group button
     And I delete text
-    And I type "CBAABC1"
+    And I type new student group "CBAABC1"
     And I click on Change button
     And I click outside the group text field
     Then Error message "" appears
@@ -103,7 +103,7 @@ Feature: User's management - Options in Student's account
     And I click on Options button
     And I click on Change User's Group button
     And I delete text
-    And I type "A"
+    And I type new student group "A"
     And I click on Change button
     Then Element with text "Log Out" is displayed on home page
 
@@ -117,7 +117,7 @@ Feature: User's management - Options in Student's account
       And I click on Options button
       And I click on Change User's Group button
       And I delete text
-      And I type "CBA"
+      And I type new student group "CBA"
       And I click on Cancel button
       Then Element with text "Log Out" is displayed on home page
 
@@ -131,13 +131,6 @@ Feature: User's management - Options in Student's account
     And I click on Options button
     And I click on Change User's Group button
     And I delete text
-    And I type "CAB"
+    And I type new student group "CAB"
     And I click on Change button
-    Then Element with text "Log out" is displayed on home page
-
-
-
-
-
-
-
+    Then Element with text "Log Out" is displayed on home page

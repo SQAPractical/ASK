@@ -49,11 +49,16 @@ public class usersManagmStGroup {
 
     }
 
-    @And("I type {string}")
-    public void iType(String GroupCode) throws InterruptedException {
+//    @And("I type {string}")
+//    public void iType(String GroupCode) throws InterruptedException {
+//        Thread.sleep(2000);
+//        getDriver().findElement(By.xpath("//input[@aria-required]")).sendKeys(GroupCode);
+//
+//    }
+    @And("I type new student group {string}")
+    public void iTypeNewStudentGroup(String GroupCode) throws InterruptedException {
         Thread.sleep(2000);
         getDriver().findElement(By.xpath("//input[@aria-required]")).sendKeys(GroupCode);
-
     }
 
     @And("I click on Change button")
@@ -66,18 +71,18 @@ public class usersManagmStGroup {
 
     }
 
-    @And("I click on Log Out button")
-    public void iClickOnLogOutButton() {
-        getDriver().findElement(By.xpath("//h5[contains(text(),'Log Out')]")).click();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 5);
-    }
+//    @And("I click on Log Out button")
+//    public void iClickOnLogOutButton() {
+//        getDriver().findElement(By.xpath("//h5[contains(text(),'Log Out')]")).click();
+//        WebDriverWait wait = new WebDriverWait(getDriver(), 5);
+//    }
 
-    @And("I confirm Log Out")
-    public void iConfirmLogOut() {
-        getDriver().findElement(By.xpath("//span[(text()='Log Out')]")).click();
-        WebDriverWait wait = new WebDriverWait(getDriver(), 5);
-
-    }
+//    @And("I confirm Log Out")
+//    public void iConfirmLogOut() {
+//        getDriver().findElement(By.xpath("//span[(text()='Log Out')]")).click();
+//        WebDriverWait wait = new WebDriverWait(getDriver(), 5);
+//
+//    }
 
     @Then("Element with text {string} displayed on home page")
     public void elementWithTextDisplayedOnHomePage(String element) {
@@ -126,9 +131,9 @@ public class usersManagmStGroup {
         getDriver().findElement(By.xpath("//*[contains(text(),'Change')]")).click();
     }
 
-    @And("I click on Cancel button")
-    public void iClickOnCancelButton() {
-        getDriver().findElement(By.xpath("//*[contains(text(), 'Cancel')]")).click();
-    }
+//    @And("I click on Cancel button")
+//    public void iClickOnCancelButton() {
+//        getDriver().findElement(By.xpath("//*[contains(text(), 'Cancel')]")).click();
+//    }
 }
 
