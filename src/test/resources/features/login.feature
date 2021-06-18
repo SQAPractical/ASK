@@ -3,7 +3,7 @@ Feature: Login
     When I navigate to login page
     And I type email "teacher3@gmail.com"
     And I type password "12345Abc"
-    And I click on Sign In button
+    And I click on Sign In button at login page
     Then Element with text "Assessment Control" is displayed on home page
 
   Scenario: Log in with valid email/invalid password should be rejected
@@ -19,6 +19,7 @@ Feature: Login
     And I type password "12345Abc"
     And I click on Sign In button
     Then Snackbar with text "Authentication failed" is displayed
+    Then Element with text "Log Out" is displayed on home page
 
   Scenario: Login - password displays in bullets, copy, cut - disabled
     When I navigate to login page
@@ -62,3 +63,4 @@ Feature: Login
     And I type password "12345aBC"
     And I click on Sign In button
     Then Snackbar with text "Authentication failed" is displayed
+    Then Password displays in bullets, copy, cut - disabled
