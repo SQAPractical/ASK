@@ -16,7 +16,7 @@ Feature: Quiz - Passing Percentage
     And I type first option "1"
     And I type second option "2"
     And I set correct answer as option two
-    And I set passing rate slider to 0 using buttons
+#    And I set passing rate slider to 0 using buttons
     And I set passing rate slider to 0 using arrow keys
     And I click save button
     When Element with text "Create New Quiz" is displayed on quizzes page
@@ -44,7 +44,7 @@ Feature: Quiz - Passing Percentage
     And I type second option "2"
     And I set correct answer as option two
     And I set passing rate slider to 55 using buttons
-    And I set passing rate slider to 55 using arrow keys
+#    And I set passing rate slider to 55 using arrow keys
     And I click save button
     When Element with text "Create New Quiz" is displayed on quizzes page
     Then The created quiz appears with name "12345" and passing rate "55"
@@ -70,7 +70,7 @@ Feature: Quiz - Passing Percentage
     And I type first option "1"
     And I type second option "2"
     And I set correct answer as option two
-    And I set passing rate slider to 100 using buttons
+#    And I set passing rate slider to 100 using buttons
     And I set passing rate slider to 100 using arrow keys
     And I click save button
     When Element with text "Create New Quiz" is displayed on quizzes page
