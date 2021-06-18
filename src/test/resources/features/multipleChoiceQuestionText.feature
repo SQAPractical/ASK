@@ -10,17 +10,17 @@ Feature: Multiple Choice Question - Text
     And I type Quiz Title "Ntest - Max 15 options"
     And I click on Add Question button N
     And I click on Multiple-Choice radio button
-    And I click on Add Option button
-    And I click on Add Option button
-    And I click on Add Option button
-    And I click on Add Option button
-    And I click on Add Option button
-    And I click on Add Option button
-    And I click on Add Option button
-    And I click on Add Option button
-    And I click on Add Option button
-    And I click on Add Option button
-    And I click on Add Option button
-    And I click on Add Option button
-    And I click on Add Option button
+    And I click on Add Option button N
+    And I click on Add Option button N
+    And I click on Add Option button N
+    And I click on Add Option button N
+    And I click on Add Option button N
+    And I click on Add Option button N
+    And I click on Add Option button N
+    And I click on Add Option button N
+    And I click on Add Option button N
+    And I click on Add Option button N
+    And I click on Add Option button N
+    And I click on Add Option button N
+    And I click on Add Option button N^X
     Then Button Add Option is disabled
