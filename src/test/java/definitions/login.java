@@ -26,10 +26,10 @@ public class login {
     }
 
     @Then("Element with text {string} is displayed on home page")
-    public void elementWithTextIsDisplayedOnHomePage(String element) {
+    public void elementWithTextIsDisplayedOnHomePage(String element) throws InterruptedException {
         String elementOnHomePage = "//footer[contains(text(),'Assessment Control @ Portnov')]";
         String xPath = "//*[contains(text(),'"+element+"')]";
-
+        Thread.sleep(1000);
         WebDriverWait wait = new WebDriverWait(getDriver(), 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elementOnHomePage)));
         assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isTrue();

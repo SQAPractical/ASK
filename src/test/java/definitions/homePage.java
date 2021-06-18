@@ -11,7 +11,8 @@ import static support.TestContext.getDriver;
 
 public class homePage {
     @And("I click on Go To My Assignments button")
-    public void iClickOnGoToMyAssignmentsButton() { getDriver().findElement(By.xpath("//span[contains(.,'Assignments')]")).click();
+    public void iClickOnGoToMyAssignmentsButton() {
+        getDriver().findElement(By.xpath("//span[contains(.,'Assignments')]")).click();
     }
 
     @Then("Button with text {string} is displayed on home page")
@@ -25,7 +26,8 @@ public class homePage {
 
 
     @And("I click on Go To My Grades button")
-    public void iClickOnGoToMyGradesButton() {
+    public void iClickOnGoToMyGradesButton() throws InterruptedException {
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//button[contains(span,'Go To My Grades')]")).click();
     }
 
@@ -36,7 +38,8 @@ public class homePage {
     }
 
     @Then("Submissions page is displayed")
-    public void submissionsPageIsDisplayed() {
+    public void submissionsPageIsDisplayed() throws InterruptedException {
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//h4[contains(text(),'Submissions')]")) ;
     }
 
@@ -46,17 +49,20 @@ public class homePage {
     }
 
     @Then("Assignments page is displayed")
-    public void assignmentsPageIsDisplayed() {
+    public void assignmentsPageIsDisplayed() throws InterruptedException {
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//h5[contains(text(),'Assignments')]"));
     }
 
     @And("I click on Go To User's Management button")
-    public void iClickOnGoToUserSManagementButton() {
+    public void iClickOnGoToUserSManagementButton() throws InterruptedException {
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//h5[contains(text(),'Management')]")).click();
     }
 
     @Then("Users Management page is displayed")
-    public void usersManagementPageIsDisplayed() {
+    public void usersManagementPageIsDisplayed() throws InterruptedException {
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//h5[contains(text(),'Management')]"));
 
     }
@@ -68,7 +74,8 @@ public class homePage {
     }
 
     @Then("button My Assignments is displayed on home page")
-    public void buttonMyAssignmentsIsDisplayedOnHomePage() {
+    public void buttonMyAssignmentsIsDisplayedOnHomePage() throws InterruptedException {
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//h5[contains(text(),'My Assignments')]"));
     }
 }
