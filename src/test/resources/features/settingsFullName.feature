@@ -1,3 +1,4 @@
+Feature: Setting - Full Name
 @fullRegression
 Feature: Setting - Full Name
   @Smoke
@@ -135,6 +136,7 @@ Feature: Setting - Full Name
     And I type "Anna" space "Ivanova" in the text field
     Then I click Change button
     And Changed name "Anna Ivanova" is displayed
+
 
 
 

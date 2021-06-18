@@ -51,7 +51,6 @@ public class settingsFullName {
         getDriver().findElement(By.xpath("//*[@class='mat-button-wrapper'][text()='Change']")).click();
         Thread.sleep(3000);
     }
-   
 
     @And("I type {string} space {string} in the text field")
     public void iTypeSpaceInTheTextField(String char1, String char2) {

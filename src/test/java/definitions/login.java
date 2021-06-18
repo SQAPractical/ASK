@@ -39,7 +39,7 @@ public class login {
         assertThat(textElement.isDisplayed()).isTrue();
     }
 
-    @Then("password displays in bullets, copy, cut - disabled")
+    @Then("Password displays in bullets, copy, cut - disabled")
     public void passwordDisplaysInBulletsCopyCutDisabled() {
         String xPath = "//*[@formcontrolname='password']";
         String attribute = "type";

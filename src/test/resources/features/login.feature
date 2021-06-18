@@ -64,3 +64,4 @@ Feature: Login
     And I type password "12345aBC"
     And I click on Sign In button
     Then Snackbar with text "Authentication failed" is displayed
+
