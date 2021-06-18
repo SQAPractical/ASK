@@ -19,12 +19,11 @@ Feature: Login
     And I type password "12345Abc"
     And I click on Sign In button
     Then Snackbar with text "Authentication failed" is displayed
-    Then Element with text "Log Out" is displayed on home page
 
   Scenario: Login - password displays in bullets, copy, cut - disabled
     When I navigate to login page
     And I type password "12345Abc"
-    Then password displays in bullets, copy, cut - disabled
+    Then Password displays in bullets, copy, cut - disabled
 
   Scenario: Login - Leading space not allowed on email field
     When I navigate to login page
@@ -63,4 +62,3 @@ Feature: Login
     And I type password "12345aBC"
     And I click on Sign In button
     Then Snackbar with text "Authentication failed" is displayed
-    Then Password displays in bullets, copy, cut - disabled
