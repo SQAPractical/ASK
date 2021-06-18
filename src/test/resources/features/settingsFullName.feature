@@ -1,4 +1,6 @@
+@fullRegression
 Feature: Setting - Full Name
+  @Smoke
   Scenario: Settings - Full Name - Clicking on "Cancel" button name will remain unchanged
     When I navigate to login page
     And I type email "teacher1@gmail.com"
@@ -133,7 +135,6 @@ Feature: Setting - Full Name
     And I type "Anna" space "Ivanova" in the text field
     Then I click Change button
     And Changed name "Anna Ivanova" is displayed
-
 
 
 
