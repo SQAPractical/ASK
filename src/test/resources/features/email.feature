@@ -30,16 +30,6 @@ Feature: Email
         Then Text "Should be a valid email address" appears
 
 
-      Scenario: Registration - Email - (64@63.63)Local part with 64 characters on the left of an @ domain on the right with 63 characters followed by (.) with 63 characters in last part of domain
-        When I navigate to registration page
-        And I type first name "Ivan"
-        And I type last name "Test"
-        And I type email "12345678901234567890ConfirmPasswordDom123ConfirmPasswordDomff064@12345678901234567890ConfirmPasswordDom123ConfirmPasswordDomff63.12345678901234567890ConfirmPasswordDom123ConfirmPasswordDomff63"
-        And I type group code "12345"
-        And I type password "Dom123"
-        And I confirm password "Dom123"
-        And I click on register me button
-        Then Text "You have been Registered" appears
 
         Scenario: Registration - Email -Whitespaces are not allowed
           When I navigate to registration page

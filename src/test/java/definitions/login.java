@@ -26,7 +26,7 @@ public class login {
 
     @Then("Element with text {string} is displayed on home page")
     public void elementWithTextIsDisplayedOnHomePage(String element) {
-        String elementOnHomePage = "//*[contains(text(),'Go To Assignments')]";
+        String elementOnHomePage = "//footer[contains(text(),'Assessment Control @ Portnov')]";
         String xPath = "//*[contains(text(),'"+element+"')]";
 
         WebDriverWait wait = new WebDriverWait(getDriver(), 5);
@@ -34,7 +34,7 @@ public class login {
         assertThat(getDriver().findElement(By.xpath(xPath)).isDisplayed()).isTrue();
     }
 
-    @Then("password displays in bullets, copy, cut - disabled")
+    @Then("Password displays in bullets, copy, cut - disabled")
     public void passwordDisplaysInBulletsCopyCutDisabled() {
         String xPath = "//*[@formcontrolname='password']";
         String attribute = "type";
