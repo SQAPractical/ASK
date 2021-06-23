@@ -12,8 +12,5 @@ Feature: Textual Question - Text
     And I click on Textual radio button
     And I type Question "This is text 123 !@#$%"
     And I click on Save button
-    And I click on title of crated Quiz "A-Textual 123 !@#$%"
-    And I click on Preview button
-    And I verify if text with alphanumeric and special characters is visible on the quiz
-    Then I delete the Quiz
+
 
