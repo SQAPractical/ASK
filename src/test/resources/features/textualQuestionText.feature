@@ -8,3 +8,9 @@ Feature: Textual Question - Text
     And I click on Quizzes button
     And I click on Create New  Quiz button
     And I type Title "Textual 123 !@#$%"
+    And I click on Add Question button
+    And I click on Textual radio button
+    And I type Question "This is text 123 !@#$%"
+    And I click on Save button
+    And I click on title of crated Quiz "Textual 123 !@#$%"
+
