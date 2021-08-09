@@ -1,2 +1,2 @@
 Feature: uueiteio
-  Scenario: test test tetsgit status
+  Scenario: test test tetsgit status tt
