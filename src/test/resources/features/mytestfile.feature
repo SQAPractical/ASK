@@ -1,5 +1,3 @@
-Feature: MyTestFile
-  Test something really well
-
+Feature
   Scenario: asdasd
     """sadasdknadjkfsa12#"""
