@@ -1,5 +1,3 @@
-Feature: hello world.Kate12233
-  readfwef
-  wefwqefwe
-  wqefwewfewe
-  ssssssssss
+Feature: hello world.Kate
+  Scenario Conflict test
+
