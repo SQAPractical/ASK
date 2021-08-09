@@ -1,4 +1,5 @@
-Feature
-asdasd
+Feature: MyTestFile
+  Test something really well
 
-sadasdknadjkfsa12#
+  Scenario: asdasd
+    """sadasdknadjkfsa12#"""
