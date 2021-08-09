@@ -1,2 +1,2 @@
 Feature: git
-  Scenario: test
+  Scenario: test1
