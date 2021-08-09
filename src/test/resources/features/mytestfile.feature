@@ -1,4 +1,3 @@
 Feature
-hello world
-test
-sadasdknadjkfsa12#
+  Scenario: asdasd
+    """sadasdknadjkfsa12#"""
