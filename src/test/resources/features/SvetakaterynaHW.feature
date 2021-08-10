@@ -1,3 +1,3 @@
 Feature: HW
   Scenario: conflict.
-    Hello Svetlana!
+    My name is Svetlana
