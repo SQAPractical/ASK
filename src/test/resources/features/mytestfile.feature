@@ -3,5 +3,4 @@ Feature: hello world.Kate
     123123
     123123
     changes from Anna
-
-Home work Kateryna Kruts
+Sveta test
