@@ -1,4 +1,4 @@
 Feature: HW
   Scenario: conflict.
-    Hello Svetlana!
+    I am supper master of conflict resolving
 
