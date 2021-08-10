@@ -1,2 +1,0 @@
-Feature: etrfhwrej
-  Scenario: wergverdsv
