@@ -1,2 +1,2 @@
 Feature: Anna
-  Scenario: 1
+  Scenario: thanks for practising with me
