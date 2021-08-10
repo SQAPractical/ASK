@@ -1,2 +1,3 @@
 Feature: HW
-  Scenario: conflict
+  Scenario: conflict.
+    Hello!
