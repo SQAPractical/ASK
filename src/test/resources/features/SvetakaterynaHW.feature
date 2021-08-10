@@ -1,3 +1,7 @@
 Feature: HW
   Scenario: conflict.
-    Hello Svetlana!
+    I am supper master of conflict resolving
+    My name is Svetlana
+    Nice to see you!
+    I can resolve issue
+
