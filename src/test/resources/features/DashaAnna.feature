@@ -1,3 +1,3 @@
 Feature: Anna
-  Scenario: 1
-    12345 Test Confl
+  Scenario: thanks for practising with me
+
