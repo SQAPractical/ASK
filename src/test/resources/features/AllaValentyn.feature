@@ -1,2 +1,3 @@
 Feature: Test conflict
-  Scenario: conflict123
+  Scenario: Alla's test
+    Then conflict
