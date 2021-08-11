@@ -1,4 +1,5 @@
-Feature: Test conflict
-  Scenario: Alla's test
-    Then local conflicts
+Feature: Internship
+  Scenario: test
+    Then conflict local
+
 
