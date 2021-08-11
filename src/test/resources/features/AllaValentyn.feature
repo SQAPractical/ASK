@@ -1,3 +1,3 @@
 Feature:Second conflict
-  Scenario: Alla's test
-    Then Nope
+  Scenario: Alla's test2
+    Then conflict2
