@@ -1,4 +1,4 @@
 Feature: Test conflict
-  Scenario: Alla's test3
-    Then conflict3
+  Scenario: Alla's test
+    Then local conflicts
 
