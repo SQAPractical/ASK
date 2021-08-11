@@ -1,2 +1,2 @@
 Feature: Test conflict
-  Scenario: conflict123
+  Scengit statusario: conflict123
