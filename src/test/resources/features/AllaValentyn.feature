@@ -1,2 +1,3 @@
 Feature: Test conflict
-  Scengit statusario: conflict123
+  Scenario: Alla's test
+    Then conflict
