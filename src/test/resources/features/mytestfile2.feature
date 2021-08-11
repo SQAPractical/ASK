@@ -1,2 +1,2 @@
-Feature: feature
-  test:123sa
+Feature: Mic test
+  Scenario: mic check one two
