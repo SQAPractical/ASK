@@ -1,3 +1,4 @@
-Feature:Second conflict
-  Scenario: Alla's test2
-    Then conflict2
+Feature: Test conflict
+  Scenario: Alla's test3
+    Then conflict3
+
