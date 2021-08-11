@@ -1,3 +1,3 @@
 Feature: Test conflict
-  Scenario: Alla's test
-    Then conflict
+  Scenario: Alla's test2
+    Then conflict2
