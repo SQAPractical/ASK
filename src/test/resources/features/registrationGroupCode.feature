@@ -1,89 +1,88 @@
 Feature: Registration - Group Code
-  Scenario: Registration - Group Code - Alphanum and Special Char
+  Scenario: Registration - Group Code - Alphanumeric and sp char
     When I navigate to registration page
-    Then I fill out First name "Jonn"
-    And I fill out Last name "Smith"
-    And I fill out email "test@gmail.com"
+    And I type first name "John"
+    And I type last name "Smith"
+    And I type email "test@gmail.com"
     And I type group code "qwe@1"
     And I type password "12345"
     And I type confirm password "12345"
-    And I click on "Register Me" button
+    And I click on Register Me button
     Then Message "You have been Registered." appears
 
-
-  Scenario: Registration - Group Code - Field is Required
+  Scenario: Registration - Group Code - Field is required
     When I navigate to registration page
-    Then I fill out First name "Jonn"
-    And I fill out Last name "Smith"
-    And I fill out email "test@gmail.com"
+    And I type first name "John"
+    And I type last name "Smith"
+    And I type email "test@gmail.com"
+    And I type group code ""
     And I type password "12345"
     And I type confirm password "12345"
-    And I click on "Register Me" button
-    Then Message "" appears
+    And I click on Register Me button
+    Then Message "This field is required" appears
 
-
-  Scenario: Registration - Group Code - Minumum 1 Char
+  Scenario: Registration - Group Code - Min 1 characters
     When I navigate to registration page
-    Then I fill out First name "Jonn"
-    And I fill out Last name "Smith"
-    And I fill out email "test@gmail.com"
+    And I type first name "John"
+    And I type last name "Smith"
+    And I type email "test@gmail.com"
     And I type group code "1"
     And I type password "12345"
     And I type confirm password "12345"
-    And I click on "Register Me" button
-    Then Message "You have been Registered." appears
+    And I click on Register Me button
+    Then Message "You have been Registered" appears
 
-  Scenario: Registration - Group Code - Max 6 Chars
+  Scenario: Registration - Group Code - Max 6 characters
     When I navigate to registration page
-    Then I fill out First name "Jonn"
-    And I fill out Last name "Smith"
-    And I fill out email "test@gmail.com"
+    And I type first name "John"
+    And I type last name "Smith"
+    And I type email "test@gmail.com"
     And I type group code "qwe@12"
     And I type password "12345"
     And I type confirm password "12345"
-    And I click on "Register Me" button
-    Then Message "You have been Registered." appears
+    And I click on Register Me button
+    Then Message "You have been Registered" appears
 
-  Scenario: Registration - Group Code - Max +1 Chars
+  Scenario: Registration - Group Code - Max +1 character
     When I navigate to registration page
-    Then I fill out First name "Jonn"
-    And I fill out Last name "Smith"
-    And I fill out email "test@gmail.com"
+    And I type first name "John"
+    And I type last name "Smith"
+    And I type email "test@gmail.com"
     And I type group code "1234567"
     And I type password "12345"
     And I type confirm password "12345"
-    And I click on "Register Me" button
+    And I click on Register Me button
     Then Message "Too long. Should be no more than 6 characters" appears
 
-  Scenario: Registration - Group Code - In Between Spaces are not allowed
+  Scenario: Registration - Group Code - Whitespaces are not allowed - In Between spaces
     When I navigate to registration page
-    Then I fill out First name "Jonn"
-    And I fill out Last name "Smith"
-    And I fill out email "test@gmail.com"
-    And I type group code "123 456"
+    And I type first name "John"
+    And I type last name "Smith"
+    And I type email "test@gmail.com"
+    And I type group code "123 56"
     And I type password "12345"
     And I type confirm password "12345"
-    And I click on "Register Me" button
+    And I click on Register Me button
     Then Message "Whitespaces are not allowed" appears
 
-  Scenario: Registration - Group Code - Leading Spaces are not allowed
+  Scenario: Registration - Group Code - Whitespaces are not allowed - Leading spaces
     When I navigate to registration page
-    Then I fill out First name "Jonn"
-    And I fill out Last name "Smith"
-    And I fill out email "test@gmail.com"
-    And I type group code " 2456"
+    And I type first name "John"
+    And I type last name "Smith"
+    And I type email "test@gmail.com"
+    And I type group code "  3456"
     And I type password "12345"
     And I type confirm password "12345"
-    And I click on "Register Me" button
+    And I click on Register Me button
     Then Message "Whitespaces are not allowed" appears
 
-  Scenario: Registration - Group Code - Trailing Spaces are not allowed
+  Scenario: Registration - Group Code - Whitespaces are not allowed - Trailing spaces
     When I navigate to registration page
-    Then I fill out First name "Jonn"
-    And I fill out Last name "Smith"
-    And I fill out email "test@gmail.com"
-    And I type group code "2456 "
+    And I type first name "John"
+    And I type last name "Smith"
+    And I type email "test@gmail.com"
+    And I type group code "1234  "
     And I type password "12345"
     And I type confirm password "12345"
-    And I click on "Register Me" button
+    And I click on Register Me button
     Then Message "Whitespaces are not allowed" appears
