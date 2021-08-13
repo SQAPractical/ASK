@@ -9,35 +9,35 @@ import org.openqa.selenium.WebElement;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class registrationGroupCode {
+public class registrationGroupCodeBat {
     @When("I navigate to page")
     public void iNavigateToRegistrationPage() {
         getDriver().get("http://ask-stage.portnov.com/");
     }
 
-    @And("I type email {string}")
-    public void iTypeFirstName(String FName) {
-        getDriver().findElement(By.xpath("/html/body/ac-root/mat-sidenav-container/mat-sidenav-content/main/ac-login-page/mat-card[1]/form/mat-form-field[1]/div/div[1]/div/input")).sendKeys(FName);
-    }
-    @And("I type password {string}")
-    public void iTypePassword(String Pass) {
-        getDriver().findElement(By.xpath("/html/body/ac-root/mat-sidenav-container/mat-sidenav-content/main/ac-login-page/mat-card[1]/form/mat-form-field[2]/div/div[1]/div/input")).sendKeys(Pass);
-    }
+//    @And("I type email {string}")
+//    public void iTypeFirstName(String FName) {
+//        getDriver().findElement(By.xpath("/html/body/ac-root/mat-sidenav-container/mat-sidenav-content/main/ac-login-page/mat-card[1]/form/mat-form-field[1]/div/div[1]/div/input")).sendKeys(FName);
+//    }
+//    @And("I type password {string}")
+//    public void iTypePassword(String Pass) {
+//        getDriver().findElement(By.xpath("/html/body/ac-root/mat-sidenav-container/mat-sidenav-content/main/ac-login-page/mat-card[1]/form/mat-form-field[2]/div/div[1]/div/input")).sendKeys(Pass);
+//    }
 
-    @And("I click on Sign In button")
-    public void iClickOnRegisterMeButton() {
-        getDriver().findElement(By.xpath("/html/body/ac-root/mat-sidenav-container/mat-sidenav-content/main/ac-login-page/mat-card[1]/form/div/button")).click();
-    }
+//    @And("I click on Sign In button")
+//    public void iClickOnRegisterMeButton() {
+//        getDriver().findElement(By.xpath("/html/body/ac-root/mat-sidenav-container/mat-sidenav-content/main/ac-login-page/mat-card[1]/form/div/button")).click();
+//    }
 
-    @Then("Message {string} appears")
-    public void messageAppears(String ExpectedMessage) throws InterruptedException {
-        Thread.sleep(2000);
-
-        String xPathForMessage = "//*[contains(text(),'"+ExpectedMessage+"')]";
-        WebElement elementWithMessage = getDriver().findElement(By.xpath(xPathForMessage));
-
-        assertThat(elementWithMessage.isDisplayed()).isTrue();
-    }
+//    @Then("Message {string} appears")
+//    public void messageAppears(String ExpectedMessage) throws InterruptedException {
+//        Thread.sleep(2000);
+//
+//        String xPathForMessage = "//*[contains(text(),'"+ExpectedMessage+"')]";
+//        WebElement elementWithMessage = getDriver().findElement(By.xpath(xPathForMessage));
+//
+//        assertThat(elementWithMessage.isDisplayed()).isTrue();
+//    }
 
     @And("I navigate to quizzes page")
     public void iNavigateToQuizzesPage() {

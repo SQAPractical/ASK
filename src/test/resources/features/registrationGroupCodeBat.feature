@@ -4,7 +4,7 @@ Feature: Registration - Group Code
     When I navigate to page
     And I type email "teacher1@gmail.com"
     And I type password "12345Abc"
-    And I click on Sign In button
+    And I click Sign In button
     And I navigate to quizzes page
     And I create a new quiz
     And I write title of quiz "Single Option Test 1"
@@ -21,7 +21,7 @@ Feature: Registration - Group Code
     When I navigate to page
     And I type email "teacher1@gmail.com"
     And I type password "12345Abc"
-    And I click on Sign In button
+    And I click Sign In button
     And I navigate to quizzes page
     And I create a new quiz
     And I write title of quiz "Single Option Test 1"
