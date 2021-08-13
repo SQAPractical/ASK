@@ -86,7 +86,7 @@ public class quizTitle {
     @And("I click the Close button")
     public void iClickTheCloseButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Close')]")).click();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
     }
 
 
