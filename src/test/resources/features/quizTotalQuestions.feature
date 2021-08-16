@@ -761,4 +761,3 @@ Feature:
     And I click Save button
     Then Message "Quiz is not completed" appears
 
-
