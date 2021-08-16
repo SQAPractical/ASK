@@ -15,3 +15,4 @@ Feature: Quiz - Title
     And I click the Preview button for quiz "abc123$#@!"
     And I click the Close button
     And I delete the quiz "abc123$#@!"
+
