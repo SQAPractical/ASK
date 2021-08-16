@@ -395,3 +395,25 @@ Feature: Test submission status
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I log out
+
+  @Cleanup @QuizTextualShowstopperCleanup
+  Scenario: Delete the assignment with a textual question
+    Then I delete row #1 with quiz "Great Manatee Quiz Textual Showstopper"
+    And I click "Delete" button on popup confirmation
+    And I wait for "Create New Assignment" button to be clickable
+    And I log out
+
+
+  @Cleanup @QuizTextualAndShowstopperCleanup
+  Scenario: Delete the assignment with a textual question
+    Then I delete row #1 with quiz "Great Manatee Quiz Textual AND Showstopper"
+    And I click "Delete" button on popup confirmation
+    And I wait for "Create New Assignment" button to be clickable
+    And I log out
+
+  @Cleanup @QuizNoTextualAndShowstopperCleanup
+  Scenario: Delete the assignment with a textual question
+    Then I delete row #1 with quiz "Great Manatee Quiz NoTextual AND Showtopper"
+    And I click "Delete" button on popup confirmation
+    And I wait for "Create New Assignment" button to be clickable
+    And I log out
