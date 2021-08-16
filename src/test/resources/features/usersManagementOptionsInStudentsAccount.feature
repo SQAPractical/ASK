@@ -51,17 +51,17 @@ Feature: User's management - Options in Student's account
 
   Scenario: Change User's Name (Min 2 characters + space)
     When I navigate to login page
-    And I type email "shepelenkoalla82@gmail.com"
-    And I type password "Qwertyu7"
-    And I click Sign In button
-    And I click on "Management" on left menu
-    And I select "A a B b C c" from list of "Students"
-    And I click on Options button
-    And I click on menu item Change Users Name from dropdown list
-    And I type text "A B" in New User Name field
-    And I click "Change" button in pop up window
-    And I click on "Log Out" on left menu
-    And I click "Log Out" button in pop up window
+#    And I type email "shepelenkoalla82@gmail.com"
+#    And I type password "Qwertyu7"
+#    And I click Sign In button
+#    And I click on "Management" on left menu
+#    And I select "A a B b C c" from list of "Students"
+#    And I click on Options button
+#    And I click on menu item Change Users Name from dropdown list
+#    And I type text "A B" in New User Name field
+#    And I click "Change" button in pop up window
+#    And I click on "Log Out" on left menu
+#    And I click "Log Out" button in pop up window
     And I type email "shepelenkoalla@bk.ru"
     And I type password "Qwertyu"
     And I click Sign In button
