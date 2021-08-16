@@ -12,7 +12,7 @@ Feature: Test submission status
     When I navigate to login page
     And I enter email "monocled.manatee+teacher@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     Then I click on "Assignments" on left menu
 
@@ -21,7 +21,7 @@ Feature: Test submission status
     """
     We're using quiz: Great Manatee Quiz NoTextual
     """
-    When I click "Create New Assignment" button
+    When I click the "Create New Assignment" button
     # Next step is optional – we can skip it, but the list is more neat this way
     Then I select "MNTEES" group
     # We can select 1st student in the list...
@@ -29,7 +29,7 @@ Feature: Test submission status
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
     And I select "AC12-275: Great Manatee Quiz NoTextual" quiz
-    And I click "Give Assignment" button
+    And I click the "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
@@ -41,7 +41,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+student@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
@@ -53,7 +53,7 @@ Feature: Test submission status
     And I give answers for the question 2
       | 1 | 3 |
     # Answers 1 and 3 selected above | 1 | 2 | 4 | will be answers 1,2 and 4. Numbers start from 1.
-    And I click "Submit My Answers" button
+    And I click the "Submit My Answers" button
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "Details" button to be clickable
@@ -63,7 +63,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+teacher@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     When I click on "Submissions" on left menu
     And I click on "Automatically Graded" header
@@ -81,7 +81,7 @@ Feature: Test submission status
     """
     We're using quiz: Great Manatee Quiz NoTextual
     """
-    When I click "Create New Assignment" button
+    When I click the "Create New Assignment" button
     # Next step is optional – we can skip it, but the list is more neat this way
     Then I select "MNTEES" group
     # We can select 1st student in the list...
@@ -89,7 +89,7 @@ Feature: Test submission status
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
     And I select "AC12-275: Great Manatee Quiz NoTextual" quiz
-    And I click "Give Assignment" button
+    And I click the "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
@@ -101,7 +101,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+student@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
@@ -113,7 +113,7 @@ Feature: Test submission status
     And I give answers for the question 2
       | 2 | 4 |
     # Answers 1 and 3 selected above | 1 | 2 | 4 | will be answers 1,2 and 4. Numbers start from 1.
-    And I click "Submit My Answers" button
+    And I click the "Submit My Answers" button
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "Details" button to be clickable
@@ -123,7 +123,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+teacher@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     When I click on "Submissions" on left menu
     And I click on "Automatically Graded" header
@@ -141,7 +141,7 @@ Feature: Test submission status
   """
     We're using quiz: Great Manatee Quiz Textual
     """
-    When I click "Create New Assignment" button
+    When I click the "Create New Assignment" button
     # Next step is optional – we can skip it, but the list is more neat this way
     Then I select "MNTEES" group
     # We can select 1st student in the list...
@@ -149,7 +149,7 @@ Feature: Test submission status
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
     And I select "AC12-278: Great Manatee Quiz Textual" quiz
-    And I click "Give Assignment" button
+    And I click the "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
@@ -161,7 +161,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+student@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
@@ -175,7 +175,7 @@ Feature: Test submission status
     And I give answers for the question 3
       | 1 | 3 |
     # Answers 1 and 3 selected above | 1 | 2 | 4 | will be answers 1,2 and 4. Numbers start from 1.
-    And I click "Submit My Answers" button
+    And I click the "Submit My Answers" button
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "My Grades" card to appear
@@ -185,7 +185,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+teacher@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     When I click on "Submissions" on left menu
     And I click on "For Grade" header
@@ -203,7 +203,7 @@ Feature: Test submission status
   """
     We're using quiz: Great Manatee Quiz NoTextual Showstopper
     """
-    When I click "Create New Assignment" button
+    When I click the "Create New Assignment" button
     # Next step is optional – we can skip it, but the list is more neat this way
     Then I select "MNTEES" group
     # We can select 1st student in the list...
@@ -211,7 +211,7 @@ Feature: Test submission status
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
     And I select "AC12-279: Great Manatee Quiz Textual Showstopper" quiz
-    And I click "Give Assignment" button
+    And I click the "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
@@ -223,7 +223,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+student@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
@@ -237,7 +237,7 @@ Feature: Test submission status
     And I give answers for the question 3
       | 2 | 4 |
     # Answers 1 and 3 selected above | 1 | 2 | 4 | will be answers 1,2 and 4. Numbers start from 1.
-    And I click "Submit My Answers" button
+    And I click the "Submit My Answers" button
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "My Grades" card to appear
@@ -247,7 +247,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+teacher@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     When I click on "Submissions" on left menu
     And I click on "For Grade" header
@@ -265,7 +265,7 @@ Feature: Test submission status
   """
     We're using quiz: Great Manatee Quiz Textual AND Showstopper
     """
-    When I click "Create New Assignment" button
+    When I click the "Create New Assignment" button
     # Next step is optional – we can skip it, but the list is more neat this way
     Then I select "MNTEES" group
     # We can select 1st student in the list...
@@ -273,7 +273,7 @@ Feature: Test submission status
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
     And I select "AC12-281: Great Manatee Quiz Textual AND Showstopper" quiz
-    And I click "Give Assignment" button
+    And I click the "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
@@ -285,7 +285,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+student@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
@@ -299,7 +299,7 @@ Feature: Test submission status
     And I give answers for the question 3
       | 1 | 3 |
     # Answers 1 and 3 selected above | 1 | 2 | 4 | will be answers 1,2 and 4. Numbers start from 1.
-    And I click "Submit My Answers" button
+    And I click the "Submit My Answers" button
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "My Grades" card to appear
@@ -309,7 +309,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+teacher@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     When I click on "Submissions" on left menu
     And I click on "Automatically Graded" header
@@ -327,7 +327,7 @@ Feature: Test submission status
   """
     We're using quiz: Great Manatee Quiz NoTextual AND Showstopper
     """
-    When I click "Create New Assignment" button
+    When I click the "Create New Assignment" button
     # Next step is optional – we can skip it, but the list is more neat this way
     Then I select "MNTEES" group
     # We can select 1st student in the list...
@@ -335,7 +335,7 @@ Feature: Test submission status
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
     And I select "AC12-284: Great Manatee Quiz NoTextual AND Showstopper" quiz
-    And I click "Give Assignment" button
+    And I click the "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
@@ -347,7 +347,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+student@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
@@ -359,7 +359,7 @@ Feature: Test submission status
     And I give answers for the question 2
       | 1 | 3 |
     # Answers 1 and 3 selected above | 1 | 2 | 4 | will be answers 1,2 and 4. Numbers start from 1.
-    And I click "Submit My Answers" button
+    And I click the "Submit My Answers" button
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "My Grades" card to appear
@@ -369,7 +369,7 @@ Feature: Test submission status
     And I wait for login page to load
     Given I enter email "monocled.manatee+teacher@gmail.com"
     And I enter password "MonocledManatee"
-    And I click "Sign In" button
+    And I click the "Sign In" button
     And I wait for the left menu to be clickable
     When I click on "Submissions" on left menu
     And I click on "Automatically Graded" header
@@ -382,14 +382,14 @@ Feature: Test submission status
     And I click on "Log Out" on left menu
     And I click "Log Out" button on popup confirmation
 
-  @Cleanup @QuizNoTextualCleanup
+  @Cleanup @QuizNoTextualCleanup @AC12-275  @AC12-285
   Scenario: Delete the assignment without textual question
     Then I delete row #1 with quiz "AC12-275: Great Manatee Quiz NoTextual"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I log out
 
-  @Cleanup @QuizTextualCleanup
+  @Cleanup @QuizTextualCleanup @AC12-278 @AC12-286
   Scenario: Delete the assignment with a textual question
     Then I delete row #1 with quiz "AC12-278: Great Manatee Quiz Textual"
     And I click "Delete" button on popup confirmation
@@ -403,7 +403,7 @@ Feature: Test submission status
     And I wait for "Create New Assignment" button to be clickable
     And I log out
 
-  @Cleanup @QuizTextualAndShowstopperCleanup
+  @Cleanup @QuizTextualAndShowstopperCleanup @AC12-281
   Scenario: Delete the assignment with a textual question
     Then I delete row #1 with quiz "AC12-281: Great Manatee Quiz Textual AND Showstopper"
     And I click "Delete" button on popup confirmation
@@ -412,7 +412,7 @@ Feature: Test submission status
 
   @Cleanup @QuizNoTextualAndShowstopperCleanup
   Scenario: Delete the assignment with a textual question
-    Then I delete row #1 with quiz "Great Manatee Quiz NoTextual AND Showtopper"
+    Then I delete row #1 with quiz "AC12-284: Great Manatee Quiz NoTextual AND Showtopper"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I log out

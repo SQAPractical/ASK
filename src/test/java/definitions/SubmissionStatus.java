@@ -48,8 +48,8 @@ public class SubmissionStatus {
         while(true);
     }
 
-    @When("I click {string} button")
-    public void iClickButton(String buttonText) {
+    @When("I click the {string} button")
+    public void iClickTheButton(String buttonText) {
         String buttonXpath = "//button/span[contains(text(), '"+ buttonText + "')]";
         await().until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("ac-spinner")));
         WebElement theButton = getDriver().findElement(By.xpath(buttonXpath));
@@ -328,12 +328,19 @@ public class SubmissionStatus {
     public void iDeleteRowWithQuiz(int rowNum, String quizName) {
         String menuButtonXpath = "//span[@class='mat-content'][contains(., '" + quizName + "')][" + rowNum + "]//button";
         String deleteButtonXpath = "//span[contains(text(),'Delete Assignment')]";
-        awaitVisible(By.xpath(menuButtonXpath));
-        awaitClickable(By.xpath(menuButtonXpath));
-        getDriver().findElement(By.xpath(menuButtonXpath)).click();
-        awaitVisible(By.xpath(deleteButtonXpath));
-        awaitClickable(By.xpath(deleteButtonXpath));
-        getDriver().findElement(By.xpath(deleteButtonXpath)).click();
+        boolean found = false;
+        try {
+            found = getDriver().findElement(By.xpath(menuButtonXpath)).isEnabled();
+            awaitVisible(By.xpath(menuButtonXpath));
+            awaitClickable(By.xpath(menuButtonXpath));
+            getDriver().findElement(By.xpath(menuButtonXpath)).click();
+            awaitVisible(By.xpath(deleteButtonXpath));
+            awaitClickable(By.xpath(deleteButtonXpath));
+            getDriver().findElement(By.xpath(deleteButtonXpath)).click();
+        } catch (NoSuchElementException err) {
+            found = false;
+        }
+        assertEquals("Cleanup: Quiz \"" + quizName + "\" not found!", true, found);
     }
 
     @And("I wait for {string} card to appear")
