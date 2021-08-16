@@ -1,4 +1,5 @@
 Feature: Quiz - Title
+  @Smoke
   Scenario: Quiz - Title - Alphanumeric and sp char
     When I navigate to login page
     And I type email "teacher1@gmail.com"
