@@ -28,12 +28,12 @@ Feature: Test submission status
     # And I select student #1 in "MNTEES" group
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
-    And I select "Great Manatee Quiz NoTextual" quiz
+    And I select "AC12-275: Great Manatee Quiz NoTextual" quiz
     And I click "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
-    Then I check that assignment #1 is for quiz "Great Manatee Quiz NoTextual"
+    Then I check that assignment #1 is for quiz "AC12-275: Great Manatee Quiz NoTextual"
     And I expand assignment #1
     Then I check that assignment #1 has the name "Joel Blows" on it
     And I click on "Log Out" on left menu
@@ -45,7 +45,7 @@ Feature: Test submission status
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
-    And I go to the first assignment for quiz "Great Manatee Quiz NoTextual"
+    And I go to the first assignment for quiz "AC12-275: Great Manatee Quiz NoTextual"
     Then I verify that question #1 is "SINGLE_CHOICE"
     And I select choice #3 for question 1
     Then I verify that question #2 is "MULTIPLE_CHOICE"
@@ -57,7 +57,7 @@ Feature: Test submission status
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "Details" button to be clickable
-    Then I confirm quiz "Great Manatee Quiz NoTextual" is graded "Automatic" and is "PASSED"
+    Then I confirm quiz "AC12-275: Great Manatee Quiz NoTextual" is graded "Automatic" and is "PASSED"
     And I click on "Log Out" on left menu
     And I click "Log Out" button on popup confirmation
     And I wait for login page to load
@@ -68,9 +68,9 @@ Feature: Test submission status
     When I click on "Submissions" on left menu
     And I click on "Automatically Graded" header
     And I filter the list by "MNTEES" group
-    Then row #1 should display "Great Manatee Quiz NoTextual" as "PASSED" by "Joel Blows" with Auto-score "11 of 11"
+    Then row #1 should display "AC12-275: Great Manatee Quiz NoTextual" as "PASSED" by "Joel Blows" with Auto-score "11 of 11"
     And I click "Assignments" sidebar button
-    Then I delete row #1 with quiz "Great Manatee Quiz NoTextual"
+    Then I delete row #1 with quiz "AC12-275: Great Manatee Quiz NoTextual"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I click on "Log Out" on left menu
@@ -88,12 +88,12 @@ Feature: Test submission status
     # And I select student #1 in "MNTEES" group
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
-    And I select "Great Manatee Quiz NoTextual" quiz
+    And I select "AC12-275: Great Manatee Quiz NoTextual" quiz
     And I click "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
-    Then I check that assignment #1 is for quiz "Great Manatee Quiz NoTextual"
+    Then I check that assignment #1 is for quiz "AC12-275: Great Manatee Quiz NoTextual"
     And I expand assignment #1
     Then I check that assignment #1 has the name "Joel Blows" on it
     And I click on "Log Out" on left menu
@@ -105,7 +105,7 @@ Feature: Test submission status
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
-    And I go to the first assignment for quiz "Great Manatee Quiz NoTextual"
+    And I go to the first assignment for quiz "AC12-275: Great Manatee Quiz NoTextual"
     Then I verify that question #1 is "SINGLE_CHOICE"
     And I select choice #1 for question 1
     Then I verify that question #2 is "MULTIPLE_CHOICE"
@@ -117,7 +117,7 @@ Feature: Test submission status
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "Details" button to be clickable
-    Then I confirm quiz "Great Manatee Quiz NoTextual" is graded "Automatic" and is "FAILED"
+    Then I confirm quiz "AC12-275: Great Manatee Quiz NoTextual" is graded "Automatic" and is "FAILED"
     And I click on "Log Out" on left menu
     And I click "Log Out" button on popup confirmation
     And I wait for login page to load
@@ -128,9 +128,9 @@ Feature: Test submission status
     When I click on "Submissions" on left menu
     And I click on "Automatically Graded" header
     And I filter the list by "MNTEES" group
-    Then row #1 should display "Great Manatee Quiz NoTextual" as "FAILED" by "Joel Blows" with Auto-score "0 of 11"
+    Then row #1 should display "AC12-275: Great Manatee Quiz NoTextual" as "FAILED" by "Joel Blows" with Auto-score "0 of 11"
     And I click "Assignments" sidebar button
-    Then I delete row #1 with quiz "Great Manatee Quiz NoTextual"
+    Then I delete row #1 with quiz "AC12-275: Great Manatee Quiz NoTextual"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I click on "Log Out" on left menu
@@ -148,12 +148,12 @@ Feature: Test submission status
     # And I select student #1 in "MNTEES" group
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
-    And I select "Great Manatee Quiz Textual" quiz
+    And I select "AC12-278: Great Manatee Quiz Textual" quiz
     And I click "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
-    Then I check that assignment #1 is for quiz "Great Manatee Quiz Textual"
+    Then I check that assignment #1 is for quiz "AC12-278: Great Manatee Quiz Textual"
     And I expand assignment #1
     Then I check that assignment #1 has the name "Joel Blows" on it
     And I click on "Log Out" on left menu
@@ -165,7 +165,7 @@ Feature: Test submission status
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
-    And I go to the first assignment for quiz "Great Manatee Quiz Textual"
+    And I go to the first assignment for quiz "AC12-278: Great Manatee Quiz Textual"
     Then I verify that question #1 is "TEXTUAL"
     And I fill the answer "Oh, behave!" for question 1
     Then I verify that question #2 is "SINGLE_CHOICE"
@@ -179,7 +179,7 @@ Feature: Test submission status
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "My Grades" card to appear
-    Then I confirm quiz "Great Manatee Quiz Textual" is graded "Automatic" and is "PENDING"
+    Then I confirm quiz "AC12-278: Great Manatee Quiz Textual" is graded "Automatic" and is "PENDING"
     And I click on "Log Out" on left menu
     And I click "Log Out" button on popup confirmation
     And I wait for login page to load
@@ -190,9 +190,9 @@ Feature: Test submission status
     When I click on "Submissions" on left menu
     And I click on "For Grade" header
     And I filter the list by "MNTEES" group
-    Then row #1 should display "Great Manatee Quiz Textual" by "Joel Blows" with Auto-score "13 of 18"
+    Then row #1 should display "AC12-278: Great Manatee Quiz Textual" by "Joel Blows" with Auto-score "13 of 18"
     And I click "Assignments" sidebar button
-    Then I delete row #1 with quiz "Great Manatee Quiz Textual"
+    Then I delete row #1 with quiz "AC12-278: Great Manatee Quiz Textual"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I click on "Log Out" on left menu
@@ -210,12 +210,12 @@ Feature: Test submission status
     # And I select student #1 in "MNTEES" group
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
-    And I select "Great Manatee Quiz Textual Showstopper" quiz
+    And I select "AC12-279: Great Manatee Quiz Textual Showstopper" quiz
     And I click "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
-    Then I check that assignment #1 is for quiz "Great Manatee Quiz Textual Showstopper"
+    Then I check that assignment #1 is for quiz "AC12-279: Great Manatee Quiz Textual Showstopper"
     And I expand assignment #1
     Then I check that assignment #1 has the name "Joel Blows" on it
     And I click on "Log Out" on left menu
@@ -227,7 +227,7 @@ Feature: Test submission status
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
-    And I go to the first assignment for quiz "Great Manatee Quiz Textual Showstopper"
+    And I go to the first assignment for quiz "AC12-279: Great Manatee Quiz Textual Showstopper"
     Then I verify that question #1 is "TEXTUAL"
     And I fill the answer "Joel Blows" for question 1
     Then I verify that question #2 is "SINGLE_CHOICE"
@@ -241,7 +241,7 @@ Feature: Test submission status
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "My Grades" card to appear
-    Then I confirm quiz "Great Manatee Quiz Textual Showstopper" is graded "Automatic" and is "PENDING"
+    Then I confirm quiz "AC12-279: Great Manatee Quiz Textual Showstopper" is graded "Automatic" and is "PENDING"
     And I click on "Log Out" on left menu
     And I click "Log Out" button on popup confirmation
     And I wait for login page to load
@@ -252,9 +252,9 @@ Feature: Test submission status
     When I click on "Submissions" on left menu
     And I click on "For Grade" header
     And I filter the list by "MNTEES" group
-    Then row #1 should display "Great Manatee Quiz Textual Showstopper" by "Joel Blows" with Auto-score "10 of 15"
+    Then row #1 should display "AC12-279: Great Manatee Quiz Textual Showstopper" by "Joel Blows" with Auto-score "10 of 15"
     And I click "Assignments" sidebar button
-    Then I delete row #1 with quiz "Great Manatee Quiz Textual Showstopper"
+    Then I delete row #1 with quiz "AC12-279: Great Manatee Quiz Textual Showstopper"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I click on "Log Out" on left menu
@@ -272,12 +272,12 @@ Feature: Test submission status
     # And I select student #1 in "MNTEES" group
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
-    And I select "Great Manatee Quiz Textual AND Showstopper" quiz
+    And I select "AC12-281: Great Manatee Quiz Textual AND Showstopper" quiz
     And I click "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
-    Then I check that assignment #1 is for quiz "Great Manatee Quiz Textual AND Showstopper"
+    Then I check that assignment #1 is for quiz "AC12-281: Great Manatee Quiz Textual AND Showstopper"
     And I expand assignment #1
     Then I check that assignment #1 has the name "Joel Blows" on it
     And I click on "Log Out" on left menu
@@ -289,7 +289,7 @@ Feature: Test submission status
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
-    And I go to the first assignment for quiz "Great Manatee Quiz Textual AND Showstopper"
+    And I go to the first assignment for quiz "AC12-281: Great Manatee Quiz Textual AND Showstopper"
     Then I verify that question #1 is "TEXTUAL"
     And I fill the answer "Oh, behave!" for question 1
     Then I verify that question #2 is "SINGLE_CHOICE"
@@ -303,7 +303,7 @@ Feature: Test submission status
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "My Grades" card to appear
-    Then I confirm quiz "Great Manatee Quiz Textual AND Showstopper" is graded "Automatic" and is "FAILED"
+    Then I confirm quiz "AC12-281: Great Manatee Quiz Textual AND Showstopper" is graded "Automatic" and is "FAILED"
     And I click on "Log Out" on left menu
     And I click "Log Out" button on popup confirmation
     And I wait for login page to load
@@ -314,9 +314,9 @@ Feature: Test submission status
     When I click on "Submissions" on left menu
     And I click on "Automatically Graded" header
     And I filter the list by "MNTEES" group
-    Then row #1 should display "Great Manatee Quiz Textual AND Showstopper" as "FAILED" by "Joel Blows" with Auto-score "5 of 15"
+    Then row #1 should display "AC12-281: Great Manatee Quiz Textual AND Showstopper" as "FAILED" by "Joel Blows" with Auto-score "5 of 15"
     And I click "Assignments" sidebar button
-    Then I delete row #1 with quiz "Great Manatee Quiz Textual AND Showstopper"
+    Then I delete row #1 with quiz "AC12-281: Great Manatee Quiz Textual AND Showstopper"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I click on "Log Out" on left menu
@@ -334,12 +334,12 @@ Feature: Test submission status
     # And I select student #1 in "MNTEES" group
     # Or we can select the student by name
     And I select student "Joel Blows" in "MNTEES" group
-    And I select "Great Manatee Quiz NoTextual AND Showstopper" quiz
+    And I select "AC12-284: Great Manatee Quiz NoTextual AND Showstopper" quiz
     And I click "Give Assignment" button
     And I wait for the left menu to be clickable
     And I click on "Assignments" on left menu
     And I wait for "Create New Assignment" button to be clickable
-    Then I check that assignment #1 is for quiz "Great Manatee Quiz NoTextual AND Showstopper"
+    Then I check that assignment #1 is for quiz "AC12-284: Great Manatee Quiz NoTextual AND Showstopper"
     And I expand assignment #1
     Then I check that assignment #1 has the name "Joel Blows" on it
     And I click on "Log Out" on left menu
@@ -351,7 +351,7 @@ Feature: Test submission status
     And I wait for the left menu to be clickable
     Then I verify that I have new assignments
     When I click on "My Assignments" on left menu
-    And I go to the first assignment for quiz "Great Manatee Quiz NoTextual AND Showstopper"
+    And I go to the first assignment for quiz "AC12-284: Great Manatee Quiz NoTextual AND Showstopper"
     Then I verify that question #1 is "SINGLE_CHOICE"
     And I select choice #2 for question 1
     Then I verify that question #2 is "MULTIPLE_CHOICE"
@@ -363,7 +363,7 @@ Feature: Test submission status
     And I click "Ok" button on popup notification
     Then I click on "My Grades" on left menu
     And I wait for "My Grades" card to appear
-    Then I confirm quiz "Great Manatee Quiz NoTextual AND Showstopper" is graded "Automatic" and is "FAILED"
+    Then I confirm quiz "AC12-284: Great Manatee Quiz NoTextual AND Showstopper" is graded "Automatic" and is "FAILED"
     And I click on "Log Out" on left menu
     And I click "Log Out" button on popup confirmation
     And I wait for login page to load
@@ -374,9 +374,9 @@ Feature: Test submission status
     When I click on "Submissions" on left menu
     And I click on "Automatically Graded" header
     And I filter the list by "MNTEES" group
-    Then row #1 should display "Great Manatee Quiz NoTextual AND Showstopper" as "FAILED" by "Joel Blows" with Auto-score "5 of 10"
+    Then row #1 should display "AC12-284: Great Manatee Quiz NoTextual AND Showstopper" as "FAILED" by "Joel Blows" with Auto-score "5 of 10"
     And I click "Assignments" sidebar button
-    Then I delete row #1 with quiz "Great Manatee Quiz NoTextual AND Showstopper"
+    Then I delete row #1 with quiz "AC12-284: Great Manatee Quiz NoTextual AND Showstopper"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I click on "Log Out" on left menu
@@ -384,29 +384,28 @@ Feature: Test submission status
 
   @Cleanup @QuizNoTextualCleanup
   Scenario: Delete the assignment without textual question
-    Then I delete row #1 with quiz "Great Manatee Quiz NoTextual"
+    Then I delete row #1 with quiz "AC12-275: Great Manatee Quiz NoTextual"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I log out
 
   @Cleanup @QuizTextualCleanup
   Scenario: Delete the assignment with a textual question
-    Then I delete row #1 with quiz "Great Manatee Quiz Textual"
+    Then I delete row #1 with quiz "AC12-278: Great Manatee Quiz Textual"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I log out
 
   @Cleanup @QuizTextualShowstopperCleanup
   Scenario: Delete the assignment with a textual question
-    Then I delete row #1 with quiz "Great Manatee Quiz Textual Showstopper"
+    Then I delete row #1 with quiz "AC12-279: Great Manatee Quiz Textual Showstopper"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I log out
 
-
   @Cleanup @QuizTextualAndShowstopperCleanup
   Scenario: Delete the assignment with a textual question
-    Then I delete row #1 with quiz "Great Manatee Quiz Textual AND Showstopper"
+    Then I delete row #1 with quiz "AC12-281: Great Manatee Quiz Textual AND Showstopper"
     And I click "Delete" button on popup confirmation
     And I wait for "Create New Assignment" button to be clickable
     And I log out
