@@ -1,5 +1,6 @@
 Feature: Registration - Password/Confirm password
 
+  @Smoke
   Scenario: Registration Password/Confirm Password - Alphanumeric and special characters
     When I navigate to registration page
     Then I type first name "Ivan"
