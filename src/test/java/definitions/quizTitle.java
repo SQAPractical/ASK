@@ -48,8 +48,9 @@ public class quizTitle {
     }
 
     @And("I click Add Question button")
-    public void iClickAddQuestionButton() {
+    public void iClickAddQuestionButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(), 'add_circle')]")).click();
+        Thread.sleep(3000);
     }
 
     @And("I select {string} type of question for question {string}")
@@ -86,7 +87,7 @@ public class quizTitle {
     @And("I click the Close button")
     public void iClickTheCloseButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Close')]")).click();
-        Thread.sleep(4000);
+        Thread.sleep(5000);
     }
 
 
@@ -95,6 +96,18 @@ public class quizTitle {
         String xPath = "//*[contains(text(),\""+quizName+"\")]/../../..//*[contains(text(),'Delete')]";
         getDriver().findElement(By.xpath(xPath)).click();
         getDriver().findElement(By.xpath("//*[@aria-label='Close dialog'][2]")).click();
+        Thread.sleep(2000);
+    }
+
+    @And("I click on Title Of The Quiz")
+    public void iClickOnTitleOfTheQuiz() throws InterruptedException {
+        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).click();
+        Thread.sleep(1000);
+    }
+
+    @And("I click outside of Quiz Title field")
+    public void iClickOutsideOfQuizTitleField() throws InterruptedException {
+        getDriver().findElement(By.xpath("//*[@class='ng-star-inserted']")).click();
         Thread.sleep(2000);
     }
 }
