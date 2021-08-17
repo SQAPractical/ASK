@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Test submission status refactored
 """
   Test Set for testing the submission status.

@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Assignment - Graded by
   Scenario: Assignment-Graded by-Teacher
     When I navigate to login page

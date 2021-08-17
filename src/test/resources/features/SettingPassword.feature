@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Setting - Password
 
   Scenario: Setting - Password - Alphanumeric and special characters

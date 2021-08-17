@@ -1,3 +1,4 @@
+@FullRegression
 Feature: User's management - Options in Student's account
   Scenario: Change User's Name (Allowable characters: Alphanumeric and special characters)
     When I navigate to login page
@@ -239,14 +240,14 @@ Feature: User's management - Options in Student's account
     And I type password "Qwertyu7"
     And I click Sign In button
     And I click on "Management" on left menu
-    And I select "textdelete" from list of "Students"
+    And I select "test test123" from list of "Students"
     And I click on Options button
     And I click on menu item Delete User from dropdown list
     And I click "Delete" button in pop up window
     And I click on "Log Out" on left menu
     And I click "Log Out" button in pop up window
-    And I type email "ailyesenpai2@devoc.site"
-    And I type password "58e9d0e4808c7b43fdc17aa52cd1ed46d7012fc8"
+    And I type email "cabd@bitesatlanta.com"
+    And I type password "12345Abc"
     And I click Sign In button
     Then "Authentication failed. User not found or password does not match" is displayed in top left corner
 

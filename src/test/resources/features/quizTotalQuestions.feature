@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Quiz - Total Questions
   Scenario: Quiz - Total Questions - Allows to save a quiz with 1 question
     When I navigate to the login page

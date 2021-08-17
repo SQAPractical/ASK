@@ -187,9 +187,10 @@ public class assignmentGradedBy {
 
     @And("I click on quiz title {string}")
     public void iClickOnQuizTitle(String qTitle) throws InterruptedException {
+        Thread.sleep(2000);
         String xPath = "//span[@class='quiz-name'][contains(text(), '"+qTitle+"')]";
         getDriver().findElement(By.xpath(xPath)).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
     @Then("I see under Graded By {string} with quiz title {string}")

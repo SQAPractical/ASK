@@ -1,3 +1,4 @@
+@FullRegression
 Feature: log In
   Scenario: Log In - Verify if a user will be able to login with a valid username and valid password
     When I navigate to login page

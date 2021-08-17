@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Registration - Password/Confirm password
 
   @Smoke

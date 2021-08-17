@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Quiz - Title
   @Smoke
   Scenario: Quiz - Title - Alphanumeric and sp char

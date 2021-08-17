@@ -1,4 +1,5 @@
-Feature: Registration - Group Code
+@FullRegression
+Feature: Single Choice Question - Options
   #AC12-181
   Scenario: Single Choice Question - Options - Create single choice question
     When I navigate to page
