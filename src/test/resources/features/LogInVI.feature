@@ -58,3 +58,7 @@ Feature: log In
     And I type password "12345Abc "
     And I click Sign In button
 
+  Scenario: Log In - password in bullets, copy and cut disabled
+    When I navigate to login page
+    And I type password "12345Abc"
+    Then Password in bullets, copy and cut disabled
