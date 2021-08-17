@@ -39,8 +39,8 @@ public class settingsFullName {
 
     @Then("user's name changed to {string}")
     public void elementWithUserName(String NewUserName) throws InterruptedException {
-        Thread.sleep(2000);
-        String xPath = "//input[@placeholder = 'New name']";
+        Thread.sleep(1000);
+        String xPath = "//td[contains(text(),'"+NewUserName+"')]";
         WebElement elementWithUserName = getDriver().findElement(By.xpath(xPath));
         assertThat(elementWithUserName.isDisplayed()).isTrue();
     }
@@ -49,6 +49,7 @@ public class settingsFullName {
     @And("I delete name")
     public void iDeleteName() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[@placeholder='New name']")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        getDriver().findElement(By.xpath("//*[@placeholder='New name']")).sendKeys(Keys.chord(Keys.COMMAND, "a"));
         getDriver().findElement(By.xpath("//*[@placeholder='New name']")).sendKeys(Keys.DELETE);
         getDriver().findElement(By.xpath("//*[@placeholder='New name']")).sendKeys(Keys.BACK_SPACE);
         Thread.sleep(2000);

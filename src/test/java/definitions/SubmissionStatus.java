@@ -280,7 +280,7 @@ public class SubmissionStatus {
         String menuItemXpath = "//div[@role='menu']//button[contains(., '" + groupName + "')]";
         String groupHeaderXpath = "//mat-tab-body//th[@class='group']/span";
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -292,7 +292,7 @@ public class SubmissionStatus {
         scrollTo(menuItem);
         menuItem.click();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

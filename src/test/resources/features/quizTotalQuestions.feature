@@ -1,4 +1,4 @@
-Feature:
+Feature: Quiz - Total Questions
   Scenario: Quiz - Total Questions - Allows to save a quiz with 1 question
     When I navigate to the login page
     And I type email "teacher1@gmail.com"
