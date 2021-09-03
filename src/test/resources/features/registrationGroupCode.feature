@@ -25,6 +25,9 @@ Feature: Registration - Group Code
       | FName  | LName   | Email            | Group | Password | ConfirmPassword | ExpectedMessage          |
       | "John" | "Smith" | "test@gmail.com" | ""    | "12345"  | "12345"         | "This field is required" |
 
+      | FName  | LName   | Email            | Group | Password | ConfirmPassword | ExpectedMessage          |
+      | "John" | "Smith" | "test@gmail.com" | ""    | "12345"  | "12345"         | "This field is required" |
+
   Scenario: Registration - Group Code - Min 1 characters
     When I navigate to registration page
     And I type first name "John"
