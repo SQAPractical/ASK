@@ -1,12 +1,9 @@
 target/
 .idea/
-chromedriver
-chromedriver.exe
 geckodriver
 geckodriver.exe
 javaWebdriverCucumber.iml
 ASK.iml
 workspace.xml
 pom.xml
-README.md
 dependency-reduced-pom.xml
