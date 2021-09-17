@@ -8,3 +8,5 @@ Feature: test Hello
 1 2 3 testhtfhgv;kjj
   khvvjlkkkmaster
   Margarita
+  Margarita 123
+  12hashh
