@@ -1,0 +1,4 @@
+scenario
+  given
+  when
+  than
