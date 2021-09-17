@@ -1,8 +1,9 @@
 Genrikh1995
-Given hello Qa
-  123 2018
-  123 2019
-  123 2020
+Given today is a good friday
+  1
+  2
+  3
+
 Feature: test Hello
 1 2 3 testhtfhgv;kjj
   khvvjlkkkmaster
