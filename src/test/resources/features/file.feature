@@ -1,8 +1,8 @@
 Genrikh1995
 Given today is a good friday
   1
-  2
-  3
+  we are the
+  Hello world
 
 Feature: test Hello
 1 2 3 testhtfhgv;kjj
