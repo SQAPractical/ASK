@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 Feature: test
+<<<<<<< HEAD
   Hello Team 3 .
 =======
 Genrikh1995
@@ -14,4 +15,8 @@ Feature: test Hello
   Margarita
   Margarita 123
   12hashh
+>>>>>>> master
+=======
+  hello Laleh and Lubov! :)
+
 >>>>>>> master
