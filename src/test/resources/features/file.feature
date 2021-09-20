@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+HEAD
 Feature: test
-<<<<<<< HEAD
+<HEAD
   Hello Team 3 .
-=======
+
 Genrikh1995
 Given today is a good friday
   1
@@ -14,9 +14,5 @@ Feature: test Hello
   khvvjlkkkmaster
   Margarita
   Margarita 123
-  12hashh
->>>>>>> master
-=======
-  hello Laleh and Lubov! :)
-
->>>>>>> master
+  12hashh>>>>>>> master
+ Gen>>>>>>> mas>>>>>>> master
