@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-uhfrgkmflmblfgmbfd
-  njsnvdnffgfgfblfdmb
 
   Hello!
 
