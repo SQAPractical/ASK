@@ -1,7 +1,11 @@
-<<<<<<< HEAD
+ Margo
+Feature
+  Margarita
+  Test
+
+
 Given xpath logo 2019
-  yes hello world
+  yes yes this is Qa
 
 Margarita
-  Genrikh
-> master
+  Genrikmaster master
