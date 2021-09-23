@@ -57,4 +57,14 @@ getDriver().get("http://ask-stage.portnov.com/#/login");
     }
 
 
+    @Then("Password in bullets, copy, cut disabled")
+    public void passwordInBulletsCopyCutDisabled() {
+        String attribute = "type";
+        String expectedAttributeValue = "password";
+        String xPathForPasswordField = "//input[@placeholder='Password *']";
+
+        String actualAttributeValue = getDriver().findElement(By.xpath(xPathForPasswordField)).getAttribute(attribute);
+
+        assertThat(actualAttributeValue.equals(expectedAttributeValue)).isTrue();
+    }
 }

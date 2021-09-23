@@ -25,3 +25,9 @@ Feature: Log In
     And I click on Email field
     Then Message "This field is required" appears
 
+  Scenario: Log In - Password in bullets, copy, cut disabled
+    When I Navigate to login page
+    And I type Password "12345Abc"
+    Then Password in bullets, copy, cut disabled
+
+
