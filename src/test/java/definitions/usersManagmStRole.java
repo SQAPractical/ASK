@@ -9,18 +9,19 @@ import static support.TestContext.getDriver;
 
 public class usersManagmStRole {
     @And("I click on {string} tab")
-    public void iClickOnTab(String roleUsersManagm) {
-        getDriver().findElement(By.xpath("//div[contains(text(),'"+roleUsersManagm+"')]")).click();
+    public void iClickOnTab(String tabName) {
+        getDriver().findElement(By.xpath("//div[contains(text(),'"+tabName+"')]")).click();
     }
 
     @And("I click on {string} name")
-    public void iClickOnName(String teacherName) throws InterruptedException {
+    public void iClickOnName(String userName) throws InterruptedException {
         Thread.sleep(2000);
-        getDriver().findElement(By.xpath("//*[contains(text(), '"+teacherName+"')]")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(), '"+userName+"')]")).click();
     }
 
-    @And("I click on {string}")
-    public void iClickOn(String options) throws InterruptedException {
+
+    @And("I click on Options")
+    public void iClickOnOptions() throws InterruptedException {
         Thread.sleep(2000);
         getDriver().findElement(By.xpath("//span[@class='mat-button-wrapper']")).click();
     }
@@ -48,4 +49,5 @@ public class usersManagmStRole {
     public void iVerifyThatRoleIs(String role) {
         assertThat(getDriver().findElement(By.xpath("//td[contains(text(), '"+role+"')]")).isDisplayed()).isTrue();
     }
+
 }
