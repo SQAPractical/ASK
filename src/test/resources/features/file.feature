@@ -1,4 +1,4 @@
-HEAD
+git merge masterHEAD
 Feature: test
 <HEAD
   Hello Team 3 .
