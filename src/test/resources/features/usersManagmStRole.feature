@@ -10,7 +10,12 @@ Feature: User's management - Options in Teacher’s account
     And I click on "Options"
     And I click on Change User's Role
     And I confirm Change role
+    Then I verify that role is "STUDENT"
     And I click on "Options"
     And I click on Change User's Role
     And I confirm Change role
+    Then I verify that role is "TEACHER"
+
+
+
 
