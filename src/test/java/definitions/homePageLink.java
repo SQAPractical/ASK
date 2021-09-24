@@ -9,11 +9,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class homePageLink {
-    @When("I navigate to login page")
-    public void iNavigateToLoginPage() {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
-
-    }
+//    @When("I navigate to login page")
+//    public void iNavigateToLoginPage() {
+//        getDriver().get("http://ask-stage.portnov.com/#/login");
+//
+//    }
 
 
 /*    @Then("{string} appears")
