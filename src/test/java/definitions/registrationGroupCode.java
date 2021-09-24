@@ -61,4 +61,5 @@ public class registrationGroupCode {
         WebElement Element = getDriver().findElement(By.xpath("//*[contains(text(),'"+Text+"')]"));
         assertThat(Element.isDisplayed()).isTrue();
     }
+
 }
