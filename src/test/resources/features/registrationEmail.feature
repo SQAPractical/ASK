@@ -54,6 +54,28 @@ Feature: Registration - Email
       And I click on Register me button
       Then Text "Should be a valid email address" appears
 
+  Scenario: Registration - Registration Email - Email contains 2@ signs
+    When I navigate to registration page
+    And I type first name "Petr"
+    And I type last name "Petrov"
+    And I type email "test123@@gmail.com "
+    And I type group code "zxc"
+    And I type password "12345"
+    And I confirm password "12345"
+    And I click on Register me button
+    Then Text "Should be a valid email address" appears
+
+  Scenario: Registration - Registration Email - Email does not contains @ signs
+    When I navigate to registration page
+    And I type first name "Petr"
+    And I type last name "Petrov"
+    And I type email "test123gmail.com "
+    And I type group code "zxc"
+    And I type password "12345"
+    And I confirm password "12345"
+    And I click on Register me button
+    Then Text "Should be a valid email address" appears
+
 
 
 
