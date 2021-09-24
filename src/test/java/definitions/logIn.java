@@ -12,10 +12,10 @@ import static support.TestContext.getDriver;
 public class logIn {
 
 
-    @When("I Navigate to login page")
-    public void iNavigateToLoginPage() {
-getDriver().get("http://ask-stage.portnov.com/#/login");
-    }
+//    @When("I Navigate to login page")
+//    public void iNavigateToLoginPage() {
+//getDriver().get("http://ask-stage.portnov.com/#/login");
+//    }
 
 
     @And("I type Email {string}")

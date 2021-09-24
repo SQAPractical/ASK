@@ -17,7 +17,3 @@ Feature: Multiple-choice question - Options
     Then Text "Cities" appears
     Then Quiz "Cities" is present in list
     And I delete quiz "Cities"
-
-
-
-
