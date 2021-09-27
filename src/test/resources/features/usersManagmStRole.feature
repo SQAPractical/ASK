@@ -1,3 +1,4 @@
+@FullRegression
 Feature: User's management - Options in Teacher’s account
   Scenario: User's management - Options in Teacher’s account - Change role
     When I navigate to login page

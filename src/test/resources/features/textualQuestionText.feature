@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Textual Question - Text
   Background: login steps
     When I navigate to login page
@@ -9,7 +10,7 @@ Feature: Textual Question - Text
     And I type quiz title "Types of Testing_Automation"
     And I click Add question button
     And I select Question type "Textual" for question 1
-
+  @Smoke
   Scenario: Textual Question - Text - Allowable characters: Alphanumeric & Special characters
     And I type text "Smoke test - ..." for question 1
     And I click Save button

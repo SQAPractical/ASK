@@ -79,4 +79,5 @@ public class usersManagementTName {
 
         WebElement Element = getDriver().findElement(By.xpath("//*[contains(text(),'"+error+"')]"));
         assertThat(Element.isDisplayed()).isTrue();
+
     }}

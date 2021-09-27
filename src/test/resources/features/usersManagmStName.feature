@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Options in Student's account - Change Name
   Background:
     When I navigate to login page

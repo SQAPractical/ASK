@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         glue = {"definitions", "support"},
         tags = {"@Smoke"} // same as VM option -Dcucumber.options="--tags @predefined"
 )
-public class TestRunner {
+public class FullRegression {
     @BeforeClass
     public static void setup() {
         //this is my test change

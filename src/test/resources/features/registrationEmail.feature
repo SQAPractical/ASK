@@ -1,4 +1,6 @@
+@FullRegression
 Feature: Registration - Email
+  @Smoke
   Scenario: Registration - Email - Alphanumeric characters and @ special char
     When I navigate to registration page
     And I type first name "Petr"

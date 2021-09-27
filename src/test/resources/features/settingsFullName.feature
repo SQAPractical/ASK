@@ -1,3 +1,4 @@
+@FullRegression
 Feature:Settings - Full Name
 
   Scenario: Settings - Full Name - Student - Allowable characters: Alphanumeric characters

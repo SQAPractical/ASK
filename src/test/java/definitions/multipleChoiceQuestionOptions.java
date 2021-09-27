@@ -38,8 +38,9 @@ public class multipleChoiceQuestionOptions {
     }
 
     @And("I click Add question button")
-    public void iClickAddQuestionButton() {
+    public void iClickAddQuestionButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(), 'add_circle')]")).click();
+        Thread.sleep(1000);
     }
 
     @And("I select Question type {string} for question {int}")

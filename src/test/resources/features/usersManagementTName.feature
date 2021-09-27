@@ -1,3 +1,4 @@
+@FullRegression
 Feature: User's management - Options in Teacher's account
   Scenario: User's management - Options in Teacher's account - Teacher is able to change their name
     When I go to login page
