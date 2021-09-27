@@ -1,5 +1,5 @@
-Feature: Multiple-choice question - Options
-  Scenario: Multiple-choice question - Options - User can choose any Answer
+Feature: Multiple-choice question-Options
+  Scenario: Multiple-choice question-Options-Options - User can choose any Answer
     When I navigate to login page
     And I type email "teacher1@gmail.com"
     And I type password "12345Abc"
@@ -17,7 +17,3 @@ Feature: Multiple-choice question - Options
     Then Text "Cities" appears
     Then Quiz "Cities" is present in list
     And I delete quiz "Cities"
-
-
-
-

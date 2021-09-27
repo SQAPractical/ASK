@@ -21,8 +21,9 @@ public class multipleChoiceQuestionOptions {
     }
 
     @And("I click {string} menu item")
-    public void iClickMenuItem(String menuItem) {
+    public void iClickMenuItem(String menuItem) throws InterruptedException {
         getDriver().findElement(By.xpath("//h5[contains(text(), '"+menuItem+"')]")).click();
+        Thread.sleep(2000);
     }
 
     @And("I click Create new quiz button")
