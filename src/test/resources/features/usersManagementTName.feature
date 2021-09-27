@@ -6,7 +6,7 @@ Feature: User's management - Options in Teacher's account
     And I click Sign In button
     And I click "Management" menu item
     And I click Teacher tab
-    And I find and click "Daria T" in the list
+    And I find and click "Diana Brown" in the list
     And I click Options button
     And I click Change User's Name button
     And I delete the name
@@ -16,9 +16,9 @@ Feature: User's management - Options in Teacher's account
     And I click Options button
     And I click Change User's Name button
     And I delete the name
-    And I type new name "Daria T"
+    And I type new name "Diana Brown"
     And I click Change button
-    Then text "Daria T" appears
+    Then text "Diana Brown" appears
 
   Scenario: User's management - Options in Teacher's account - User's name field is required
     When I go to login page
@@ -27,10 +27,10 @@ Feature: User's management - Options in Teacher's account
     And I click Sign In button
     And I click "Management" menu item
     And I click Teacher tab
-    And I find and click "Daria T" in the list
+    And I find and click "Diana Brown" in the list
     And I click Options button
     And I click Change User's Name button
-    And I delete the name
+    And I delete name in New Name field
     And I click Change button
     Then error message "This field is required" appears
 
@@ -41,13 +41,28 @@ Feature: User's management - Options in Teacher's account
     And I click Sign In button
     And I click "Management" menu item
     And I click Teacher tab
-    And I find and click "Daria" in the list
+    And I find and click "Diana Brown" in the list
     And I click Options button
     And I click Change User's Name button
     And I delete the name
-    And I type new name "D"
+    And I type new name "Q"
     And I click Change button
     Then error message "Should be at least 2 characters name" appears
+
+
+  Scenario: User's management - reset name back after previous test case with bug
+    When I go to login page
+    And I type email "teacher1@gmail.com"
+    And I type password "12345Abc"
+    And I click Sign In button
+    And I click "Management" menu item
+    And I click Teacher tab
+    And I find and click "Q" in the list
+    And I click Options button
+    And I click Change User's Name button
+    And I delete the name
+    And I type new name "Diana Brown"
+    And I click Change button
 
   Scenario: User's management - Options in Teacher's account - 100 characters name
     When I go to login page
@@ -56,7 +71,7 @@ Feature: User's management - Options in Teacher's account
     And I click Sign In button
     And I click "Management" menu item
     And I click Teacher tab
-    And I find and click "Daria T" in the list
+    And I find and click "Diana Brown" in the list
     And I click Options button
     And I click Change User's Name button
     And I delete the name
@@ -66,9 +81,9 @@ Feature: User's management - Options in Teacher's account
     And I click Options button
     And I click Change User's Name button
     And I delete the name
-    And I type new name "Daria T"
+    And I type new name "Diana Brown"
     And I click Change button
-    Then text "Daria T" appears
+    Then text "Diana Brown" appears
 
   Scenario: User's management - Options in Teacher's account - 101 characters name
     When I go to login page
@@ -77,7 +92,7 @@ Feature: User's management - Options in Teacher's account
     And I click Sign In button
     And I click "Management" menu item
     And I click Teacher tab
-    And I find and click "Daria" in the list
+    And I find and click "Diana Brown" in the list
     And I click Options button
     And I click Change User's Name button
     And I delete the name
