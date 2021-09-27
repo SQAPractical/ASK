@@ -45,14 +45,14 @@ Feature: Options in Student's account - Change Name
   Scenario: Name cannot have trailing whitespace character
     And I type Space into New Name field
     And I click Change button
-    Then Text "Trailing and leading spaces are not allowed" appears
+    Then Text "Whitespaces are not allowed" appears
 
   Scenario: Name cannot have leading whitespace character
     And I select and cut existed name from name field
     And I type Space into New Name field
     And I paste name back into New Name field
     And I click Change button
-    Then Text "Trailing and leading spaces are not allowed" appears
+    Then Text "Whitespaces are not allowed" appears
 # Return back name as it was
     And I click Change Your Name button
     And I delete name in New Name field

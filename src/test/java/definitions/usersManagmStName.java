@@ -17,8 +17,11 @@ public class usersManagmStName {
 
     @And("I delete name in New Name field")
     public void iDeleteNameInNewNameField() throws InterruptedException {
+
+        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(Keys.COMMAND + "a");
         getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(Keys.CONTROL + "a");
         getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(Keys.DELETE);
+        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(Keys.BACK_SPACE);
         Thread.sleep(2000);
 
     }
@@ -44,7 +47,9 @@ public class usersManagmStName {
 
     @And("I select and cut existed name from name field")
     public void iSelectAndCutExistedNameFromNameField() {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(Keys.COMMAND + "a");
         getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(Keys.CONTROL + "a");
+        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(Keys.COMMAND + "x");
         getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(Keys.CONTROL + "x");
     }
 
@@ -56,5 +61,7 @@ public class usersManagmStName {
     @And("I paste name back into New Name field")
     public void iPasteNameBackIntoNewNameField() {
         getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(Keys.CONTROL + "v");
+        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(Keys.COMMAND + "v");
+
     }
 }
