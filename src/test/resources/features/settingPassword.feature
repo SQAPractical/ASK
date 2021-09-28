@@ -6,7 +6,7 @@ Feature: Settings - Password
     And I click Sign In button
     And I click "Settings" menu item
     And I click on "Change Your Password" button
-    And I type Password in the Changing Password window "123abc!@#"
+    And I type Password in the Changing Password window "12345"
     And I type new Password "123abc!@#"
     And I confirm new Password "123abc!@#"
     And I click on Change button
