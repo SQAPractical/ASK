@@ -41,5 +41,10 @@ public class homePageLink {
         assertThat(currentUrl.contains(urlText)).isTrue();
 
     }
+
+    @When("I navigate to login page")
+    public void iNavigateToLoginPage() {
+        getDriver().get("http://ask-stage.portnov.com/#/home");
+    }
 }
 

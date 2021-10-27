@@ -3,11 +3,11 @@ Feature: Home page - Links
   @Smoke
   Scenario: Home page - Links - Go To My Assignments
     When I navigate to login page
-    And I type email "student1@gmail.com"
-    And I type password "12345Abc"
-    And I click Sign In button
-    And I click "Go To My Assignments" on home page
-    Then Text "My Assignments" appears
+#    And I type email "student1@gmail.com"
+#    And I type password "12345Abc"
+#    And I click Sign In button
+#    And I click "Go To My Assignments" on home page
+#    Then Text "My Assignments" appears
 
   Scenario: Home page - Links - Go To My Grades
     When I navigate to login page
