@@ -1,2 +1,2 @@
 Feature: logIn
-  Scenario: navigateg
+  Scenario: navigate
