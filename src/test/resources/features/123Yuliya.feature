@@ -1,5 +1,5 @@
 Feature: it's a beautiful day
-  Scenario: be happy
+  Scenario: 1234
     happy Halloween
     Happy CHristmass
-    ANew YEar
+    Carrots
