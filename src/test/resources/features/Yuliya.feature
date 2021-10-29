@@ -1,2 +1,0 @@
-Feature: TestY
-  Scenario: TestY

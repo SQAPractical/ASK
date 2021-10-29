@@ -1,2 +1,0 @@
-Feature: hello
-  Scenario: ghj
