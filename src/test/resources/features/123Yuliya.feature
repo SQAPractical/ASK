@@ -1,5 +1,5 @@
-Feature: 123
+Feature: it's a beautiful day
   Scenario: 1234
-    Cats
-    Dogs
+    happy Halloween
+    Happy CHristmass
     Carrots
