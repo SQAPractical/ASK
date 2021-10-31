@@ -3,3 +3,7 @@ Feature: We are the Chempions , my Friend
   We are the champions
   No time for losers
   ‘Cause we are the champions of the world
+
+
+    Hallilua
+    apparently it's impossible to perform this conflict from one comp
