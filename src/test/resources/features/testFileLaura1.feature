@@ -1,2 +1,0 @@
-Feature: logIn
-  Scenario: navigate

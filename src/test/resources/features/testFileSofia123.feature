@@ -1,2 +1,0 @@
-Feature: stdvgwerf
-  Scenario: rtfgewefsdc
