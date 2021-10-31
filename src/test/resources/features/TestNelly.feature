@@ -7,3 +7,5 @@ Feature: We are the Chempions , my Friend
 
     Hallilua
     apparently it's impossible to perform this conflict from one comp
+
+I add some changes to you file.  Do you see conflict somewhere?
