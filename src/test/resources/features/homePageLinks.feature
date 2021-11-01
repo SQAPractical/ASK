@@ -1,7 +1,9 @@
 Feature: Text from Sofia
-123
-123121212121212121
-12312121211212
+
+123weasfdasdf
+123asefdasdf
+123stergtwegf
+
   Hello world
   Aaaaaa!!!sdasd
  Good night world
