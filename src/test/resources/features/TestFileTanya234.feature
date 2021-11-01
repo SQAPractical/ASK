@@ -1,7 +1,7 @@
 Feature:234
   Scenario: hello
     Hi
-  Today is Halloween,
+  Yesterday was  Halloween, today is first day of November
   next month is Christmas !
 
           Lets a have a drink
