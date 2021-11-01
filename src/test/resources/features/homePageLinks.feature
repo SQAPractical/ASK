@@ -1,3 +1,4 @@
+
 Feature: Home page123
 
   Hello world
@@ -12,7 +13,4 @@ Feature: Home page123
  Happy November!!!
  Good night world
   Happy Monday!
-
-
-
 
