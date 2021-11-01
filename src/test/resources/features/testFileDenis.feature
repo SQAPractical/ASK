@@ -1,2 +1,2 @@
-Feature: dfghjkhgf
-  Scenario: fjhg
+Feature: test
+  Scenario: test

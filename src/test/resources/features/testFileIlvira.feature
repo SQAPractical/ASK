@@ -1,2 +1,2 @@
-Feature: Test
+Feature: test
   Scenario: test
