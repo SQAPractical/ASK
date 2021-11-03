@@ -1,4 +1,4 @@
-Feature: Single choice question - Options
+Feature: "Single choice question - Options"
   Scenario: Single choice question - Options - 2 options
     When I navigate to login page
     And I type my email "teacher3@gmail.com"
