@@ -19,3 +19,4 @@ Feature: "Single choice question - Options"
     Then Options with text "ABC" and "CAB" id displayed
     And I click Close button
     And I delete Quiz"Quiz AG4"
+    And test
