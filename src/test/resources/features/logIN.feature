@@ -4,6 +4,7 @@ Feature: "Log In"
     And I type my email "teacher3@gmail.com"
     And I type password "12345Abc"
     And I click Sign In button
+    Then Message "Log Out" appears
 
   Scenario: Log In -login with valid Email and invalid password
     When I navigate to login page
@@ -74,5 +75,11 @@ Feature: "Log In"
     And I type my email "tEacher3@gmail.com"
     And I type password "12345Abc"
     And I click Sign In button
+    Then Message "Log Out" appears
+
+  Scenario: Log In - password displays in bullets, copy/cut disabled
+    When I navigate to login page
+    And I type password "12345Abc"
+    Then password displays in bullets, copy and cut disabled
 
 
