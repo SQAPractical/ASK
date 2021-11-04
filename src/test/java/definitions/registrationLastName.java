@@ -5,10 +5,9 @@ import org.openqa.selenium.By;
 
 import static support.TestContext.getDriver;
 
-
-public class registrationLastName {
+     public class registrationLastName {
     @And("I click on Last Name field")
     public void iClickOnLastNameField() {
-        getDriver().findElement(By.xpath("//input[@placeholder='Last Name']")).click();
+        getDriver().findElement(By.xpath("//*[@formcontrolname='lastName']")).click();
     }
 }
