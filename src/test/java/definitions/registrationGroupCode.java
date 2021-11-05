@@ -58,4 +58,9 @@ public class registrationGroupCode {
         WebElement element = getDriver().findElement(By.xpath("//*[contains(text(),'"+mesg+"')]"));
         assertThat(element.isDisplayed()).isTrue();
     }
+
+    @And("I type first name <MyFirstName>")
+    public void iTypeFirstNameMyFirstName() {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='firstName']")).sendKeys();
+    }
 }
