@@ -1,90 +1,26 @@
 Feature: Registration- Group Code
 
-  Scenario: Registration- Group Code - Alphanumeric and sp char
+  Background:
     When I navigate to registration page
-    And I type first name "Test"
-    And I type last name "Test"
-    And I type my email "smohamedalaa22223@caraparcal.com"
-    And I type group code "12AB@"
-    And I type password "12345"
-    And I confirm password "12345"
-    And I click Register Me button
-    Then Message "You have been Registered." appears
 
-  Scenario: Registration- Group Code - Field is required
-    When I navigate to registration page
-    And I type first name "Test"
-    And I type last name "Test"
-    And I type my email "smohamedalaa22223@caraparcal.com"
-    And I type group code ""
-    And I type password "12345"
-    And I confirm password "12345"
+  Scenario Outline: Registration- Group Code - Alphanumeric and sp char
+    And I type first name <fName>
+    And I type last name <lName>
+    And I type my email <email>
+    And I type group code <groupCode>
+    And I type password <password>
+    And I confirm password <password>
     And I click Register Me button
-    Then Message "This field is required" appears
+    Then Message <mesg> appears
+    Examples:
+      | fName  | lName  | email                              | groupCode | password | mesg                        |
+      | "Test" | "Test" | "smohamedalaa22223@caraparcal.com" | "12AB@"   | "12345"  | "You have been Registered." |
+      | "Test" | "Test" | "smohamedalaa22223@caraparcal.com" | ""        | "12345"  | "This field is required" |
+      | "Test" | "Test" | "smohamedalaa22223@caraparcal.com" | "12AB@Q"  | "12345"  | "You have been Registered." |
+      | "Test" | "Test" | "smohamedalaa22223@caraparcal.com" | "12AB@Qa"  | "12345" | "Too long. Should be no more than 6 characters" |
+      | "Test" | "Test" | "smohamedalaa22223@caraparcal.com" | "1"       | "12345" | "You have been Registered." |
+      | "Test" | "Test" | "smohamedalaa22223@caraparcal.com" | "  1"      | "12345" | "Whitespaces are not allowed" |
+      | "Test" | "Test" | "smohamedalaa22223@caraparcal.com" | "1 ds"      | "12345" | "Whitespaces are not allowed" |
+      | "Test" | "Test" | "smohamedalaa22223@caraparcal.com" | "1ds "      | "12345" | "Whitespaces are not allowed" |
 
-  Scenario: Registration- Group Code - Max Characters
-    When I navigate to registration page
-    And I type first name "Test"
-    And I type last name "Test"
-    And I type my email "smohamedalaa22223@caraparcal.com"
-    And I type group code "12AB@Q"
-    And I type password "12345"
-    And I confirm password "12345"
-    And I click Register Me button
-    Then Message "You have been Registered." appears
-
-  Scenario: Registration- Group Code - Max + 1
-    When I navigate to registration page
-    And I type first name "Test"
-    And I type last name "Test"
-    And I type my email "smohamedalaa22223@caraparcal.com"
-    And I type group code "qwertyu"
-    And I type password "12345"
-    And I confirm password "12345"
-    And I click Register Me button
-    Then Message "Too long. Should be no more than 6 characters" appears
-
-  Scenario: Registration- Group Code - Min Character
-    When I navigate to registration page
-    And I type first name "Test"
-    And I type last name "Test"
-    And I type my email "smohamedalaa22223@caraparcal.com"
-    And I type group code "1"
-    And I type password "12345"
-    And I confirm password "12345"
-    And I click Register Me button
-    Then Message "You have been Registered." appears
-
-  Scenario: Registration- Group Code - Leading white spaces
-    When I navigate to registration page
-    And I type first name "Test"
-    And I type last name "Test"
-    And I type my email "smohamedalaa22223@caraparcal.com"
-    And I type group code "  123"
-    And I type password "12345"
-    And I confirm password "12345"
-    And I click Register Me button
-    Then Message "Whitespaces are not allowed" appears
-
-  Scenario: Registration- Group Code - White spaces in the middle are not allowed
-    When I navigate to registration page
-    And I type first name "Test"
-    And I type last name "Test"
-    And I type my email "smohamedalaa22223@caraparcal.com"
-    And I type group code "1  23"
-    And I type password "12345"
-    And I confirm password "12345"
-    And I click Register Me button
-    Then Message "Whitespaces are not allowed" appears
-
-  Scenario: Registration- Group Code - Trailing White spaces are not allowed
-    When I navigate to registration page
-    And I type first name "Test"
-    And I type last name "Test"
-    And I type my email "smohamedalaa22223@caraparcal.com"
-    And I type group code "123  "
-    And I type password "12345"
-    And I confirm password "12345"
-    And I click Register Me button
-    Then Message "Whitespaces are not allowed" appears
 
