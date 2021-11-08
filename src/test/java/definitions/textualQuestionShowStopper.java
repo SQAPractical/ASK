@@ -4,7 +4,9 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class textualQuestionShowStopper {
@@ -35,10 +37,9 @@ public class textualQuestionShowStopper {
         Thread.sleep(2000);
     }
 
-    @And("I click on {string} button")
-    public void iClickOnButton(String GoToAssessment) throws InterruptedException{
-        getDriver().findElement(By.xpath("//span[contains(text(),'Go To Assessment')]")).click();
-        Thread.sleep(2000);
+    @And("I click on {string} button for quiz {string}")
+    public void iClickOnButtonForQuiz(String buttonName, String quizName) {
+        getDriver().findElement(By.xpath("//td[contains(text(),'"+quizName+"')]/..//*[contains(text(), '"+buttonName+"')]")).click();
     }
 
     @And("I type {string} to Enter your answer")
@@ -53,10 +54,10 @@ public class textualQuestionShowStopper {
     }
 
 
-    @And("I click Create New Assignment button")
-    public void iClickCreateNewAssignmentButton() {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Create New Assignment')]")).click();
-    }
+//    @And("I click Create New Assignment button")
+//    public void iClickCreateNewAssignmentButton() {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Create New Assignment')]")).click();
+//    }
 
     @And("I select student {string}")
     public void iSelectStudent(String student) {
@@ -78,13 +79,15 @@ public class textualQuestionShowStopper {
 
     @Then("Textual question is marked as Show-stopper")
     public void textualQuestionIsMarkedAsShowStopper() {
-        getDriver().findElement(By.xpath("//*[contains(text(),'Show-Stopper Question')]"));
+        WebElement showStopper = getDriver().findElement(By.xpath("//*[contains(text(),'Show-Stopper Question')]"));
+        assertThat(showStopper.isDisplayed()).isTrue();
     }
 
     @And("I click on {string} button on right side")
-    public void iClickOnButtonOnRightSide(String LogOut) throws InterruptedException{
-        getDriver().findElement(By.xpath("//span[contains(text(),'Log Out')]")).click();
+    public void iClickOnButtonOnRightSide(String buttonName) throws InterruptedException{
+        getDriver().findElement(By.xpath("//span[contains(text(),'"+buttonName+"')]")).click();
         Thread.sleep(2000);
     }
+
 }
 
