@@ -10,48 +10,48 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class MultipleChoiceQuestionText {
-    @When("I navigate to login page")
-    public void iNavigateToLoginPage() {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
-    }
+//    @When("I navigate to login page")
+//    public void iNavigateToLoginPage() {
+//        getDriver().get("http://ask-stage.portnov.com/#/login");
+//    }
 
-    @And("I type my email {string}")
-    public void iTypeMyEmail(String email) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
-    }
+//    @And("I type my email {string}")
+//    public void iTypeMyEmail(String email) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(email);
+//    }
+//
+//    @And("I type my password {string}")
+//    public void iTypeMyPassword(String password) {
+//        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
+//    }
 
-    @And("I type my password {string}")
-    public void iTypeMyPassword(String password) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(password);
-    }
-
-    @And("I click Sign In button")
-    public void iClickSignInButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(), 'Sign In')]")).click();
-        Thread.sleep(2000);
-    }
-
-    @And("I click on {string} on left menu")
-    public void iClickOnOnLeftMenu(String menuItem) throws InterruptedException {
-        getDriver().findElement(By.xpath("//h5[contains(text(), '"+menuItem+"')]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click Sign In button")
+//    public void iClickSignInButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//span[contains(text(), 'Sign In')]")).click();
+//        Thread.sleep(2000);
+//    }
+//
+//    @And("I click on {string} on left menu")
+//    public void iClickOnOnLeftMenu(String menuItem) throws InterruptedException {
+//        getDriver().findElement(By.xpath("//h5[contains(text(), '"+menuItem+"')]")).click();
+//        Thread.sleep(2000);
+//    }
 
     @And("I click Create New Quiz Button")
     public void iClickCreateNewQuizButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(), 'Create New Quiz')]")).click();
         Thread.sleep(2000);
     }
-
+//
     @And("i type quiz title {string}")
     public void iTypeQuizTitle(String quizTitle) {
         getDriver().findElement(By.xpath("//input[@placeholder = 'Title Of The Quiz *']")).sendKeys(quizTitle);
     }
-
-    @And("I click Add question button")
-    public void iClickAddQuestionButton() {
-        getDriver().findElement(By.xpath("//*[contains(text(), 'add_circle')]")).click();
-    }
+//
+//    @And("I click Add question button")
+//    public void iClickAddQuestionButton() {
+//        getDriver().findElement(By.xpath("//*[contains(text(), 'add_circle')]")).click();
+//    }
 
     @And("I cselect {string} question type for question {int}")
     public void iCselectQuestionTypeForQuestion(String questionType, int questionNumber) throws InterruptedException {
@@ -60,23 +60,23 @@ public class MultipleChoiceQuestionText {
 
     }
 
-    @And("I type text {string} for question {int}")
-    public void iTypeTextForQuestion(String questionText, int questionNumber) {
-        getDriver().findElement(By.xpath("//*[contains(text(), 'Q"+questionNumber+"')]/../../..//*[@placeholder  = 'Question *']")).sendKeys(questionText);
-    }
+//    @And("I type text {string} for question {int}")
+//    public void iTypeTextForQuestion(String questionText, int questionNumber) {
+//        getDriver().findElement(By.xpath("//*[contains(text(), 'Q"+questionNumber+"')]/../../..//*[@placeholder  = 'Question *']")).sendKeys(questionText);
+//    }
 
-    @And("I type text {string} for for option {int} for question {int}")
-    public void iTypeTextForForOptionForQuestion(String optionText, int optionNumber, int questionNumber) {
-        String xPath = "//*[contains(text(), 'Q"+questionNumber+"')]/../../..//textarea[@placeholder='Option "+optionNumber+"*']";
-        getDriver().findElement(By.xpath(xPath)).sendKeys(optionText);
-    }
+//    @And("I type text {string} for for option {int} for question {int}")
+//    public void iTypeTextForForOptionForQuestion(String optionText, int optionNumber, int questionNumber) {
+//        String xPath = "//*[contains(text(), 'Q"+questionNumber+"')]/../../..//textarea[@placeholder='Option "+optionNumber+"*']";
+//        getDriver().findElement(By.xpath(xPath)).sendKeys(optionText);
+//    }
 
-    @And("I type text {string} for option {int} for question {int}")
-    public void iTypeTextForOptionForQuestion(String optionText, int optionNumber, int questionNumber) throws InterruptedException {
-        String xPath = "//*[contains(text(), 'Q"+questionNumber+"')]/../../..//textarea[@placeholder='Option "+optionNumber+"*']";
-        getDriver().findElement(By.xpath(xPath)).sendKeys(optionText);
-        Thread.sleep(2000);
-    }
+//    @And("I type text {string} for option {int} for question {int}")
+//    public void iTypeTextForOptionForQuestion(String optionText, int optionNumber, int questionNumber) throws InterruptedException {
+//        String xPath = "//*[contains(text(), 'Q"+questionNumber+"')]/../../..//textarea[@placeholder='Option "+optionNumber+"*']";
+//        getDriver().findElement(By.xpath(xPath)).sendKeys(optionText);
+//        Thread.sleep(2000);
+//    }
 
 
     @And("I select option {int}  as correct answer for question {int}")
@@ -99,12 +99,12 @@ public class MultipleChoiceQuestionText {
         assertThat(listOfQuizzes.contains(quizName)).isTrue();
     }
 
-    @And("I click on Preview button for quiz {string}")
-    public void iClickOnPreviewButtonForQuiz(String quizName) {
-        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(), '"+quizName+"')]/..")).click();
-        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(), '"+quizName+"')]/../../..//*[contains(text(), 'Preview')]")).click();
-
-    }
+//    @And("I click on Preview button for quiz {string}")
+//    public void iClickOnPreviewButtonForQuiz(String quizName) {
+//        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(), '"+quizName+"')]/..")).click();
+//        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(), '"+quizName+"')]/../../..//*[contains(text(), 'Preview')]")).click();
+//
+//    }
 
     @Then("I click on the empty field")
     public void iClickOnTheEmptyField() throws InterruptedException {
@@ -130,15 +130,15 @@ public class MultipleChoiceQuestionText {
         assertThat(getDriver().findElement(By.xpath(xPathFormessage)).isDisplayed()).isTrue();
     }
 
-    @And("I click Close button")
-    public void iClickCloseButton() {
-        getDriver().findElement(By.xpath("//*[contains(text(), 'Close')]")).click();
-    }
+//    @And("I click Close button")
+//    public void iClickCloseButton() {
+//        getDriver().findElement(By.xpath("//*[contains(text(), 'Close')]")).click();
+//    }
 
-    @And("I delete Quiz {string}")
-    public void iDeleteQuiz(String QuizName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(), '"+QuizName+"')]/../../..//*[contains(text(), 'Delete')]")).click();
-        getDriver().findElement(By.xpath("//*[contains(text(), 'Confirmation')]/../../..//*[contains(text(), 'Delete')]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I delete Quiz {string}")
+//    public void iDeleteQuiz(String QuizName) throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*[contains(text(), '"+QuizName+"')]/../../..//*[contains(text(), 'Delete')]")).click();
+//        getDriver().findElement(By.xpath("//*[contains(text(), 'Confirmation')]/../../..//*[contains(text(), 'Delete')]")).click();
+//        Thread.sleep(2000);
+//    }
 }
