@@ -1,5 +1,5 @@
 Feature: Submission - Status
-  Scenario: Submission - Status -
+  Scenario: Submission - Status - Failed (Auto-grade with no textual question)
     When I navigate to login page
     And I type my email "teacher2@gmail.com"
     And I type password "12345Abc"
@@ -24,11 +24,12 @@ Feature: Submission - Status
     And I click on "Auto-grade with no textual question1" Quiz
     And I click on "Sophia Jones"
     And I click Give Assignment button
-    And I click on "Submissions" on left menu
-    And I click on "Automatically Graded" on top menu
-    And I click on "Reviewed" on top menu
-    And I click on "For Grade" on top menu
-    And I click on "Quizzes" on left menu
+# these steps are not needed
+#    And I click on "Submissions" on left menu
+#    And I click on "Automatically Graded" on top menu
+#    And I click on "Reviewed" on top menu
+#    And I click on "For Grade" on top menu
+#    And I click on "Quizzes" on left menu
     And I click on "Log Out" on left menu
     And I click on Log Out button
     And I type my email "student4@gmail.com"
@@ -40,6 +41,7 @@ Feature: Submission - Status
     And I click on Submit My Answers button
     And I click Ok button
     And I click on "My Grades" on left menu
+    Then Status for quiz "Auto-grade with no textual question1" is "FAILED"
     And I click on "Log Out" on left menu
     And I click on Log Out button
     And I type my email "teacher2@gmail.com"
@@ -47,5 +49,8 @@ Feature: Submission - Status
     And I click Sign In button
     And I click on "Submissions" on left menu
     And I click on "Automatically Graded" on top menu
-    And I click on "Reviewed" on top menu
-    And I click on "For Grade" on top menu
+    Then Status for quiz "Auto-grade with no textual question1" is "FAILED"
+
+# these steps are not needed
+#    And I click on "Reviewed" on top menu
+#    And I click on "For Grade" on top menu

@@ -1,8 +1,11 @@
 package definitions;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class submissionStatus {
@@ -65,5 +68,13 @@ public class submissionStatus {
     public void iClickForOptionForQuestion(String textAnswer, int optionNumber, int questionNumber) throws InterruptedException {
         getDriver().findElement(By.xpath("//div[contains(text(), 'Incorrect Answer')]/..//div[@class='mat-radio-container']")).click();
         Thread.sleep(1000);
+    }
+
+    @Then("Status for quiz {string} is {string}")
+    public void statusForQuizIs(String quizName, String status) {
+        String xPath = "//td[contains(text(),'"+quizName+"')]/..//span[contains(text(), '"+status+"')]";
+        WebElement quizStatus= getDriver().findElement(By.xpath(xPath));
+        assertThat(quizStatus.isDisplayed()).isTrue();
+
     }
 }
