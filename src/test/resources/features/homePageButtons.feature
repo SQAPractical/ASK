@@ -1,4 +1,5 @@
 Feature: Home page - Buttons
+  @Smoke
   Scenario: Home page - Buttons - T - Go To Submissions
     When I navigate to login page
     And I type an email "teacher4@gmail.com"
