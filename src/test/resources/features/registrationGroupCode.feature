@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Registration- Group Code
 
   Background:
@@ -22,5 +23,3 @@ Feature: Registration- Group Code
       | "Test" | "Test" | "smohamedalaa22223@caraparcal.com" | "  1"      | "12345" | "Whitespaces are not allowed" |
       | "Test" | "Test" | "smohamedalaa22223@caraparcal.com" | "1 ds"      | "12345" | "Whitespaces are not allowed" |
       | "Test" | "Test" | "smohamedalaa22223@caraparcal.com" | "1ds "      | "12345" | "Whitespaces are not allowed" |
-
-
