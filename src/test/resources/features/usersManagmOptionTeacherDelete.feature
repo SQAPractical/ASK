@@ -1,3 +1,4 @@
+@FullRegression
 Feature: User's management - Options in Teacher's account - Delete
   Scenario: Options in Teacher's account - Delete Teacher's account
     When I navigate to registration page

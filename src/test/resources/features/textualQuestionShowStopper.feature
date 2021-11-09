@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Textual Question Show Stopper
 
   Scenario: Textual question show - stopper

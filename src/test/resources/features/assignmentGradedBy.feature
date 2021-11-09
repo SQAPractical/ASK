@@ -1,4 +1,4 @@
-@AC-203
+@FullRegression @AC-203
   Feature: AC-203 Assignment - Graded by
 
     @AC-257

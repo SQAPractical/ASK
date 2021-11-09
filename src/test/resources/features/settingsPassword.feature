@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Settings - Password
   Scenario: Settings - Password - Alphanumeric and special characters + 5 characters max
     When I navigate to login page

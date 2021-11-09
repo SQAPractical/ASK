@@ -1,3 +1,4 @@
+@FullRegression
 Feature: User's Management - Option Student Account
   Scenario: User's Management - Option Student Account - Delete Student
 

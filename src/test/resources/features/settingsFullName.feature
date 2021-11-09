@@ -1,3 +1,4 @@
+@FullRegression
 Feature:"Settings - Full Name"
   Scenario:Settings - Full Name: Not allowable characters: Alphanumeric and special characters
     When I navigate to login page
