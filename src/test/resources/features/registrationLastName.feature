@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Registration - Last Name
   @Smoke
   Scenario: Registration - Last Name - Alphanumeric and special characters

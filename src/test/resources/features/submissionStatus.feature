@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Submission - Status
   Scenario: Submission - Status - Failed (Auto-grade with no textual question)
     When I navigate to login page

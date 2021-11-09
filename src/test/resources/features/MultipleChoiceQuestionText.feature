@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Multiple Choice Question - Text
 
   Scenario: Multiple-Choice question - Text - Allowable characters: Alphanumeric and special characters

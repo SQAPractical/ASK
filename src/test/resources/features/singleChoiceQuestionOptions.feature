@@ -1,3 +1,4 @@
+@FullRegression
 Feature: "Single choice question - Options"
   Scenario: Single choice question - Options - 2 options
     When I navigate to login page

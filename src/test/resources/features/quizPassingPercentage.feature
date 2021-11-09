@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Quiz Passing Percentage
   Scenario: Quiz Passing Percentage - 50% passing percentage
     When I navigate to login page

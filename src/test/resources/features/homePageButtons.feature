@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Home page - Buttons
   @Smoke
   Scenario: Home page - Buttons - T - Go To Submissions

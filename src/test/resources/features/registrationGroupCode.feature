@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Registration- Group Code
 
   Background:
