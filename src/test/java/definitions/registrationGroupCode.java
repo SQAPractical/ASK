@@ -58,4 +58,5 @@ public class registrationGroupCode {
         WebElement element = getDriver().findElement(By.xpath("//*[contains(text(),'"+mesg+"')]"));
         assertThat(element.isDisplayed()).isTrue();
     }
+
 }

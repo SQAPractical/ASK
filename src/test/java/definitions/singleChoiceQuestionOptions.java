@@ -101,7 +101,8 @@ public class singleChoiceQuestionOptions {
     }
 
     @And("I click Close button")
-    public void iClickCloseButton() {
+    public void iClickCloseButton() throws InterruptedException {
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//span[contains(text(),'Close')]")).click();
     }
 
