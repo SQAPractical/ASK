@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Total Questions
   Scenario: Total Questions-Allows up to 5 questions
     When I navigate to Login page

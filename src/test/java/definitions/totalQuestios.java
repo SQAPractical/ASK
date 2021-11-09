@@ -43,11 +43,11 @@ public class totalQuestios {
     }
 
 
-    @And("I delete Quiz {string}")
-    public void iDeleteQuiz(String quizName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(),'"+quizName+"')]/../../..//*[contains(text(),'Delete')]")).click();
-        getDriver().findElement(By.xpath("//*[contains(text(),'Confirmation')]/../..//*[contains(text(),'Delete')]")).click();
-    }
+//    @And("I delete Quiz {string}")
+//    public void iDeleteQuiz(String quizName) throws InterruptedException {
+//        getDriver().findElement(By.xpath("//*[contains(text(),'"+quizName+"')]/../../..//*[contains(text(),'Delete')]")).click();
+//        getDriver().findElement(By.xpath("//*[contains(text(),'Confirmation')]/../..//*[contains(text(),'Delete')]")).click();
+//    }
 
     @And("Click on quiz {string}")
     public void clickOnQuiz(String quizName) throws InterruptedException {
