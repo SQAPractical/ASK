@@ -51,7 +51,7 @@ public class singleChoiceQuestionOptions {
 
     @And("I type text {string} for question {int}")
     public void iTypeTextForQuestion(String questionText, int questionNumber) {
-        getDriver().findElement(By.xpath("//*[contains(text(), 'Q"+questionNumber+"')]/../../..//*[@placeholder='Question *']")).sendKeys(questionText);
+        getDriver().findElement(By.xpath("//*[contains(text(), 'Q\"+questionNumber+\"')]/../../..//*[@placeholder='Question *']")).sendKeys(questionText);
     }
 
     @And("I type text {string} for option {int} for question {int}")
@@ -101,7 +101,8 @@ public class singleChoiceQuestionOptions {
     }
 
     @And("I click Close button")
-    public void iClickCloseButton() {
+    public void iClickCloseButton() throws InterruptedException {
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//span[contains(text(),'Close')]")).click();
     }
 
