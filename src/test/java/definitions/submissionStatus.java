@@ -23,7 +23,7 @@ public class submissionStatus {
 
     @And("I click on {string} Quiz")
     public void iClickOnQuiz(String quizName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(.,'Auto-grade with no textual question1')]/..")).click();
+        getDriver().findElement(By.xpath("//span[contains(.,'"+quizName+"')]/..")).click();
         Thread.sleep(1000);
     }
 
