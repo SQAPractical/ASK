@@ -20,15 +20,30 @@ public class settingsPassword {
     }
 
     @And("I type confirm new password {string}")
-    public void iTypeConfirmNewPassword(String newPassword) throws InterruptedException {
+    public void iTypeConfirmNewPassword(String newPassword) {
         getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(newPassword);
-        Thread.sleep(2000);
     }
 
     @And("I click Change button")
-    public void iClickChangeButton() throws InterruptedException {
+    public void iClickChangeButton()  {
         getDriver().findElement(By.xpath("//button[normalize-space()='Change']")).click();
-        Thread.sleep(2000);
 
+    }
+
+    @And("I click Log Out button")
+    public void iClickLogOutButton() throws InterruptedException {
+        getDriver().findElement(By.xpath("//span[@class='mat-button-wrapper']/../..//span[contains(text(),'Log Out')]")).click();
+        Thread.sleep(2000);
+    }
+
+    @And("I click New Password field")
+    public void iClickNewPasswordField() {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='newPassword']")).click();
+
+    }
+
+    @And("I click Cancel button")
+    public void iClickCancelButton() {
+        getDriver().findElement(By.xpath("//button[normalize-space()='Cancel']")).click();
     }
 }
