@@ -16,21 +16,24 @@ public class quizPassingPercentage {
         switch (percent) {
             case 50:
 
-                for (int i=1;i<=25;i++) {
-                    percentXpath = "//button[@class = 'mat-button mat-primary']//span[contains(text(),'-')]/..";
+                for (int i=0;i<25;i++) {
+                    percentXpath = "//button[@class = 'mat-button mat-primary']//span[contains(text(),'-')]";
                     getDriver().findElement(By.xpath(percentXpath)).click();
-                    Thread.sleep(1000);
+                    getDriver().findElement(By.xpath("//h3[normalize-space()='Passing Rate']")).click();
+                    System.out.println(i);
                 }
                 break;
             case 100:
                 percentXpath = "//span[contains(text(),'+')]";
                 for (int i=0;i<50;i++) {
                     getDriver().findElement(By.xpath(percentXpath)).click();
+                    getDriver().findElement(By.xpath("//h3[normalize-space()='Passing Rate']")).click();
+                    System.out.println(i);
                 }
             default:
                 break;
         }
-        Thread.sleep(2000);
+//
     }
 
     @Then("I check if {string} percent appears for {string}")
