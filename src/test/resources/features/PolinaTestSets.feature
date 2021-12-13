@@ -1,3 +1,3 @@
 Feature: Log in page
   Scenario: Log in
-    Given I open page
+    Given I open pageg
