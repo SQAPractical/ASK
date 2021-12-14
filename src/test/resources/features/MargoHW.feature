@@ -1,4 +1,3 @@
 Feature:
-  jshfaldhf
-  agh
+  This line is deleted
 My modification created by Margo Anorova
