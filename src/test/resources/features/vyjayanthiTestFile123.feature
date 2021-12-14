@@ -1,2 +1,3 @@
 Feature: Hello
-  This is my Intelli J
+  This is my terminal
+  few changes
