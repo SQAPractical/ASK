@@ -1,3 +1,2 @@
 Feature: FirstTest
   hello
-  g
