@@ -1,2 +1,0 @@
-Feature: efgh
-ijkl

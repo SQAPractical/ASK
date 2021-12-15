@@ -1,3 +1,0 @@
-Feature: Create an account
-  Scenario: Creates student's account
-    Given I go to the site ...
