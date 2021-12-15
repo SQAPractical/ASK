@@ -1,3 +1,3 @@
 Feature: test
-  test
-  testsvitlana
+  test log in
+  Given I open url ...
