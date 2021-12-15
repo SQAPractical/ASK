@@ -1,2 +1,0 @@
-Feature:
-  Denis's changes
