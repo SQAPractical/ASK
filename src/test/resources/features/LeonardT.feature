@@ -1,3 +1,1 @@
-Feature: ljcdsj
-  dslkhbv
-  hblvdsa
+Feature: Hello
