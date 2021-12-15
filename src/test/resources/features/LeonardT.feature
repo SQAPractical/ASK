@@ -1,4 +1,1 @@
-Feature:
-Hello Leonard
-
-
+Feature: Hello
