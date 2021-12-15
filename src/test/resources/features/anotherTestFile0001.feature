@@ -1,4 +1,0 @@
-Feature: something
-  aaaaa
-  bbbbb
-

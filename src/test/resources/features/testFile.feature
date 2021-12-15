@@ -1,3 +1,1 @@
-Feature: test
-  test
-  test
+Feature:
