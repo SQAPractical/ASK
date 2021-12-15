@@ -1,3 +1,3 @@
 Feature: Log in page
   Scenario: Log in
-    Given I open pageg
+    Given I open page www.polina.com
