@@ -1,3 +1,3 @@
 Feature: test
-  Scenario: test
+  Scenario: testPolina
     test
