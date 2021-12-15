@@ -1,3 +1,0 @@
-Feature: igfdis
-  aihslbf
-  sbalk

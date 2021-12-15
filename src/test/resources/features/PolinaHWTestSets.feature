@@ -1,3 +1,0 @@
-Feature: Log out from the app
-  Scenario: Log out
-    Given I open url ...

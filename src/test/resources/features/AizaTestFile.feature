@@ -1,3 +1,0 @@
-Feature: FirstTest
-  hello
-privet
