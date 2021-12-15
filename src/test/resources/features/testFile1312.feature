@@ -1,3 +1,3 @@
 Feature: test
-  test
-  test Polina
+  test log in
+  Given I open url ...
