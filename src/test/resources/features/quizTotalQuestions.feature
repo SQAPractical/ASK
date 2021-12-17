@@ -1,4 +1,5 @@
-Feature: Quiz - Total Questions
+Feature: Quiz - Total Questions @FullRegression
+  @Smoke
   Scenario: Quiz - Total Questions - Allows to create 5 questions
     When I navigate to log in page
     And I type email "teacher1@gmail.com" to email field

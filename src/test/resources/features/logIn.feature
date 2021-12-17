@@ -1,3 +1,4 @@
+@Smoke @FullRegression
 Feature:Log In
   Scenario: Log In - Valid email and password combination
     When I navigate to log in page
