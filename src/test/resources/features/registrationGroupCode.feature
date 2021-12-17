@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Registration - Group Code
   Scenario: Registration - Group Code - Alphanumeric and special characters
     When I navigate to registration page
