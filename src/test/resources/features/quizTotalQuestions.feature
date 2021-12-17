@@ -31,7 +31,8 @@ Feature: Quiz - Total Questions
     And I click "Save" button
     And I click on quiz "5 Questions Quiz" in list of quizzes
     And I click Preview for quiz "5 Questions Quiz"
-    Then Message "What is your name?" appears
+    Then Message "Question 1 / 5" appears
+
   Scenario:  Quiz - Total Questions - Allows up to 50 questions
     When I navigate to log in page
     And I type email "teacher1@gmail.com" to email field
@@ -357,4 +358,15 @@ Feature: Quiz - Total Questions
     And I type text of question "50+1" for question 51
     And I click "Save" button
     Then Message "Max number of 50 question exceeded" appears
+
+
+  Scenario: Quiz - Total Questions - 50
+    When I navigate to log in page
+    And I type email "teacher1@gmail.com" to email field
+    And I type password "12345Abc" to log in
+    And I click on Sign In button
+    And I click on "Quizzes" on left menu
+    And I click "Create New Quiz" button
+    And I type quiz title "50 Questions Quiz Version 2"
+    And I add 50 questions to quiz
 
