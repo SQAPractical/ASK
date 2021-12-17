@@ -41,13 +41,6 @@ Feature: User's management - Options in Student's account
     And I click "Change" button
     And I wait for 3 sec
     And I check "Change" button is disabled
-    
-
-
-
-
-
-
 
 
 
