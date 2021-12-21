@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Single Choice Question - Text
   Scenario: Single Choice Question - Text - Alphanumeric and special char
     When I navigate to log in page

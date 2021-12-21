@@ -1,3 +1,4 @@
+@Smoke @FullRegression
 Feature:Log In
 
   Scenario Outline: Log In - Valid email and password combination
