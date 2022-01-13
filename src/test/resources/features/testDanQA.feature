@@ -5,4 +5,7 @@ Feature: quiz
     And I type email "teacher1@gmail.com" to email field
     And I type password "12345Abc" to log in
     And I click on Sign In button
+    Then student appears
+
+
 
