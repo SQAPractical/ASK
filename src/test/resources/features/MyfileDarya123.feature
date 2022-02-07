@@ -1,4 +1,0 @@
-test
-  qwerty
-  asdfg
-  zxcvb
