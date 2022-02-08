@@ -1,1 +1,0 @@
-Cucumber is a Behavior Driven Development tool used to develop test cases for the behavior of software's functionality. It plays a supporting role in automated testing. In other words, "Cucumber is a software tool used by the testers to develop test cases for the testing of behavior of the software."
