@@ -1,2 +1,2 @@
 fadskhfhgijvkljcxz
-git add .xcfs
+git add .xcfs rddgit add
