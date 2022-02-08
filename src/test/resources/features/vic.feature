@@ -1,2 +1,5 @@
-fadskhfhgijvkljcxz
-git add .xcfs rddgit add
+
+
+git add .xcfs
+ master
+
