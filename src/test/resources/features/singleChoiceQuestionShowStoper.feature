@@ -4,7 +4,7 @@ Feature: Single Choice Question
     And I type email "teacher3@gmail.com" on Login page
     And I type password "12345Abc" on Login page
     And I click Sign In button
-    And I click on "Quizzes" menu item
+#    And I click on "Quizzes" menu item
     And I click on "Create New Quiz" button
     And I type title of quiz "QW5"
     And I click Add question button
@@ -19,7 +19,7 @@ Feature: Single Choice Question
     And I click on "Preview" button in "QW5"
     Then  "Show-Stopper" is present in Question 1
 
-    Scenario: Single Choice Question - Show-Stopper
+    Scenario: Single Choice Question - Show-Stopper - student
       When I navigate to login page
       And I type email "carolinerose@devou.site" on Login page
       And I type password "12345" on Login page

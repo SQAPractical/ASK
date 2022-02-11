@@ -4,6 +4,10 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
@@ -28,6 +32,10 @@ public class singleChoiceQuestionOptions {
     public void iClickSignInButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
         Thread.sleep(2000);
+//        String xPath = "//*[contains(text(), 'Log Out')]";
+//        WebDriverWait wait = new WebDriverWait(getDriver(),5);
+//        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(xPath)));
+//        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
     }
 
     @And("I click on {string} menu item")
