@@ -12,6 +12,7 @@ import static support.TestContext.getDriver;
 public class registrationGroupCode {
     @When("I navigate to registration page")
     public void iNavigateToRegistrationPage() {
+
         getDriver().get("http://ask-stage.portnov.com/#/registration");
     }
 
