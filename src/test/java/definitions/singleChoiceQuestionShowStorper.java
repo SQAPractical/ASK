@@ -45,27 +45,30 @@ public class singleChoiceQuestionShowStorper {
 
     @And("I click on {string} in List of Quizzes")
     public void iClickOnInListOfQuizzes(String nameOfQuiz) throws InterruptedException {
-        getDriver().findElement(By.xpath("//*[contains(text(), 'TEST1234')]")).click();
+        getDriver().findElement(By.xpath("//*[contains(text(), '"+nameOfQuiz+"')]")).click();
         Thread.sleep(2000);
     }
 
 
     @Then("{string} is present in Question {int}")
-    public void isPresentInQuestion(String nameOption, int questionNumber) {
+    public void isPresentInQuestion(String nameOption, int questionNumber) throws InterruptedException {
         assertThat(getDriver().findElement(By.xpath("//p[contains(text(), 'Show-Stopper')]")).isDisplayed()).isTrue();
+        Thread.sleep(2000);
 
 
     }
 
 
     @And("I click on {string} button in {string}")
-    public void iClickOnButtonIn(String buttonName, String quizName) {
-        getDriver().findElement(By.xpath("//*[contains(text(),‘Q1’)]//../../../../../../..//*[contains(text(),‘Preview’)]")).click();
+    public void iClickOnButtonIn(String buttonName, String quizName) throws InterruptedException {
+        getDriver().findElement(By.xpath("//*[contains(text(), '"+quizName+"')]//..//../../../div/div/div/../..//../*[contains(text(), 'Preview')]")).click();
+        Thread.sleep(2000);
     }
 
 
     @And("I click on {string} button on {string} assignment in List of Assignments")
-    public void iClickOnButtonOnAssignmentInListOfAssignments(String assignmentbutton, String assignmentName) {
-        getDriver().findElement(By.xpath("")).click();
+    public void iClickOnButtonOnAssignmentInListOfAssignments(String assignmentButton, String assignmentName) throws InterruptedException {
+        getDriver().findElement(By.xpath("//tr[@class='ng-star-inserted']/td/a[contains(@href,'/#/assessment/14')]")).click();
+        Thread.sleep(2000);
     }
 }

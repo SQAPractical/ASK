@@ -6,7 +6,7 @@ Feature: Single Choice Question
     And I click Sign In button
     And I click on "Quizzes" menu item
     And I click on "Create New Quiz" button
-    And I type title of quiz "TEST12341"
+    And I type title of quiz "QW5"
     And I click Add question button
     And I click "Single-Choice" button for question 1
     And I type text "Do you know?" for question 1
@@ -15,8 +15,8 @@ Feature: Single Choice Question
     And I select option 1 as correct answer for question 1
     And I select "Show-Stopper" as type for question 1
     And I click "Save" button
-    And I click on "TEST1234" in List of Quizzes
-    And I click on "Preview" button in "TEST12341"
+    And I click on "QW5" in List of Quizzes
+    And I click on "Preview" button in "QW5"
     Then  "Show-Stopper" is present in Question 1
 
     Scenario: Single Choice Question - Show-Stopper
