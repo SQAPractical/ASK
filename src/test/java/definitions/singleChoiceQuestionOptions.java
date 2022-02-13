@@ -3,6 +3,7 @@ package definitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java8.Th;
 import org.openqa.selenium.By;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -38,9 +39,11 @@ public class singleChoiceQuestionOptions {
 
     @And("I click {string} button")
     public void iClickButton(String buttonName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'"+buttonName+"')]")).click();
+        getDriver().findElement(By.xpath("//span[contains(text(),'"+buttonName+"')]/..")).click();
         Thread.sleep(2000);
+
     }
+
 
     @And("I type title of quiz {string}")
     public void iTypeTitleOfQuiz(String quizTitle) {
@@ -50,6 +53,8 @@ public class singleChoiceQuestionOptions {
     @And("I click Add question button")
     public void iClickAddQuestionButton() {
         getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
+
+
     }
 
     @And("I select {string} question type for question {int}")
@@ -63,8 +68,9 @@ public class singleChoiceQuestionOptions {
     }
 
     @And("I type text {string} for option {int} for question {int}")
-    public void iTypeTextForOptionForQuestion(String textOfOption, int optionNumber, int questionNumber) {
+    public void iTypeTextForOptionForQuestion(String textOfOption, int optionNumber, int questionNumber) throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'Q"+questionNumber+"')]/../../..//*[@placeholder='Option "+optionNumber+"*']")).sendKeys(textOfOption);
+        Thread.sleep(2000);
     }
 
     @And("I select option {int} as correct answer for question {int}")
