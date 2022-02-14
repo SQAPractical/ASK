@@ -87,7 +87,7 @@ public class singleChoiceQuestionShowStorper {
 
     @And("I select {string}  in {string} menu")
     public void iSelectInMenu(String quizName, String menuName) {
-        getDriver().findElement(By.xpath("//div/mat-option/span[contains(text(), '"+quizName+"')]")).isSelected();
+        getDriver().findElement(By.xpath("//div/mat-option/span[contains(text(), '"+quizName+"')]")).click();
     }
 
 
