@@ -3,7 +3,9 @@ package definitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class homePageButtons {
@@ -14,8 +16,11 @@ public class homePageButtons {
 
     @Then("My Assignments are present on the page")
     public void myAssignmentsArePresentOnThePage() throws InterruptedException {
-        getDriver().findElement(By.xpath("//h4[contains(text(),'My Assignments')]")).getText();
+
+        String textFromElement = getDriver().findElement(By.xpath("//h4[contains(text(),'My Assignments')]")).getText();
+        System.out.println(textFromElement);
         Thread.sleep(2000);
+        assertThat(textFromElement.contains("My Assignments")).isTrue();
     }
 
     @And("I click on Go To My Grades button")
@@ -26,8 +31,9 @@ public class homePageButtons {
 
     @Then("My Grades are present on the page")
     public void myGradesArePresentOnThePage() throws InterruptedException {
-        getDriver().findElement(By.xpath("//h4[contains(text(),'My Grades')]")).getText();
+        String textFromElement = getDriver().findElement(By.xpath("//h4[contains(text(),'My Grades')]")).getText();
         Thread.sleep(2000);
+        assertThat(textFromElement.contains("My Grades")).isTrue();
     }
 
     @And("I click on  Go To My Submissions button")
@@ -59,7 +65,13 @@ public class homePageButtons {
 
     @Then("User's Management is present on the page")
     public void userSManagementIsPresentOnThePage() throws InterruptedException {
-        getDriver().findElement(By.xpath("/html[1]/body[1]/ac-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/ac-user-management-page[1]/mat-card[1]/h4[1]")).getText();
+//        getDriver().findElement(By.xpath("/html[1]/body[1]/ac-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/ac-user-management-page[1]/mat-card[1]/h4[1]")).getText();
         Thread.sleep(2000);
+
+        String xpath = "//h4[contains(text(),'Management')]";
+        WebElement element = getDriver().findElement(By.xpath(xpath));
+
+        assertThat(element.isDisplayed()).isTrue();
+
     }
 }
