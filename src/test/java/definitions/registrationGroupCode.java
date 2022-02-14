@@ -57,7 +57,6 @@ public class registrationGroupCode {
         getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(confirmPassword);
         Thread.sleep(2000);
 
-
     }
 
     @Then("message {string} appears")
