@@ -1,15 +1,23 @@
 Feature: Registration - Email
 
-  Scenario: Registration - Email - Alphanumeric characters and @ special char accepted
+  Scenario Outline: Registration - Email - Alphanumeric characters and @ special char accepted
     When I navigate to registration page
     And I type first name "Hanna"
     And I type last name "White"
-    And I type email "hanna56@mail.ru"
+    And I type email <email>
     And I type group code "123"
     And I type password "12345"
     And I type confirmPassword "12345"
     And I click Register Me button
-    Then message "You have been Registered." appears
+    Then message <textOfMessage> appears
+
+    Examples:
+      | email              | textOfMessage                     |
+      | "hanna56@mail.ru"  | "You have been Registered."       |
+      | ""                 | "This field is required"          |
+      | " hanna56@mail.ru" | "Should be a valid email address" |
+
+
 
   Scenario: Registration - Email - Input without special char @ is not accepted
     When I navigate to registration page
