@@ -2,6 +2,7 @@ package definitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java8.Th;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -80,18 +81,17 @@ public class singleChoiceQuestionShowStorper {
     }
 
     @And("I select {string} field in {string}")
-    public void iSelectFieldIn(String nameField, String menuName) {
+    public void iSelectFieldIn(String nameField, String menuName) throws InterruptedException {
         getDriver().findElement(By.xpath("//form/div/mat-form-field/div/div/div/mat-select[@placeholder='Select Quiz To Assign']")).click();
+        Thread.sleep(2000);
     }
 
 
     @And("I select {string}  in {string} menu")
-    public void iSelectInMenu(String quizName, String menuName) {
+    public void iSelectInMenu(String quizName, String menuName) throws InterruptedException {
         getDriver().findElement(By.xpath("//div/mat-option/span[contains(text(), '"+quizName+"')]")).isSelected();
+        Thread.sleep(2000);
     }
-
-
-
 
 
 
@@ -108,8 +108,10 @@ public class singleChoiceQuestionShowStorper {
 
 
     @And("I select {string} button in {string} quiz")
-    public void iSelectButtonInQuiz(String buttonName, String quizName) {
+    public void iSelectButtonInQuiz(String buttonName, String quizName) throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-expansion-panel-header/span/*[contains(text(), '"+quizName+"')]/../../../div/div/div/div/button/*[contains(text(), '"+buttonName+"')]")).click();
+        Thread.sleep(4000);
+
     }
 
     @Then("{string} is not present in {string}")
@@ -118,7 +120,15 @@ public class singleChoiceQuestionShowStorper {
     }
 
     @And("I select {string}")
-    public void iSelect(String studentName) {
+    public void iSelect(String studentName) throws InterruptedException {
         getDriver().findElement(By.xpath("//div[@class='mat-list-text'][contains(., '"+studentName+"')]")).click();
+        Thread.sleep(2000);
+    }
+
+    @And("I click on {string} button in Confirmation menu")
+    public void iClickOnButtonInConfirmationMenu(String nameButton) throws InterruptedException {
+        getDriver().findElement(By.xpath("//h1[contains(text(), 'Confirmation')]/../div/button/*[contains(text(), '"+nameButton+"')]")).click();
+        Thread.sleep(2000);
+
     }
 }
