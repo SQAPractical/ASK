@@ -23,11 +23,17 @@ public class logIn {
     public void iClickOnSignInButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button[@type ='submit']")).click();
         Thread.sleep(2000);
-
-
     }
 
+    @Then("Password in bullets. Copy and Cut disable")
+    public void passwordInBulletsCopyAndCutDisable() {
+        String expectedAttribute = "type";
+        String expectedAttributeValue = "password";
+        String xpathForPassField = "//input[@formcontrolname ='password']";
 
+        String actualAttributeValue = getDriver().findElement(By.xpath(xpathForPassField)).getAttribute(expectedAttribute);
 
+        assertThat(actualAttributeValue.equals(expectedAttributeValue)).isTrue();
 
+    }
 }

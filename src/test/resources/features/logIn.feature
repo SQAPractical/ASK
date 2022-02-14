@@ -12,7 +12,7 @@ Feature: LogIn
     And I Type Email "student1000@gmail.com"
     And I type Password "12345"
     And I click on Sign In button
-    Then message "Authentication failed.User not found or password does not match" appears
+    Then message "Authentication failed. User not found or password does not match" appears
 
   Scenario:  LogIn -Leading spaces in password field are not allowed
    When I navigate to login page
@@ -45,9 +45,14 @@ Feature: LogIn
   Scenario:  LogIn - Password field is case sensitive
     When I navigate to login page
     And I Type Email "STUDENT1@GMAIL.COM"
-   And I type Password "12345ABC"
+    And I type Password "12345ABC"
     And I click on Sign In button
     Then message "Authentication failed. User not found or password does not match" appears
+
+  Scenario:  Password in bullets. Copy and Cut disable
+    When I navigate to login page
+    And I type Password "12345ABC"
+    Then Password in bullets. Copy and Cut disable
 
 
 
