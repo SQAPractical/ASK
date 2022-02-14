@@ -3,6 +3,7 @@ package definitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -67,8 +68,13 @@ public class quizTitle {
     @And("I delete the quiz title in the title of the quiz")
     public void iDeleteTheQuizTitleInTheTitleOfTheQuiz() throws InterruptedException {
         WebElement element = getDriver().findElement(By.xpath("//input[@placeholder= 'Title Of The Quiz *']"));
-        element.clear();
-        getDriver().findElement(By.tagName("body")).click();
+//        element.clear();
+        element.sendKeys(Keys.COMMAND,"a");
+        element.sendKeys(Keys.CONTROL,"a");
+        element.sendKeys(Keys.DELETE);
+        element.sendKeys(Keys.BACK_SPACE);
+
+//        getDriver().findElement(By.tagName("body")).click();
         Thread.sleep(2000);
 
     }
