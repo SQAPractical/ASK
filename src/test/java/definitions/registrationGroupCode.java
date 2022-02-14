@@ -12,6 +12,7 @@ import static support.TestContext.getDriver;
 public class registrationGroupCode {
     @When("I navigate to registration page")
     public void iNavigateToRegistrationPage() {
+
         getDriver().get("http://ask-stage.portnov.com/#/registration");
     }
 
@@ -56,7 +57,6 @@ public class registrationGroupCode {
         getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(confirmPassword);
         Thread.sleep(2000);
 
-
     }
 
     @Then("message {string} appears")
@@ -66,5 +66,5 @@ public class registrationGroupCode {
         assertThat(elementWithMessage.isDisplayed()).isTrue();
         //        assertThat(getDriver().findElement(By.xpath("//*[contains(text(),'"+textOfMessage+"')]")).isDisplayed()).isTrue()
     }
-    }
+}
 

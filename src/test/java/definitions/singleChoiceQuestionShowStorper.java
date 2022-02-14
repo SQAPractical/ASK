@@ -48,14 +48,14 @@ public class singleChoiceQuestionShowStorper {
     @And("I click on {string} in List of Quizzes")
     public void iClickOnInListOfQuizzes(String nameOfQuiz) throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(), '"+nameOfQuiz+"')]")).click();
-        Thread.sleep(200);
+        Thread.sleep(2000);
     }
 
 
     @Then("{string} is present in Question {int}")
     public void isPresentInQuestion(String nameOption, int questionNumber) throws InterruptedException {
-        assertThat(getDriver().findElement(By.xpath("//p[contains(text(), 'Show-Stopper')]")).isDisplayed()).isTrue();
-        Thread.sleep(200);
+        assertThat(getDriver().findElement(By.xpath("//p[contains(text(), '"+nameOption+"')]")).isDisplayed()).isTrue();
+        Thread.sleep(2000);
 
 
     }
@@ -70,7 +70,7 @@ public class singleChoiceQuestionShowStorper {
 
     @And("I click on {string} button on {string} assignment in List of Assignments")
     public void iClickOnButtonOnAssignmentInListOfAssignments(String assignmentButton, String assignmentName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//table/tbody/tr/td[contains(text(), '"+assignmentName+"')]")).click();
+        getDriver().findElement(By.xpath("//table/tbody/tr/td[contains(text(), '"+assignmentName+"')]/../td/a")).click();
         Thread.sleep(2000);
     }
 
@@ -88,17 +88,18 @@ public class singleChoiceQuestionShowStorper {
 
 
     @And("I select {string}  in {string} menu")
-    public void iSelectInMenu(String quizName, String menuName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//div/mat-option/span[contains(text(), '"+quizName+"')]")).isSelected();
-        Thread.sleep(2000);
+    public void iSelectInMenu(String quizName, String menuName) {
+        getDriver().findElement(By.xpath("//div/mat-option/span[contains(text(), '"+quizName+"')]")).click();
+
     }
 
 
 
 
     @And("I click on {string} button in Give Assignment menu")
-    public void iClickOnButtonInGiveAssignmentMenu(String nameOfButton) {
+    public void iClickOnButtonInGiveAssignmentMenu(String nameOfButton) throws InterruptedException {
         getDriver().findElement(By.xpath("//button/*[contains(text(), '"+nameOfButton+"')]")).click();
+        Thread.sleep(2000);
     }
 
     @And("I select {string} quiz")

@@ -3,11 +3,8 @@ package definitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java8.Th;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
@@ -40,15 +37,17 @@ public class singleChoiceQuestionOptions {
 
     @And("I click on {string} menu item")
     public void iClickOnMenuItem(String menuItem) throws InterruptedException {
-        getDriver().findElement(By.xpath("//h5[contains(text(),'"+menuItem+"')]")).click();
+        getDriver().findElement(By.xpath("//mat-list/a/div/div/h5[contains(text(),'"+menuItem+"')]")).click();
         Thread.sleep(3000);
     }
 
     @And("I click {string} button")
     public void iClickButton(String buttonName) throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'"+buttonName+"')]")).click();
+        getDriver().findElement(By.xpath("//span[contains(text(),'"+buttonName+"')]/..")).click();
         Thread.sleep(2000);
+
     }
+
 
     @And("I type title of quiz {string}")
     public void iTypeTitleOfQuiz(String quizTitle) throws InterruptedException {
@@ -60,6 +59,7 @@ public class singleChoiceQuestionOptions {
     public void iClickAddQuestionButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
         Thread.sleep(2000);
+
     }
 
     @And("I select {string} question type for question {int}")
@@ -75,8 +75,9 @@ public class singleChoiceQuestionOptions {
     }
 
     @And("I type text {string} for option {int} for question {int}")
-    public void iTypeTextForOptionForQuestion(String textOfOption, int optionNumber, int questionNumber) {
+    public void iTypeTextForOptionForQuestion(String textOfOption, int optionNumber, int questionNumber) throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'Q"+questionNumber+"')]/../../..//*[@placeholder='Option "+optionNumber+"*']")).sendKeys(textOfOption);
+        Thread.sleep(2000);
     }
 
     @And("I select option {int} as correct answer for question {int}")

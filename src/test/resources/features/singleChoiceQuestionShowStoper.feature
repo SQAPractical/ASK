@@ -19,16 +19,16 @@ Feature: Single Choice Question
     And I select  "Create New Assignment" button in "List Of Assignments"
     And I select "Select Quiz To Assign" field in "Give Assignment"
     And I select "QW5"  in "Select Quiz To Assign" menu
-    And I select "Jon Snow"
+    And I select "Vasiliy Vasiliev"
     And I click on "Give Assignment" button in Give Assignment menu
-    And I click on "Quizzes" button
+    And I click on "Quizzes" menu item
     And I click on "QW5" in List of Quizzes
     And I click on "Preview" button in "QW5"
     Then  "Show-Stopper" is present in Question 1
 
     Scenario: Single Choice Question - Show-Stopper - student
       When I navigate to login page
-      And I type email "student0@gmail.com" on Login page
+      And I type email "student8@gmail.com" on Login page
       And I type password "12345Abc" on Login page
       And I click Sign In button
       And I click on "My Assignments" menu item
