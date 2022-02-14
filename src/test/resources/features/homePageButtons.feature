@@ -37,17 +37,5 @@ Feature: Home Page Buttons
     And I type email "teacher4@gmail.com" on login page
     And I type password "12345Abc" on login page
     And I click Sign In button
-    And I click on Go To Management button
+    And I click on Go To Users Management button
     Then User's Management is present on the page
-
-
-
-
-
-
-
-
-
-
-
-

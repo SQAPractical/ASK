@@ -52,8 +52,8 @@ public class homePageButtons {
         Thread.sleep(2000);
     }
 
-    @And("I click on Go To Management button")
-    public void iClickOnGoToManagementButton() {
+    @And("I click on Go To Users Management button")
+    public void iClickOnGoToUsersManagementButton() {
         getDriver().findElement(By.xpath("//span[contains(text(),'Go To Users Management')]")).click();
     }
 
