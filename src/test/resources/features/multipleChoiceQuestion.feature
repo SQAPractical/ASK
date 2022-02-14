@@ -161,7 +161,7 @@ Feature:Feature: Multiple Choice Question - Other text area
       |otherFieldInputNegative   |
       |ONETHOUSANDANDCHAR $%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertyuiop!@#$%&()123456789qwertbbnbnbnyuiop!@#$()123456789qwertyuiop!@#$%&()123bn456789qnnnnnENDOFINPUT|
 
-  Scenario Outline: Multiple Choice Question - Delete Quiz And Assignment
+  Scenario: : Multiple Choice Question - Delete Quiz And Assignment
     When I navigate to login page
     And I type email "teacher4@gmail.com" on login page
     And I type password "12345Abc" on login page

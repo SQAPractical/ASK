@@ -71,7 +71,8 @@ public class SingleChoiceQuestionOtherTextArea {
 
 
     @And("I click on {string} label in Submissions")
-    public void iClickOnLabelInSubmissions(String labelInSubmissions) {
+    public void iClickOnLabelInSubmissions(String labelInSubmissions) throws InterruptedException {
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//div[@class='mat-tab-label-content'][contains(text(),'"+labelInSubmissions+"')]")).click();
     }
 
