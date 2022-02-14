@@ -13,24 +13,32 @@ public class QuizTotalQuestions {
 
 
     @And("I click on {string}")
-    public void iClickOn(String quizName) {
+    public void iClickOn(String quizName) throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizName+"')]")).click();
+        Thread.sleep(1000);
     }
 
-    @Then("Quiz {string} total question numbers = {int}")
-    public void quizTotalQuestionNumbers(String quizName, int questionNumber) {
-        String questionNumbers = getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'TestQA')]/../../..//td[contains(text(),'Total Questions')]/following-sibling::td")).getText();
-        System.out.println(questionNumbers);
 
+    @Then("Quiz {string} total question numbers {string}")
+    public void quizTotalQuestionNumbers(String quizName, String questionNumber) throws InterruptedException {
+        Thread.sleep(2000);
+        String actualQuestionNumber = getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizName+"')]/../../..//td[contains(text(),'Total Questions')]/following-sibling::td")).getText();
+        System.out.println("Total questions number = " + actualQuestionNumber);
 
-
-
+        assertThat(actualQuestionNumber.equals(questionNumber)).isTrue();
     }
 
     @And("I add {int} questions to quiz")
-    public void iAddQuestionsToQuiz(int questionNumber) {
-        getDriver().findElement(By.xpath("//body/ac-root[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/main[1]/ac-quiz-builder-page[1]/form[1]/div[1]/button[1]/span[1]"));
+    public void iAddQuestionsToQuiz(int questionNumber) throws InterruptedException {
+        int i = 0;
+       for (i=1; i<= questionNumber; i++ ) {
+           getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
+           Thread.sleep(2000);
+           getDriver().findElement(By.xpath("//*[contains(text(),'Q"+i+"')]/../../..//*[contains(text(), 'Textual')]")).click();
+           getDriver().findElement(By.xpath("//*[contains(text(),'Q"+i+"')]/../../..//*[@placeholder='Question *']")).sendKeys("ABC");
+       }
 
     }
+
 
 }
