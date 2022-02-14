@@ -24,11 +24,11 @@ public class TextualQuestionText {
         getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).sendKeys(password);
     }
 
-    @And("I click on Sign In button")
-    public void iClickOnSignInButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click on Sign In button")
+//    public void iClickOnSignInButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
+//        Thread.sleep(2000);
+//    }
 
     @And("I click {string} menu item")
     public void iClickMenuItem(String menuItem) throws InterruptedException {
