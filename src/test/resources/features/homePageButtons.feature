@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Home Page Buttons
 
   Scenario: Student - Home Page Buttons - Go to My Assignments

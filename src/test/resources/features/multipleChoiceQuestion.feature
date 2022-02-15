@@ -1,4 +1,5 @@
 Feature:Feature: Multiple Choice Question - Other text area
+  @FullRegression
   Scenario: Multiple Choice Question - Other text area - Text field is present in a Preview Mode
     When I navigate to login page
     And I type email "teacher2@gmail.com" on login page
@@ -18,7 +19,7 @@ Feature:Feature: Multiple Choice Question - Other text area
     And I click "quizNK15" on list of quizzes
     And I click "Preview" button on Quizz "quizNK15" table
     Then textfield "Other" is present in quiz "quizNK15"
-
+  @FullRegression
   Scenario: Multiple Choice Question - Delete Quiz
     When I navigate to login page
     And I type email "teacher4@gmail.com" on login page

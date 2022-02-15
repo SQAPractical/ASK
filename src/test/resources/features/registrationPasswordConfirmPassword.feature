@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Registration - Password/Confirm password
   Scenario: Registration - Password/Confirm password" Alphanumeric and special characters
     When I navigate to registration page

@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Single Choice Question - Options
 
   Scenario: Single Choice Question - Options - 2 Options with correct answer

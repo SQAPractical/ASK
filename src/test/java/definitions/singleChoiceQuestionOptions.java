@@ -37,7 +37,7 @@ public class singleChoiceQuestionOptions {
 
     @And("I click on {string} menu item")
     public void iClickOnMenuItem(String menuItem) throws InterruptedException {
-        getDriver().findElement(By.xpath("//mat-list/a/div/div/h5[contains(text(),'"+menuItem+"')]")).click();
+        getDriver().findElement(By.xpath("//h5[contains(text(),'"+menuItem+"')]")).click();
         Thread.sleep(3000);
     }
 

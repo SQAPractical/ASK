@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Quiz Total questions
   Scenario: Quiz Total questions - Allows 3 question
     When I navigate to login page

@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Single Choice Question
   Scenario: Single Choice Question - Show-Stopper
     When I navigate to login page

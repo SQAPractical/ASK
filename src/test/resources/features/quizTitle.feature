@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Quiz - Title
   Scenario: Quiz - Title - Alphanumeric & Sp. characters
     When I navigate to login page

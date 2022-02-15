@@ -2,8 +2,6 @@ package definitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import org.apache.xpath.operations.String;
-import org.assertj.core.api.StringAssert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -78,7 +76,7 @@ public class homePageButtons {
     @Then("User's Management is present on the page")
     public void userSManagementIsPresentOnThePage() throws InterruptedException {
 
-        java.lang.String xpath = ("//h4[contains(text(),'Management')]");
+        String xpath = ("//h4[contains(text(),'Management')]");
         WebElement element = getDriver().findElement(By.xpath(xpath));
         Thread.sleep(2000);
         assertThat(element.isDisplayed()).isTrue();

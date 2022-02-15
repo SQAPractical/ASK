@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Textual Question -Text
 
   Scenario: Textual Question - Text-Allowable characters: Alphanumeric and Sp. characters

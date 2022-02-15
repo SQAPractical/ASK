@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Registration - Email
 
   Scenario Outline: Registration - Email - Alphanumeric characters and @ special char accepted

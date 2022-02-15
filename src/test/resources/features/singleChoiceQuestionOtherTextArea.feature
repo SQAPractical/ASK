@@ -1,3 +1,4 @@
+@FullRegression
 Feature: Single Choice Question - Other text area
   Scenario: Single Choice Question - Other text area - can be created by teacher
     When I navigate to login page
@@ -39,7 +40,8 @@ Feature: Single Choice Question - Other text area
     And I click on "Assignments" menu item
     And I click "Create New Assignment" button
     And I click on "Select Quiz To Assign" drop down menu
-    And I select "Test Animals" Quiz in Select Quiz To Assign drop down menu
+    And I select "Test Animals" from drop-down list
+#    And I select "Test Animals" Quiz in Select Quiz To Assign drop down menu
     And I click on "Group Filter" drop down menu
     And I select "ABC" group filter in Group Filter drop down menu
     And I click on "Ivan Ivanov" student checkbox on Give Assignment list
@@ -74,7 +76,8 @@ Feature: Single Choice Question - Other text area
     And I click on "Assignments" menu item
     And I click "Create New Assignment" button
     And I click on "Select Quiz To Assign" drop down menu
-    And I select "Test Animals" Quiz in Select Quiz To Assign drop down menu
+    And I select "Test Animals" from drop-down list
+#    And I select "Test Animals" Quiz in Select Quiz To Assign drop down menu
     And I click on "Group Filter" drop down menu
     And I select "ABC" group filter in Group Filter drop down menu
     And I click on "Ivan Ivanov" student checkbox on Give Assignment list
