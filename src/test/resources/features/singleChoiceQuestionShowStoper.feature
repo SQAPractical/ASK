@@ -43,6 +43,7 @@ Feature: Single Choice Question
        And I click on "Quizzes" menu item
        And I select "QW5" quiz
        And I select "Delete" button in "QW5" quiz
+       And I click on "Delete" button in Confirmation menu
        Then "QW5" is not present in "List Of Quizzes"
 
 
