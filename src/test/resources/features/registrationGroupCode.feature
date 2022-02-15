@@ -1,5 +1,6 @@
 @FullRegression
 Feature: Registration - Group Code
+  @Smoke
   Scenario: Registration - Group Code - Alphanumeric and special char
     When I navigate to registration page
     And I type first name "Ivan"

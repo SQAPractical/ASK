@@ -1,6 +1,6 @@
 @FullRegression
 Feature: LogIn
-
+  @Smoke
   Scenario: LogIn - Valid email and valid password
     When I navigate to login page
     And I Type Email "student1@gmail.com"

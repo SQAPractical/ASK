@@ -1,6 +1,6 @@
 @FullRegression
 Feature: Home Page Buttons
-
+@Smoke
   Scenario: Student - Home Page Buttons - Go to My Assignments
     When I navigate to login page
     And I type email "student0@gmail.com" on login page
