@@ -13,5 +13,8 @@ public class MyStepdefs {
     }
 
 
-
+    @Given("Testbn")
+    public void testbn() {
+        System.out.println("Testing");
+    }
 }
