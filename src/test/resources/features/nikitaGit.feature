@@ -1,0 +1,2 @@
+Feature: testGit
+  Scenario: addingChanges
