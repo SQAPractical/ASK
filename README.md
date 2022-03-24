@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 git *HOW TO PUSH YOUR CHANGES TO GIT HUB*
+=======
+
+git *HOW TO PUSH YOUR CHANGES TO GIT HUB*
+
+
+
+>>>>>>> master
 
 
 1. Cut your own branch from `master` locally, typing:
