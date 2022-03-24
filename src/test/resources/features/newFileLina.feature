@@ -1,2 +1,4 @@
 Feature: test
-  Scenario: TestLina
+  Scenario: TestLina1
+    Q1
+    A1
