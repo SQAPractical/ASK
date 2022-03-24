@@ -1,3 +1,3 @@
 Feature:
-  My name
-  Simar
+  My name is
+  Simarpreet kaur
