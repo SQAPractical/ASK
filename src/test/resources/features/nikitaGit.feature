@@ -1,2 +1,2 @@
-Feature: testGit
-  Scenario: addingChanges
+Feature: testGit hello !@#$% yabadabadoo
+  Scenario: addingChanges !@#$%% @#%%
