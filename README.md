@@ -15,7 +15,7 @@
     ----
 3. Make your changes
 
-    ----                        
+    ----                       
 
 4.  Run `git status` - your changes will appear in red
 
