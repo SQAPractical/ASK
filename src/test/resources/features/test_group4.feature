@@ -1,2 +1,3 @@
 Feature: Test
-  Scenario: Test Test
+  Scenario: Test1 Test2
+    And
