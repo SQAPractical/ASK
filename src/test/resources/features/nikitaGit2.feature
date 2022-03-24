@@ -1,2 +1,0 @@
-Feature: HW
-  Scenario: newTest
