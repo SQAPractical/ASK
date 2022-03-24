@@ -1,3 +1,4 @@
 Feature:
   Scenario:
-    Practice work
+    Practice work for conflict
+    working together
