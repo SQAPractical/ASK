@@ -1,6 +1,13 @@
-*HOW TO PUSH YOUR CHANGES TO GIT HUB*
+<<<<<<< HEAD
+c*HOW TO PUSH YOUR CHANGES TO GIT HUB*
+=======
+git*HOW TO PUSH YOUR CHANGES TO GIT HUB*
+
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
 1. Cut your own branch from `master` locally, typing:
     `git checkout -b name_of_your_branch`
     and create remote copy
@@ -37,7 +44,7 @@
 
 9. Switch to your branch again
     Type `git checkout name_of_your_branch`
-git pull
+
 10. Type `git merge master` to make sure there won't be any conflicts in your future pull request.
 
 11. Run project to double check if it is not broken (if you fixed something, you need
