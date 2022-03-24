@@ -1,5 +1,3 @@
-Features: test
-Scenario: test123
-  sjkdfhksdhf
-  kbcvbdb
-  sjdbjbf
+Features: test+test2
+Scenario: test12345
+
