@@ -1,3 +1,2 @@
-Feature: testing conflicts/ what ever you want
-  Scenario: 2 people at the same time/ same thing
-    changes number1 extra
+Feature: testing conflict
+  Scenario: 2 people at th changes number1 extra
