@@ -22,7 +22,7 @@ git*HOW TO PUSH YOUR CHANGES TO GIT HUB*
     ----
 3. Make your changes
 
-    ----                        
+    ----                       
 
 4.  Run `git status` - your changes will appear in red
 
