@@ -1,6 +1,7 @@
 Feature:
-  Senario:
-    Prac work123
-    ConflictYullia
+  Scenario:
+    Practice work123
+    Conflict
+
 
 
