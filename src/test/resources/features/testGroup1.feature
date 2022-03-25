@@ -1,7 +1,10 @@
+
 Feature:
   Scenario:
-    this is new file
-    with new changes
+    Practice work123
+    Conflict
+
+
 
 
 
