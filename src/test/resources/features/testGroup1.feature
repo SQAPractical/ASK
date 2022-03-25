@@ -1,6 +1,7 @@
-Feature:
-  Scenario55:
+Feature
+  Scenario:
     Practice work123
-    Conflict  77
+    Conflict
+
 
 
