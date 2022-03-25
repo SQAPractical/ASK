@@ -1,7 +1,7 @@
 Feature:
   Scenario:
-    Practice work123
-    Conflict
+    Practice in progress
+    Conflict is under review
 
 
 
