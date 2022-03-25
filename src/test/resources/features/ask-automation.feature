@@ -1,3 +1,3 @@
 Feature: Test
-  Scenario: test Qwerty
-    Given Test 111
+  Scenario: test
+    Given Test
