@@ -8,3 +8,5 @@ Given: I open website amazon.com
 
 >>>>>>> master
 
+  Hello World!
+
