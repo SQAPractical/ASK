@@ -1,2 +1,2 @@
-Feature: testing nikitanikitanikita
-  Scenario: nikitanikitanikita
+Feature: hello
+Sceneario: new test

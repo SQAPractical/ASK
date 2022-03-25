@@ -1,4 +1,10 @@
 Features: test+test2
 Scenario: test12345+test2022
-  Scenario: test555
+<<<<<<< HEAD
+Scenario: Hello there
+  Given : I test local conflicts
+=======
+Given: I open website amazon.com
+
+>>>>>>> master
 
