@@ -1,3 +1,3 @@
-Feature: testing nikitanikitanikitasdf
-  Scenario: nikitanikitanikitasdfsdfss
-    12345
+Feature: boulatovsdfsd
+  Scenario: boulatovsdfsf
+
