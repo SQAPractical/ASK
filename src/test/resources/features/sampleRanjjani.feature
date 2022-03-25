@@ -1,2 +1,2 @@
 Feature: Sample
-  Scenario: test123 -bjnjjnm,m
+  Scenario: test123 -bjnjjnm
