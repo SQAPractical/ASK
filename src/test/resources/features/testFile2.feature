@@ -1,3 +1,3 @@
 Feature: Homework
   Scenario: Test123
-    Given Hello!
+    Given Hello! I practice with conflicts.
