@@ -1,4 +1,2 @@
 Feature: Sample
-  Scenario: test123
-    ghgnbbn
-    hbvhbvbh
+  Scenario: test123 -sarala
