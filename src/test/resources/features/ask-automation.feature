@@ -1,4 +1,3 @@
-Feature: Test vsjkhkjvkj
-  Scenario: testkndxvkjln
-    Given Testnjdskjv
-
+Feature: Test
+  Scenario: test
+    Given Test
