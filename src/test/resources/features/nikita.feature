@@ -1,2 +1,2 @@
-Feature: testing conflicts !@#%%%%!$#$
-  Scenario: 2 people at the same time !@#@!$!%###@$
+Feature: hello
+Sceneario: new test
