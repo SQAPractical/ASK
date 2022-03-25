@@ -1,3 +1,3 @@
-Feature: nikita
-  Scenario: nikita
+Feature: boulatov
+  Scenario: boulatov
 
