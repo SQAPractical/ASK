@@ -1,6 +1,6 @@
 Feature:
   Scenario:
-    Practice work123
-    Conflict
+    Practice changes by simar
+    Conflict is under view
 
 
