@@ -1,7 +1,7 @@
 Feature:
   Scenario:
-    Practice in progress
-    Conflict is under review
+    this is new file
+    with new changes
 
 
 
