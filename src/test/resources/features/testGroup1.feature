@@ -1,7 +1,7 @@
 Feature
-  Scenario:
-    Practice work123
-    Conflict
+  Scenario1:
+    practice with github
+    team work
 
 
 
