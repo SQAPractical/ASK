@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-c*HOW TO PUSH YOUR CHANGES TO GIT HUB*
-=======
-git*HOW TO PUSH YOUR CHANGES TO GIT HUB*
+*HOW TO PUSH YOUR CHANGES TO GIT HUB*
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> master
 1. Cut your own branch from `master` locally, typing:
     `git checkout -b name_of_your_branch`
     and create remote copy
@@ -22,7 +14,7 @@ git*HOW TO PUSH YOUR CHANGES TO GIT HUB*
     ----
 3. Make your changes
 
-    ----                        
+    ----                       
 
 4.  Run `git status` - your changes will appear in red
 
