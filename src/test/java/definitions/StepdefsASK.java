@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import static support.TestContext.getDriver;
 
@@ -75,5 +76,84 @@ public class StepdefsASK {
             e.printStackTrace();
             System.out.println("LOGIN NOT SUCCESSFUL");
         }
+    }
+
+    @Then("I see error message {string}")
+    public void iSeeErrorMessage(String arg0) {
+        try {
+            WebDriverWait wait = new WebDriverWait(getDriver(), 5);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//mat-error[contains(text(),'required')]")));
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            System.out.println("NO ERROR MESSAGE FOR REQUIRED FIELD");
+        }
+    }
+
+    @When("I navigate to login page")
+    public void iNavigateToLoginPage() {
+        WebDriver driver = getDriver();
+        String regURl = "http://ask-stage.portnov.com/#/login";
+        driver.get(regURl);
+
+    }
+
+    @And("I type {string} in the email field")
+    public void iTypeInTheEmailField(String email) {
+        WebElement em = getDriver().findElement(By.xpath("//input[@placeholder='Email *']"));
+        em.sendKeys(email);
+
+    }
+
+    @And("I type {string} in the password field")
+    public void iTypeInThePasswordField(String password) {
+        WebElement pw = getDriver().findElement(By.xpath("//input[@placeholder='Password *']"));
+        pw.sendKeys(password);
+    }
+
+    @When("I click Sign in button")
+    public void iClickSignInButton() {
+        WebElement signBtn = getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]"));
+        signBtn.click();
+    }
+
+    @Then("I see the role Teacher")
+    public void iSeeTheRoleTeacher() {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'TEACHER')]")));
+        String homeURL = "http://ask-stage.portnov.com/#/home";
+        String hmURL = getDriver().getCurrentUrl();
+        try{
+            Assert.assertEquals(hmURL, homeURL);
+            System.out.println("EXPECTED URL: "+ homeURL + "ACTUAL URL:" + hmURL);
+
+        }
+        catch(Exception e){
+            System.out.println("LOGIN NOT SUCCESSFULL");
+        }
+    }
+
+    @When("I click text link Assignments")
+    public void iClickLinkTextAssignments() {
+        WebElement assgnText = getDriver().findElement(By.xpath("//h5[contains(text(),'Assignments')]"));
+        assgnText.click();
+
+    }
+
+    @Then("I see Create New Quiz button")
+    public void iSeeCreateNewQuizButton() {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Create New Assignment')]")));
+        String assignmentURL = "http://ask-stage.portnov.com/#/assignments";
+        String assnURL = getDriver().getCurrentUrl();
+        try{
+            Assert.assertEquals(assignmentURL, assnURL);
+            System.out.println("EXPECTED URL: "+ assignmentURL + "ACTUAL URL:" + assnURL);
+        }
+        catch(Exception e){
+            System.out.println("QUIZZES PAGE NOT LOADED");
+        }
+
+
     }
 }
