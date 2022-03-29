@@ -30,8 +30,13 @@ public class registrationGroupCode {
     @And("I type email {string}")
     public void iTypeEmail(String email)
     {
+        String nameOfThePage = getDriver().getCurrentUrl();
+        if (nameOfThePage.contains("login")) {
+            getDriver().findElement(By.xpath("//input[@placeholder='Email *']")).sendKeys(email);
+        }
+        else {
         getDriver().findElement(By.xpath("//input[@placeholder='Email']")).sendKeys(email);
-    }
+    }}
 
     @And("I type group code {string}")
     public void iTypeGroupCode(String groupCode)
@@ -41,9 +46,15 @@ public class registrationGroupCode {
 
     @And("I type password {string}")
     public void iTypePassword(String password)
+
     {
-        getDriver().findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(password);
-    }
+        String nameOfThePage = getDriver().getCurrentUrl();
+        if (nameOfThePage.contains("login")) {
+            getDriver().findElement(By.xpath("//input[@placeholder='Password *']")).sendKeys(password);
+        }
+        else {
+            getDriver().findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(password);
+        }}
 
     @And("I type confirm password {string}")
     public void iTypeConfirmPassword(String confirmPassword)
