@@ -92,7 +92,7 @@ public class StepdefsCheckLinks {
 //        System.out.println("OUT OF THE LOOP");
     }
 
-    @When("I navigate to login page")
+    @When("I navigate to the login page")
     public void iNavigateToLoginPage() {
         WebDriver driver = getDriver();
         String regURl = "http://ask-stage.portnov.com/#/login";
