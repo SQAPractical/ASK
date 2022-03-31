@@ -17,6 +17,9 @@ public class singleChoiceQuestionOptions {
     @And("I click {string} button")
     public void iClickButton(String buttonName) {
         getDriver().findElement(By.xpath("//button/span[contains(text(),'"+buttonName+"')]")).click();
+
+
+
     }
 
     @And("I type {string} title of the quiz")
