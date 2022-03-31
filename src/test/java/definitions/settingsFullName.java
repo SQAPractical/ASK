@@ -18,6 +18,7 @@ public class settingsFullName {
     @And("I type name {string} into New name field")
     public void iTypeNameIntoNewNameField(String newNameOnSettingPage) throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+        getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.COMMAND, "a"), Keys.DELETE);
         getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(newNameOnSettingPage);
         Thread.sleep(1000);
     }
@@ -32,6 +33,7 @@ public class settingsFullName {
     @And("I change name back to default {string}")
     public void iChangeNameBackToDefault(String NameOnSettingPage) throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+        getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.COMMAND, "a"), Keys.DELETE);
         getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(NameOnSettingPage);
         Thread.sleep(1000);
     }
