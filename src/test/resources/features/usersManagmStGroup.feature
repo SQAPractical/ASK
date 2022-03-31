@@ -73,7 +73,7 @@ Feature: User's management - Options in Student's account
     And I type email "teacher2@gmail.com"
     And I type password "12345Abc"
     And I click on Sign In button
-    And I click on "Management" on left menu
+    And I click on "User's Management" on left menu
     And I click "Students" tab
     And I click "Jon Snow" student with "ABC" group
     And I click OPTIONS button
