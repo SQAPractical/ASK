@@ -47,4 +47,9 @@ Feature: Quiz Total Questions
 #      And I delete quiz "BBB"
 
      Scenario: Delete the quiz
+       When I navigate to login page
+       And I type email "teacher3@gmail.com"
+       And I type password "12345Abc"
+       And I click on Sign In button
+       And I click on "Quizzes" on left menu
        And I delete quiz "BBB"
