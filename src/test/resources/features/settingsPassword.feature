@@ -12,9 +12,8 @@ Feature: Settings - Password
     And I click on Change button
     And I redirect to settings page
     And I click on Log Out
-    And I click on "Log Out" button
+    And I confirm Log Out
     # Change password back to default
-    And I redirect to login page
     And I type email "teacher2@gmail.com"
     And I type password "123Abc!@#"
     And I click on Sign In button
@@ -58,6 +57,7 @@ Feature: Settings - Password
     And I type password "12345Abc"
     And I type new password "123Abc!@#"
     And I type confirm new password ""
+    And I click on Change button
     Then Message "This field is required" appears
   Scenario: Settings - New Password- Minimum (5) characters
     When I navigate to login page
@@ -72,9 +72,8 @@ Feature: Settings - Password
     And I click on Change button
     And I redirect to settings page
     And I click on Log Out
-    And I click on "Log Out" button
+    And I confirm Log Out
     # Change password back to default
-    And I redirect to login page
     And I type email "teacher2@gmail.com"
     And I type password "123Ab"
     And I click on Sign In button
@@ -110,9 +109,8 @@ Feature: Settings - Password
     And I click on Change button
     And I redirect to settings page
     And I click on Log Out
-    And I click on "Log Out" button
+    And I confirm Log Out
       # Change password back to default
-    And I redirect to login page
     And I type email "teacher2@gmail.com"
     And I type password "abcdefghigklmnop1234567891011121"
     And I click on Sign In button

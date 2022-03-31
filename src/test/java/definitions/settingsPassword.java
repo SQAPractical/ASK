@@ -42,4 +42,10 @@ public class settingsPassword {
     public void iRedirectToLoginPage() {
         getDriver().get("http://ask-stage.portnov.com/#/login");
     }
+
+    @And("I confirm Log Out")
+    public void iConfirmLogOut() throws InterruptedException {
+        getDriver().findElement(By.xpath("//*[contains(text(),'Confirmation')]/../..//button/span[contains(text(),'Log Out')]")).click();
+        Thread.sleep(1000);
+    }
 }
