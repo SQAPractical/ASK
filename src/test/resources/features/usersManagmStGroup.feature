@@ -12,6 +12,16 @@ Feature: User's management - Options in Student's account
     And I clear "Group" input field
     And I type new group "Ab12!@" into group field
     And I click Change button
+    # Change name back
+    And I click on "Management" on left menu
+    And I click "Students" tab
+    And I click "Jon Snow" student with "Ab12!@" group
+    And I click OPTIONS button
+    And I click Change User's "group" from a drop-down menu
+    And I clear "Group" input field
+    And I type new group "ABC" into group field
+    And I click Change button
+
 
   Scenario: Return to ABC group code
     When I navigate to login page
