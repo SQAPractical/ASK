@@ -38,7 +38,6 @@ Feature: User's management - Options in Student's account
     And I click OPTIONS button
     And I click Change User's "group" from a drop-down menu
     And I clear "Group" input field
-    And I click elsewhere
     Then Message "This field is required" appears
 
   Scenario: User's management - Options in Student's account - Change User's Group - Maximum 6 Characters
@@ -55,7 +54,7 @@ Feature: User's management - Options in Student's account
     And I type new group "Ab11!@" into group field
     And I click Change button
 
-  Scenario: Return to ABC group code
+  Scenario: Return to ABC group code 2
     When I navigate to login page
     And I type email "teacher2@gmail.com"
     And I type password "12345Abc"
@@ -81,5 +80,4 @@ Feature: User's management - Options in Student's account
     And I click Change User's "group" from a drop-down menu
     And I clear "Group" input field
     And I type new group "Ab11!@#" into group field
-    And I click elsewhere
     Then Message "Too long. Should be no more than 6 characters" appears

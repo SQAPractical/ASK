@@ -3,6 +3,7 @@ package definitions;
 import cucumber.api.java.en.And;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -24,7 +25,7 @@ public class usersManagementStGroup
 
     @And("I click OPTIONS button")
     public void iClickOptionsButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//button")).click();
+        getDriver().findElement(By.xpath("//span[contains(.,'Options')]")).click();
         Thread.sleep(2000);
     }
 
@@ -36,8 +37,11 @@ public class usersManagementStGroup
 
     @And("I clear {string} input field")
     public void iClearInputField(String group) throws InterruptedException {
-        getDriver().findElement(By.xpath("//input[contains(@placeholder,'"+group+"')]")).clear();
-        Thread.sleep(1000);
+        getDriver().findElement(By.xpath("//input[contains(@placeholder,'"+group+"')]")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        getDriver().findElement(By.xpath("//input[contains(@placeholder,'"+group+"')]")).sendKeys(Keys.DELETE);
+        getDriver().findElement(By.xpath("//input[contains(@placeholder,'"+group+"')]")).sendKeys(Keys.BACK_SPACE);
+        getDriver().findElement(By.xpath("//span[contains(.,'Change')]")).click();
+        Thread.sleep(2000);
     }
 
     @And("I type new group {string} into group field")
