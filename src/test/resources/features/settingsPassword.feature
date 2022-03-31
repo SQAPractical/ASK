@@ -17,6 +17,8 @@ Feature: Settings - Password
     And I type new password "12345Abc"
     And I type confirm new password "12345Abc"
     And I click on Change button
+
+
   Scenario: Settings - Password - Password field cannot be empty
     When I navigate to login page
     And I type email "teacher2@gmail.com"
@@ -141,6 +143,7 @@ Feature: Settings - Password
     And I type new password "123A "
     And I type confirm new password "123A "
     Then Message "Whitespaces are not allowed" appears
+
   Scenario: Settings - Password- New Password must match Confirm Password
     When I navigate to login page
     And I type email "teacher2@gmail.com"

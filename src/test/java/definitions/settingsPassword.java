@@ -22,10 +22,10 @@ public class settingsPassword {
         getDriver().get("http://ask-stage.portnov.com/#/settings");
     }
 
-    @And("I click on {string} button")
-    public void iClickOnButton(String buttonName) {
-        getDriver().findElement(By.xpath("//button/span[contains(text(),'"+buttonName+"')]")).click();
-    }
+//    @And("I click on {string} button")
+//    public void iClickOnButton(String buttonName) {
+//        getDriver().findElement(By.xpath("//button/span[contains(text(),'"+buttonName+"')]")).click();
+//    }
 
     @And("I click on Change button")
     public void iClickOnChangeButton() throws InterruptedException {
