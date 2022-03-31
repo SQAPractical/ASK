@@ -21,7 +21,7 @@ Feature: Settings - Full Name
     And I type password "12345Abc"
     And I click on Sign In button
     And I click on "Settings" on left menu
-    And I click on "Change Your Name" button
+    And I click on "Change Your Name" button on Settings page
     And I remove name from New name field
     And I verify that button "Change" is disabled
     And I see error message "This field is required" displayed

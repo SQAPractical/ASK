@@ -8,8 +8,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class settingsFullName {
-    @And("I click on {string} button")
-    public void iClickOnButton(String buttonNameOnSettingsPage) throws InterruptedException {
+
+    @And("I click on {string} button on Settings page")
+    public void iClickOnButtonOnSettingsPage(String buttonNameOnSettingsPage) throws InterruptedException {
         getDriver().findElement(By.xpath("//button/span[text()='"+buttonNameOnSettingsPage+"']")).click();
         Thread.sleep(1000);
     }
@@ -65,6 +66,7 @@ public class settingsFullName {
         String newName = getDriver().findElement(By.xpath("//mat-card//*[contains(text(), '"+updatedName+"')]")).getText();
         assertThat(newName.equals(updatedName)).isTrue();
     }
+
 }
 
     

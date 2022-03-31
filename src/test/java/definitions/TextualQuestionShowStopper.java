@@ -4,6 +4,9 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
@@ -11,10 +14,10 @@ import static support.TestContext.getDriver;
 public class TextualQuestionShowStopper {
 
 
-    @When("I navigate to the login page")
-    public void iNavigateToTheLoginPage() {
-        getDriver().get("http://ask-stage.portnov.com/#/login");
-    }
+//    @When("I navigate to the login page")
+//    public void iNavigateToTheLoginPage() {
+//        getDriver().get("http://ask-stage.portnov.com/#/login");
+//    }
 
     @And("I type the email {string}")
     public void iTypeTheEmail(String email) {
@@ -37,7 +40,12 @@ public class TextualQuestionShowStopper {
     }
 
     @And("I click on {string} button")
-    public void iClickOnButton(String nameOfButton) {
+    public void iClickOnButton(String nameOfButton) throws InterruptedException {
+//        String xPathOfElement = "(//*[contains(text(), 'Assignment Date')])[1]";
+//
+//        WebDriverWait wait = new WebDriverWait(getDriver(), 5);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPathOfElement)));
+        Thread.sleep(2000);
         getDriver().findElement(By.xpath("//span[contains(text(),'"+nameOfButton+"')]")).click();
     }
 

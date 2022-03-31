@@ -21,10 +21,10 @@ public class SingleChoiceQuestionOtherTextArea {
 
             }
 
-    @And("I select in dropdown menu option {string}")
-    public void iSelectInDropdownMenuOption(String optionText) {
-        getDriver().findElement(By.xpath("//span[@class='mat-option-text'][contains(text(),'"+optionText+"')]")).click();
-    }
+//    @And("I select in dropdown menu option {string}")
+//    public void iSelectInDropdownMenuOption(String optionText) {
+//        getDriver().findElement(By.xpath("//span[@class='mat-option-text'][contains(text(),'"+optionText+"')]")).click();
+//    }
 
     @And("I click on Group dropdown in the Give Assignment")
     public void iClickOnGroupDropdownInTheGiveAssignment() {
