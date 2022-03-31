@@ -22,20 +22,24 @@ public class settingsPassword {
         getDriver().get("http://ask-stage.portnov.com/#/settings");
     }
 
-//    @And("I click on {string} button")
-//    public void iClickOnButton(String buttonName) {
-//        getDriver().findElement(By.xpath("//button/span[contains(text(),'"+buttonName+"')]")).click();
-//    }
-
+    @And("I click outside the Confirm password field")
+    public void iClickOutsideTheConfirmPasswordField() throws InterruptedException {
+        getDriver().findElement(By.xpath("//div[@class='mat-dialog-content']")).click();
+        Thread.sleep(2000);
+    }
     @And("I click on Change button")
     public void iClickOnChangeButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button/span[text()='Change']")).click();
         Thread.sleep(2000);
     }
 
-    @And("I click outside the Confirm password field")
-    public void iClickOutsideTheConfirmPasswordField() throws InterruptedException {
-        getDriver().findElement(By.xpath("//div[@class='mat-dialog-content']")).click();
-        Thread.sleep(2000);
+    @And("I click on Log Out")
+    public void iClickOnLogOut() {
+        getDriver().findElement(By.xpath("//h5[contains(text(),'Log Out')]")).click();
+    }
+
+    @And("I redirect to login page")
+    public void iRedirectToLoginPage() {
+        getDriver().get("http://ask-stage.portnov.com/#/login");
     }
 }
