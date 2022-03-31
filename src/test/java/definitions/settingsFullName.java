@@ -38,6 +38,7 @@ public class settingsFullName {
     @And("I remove name from New name field")
     public void iRemoveNameFromNewNameField() throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+        getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.COMMAND, "a"), Keys.DELETE);
         Thread.sleep(2000);
     }
 
