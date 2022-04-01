@@ -8,8 +8,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class settingsFullName {
-    @And("I click on {string} button")
-    public void iClickOnButton(String buttonNameOnSettingsPage) throws InterruptedException {
+
+    @And("I click on {string} button on Settings page")
+    public void iClickOnButtonOnSettingsPage(String buttonNameOnSettingsPage) throws InterruptedException {
         getDriver().findElement(By.xpath("//button/span[text()='"+buttonNameOnSettingsPage+"']")).click();
         Thread.sleep(1000);
     }
@@ -17,6 +18,7 @@ public class settingsFullName {
     @And("I type name {string} into New name field")
     public void iTypeNameIntoNewNameField(String newNameOnSettingPage) throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+        getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.COMMAND, "a"), Keys.DELETE);
         getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(newNameOnSettingPage);
         Thread.sleep(1000);
     }
@@ -31,6 +33,7 @@ public class settingsFullName {
     @And("I change name back to default {string}")
     public void iChangeNameBackToDefault(String NameOnSettingPage) throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+        getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.COMMAND, "a"), Keys.DELETE);
         getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(NameOnSettingPage);
         Thread.sleep(1000);
     }
@@ -38,6 +41,7 @@ public class settingsFullName {
     @And("I remove name from New name field")
     public void iRemoveNameFromNewNameField() throws InterruptedException {
         getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+        getDriver().findElement(By.xpath("//mat-dialog-container//input[@formcontrolname='name']")).sendKeys(Keys.chord(Keys.COMMAND, "a"), Keys.DELETE);
         Thread.sleep(2000);
     }
 
@@ -64,6 +68,7 @@ public class settingsFullName {
         String newName = getDriver().findElement(By.xpath("//mat-card//*[contains(text(), '"+updatedName+"')]")).getText();
         assertThat(newName.equals(updatedName)).isTrue();
     }
+
 }
 
     

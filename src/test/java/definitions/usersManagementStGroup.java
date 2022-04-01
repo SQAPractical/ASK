@@ -41,7 +41,6 @@ public class usersManagementStGroup
         getDriver().findElement(By.xpath("//input[contains(@placeholder,'"+group+"')]")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
         getDriver().findElement(By.xpath("//input[contains(@placeholder,'"+group+"')]")).sendKeys(Keys.DELETE);
         getDriver().findElement(By.xpath("//input[contains(@placeholder,'"+group+"')]")).sendKeys(Keys.BACK_SPACE);
-        getDriver().findElement(By.xpath("//span[contains(.,'Change')]")).click();
         Thread.sleep(2000);
     }
 

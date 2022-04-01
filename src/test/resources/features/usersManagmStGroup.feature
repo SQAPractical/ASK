@@ -19,7 +19,6 @@ Feature: User's management - Options in Student's account
     And I clear "Group" input field
     And I type new group "ABC" into group field
     And I click Change button
-    Then I verify that "Group" is updated with new "ABC" group
 
    Scenario: User's management - Options in Student's account - Change User's Group - Field Required
     When I navigate to login page
@@ -32,6 +31,7 @@ Feature: User's management - Options in Student's account
     And I click OPTIONS button
     And I click Change User's "group" from a drop-down menu
     And I clear "Group" input field
+    And I click Change button
     Then Message "This field is required" appears
 
   Scenario: User's management - Options in Student's account - Change User's Group - Maximum 6 Characters
@@ -68,4 +68,5 @@ Feature: User's management - Options in Student's account
     And I click Change User's "group" from a drop-down menu
     And I clear "Group" input field
     And I type new group "Ab11!@#" into group field
+    And I click Change button
     Then Message "Too long. Should be no more than 6 characters" appears
