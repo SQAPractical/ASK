@@ -8,10 +8,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class usersManagmStRoleAndDelete {
-    @And("I click on {string} on left side menu")
-    public void iClickOnOnLeftSideMenu(String menuItem) {
-        getDriver().findElement(By.xpath("//*[@href='/#/users-management']")).click();
-    }
+//    @And("I click on {string} on left side menu")
+//    public void iClickOnOnLeftSideMenu(String menuItem) {
+//        getDriver().findElement(By.xpath("//*[@href='/#/users-management']")).click();
+//    }
 
     @And("I select {string} to open list of students")
     public void iSelectToOpenListOfStudents(String students) throws InterruptedException {
@@ -31,18 +31,18 @@ public class usersManagmStRoleAndDelete {
         Thread.sleep(2000);
     }
 
-    @And("I click on {string} option")
-    public void iClickOnOption(String userRole) throws InterruptedException {
-        getDriver().findElement(By.xpath("//button[contains(., 'Role')]")).click();
-        Thread.sleep(2000);
+//    @And("I click on {string} option")
+//    public void iClickOnOption(String userRole) throws InterruptedException {
+//        getDriver().findElement(By.xpath("//button[contains(., 'Role')]")).click();
+//        Thread.sleep(2000);
+//
+//    }
 
-    }
-
-    @And("I click on {string} button")
-    public void iClickOnButton(String role) throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Change Role')]")).click();
-        Thread.sleep(2000);
-    }
+//    @And("I click on {string} button")
+//    public void iClickOnButton(String role) throws InterruptedException {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Change Role')]")).click();
+//        Thread.sleep(2000);
+//    }
 
     @And("I select {string} to open list of teacher")
     public void iSelectToOpenListOfTeacher(String teacher) throws InterruptedException {
@@ -88,8 +88,25 @@ public class usersManagmStRoleAndDelete {
 
     @And("I click on {string} button from the Popup window")
     public void iClickOnButtonFromThePopupWindow(String delete) throws InterruptedException {
-        Thread.sleep(2000);
+
         getDriver().findElement(By.xpath("//span[contains(text(), 'Delete')]")).click();
+        Thread.sleep(2000);
     }
 
+    @Then("User role is {string} is displayed")
+    public void userRoleIsIsDisplayed(String userRole) {
+        String xPath = "//td[contains(text(),'User Role')]/..";
+        String textThatContainsUserRoleInfo = getDriver().findElement(By.xpath(xPath)).getText();
+
+        assertThat(textThatContainsUserRoleInfo.contains(userRole)).isTrue();
+        System.out.println(textThatContainsUserRoleInfo);
+    }
+
+    @And("Student {string} is not present on list of users")
+    public void studentIsNotPresentOnListOfUsers(String studentName) {
+        String listOfStudents = getDriver().findElement(By.xpath("//mat-tab-group")).getText();
+        System.out.println(listOfStudents);
+
+        assertThat(listOfStudents.contains(studentName)).isFalse();
+    }
 }
