@@ -1,6 +1,7 @@
 package definitions;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -62,5 +63,10 @@ public class usersManagementStGroup
     public void iClickChangeButton() throws InterruptedException {
         getDriver().findElement(By.xpath("//button/span[text()='Change']")).click();
         Thread.sleep(1000);
+    }
+    @Then("I verify that {string} is updated with new {string} group")
+    public void iVerifyThatIsUpdatedWithNewGroup(String group, String newGroup) throws InterruptedException {
+        getDriver().findElement(By.xpath("//td[contains(text(),'"+group+"')]/following-sibling::td[contains(text(),'"+newGroup+"')]"));
+        Thread.sleep(2000);
     }
 }
