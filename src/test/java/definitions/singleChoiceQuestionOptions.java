@@ -10,13 +10,15 @@ import static support.TestContext.getDriver;
 
 public class singleChoiceQuestionOptions {
     @And("I click on {string} on left menu")
-    public void iClickOnOnLeftMenu(String menuItem) {
-        getDriver().findElement(By.xpath("//h5[contains(text(),'"+menuItem+"')]")).click();
+    public void iClickOnOnLeftMenu(String menuItem) throws InterruptedException {
+        getDriver().findElement(By.xpath("//h5[contains(text(), '"+menuItem+"')]")).click();
+        Thread.sleep(2000);
     }
 
     @And("I click {string} button")
-    public void iClickButton(String buttonName) {
+    public void iClickButton(String buttonName) throws InterruptedException {
         getDriver().findElement(By.xpath("//button/span[contains(text(),'"+buttonName+"')]")).click();
+        Thread.sleep(2000);
     }
 
     @And("I type {string} title of the quiz")
@@ -48,7 +50,8 @@ public class singleChoiceQuestionOptions {
 
     @And("I select option {int} as correct answer for {string} question {int}")
     public void iSelectOptionAsCorrectAnswerForQuestion(int optionNumber, String questionType, int questionNumber) throws InterruptedException {
-        if (questionType.contains("Single")){
+        if (questionType.contains("Single"))
+        {
             getDriver().findElement(By.xpath("//*[contains(text(),'Q"+questionNumber+"')]/../../..//*[@placeholder='Option "+optionNumber+"*']/../../../../..//*[@class='mat-radio-container']")).click();
             Thread.sleep(2000);
         }
@@ -60,7 +63,8 @@ public class singleChoiceQuestionOptions {
     }
 
     @Then("Quiz {string} is saved in list of quizzes")
-    public void quizIsSavedInListOfQuizzes(String quizTitle) {
+    public void quizIsSavedInListOfQuizzes(String quizTitle)
+    {
         String listOfQuizzes = getDriver().findElement(By.xpath("//div[@class='quizzes']")).getText();
         System.out.println(listOfQuizzes);
 
@@ -68,7 +72,8 @@ public class singleChoiceQuestionOptions {
     }
 
     @And("I delete quiz {string}")
-    public void iDeleteQuiz(String quizTitle) throws InterruptedException {
+    public void iDeleteQuiz(String quizTitle) throws InterruptedException
+    {
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizTitle+"')]")).click();
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizTitle+"')]/../../..//*[contains(text(), 'Delete')]")).click();
         getDriver().findElement(By.xpath("//*[contains(text(), 'Confirmation')]/../..//*[contains(text(), 'Delete')]")).click();
