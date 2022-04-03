@@ -1,4 +1,3 @@
-<<<<<<< HEAD
-Feature: Test vsjkhkjvkj
-  Scenario: testkndxvkjlnfdb
-    Given Testnjdskjvbfn
+Feature: Test
+  Scenario: test
+    Given Test
