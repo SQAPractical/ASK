@@ -47,7 +47,7 @@ public class TextualQuestionShowStopper {
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPathOfElement)));
         Thread.sleep(1000);
         getDriver().findElement(By.xpath("//span[contains(text(),'"+nameOfButton+"')]")).click();
-
+        Thread.sleep(1000);
     }
 
     @And("I type {string} as title of the quiz")
@@ -81,8 +81,9 @@ public class TextualQuestionShowStopper {
 
 
     @And("I click on the {string} button")
-    public void iClickOnTheButton(String buttonName) {
+    public void iClickOnTheButton(String buttonName) throws InterruptedException {
         getDriver().findElement(By.xpath("//*[contains(text(),'"+buttonName+"')]")).click();
+        Thread.sleep(1000);
     }
 
     @And("I click on {string} from Quiz list")
@@ -112,7 +113,9 @@ public class TextualQuestionShowStopper {
     @And("I delete the quiz {string}")
     public void iDeleteTheQuiz(String quizName) throws InterruptedException {
     getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizName+"')]")).click();
+    Thread.sleep(1000);
     getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizName+"')]/../../..//*[contains(text(),'Delete')]")).click();
+    Thread.sleep(1000);
     getDriver().findElement(By.xpath("//*[contains(text(),'Confirmation')]/../..//*[contains(text(),'Delete')]")).click();
     Thread.sleep(2000);
     }
@@ -129,7 +132,8 @@ public class TextualQuestionShowStopper {
     }
 
     @And("I select in dropdown menu option {string}")
-    public void iSelectInDropdownMenuOption(String quizTitle) {
+    public void iSelectInDropdownMenuOption(String quizTitle) throws InterruptedException {
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//span[@class ='mat-option-text'][contains( text(),'"+quizTitle+"')]")).click();
     }
 

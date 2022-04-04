@@ -97,9 +97,9 @@ public class usersManagmStRoleAndDelete {
     public void userRoleIsIsDisplayed(String userRole) {
         String xPath = "//td[contains(text(),'User Role')]/..";
         String textThatContainsUserRoleInfo = getDriver().findElement(By.xpath(xPath)).getText();
-
-        assertThat(textThatContainsUserRoleInfo.contains(userRole)).isTrue();
         System.out.println(textThatContainsUserRoleInfo);
+        assertThat(textThatContainsUserRoleInfo.contains(userRole)).isTrue();
+
     }
 
     @And("Student {string} is not present on list of users")

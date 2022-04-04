@@ -16,7 +16,7 @@ Feature: Textual Question - Show-Stopper
     And I click  "Preview" button
     Then text "Show-Stopper Question" is present in question 1
     And I click on the "Close" button
-    And I delete the quiz "Textual Show-Stopper"
+#    And I delete the quiz "Textual Show-Stopper"
 
   Scenario: Textual Question - Show-Stopper- Visible for Student
     When I navigate to the login page

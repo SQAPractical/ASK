@@ -10,8 +10,9 @@ import static support.TestContext.getDriver;
 public class userManagmtRoleAndDelete {
 
     @And("I click on {string} on left side menu")
-    public void iClickOnOnLeftSideMenu(String mainMenuItem) {
+    public void iClickOnOnLeftSideMenu(String mainMenuItem) throws InterruptedException {
         getDriver().findElement(By.xpath("//h5[contains(text(),'" + mainMenuItem + "')]")).click();
+        Thread.sleep(1000);
     }
     @And("I click on username {string}")
     public void iClickOnUsername(String name) throws InterruptedException {
