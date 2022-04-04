@@ -1,3 +1,4 @@
+@Quiz
 Feature: Quiz Total Questions
   Scenario: Quiz Total Questions - one question
     When I navigate to login page

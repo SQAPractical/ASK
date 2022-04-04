@@ -1,3 +1,4 @@
+@Quiz
 Feature: Single Choice Question - Options
   @smoke
   Scenario: Single Choice Question - Options - Alphanumeric and special characters

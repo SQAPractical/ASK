@@ -1,3 +1,4 @@
+@Registration
 Feature: Registration - Email
   @smoke
   Scenario: Registration - Email - Alphanumeric and special characters

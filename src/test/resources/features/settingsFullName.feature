@@ -1,3 +1,4 @@
+@Settings
 Feature: Settings - Full Name
 
   Scenario: Settings - Full Name - Alphanumeric and special characters

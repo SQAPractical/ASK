@@ -1,3 +1,4 @@
+@Quiz
 Feature: Textual Question - Text
   Scenario: Textual Question - Text - Allowable characters: Alphanumeric & Sp. characters
     Given I navigate to login page

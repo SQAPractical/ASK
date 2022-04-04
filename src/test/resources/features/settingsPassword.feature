@@ -1,3 +1,4 @@
+@Settings
 Feature: Settings - Password
   Scenario: Settings - New Password - Alphanumeric and special characters
     When I navigate to login page

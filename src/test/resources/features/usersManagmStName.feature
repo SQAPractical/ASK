@@ -1,3 +1,4 @@
+@UM
 Feature: Automate test set User's management
   Scenario: Options in Student's account Change Name
     When I navigate to login page

@@ -1,3 +1,4 @@
+@Home
 Feature: Check Links - Home Page
   Background: Verify teacher login
     When I navigate to the login page

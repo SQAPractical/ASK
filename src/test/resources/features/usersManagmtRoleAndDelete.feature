@@ -1,3 +1,4 @@
+@UM
 Feature: User Management Role and Delete
   Scenario: Change Role
     When I navigate to login page

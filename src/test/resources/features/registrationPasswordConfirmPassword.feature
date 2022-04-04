@@ -1,3 +1,4 @@
+@Registration
 Feature: Registration - Password/Confirm password
   Scenario: Registration - Password/Confirm password - Allowable characters: Alphanumeric and special characters
     When I navigate to the registration page

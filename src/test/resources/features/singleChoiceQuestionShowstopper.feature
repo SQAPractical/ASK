@@ -1,3 +1,4 @@
+@Quiz
 Feature: Test Set for Single Choice Questions - Showstopper
 
   Scenario: Single-Choice Questions - Assigning showstopper

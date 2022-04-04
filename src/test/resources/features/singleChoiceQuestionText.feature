@@ -1,3 +1,4 @@
+@Quiz
 Feature: Single Choice Question - Text
   Scenario: Single Choice Question - Text - Alphanumeric and special characters
     Given I navigate to login page

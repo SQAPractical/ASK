@@ -1,3 +1,4 @@
+@Submissions
 Feature: Submissions - Automatically Graded
   Scenario: Submissions - Automatically Graded - Show Stopper - Student - Failed
     When I navigate to login page

@@ -1,3 +1,4 @@
+@Quiz
 Feature: Textual Question - Show-Stopper
   Scenario: Textual Question - Show-Stopper - Visible for Teacher in Preview mode
     When I navigate to the login page

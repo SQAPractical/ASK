@@ -1,3 +1,4 @@
+@Quiz
 Feature: Single Choice Question Other Text Area A22-306
   Scenario Outline: All test cases
     Given I navigate to login page

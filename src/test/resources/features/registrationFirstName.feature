@@ -1,3 +1,4 @@
+@Registration
 Feature: Registration - First Name
 
   Scenario: Registration - First Name - Alphanumeric and special characters

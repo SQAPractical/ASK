@@ -1,3 +1,4 @@
+@Quiz
 Feature: Assigning points to quiz question
   Background:
     Given I am logged in with email "teacher2@gmail.com" and password "12345Abc"

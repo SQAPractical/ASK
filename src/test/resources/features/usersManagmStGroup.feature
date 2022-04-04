@@ -1,3 +1,4 @@
+@UM
 Feature: User's management - Options in Student's account
   Scenario: User's management - Options in Student's account - Change User's Group - Alphanumeric and Special Characters
     When I navigate to login page
