@@ -45,8 +45,9 @@ public class TextualQuestionShowStopper {
 //
 //        WebDriverWait wait = new WebDriverWait(getDriver(), 5);
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPathOfElement)));
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         getDriver().findElement(By.xpath("//span[contains(text(),'"+nameOfButton+"')]")).click();
+
     }
 
     @And("I type {string} as title of the quiz")
