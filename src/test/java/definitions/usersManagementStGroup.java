@@ -39,6 +39,7 @@ public class usersManagementStGroup
     @And("I clear {string} input field")
     public void iClearInputField(String group) throws InterruptedException {
         getDriver().findElement(By.xpath("//input[contains(@placeholder,'"+group+"')]")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        getDriver().findElement(By.xpath("//input[contains(@placeholder,'"+group+"')]")).sendKeys(Keys.chord(Keys.COMMAND, "a"));
         getDriver().findElement(By.xpath("//input[contains(@placeholder,'"+group+"')]")).sendKeys(Keys.DELETE);
         getDriver().findElement(By.xpath("//input[contains(@placeholder,'"+group+"')]")).sendKeys(Keys.BACK_SPACE);
         Thread.sleep(2000);

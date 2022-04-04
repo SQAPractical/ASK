@@ -51,11 +51,11 @@ public class userManagmStName {
         getDriver().findElement(By.xpath("//*[@placeholder=\"New User's Name\"]")).sendKeys(newName);
     }
 
-    @And("I click on Change button")
-    public void iClickOnChangeButton() throws InterruptedException {
-        getDriver().findElement(By.xpath("//span[contains(text(),'Change')]")).click();
-        Thread.sleep(1000);
-    }
+//    @And("I click on Change button")
+//    public void iClickOnChangeButton() throws InterruptedException {
+//        getDriver().findElement(By.xpath("//span[contains(text(),'Change')]")).click();
+//        Thread.sleep(1000);
+//    }
 
     @And("I choose Student {string}from the list")
     public void iChooseStudentFromTheList(String studName) {

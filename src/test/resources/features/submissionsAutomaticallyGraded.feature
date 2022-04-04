@@ -23,7 +23,8 @@ Feature: Submissions - Automatically Graded
     Then Quiz "12345" present in list of quizzes
     And I click on "Assignments" on left menu
     And I click on "Create New Assignment" button
-    And I select in dropdown menu option "12345"
+    And I select Quiz To Assign "12345"
+#    And I select in dropdown menu option "12345"
     And I select "Ivan Ivanov" from the list of students
     And I click on "Give Assignment" button
     And I logout of teacher account
@@ -63,7 +64,7 @@ Feature: Submissions - Automatically Graded
     Then Quiz "12345" present in list of quizzes
     And I click on "Assignments" on left menu
     And I click on "Create New Assignment" button
-    And I select in dropdown menu option "12345"
+    And I select Quiz To Assign "12345"
     And I select "Ivan Ivanov" from the list of students
     And I click on "Give Assignment" button
     And I logout of teacher account
@@ -76,8 +77,10 @@ Feature: Submissions - Automatically Graded
     And I select option 2 as an answer for question 2
     And I click on "Submit My Answers" button
     And I click on "Ok" button
-    And I logout of student account
-    When I navigate to login page
+    And I click on "Log Out" on left menu
+    And I confirm Log Out
+#    And I logout of student account
+#    When I navigate to login page
     And I type "teacher1@gmail.com" in the email field
     And I type "12345Abc" in the password field
     And I click Sign in button
