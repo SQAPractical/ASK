@@ -1,11 +1,12 @@
 Feature: Login
+  @smoke
   Scenario: Log In - student - valid email and valid password combination lets user in
     When I navigate to login page
     And I type email "student0@gmail.com"
     And I type password "12345Abc"
     And I click on Sign In button
     Then Message "Jon Snow" appears
-
+  @smoke
   Scenario: Log In - student - valid email and invalid password combination
     When I navigate to login page
     And I type email "student0@gmail.com"

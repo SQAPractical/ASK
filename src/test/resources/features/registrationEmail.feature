@@ -1,4 +1,5 @@
 Feature: Registration - Email
+  @smoke
   Scenario: Registration - Email - Alphanumeric and special characters
     Given I navigate to registration page
     And I type first name "abc"

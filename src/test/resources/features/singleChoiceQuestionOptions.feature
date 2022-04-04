@@ -1,4 +1,5 @@
 Feature: Single Choice Question - Options
+  @smoke
   Scenario: Single Choice Question - Options - Alphanumeric and special characters
     When I navigate to login page
     And I type email "teacher2@gmail.com"
