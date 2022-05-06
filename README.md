@@ -55,4 +55,4 @@ to commit changes one more time)
 16. And update your branch `git merge master`
 (With this command you will take changes from your local master and copy it to your branch)
     
-Repeat steps 3-16 for each complete task
+Repeat steps 3-16 for each complete task!
